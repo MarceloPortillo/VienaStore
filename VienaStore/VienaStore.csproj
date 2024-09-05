@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C_Presentacion\Vendedor\Form1.cs">
+    <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="C_Presentacion\Vendedor\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.Designer.cs">
+      <DependentUpon>FNuevoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
+      <DependentUpon>FNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +91,9 @@
     <Folder Include="C_Negocio\" />
     <Folder Include="C_Presentacion\Administrador\" />
     <Folder Include="C_Presentacion\Encargado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AltaCliente.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
