@@ -39,9 +39,9 @@
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(56, 362);
+            this.LblTelefono.Location = new System.Drawing.Point(56, 351);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(59, 20);
             this.LblTelefono.TabIndex = 6;
@@ -137,45 +137,51 @@
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(163, 362);
+            this.TxtTelefono.Location = new System.Drawing.Point(163, 349);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(268, 22);
             this.TxtTelefono.TabIndex = 12;
             this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.Blue;
-            this.BtnGuardar.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(182, 418);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(105, 43);
-            this.BtnGuardar.TabIndex = 13;
-            this.BtnGuardar.Text = "GUARDAR";
-            this.BtnGuardar.UseVisualStyleBackColor = false;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.Blue;
-            this.BtnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(339, 418);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(111, 43);
-            this.BtnCancelar.TabIndex = 14;
-            this.BtnCancelar.Text = "CANCELAR";
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VienaStore.Properties.Resources.AltaCliente;
-            this.pictureBox1.Location = new System.Drawing.Point(464, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(497, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(311, 302);
+            this.pictureBox1.Size = new System.Drawing.Size(311, 320);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Image = global::VienaStore.Properties.Resources.Cancel_icon_icons_com_73703;
+            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelar.Location = new System.Drawing.Point(486, 436);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(162, 64);
+            this.BtnCancelar.TabIndex = 14;
+            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnGuardar.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Image = global::VienaStore.Properties.Resources.save_icon_icons_com_53618__2_;
+            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardar.Location = new System.Drawing.Point(297, 436);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(164, 64);
+            this.BtnGuardar.TabIndex = 13;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // FNuevoCliente
             // 

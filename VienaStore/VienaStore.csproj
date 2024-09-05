@@ -95,5 +95,17 @@
   <ItemGroup>
     <None Include="Resources\AltaCliente.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_icon-icons.com_53618 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_icon-icons.com_73703.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
