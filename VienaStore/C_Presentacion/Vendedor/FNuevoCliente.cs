@@ -16,5 +16,29 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             InitializeComponent();
         }
+
+        private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Negocio.Validaciones.SoloNumeros(e);
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Negocio.Validaciones.SoloNumeros(e);
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtNombre.Text) ||
+                string.IsNullOrWhiteSpace(TxtApellido.Text) ||
+                string.IsNullOrWhiteSpace(TxtDNI.Text) ||
+                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
+                string.IsNullOrWhiteSpace(TxtTelefono.Text))
+
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }

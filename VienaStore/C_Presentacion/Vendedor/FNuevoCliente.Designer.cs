@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Teléfono = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.TDNI = new System.Windows.Forms.TextBox();
-            this.TNombre = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.LblDNI = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.LblApellido = new System.Windows.Forms.Label();
+            this.LblDireccion = new System.Windows.Forms.Label();
+            this.LblTelefono = new System.Windows.Forms.Label();
+            this.TxtDNI = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,137 +50,123 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Location = new System.Drawing.Point(92, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(459, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "AGREGAR NUEVO CLIENTE";
             // 
-            // label2
+            // LblDNI
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "leabel";
+            this.LblDNI.AutoSize = true;
+            this.LblDNI.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDNI.Location = new System.Drawing.Point(85, 218);
+            this.LblDNI.Name = "LblDNI";
+            this.LblDNI.Size = new System.Drawing.Size(30, 20);
+            this.LblDNI.TabIndex = 2;
+            this.LblDNI.Text = "DNI";
             // 
-            // label3
+            // LblNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "DNI";
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Location = new System.Drawing.Point(61, 84);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(54, 20);
+            this.LblNombre.TabIndex = 3;
+            this.LblNombre.Text = "Nombre";
             // 
-            // label4
+            // LblApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(60, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Nombre";
+            this.LblApellido.AutoSize = true;
+            this.LblApellido.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblApellido.Location = new System.Drawing.Point(62, 154);
+            this.LblApellido.Name = "LblApellido";
+            this.LblApellido.Size = new System.Drawing.Size(53, 20);
+            this.LblApellido.TabIndex = 4;
+            this.LblApellido.Text = "Apellido";
             // 
-            // label5
+            // LblDireccion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Apellido";
+            this.LblDireccion.AutoSize = true;
+            this.LblDireccion.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDireccion.Location = new System.Drawing.Point(52, 282);
+            this.LblDireccion.Name = "LblDireccion";
+            this.LblDireccion.Size = new System.Drawing.Size(63, 20);
+            this.LblDireccion.TabIndex = 5;
+            this.LblDireccion.Text = "Dirección";
             // 
-            // label6
+            // LblTelefono
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(61, 282);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Dirección";
+            this.LblTelefono.AutoSize = true;
+            this.LblTelefono.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTelefono.Location = new System.Drawing.Point(56, 362);
+            this.LblTelefono.Name = "LblTelefono";
+            this.LblTelefono.Size = new System.Drawing.Size(59, 20);
+            this.LblTelefono.TabIndex = 6;
+            this.LblTelefono.Text = "Teléfono";
             // 
-            // Teléfono
+            // TxtDNI
             // 
-            this.Teléfono.AutoSize = true;
-            this.Teléfono.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Teléfono.Location = new System.Drawing.Point(61, 329);
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.Size = new System.Drawing.Size(59, 20);
-            this.Teléfono.TabIndex = 6;
-            this.Teléfono.Text = "Teléfono";
+            this.TxtDNI.Location = new System.Drawing.Point(163, 216);
+            this.TxtDNI.Name = "TxtDNI";
+            this.TxtDNI.Size = new System.Drawing.Size(268, 22);
+            this.TxtDNI.TabIndex = 8;
+            this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
             // 
-            // textBox1
+            // TxtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 22);
-            this.textBox1.TabIndex = 7;
+            this.TxtNombre.Location = new System.Drawing.Point(163, 82);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(268, 22);
+            this.TxtNombre.TabIndex = 9;
             // 
-            // TDNI
+            // TxtApellido
             // 
-            this.TDNI.Location = new System.Drawing.Point(182, 150);
-            this.TDNI.Name = "TDNI";
-            this.TDNI.Size = new System.Drawing.Size(220, 22);
-            this.TDNI.TabIndex = 8;
+            this.TxtApellido.Location = new System.Drawing.Point(163, 152);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(268, 22);
+            this.TxtApellido.TabIndex = 10;
             // 
-            // TNombre
+            // TxtDireccion
             // 
-            this.TNombre.Location = new System.Drawing.Point(182, 194);
-            this.TNombre.Name = "TNombre";
-            this.TNombre.Size = new System.Drawing.Size(220, 22);
-            this.TNombre.TabIndex = 9;
+            this.TxtDireccion.Location = new System.Drawing.Point(163, 282);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(268, 22);
+            this.TxtDireccion.TabIndex = 11;
             // 
-            // textBox4
+            // TxtTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 22);
-            this.textBox4.TabIndex = 10;
+            this.TxtTelefono.Location = new System.Drawing.Point(163, 362);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(268, 22);
+            this.TxtTelefono.TabIndex = 12;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
-            // textBox5
+            // BtnGuardar
             // 
-            this.textBox5.Location = new System.Drawing.Point(182, 282);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(220, 22);
-            this.textBox5.TabIndex = 11;
+            this.BtnGuardar.BackColor = System.Drawing.Color.Blue;
+            this.BtnGuardar.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(182, 418);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(105, 43);
+            this.BtnGuardar.TabIndex = 13;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // textBox6
+            // BtnCancelar
             // 
-            this.textBox6.Location = new System.Drawing.Point(182, 329);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 22);
-            this.textBox6.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(182, 418);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 43);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(339, 418);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 43);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnCancelar.BackColor = System.Drawing.Color.Blue;
+            this.BtnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(339, 418);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(111, 43);
+            this.BtnCancelar.TabIndex = 14;
+            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -197,23 +181,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(819, 527);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(867, 527);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.TNombre);
-            this.Controls.Add(this.TDNI);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Teléfono);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnGuardar);
+            this.Controls.Add(this.TxtTelefono);
+            this.Controls.Add(this.TxtDireccion);
+            this.Controls.Add(this.TxtApellido);
+            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.TxtDNI);
+            this.Controls.Add(this.LblTelefono);
+            this.Controls.Add(this.LblDireccion);
+            this.Controls.Add(this.LblApellido);
+            this.Controls.Add(this.LblNombre);
+            this.Controls.Add(this.LblDNI);
             this.Controls.Add(this.label1);
             this.Name = "FNuevoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -227,20 +209,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Teléfono;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox TDNI;
-        private System.Windows.Forms.TextBox TNombre;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label LblDNI;
+        private System.Windows.Forms.Label LblNombre;
+        private System.Windows.Forms.Label LblApellido;
+        private System.Windows.Forms.Label LblDireccion;
+        private System.Windows.Forms.Label LblTelefono;
+        private System.Windows.Forms.TextBox TxtDNI;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtApellido;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
