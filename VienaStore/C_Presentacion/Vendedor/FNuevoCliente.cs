@@ -33,12 +33,49 @@ namespace VienaStore.C_Presentacion.Vendedor
                 string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxtTelefono.Text))
-
+                string.IsNullOrWhiteSpace(TxTelefono.Text) ||
+                string.IsNullOrWhiteSpace(TxtEmail.Text))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+                MessageBox.Show("El Cliente: " + this.TxtNombre.Text + " " + this.TxtApellido.Text + " " + "Se inserto Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                this.TxtApellido.Clear();
+                this.TxtNombre.Clear();
+                this.TxtDNI.Clear();
+            }
+
+
+           
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Negocio.Validaciones.SoloLetras(e);
+        }
+
+        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Negocio.Validaciones.SoloLetras(e);
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FNuevoCliente_Load(object sender, EventArgs e)
+        {
+            TxtNombre.Focus();
         }
     }
 }
