@@ -53,9 +53,6 @@ namespace VienaStore.C_Presentacion.Vendedor
                 this.TxtNombre.Clear();
                 this.TxtDNI.Clear();
             }
-
-
-           
         }
 
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)

@@ -63,9 +63,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AltaCliente {
+        internal static System.Drawing.Bitmap Alta_Cliente_240x240px {
             get {
-                object obj = ResourceManager.GetObject("AltaCliente", resourceCulture);
+                object obj = ResourceManager.GetObject("Alta_Cliente_240x240px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancel_77947 {
+        internal static System.Drawing.Bitmap cancelar_48x48_px {
             get {
-                object obj = ResourceManager.GetObject("cancel_77947", resourceCulture);
+                object obj = ResourceManager.GetObject("cancelar_48x48_px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,59 +83,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703 {
+        internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
-                object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap guardar {
-            get {
-                object obj = ResourceManager.GetObject("guardar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap save_icon_icons_com_53618 {
-            get {
-                object obj = ResourceManager.GetObject("save_icon-icons.com_53618", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap save_icon_icons_com_53618__1_ {
-            get {
-                object obj = ResourceManager.GetObject("save_icon-icons.com_53618 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap save_icon_icons_com_53618__2_ {
-            get {
-                object obj = ResourceManager.GetObject("save_icon-icons.com_53618 (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap savetheapplication_guardar_2958 {
-            get {
-                object obj = ResourceManager.GetObject("savetheapplication_guardar_2958", resourceCulture);
+                object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
