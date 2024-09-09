@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Negocio;
 
+
 namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FNuevoCliente : Form
@@ -61,9 +62,12 @@ namespace VienaStore.C_Presentacion.Vendedor
             }
             else
             {
-                this.TxtDNI.Clear();
                 this.TxtApellido.Clear();
                 this.TxtNombre.Clear();
+                this.TxtDNI.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtEmail.Clear();
+                this.TxtTelefono.Clear();       
             }
         }
 
@@ -75,6 +79,23 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void FNuevoCliente_Load(object sender, EventArgs e)
         {
             TxtApellido.Focus();
+        }
+
+
+        private void TxtEmail_Leave(object sender, EventArgs e)
+        {
+            if (C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
+            {
+                // Correo válido, puedes hacer algo aquí si es necesario
+            }
+            else
+            {
+                MessageBox.Show("Dirección de correo electrónico no es valida, el correo debe tener el formato: nombre@dominio.com," +
+                                "por favor seleccione un correo válido", "Validación de correo electrónico",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtEmail.SelectAll();
+                TxtEmail.Focus();
+            }
         }
     }
 }

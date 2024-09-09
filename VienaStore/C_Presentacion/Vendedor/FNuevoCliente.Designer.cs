@@ -162,6 +162,7 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(268, 22);
             this.TxtEmail.TabIndex = 16;
+            this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
             // 
             // LblEmail
             // 

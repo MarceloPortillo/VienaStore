@@ -45,26 +45,13 @@ namespace VienaStore.C_Negocio
             {
                 f.Handled |= true;
                 MessageBox.Show("Ingrese solo letras.", "Verifique", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
-
         }
 
-        public void ValidarEmail(TextBox textBox, ErrorProvider errorProvider)
+        public static bool ValidarEmail(string email)
         {
-            if (textBox.Text.Contains("@gmail.com") || textBox.Text.Contains("@hotmail.com"))
-            {
-                errorProvider.SetError(textBox, "");
-            }
-            else
-            {
-                errorProvider.SetError(textBox, "Debe ser: @gmail.com o @hotmail.com");
-            }
+            string expresion = @"^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, expresion);
         }
-
-
-
     }
-
-
 }
