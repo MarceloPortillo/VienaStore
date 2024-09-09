@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
@@ -15,6 +16,17 @@ namespace VienaStore.C_Presentacion.Vendedor
         public FNuevoCliente()
         {
             InitializeComponent();
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            C_Negocio.Validaciones.SoloLetras(e);
+        }
+
+        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Negocio.Validaciones.SoloLetras(e);
         }
 
         private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -29,11 +41,11 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtNombre.Text) ||
-                string.IsNullOrWhiteSpace(TxtApellido.Text) ||
+            if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||
+                string.IsNullOrWhiteSpace(TxtNombre.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxTelefono.Text) ||
+                string.IsNullOrWhiteSpace(TxtTelefono.Text) ||
                 string.IsNullOrWhiteSpace(TxtEmail.Text))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -44,25 +56,15 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             if (ask == DialogResult.Yes)
             {
-                MessageBox.Show("El Cliente: " + this.TxtNombre.Text + " " + this.TxtApellido.Text + " " + "Se inserto Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " " + "Se inserto Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
             {
+                this.TxtDNI.Clear();
                 this.TxtApellido.Clear();
                 this.TxtNombre.Clear();
-                this.TxtDNI.Clear();
             }
-        }
-
-        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            C_Negocio.Validaciones.SoloLetras(e);
-        }
-
-        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            C_Negocio.Validaciones.SoloLetras(e);
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -72,7 +74,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void FNuevoCliente_Load(object sender, EventArgs e)
         {
-            TxtNombre.Focus();
+            TxtApellido.Focus();
         }
     }
 }

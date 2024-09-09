@@ -50,8 +50,21 @@ namespace VienaStore.C_Negocio
 
         }
 
-     
+        public void ValidarEmail(TextBox textBox, ErrorProvider errorProvider)
+        {
+            if (textBox.Text.Contains("@gmail.com") || textBox.Text.Contains("@hotmail.com"))
+            {
+                errorProvider.SetError(textBox, "");
+            }
+            else
+            {
+                errorProvider.SetError(textBox, "Debe ser: @gmail.com o @hotmail.com");
+            }
+        }
+
+
+
     }
-    
-   
+
+
 }
