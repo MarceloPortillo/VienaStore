@@ -29,59 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnRegistrarCliente = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.TxtFecha = new System.Windows.Forms.Label();
+            this.LblBienvenido = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnRegistrarCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 502);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Controls.Add(this.TxtFecha);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(204, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(596, 51);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido...";
             // 
             // pictureBox1
             // 
@@ -163,33 +144,66 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BtnRegistrarCliente
             // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::VienaStore.Properties.Resources.nuevoUsuario;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 56);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.Tag = "2";
-            this.button1.Text = "REGISTRAR \r\nCLIENTE";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnRegistrarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnRegistrarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnRegistrarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.nuevoUsuario;
+            this.BtnRegistrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 111);
+            this.BtnRegistrarCliente.Name = "BtnRegistrarCliente";
+            this.BtnRegistrarCliente.Size = new System.Drawing.Size(155, 56);
+            this.BtnRegistrarCliente.TabIndex = 0;
+            this.BtnRegistrarCliente.TabStop = false;
+            this.BtnRegistrarCliente.Tag = "2";
+            this.BtnRegistrarCliente.Text = "REGISTRAR \r\nCLIENTE";
+            this.BtnRegistrarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRegistrarCliente.UseCompatibleTextRendering = true;
+            this.BtnRegistrarCliente.UseVisualStyleBackColor = false;
+            this.BtnRegistrarCliente.Click += new System.EventHandler(this.BtnRegistrarCliente_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.TxtFecha);
+            this.panel2.Controls.Add(this.LblBienvenido);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(204, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(596, 51);
+            this.panel2.TabIndex = 1;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button7.Image = global::VienaStore.Properties.Resources.CierreSesion;
+            this.button7.Location = new System.Drawing.Point(547, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(49, 51);
+            this.button7.TabIndex = 3;
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // TxtFecha
             // 
             this.TxtFecha.AutoSize = true;
-            this.TxtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFecha.Location = new System.Drawing.Point(305, 12);
+            this.TxtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFecha.Location = new System.Drawing.Point(3, 3);
             this.TxtFecha.Name = "TxtFecha";
-            this.TxtFecha.Size = new System.Drawing.Size(64, 25);
+            this.TxtFecha.Size = new System.Drawing.Size(51, 20);
             this.TxtFecha.TabIndex = 2;
             this.TxtFecha.Text = "label2";
+            // 
+            // LblBienvenido
+            // 
+            this.LblBienvenido.AutoSize = true;
+            this.LblBienvenido.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBienvenido.Location = new System.Drawing.Point(214, 31);
+            this.LblBienvenido.Name = "LblBienvenido";
+            this.LblBienvenido.Size = new System.Drawing.Size(130, 20);
+            this.LblBienvenido.TabIndex = 0;
+            this.LblBienvenido.Text = "Bienvenido...";
             // 
             // fecha
             // 
@@ -205,13 +219,15 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Vendedor";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,11 +240,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnRegistrarCliente;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
+        private System.Windows.Forms.Button button7;
     }
 }

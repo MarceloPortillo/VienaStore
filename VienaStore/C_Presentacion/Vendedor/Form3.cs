@@ -26,5 +26,12 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             TxtFecha.Text = DateTime.Now.ToString("dddd dd MMMM yyy");
         }
+
+        private void BtnRegistrarCliente_Click(object sender, EventArgs e)
+        {
+            Form1 nuevo = new Form1();
+            nuevo.MdiParent = this;
+            nuevo.Show();
+        }
     }
 }
