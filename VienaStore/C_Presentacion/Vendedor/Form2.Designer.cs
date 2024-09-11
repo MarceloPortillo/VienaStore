@@ -1,4 +1,4 @@
-﻿namespace VienaStore.C_Presentacion.Encargado
+﻿namespace VienaStore.C_Presentacion.Vendedor
 {
     partial class Form2
     {
@@ -28,23 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-<<<<<<< HEAD:VienaStore/C_Presentacion/Encargado/Form2.Designer.cs
             this.Text = "Form2";
-=======
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.ResumeLayout(false);
-
->>>>>>> develop:VienaStore/Form1.Designer.cs
         }
 
         #endregion
