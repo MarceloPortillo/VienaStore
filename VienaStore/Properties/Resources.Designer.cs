@@ -63,9 +63,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buscarCliente {
+        internal static System.Drawing.Bitmap Alta_Cliente_240x240px {
             get {
-                object obj = ResourceManager.GetObject("buscarCliente", resourceCulture);
+                object obj = ResourceManager.GetObject("Alta_Cliente_240x240px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buscarProducto {
+        internal static System.Drawing.Bitmap cancelar_48x48_px {
             get {
-                object obj = ResourceManager.GetObject("buscarProducto", resourceCulture);
+                object obj = ResourceManager.GetObject("cancelar_48x48_px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,79 +83,9 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CierreSesion {
+        internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
-                object obj = ResourceManager.GetObject("CierreSesion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap editar {
-            get {
-                object obj = ResourceManager.GetObject("editar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap listaProductos {
-            get {
-                object obj = ResourceManager.GetObject("listaProductos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Listar {
-            get {
-                object obj = ResourceManager.GetObject("Listar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logotipo {
-            get {
-                object obj = ResourceManager.GetObject("logotipo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logotipo1 {
-            get {
-                object obj = ResourceManager.GetObject("logotipo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logotipo2 {
-            get {
-                object obj = ResourceManager.GetObject("logotipo2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nuevoUsuario {
-            get {
-                object obj = ResourceManager.GetObject("nuevoUsuario", resourceCulture);
+                object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
