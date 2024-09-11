@@ -29,42 +29,42 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnRegistrarCliente_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
 
         private void BtnModificarCliente_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FModificarCliente nuevo = new FModificarCliente();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
 
         private void BtnBuscarCliente_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FBuscarCliente nuevo = new FBuscarCliente();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
 
         private void BtnListarCliente_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FListarCliente nuevo = new FListarCliente();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
 
         private void BtnBuscarProd_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FBuscarProd nuevo = new FBuscarProd();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
 
         private void BtnListarProd_Click(object sender, EventArgs e)
         {
-            Form1 nuevo = new Form1();
+            FListarProd nuevo = new FListarProd();
             nuevo.MdiParent = this;
             nuevo.Show();
         }
