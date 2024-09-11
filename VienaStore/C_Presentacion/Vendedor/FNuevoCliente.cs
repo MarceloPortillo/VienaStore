@@ -15,7 +15,7 @@ namespace VienaStore.C_Presentacion.Vendedor
     public partial class FNuevoCliente : Form
     {
         private  static FNuevoCliente instancia=null;
-        public static FNuevoCliente ventana_unica()
+        public static FNuevoCliente Ventana_unica()
         {
             if(instancia==null)
             {
