@@ -244,6 +244,7 @@
             this.Controls.Add(this.LblDNI);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FNuevoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

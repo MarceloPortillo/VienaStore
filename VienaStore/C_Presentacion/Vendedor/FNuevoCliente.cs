@@ -14,6 +14,16 @@ namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FNuevoCliente : Form
     {
+        private  static FNuevoCliente instancia=null;
+        public static FNuevoCliente ventana_unica()
+        {
+            if(instancia==null)
+            {
+                instancia = new FNuevoCliente();
+                return instancia;   
+            }
+            return instancia;
+        }
         public FNuevoCliente()
         {
             InitializeComponent();
