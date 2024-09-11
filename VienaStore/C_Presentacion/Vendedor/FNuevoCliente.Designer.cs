@@ -38,12 +38,12 @@
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtDNI = new System.Windows.Forms.TextBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,22 +140,6 @@
             this.TxtDireccion.Size = new System.Drawing.Size(268, 22);
             this.TxtDireccion.TabIndex = 11;
             // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
-            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(527, 456);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(162, 64);
-            this.BtnCancelar.TabIndex = 14;
-            this.BtnCancelar.Text = "CANCELAR";
-            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(163, 321);
@@ -192,19 +176,29 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnGuardar.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(301, 456);
+            this.BtnGuardar.Location = new System.Drawing.Point(358, 469);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(164, 64);
-            this.BtnGuardar.TabIndex = 13;
+            this.BtnGuardar.Size = new System.Drawing.Size(167, 69);
+            this.BtnGuardar.TabIndex = 19;
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelar.Location = new System.Drawing.Point(555, 469);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(167, 69);
+            this.BtnCancelar.TabIndex = 20;
+            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click_1);
             // 
             // FNuevoCliente
             // 
@@ -212,12 +206,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(892, 618);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.TxtTelefono);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.TxtEmail);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.TxtDireccion);
             this.Controls.Add(this.TxtDNI);
             this.Controls.Add(this.TxtApellido);
@@ -250,11 +244,11 @@
         private System.Windows.Forms.TextBox TxtDNI;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.MaskedTextBox TxtTelefono;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnCancelar;
     }
 }

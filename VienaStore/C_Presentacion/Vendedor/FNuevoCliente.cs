@@ -40,13 +40,33 @@ namespace VienaStore.C_Presentacion.Vendedor
             C_Negocio.Validaciones.SoloNumeros(e);
         }
 
+        private void FNuevoCliente_Load(object sender, EventArgs e)
+        {
+            TxtApellido.Focus();
+        }
+
+        private void TxtEmail_Leave(object sender, EventArgs e)
+        {
+            if (C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
+            {
+                // Correo válido, puedes hacer algo aquí si es necesario
+            }
+            else
+            {
+                MessageBox.Show("Dirección de correo electrónico no es valida, el correo debe tener el formato: nombre@dominio.com," +
+                                "por favor seleccione un correo válido", "Validación de correo electrónico",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtEmail.SelectAll();
+                TxtEmail.Focus();
+            }
+        }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||
                 string.IsNullOrWhiteSpace(TxtNombre.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxtTelefono.Text) ||
+               (string.IsNullOrWhiteSpace(TxtTelefono.Text) || !TxtTelefono.MaskFull) ||
                 string.IsNullOrWhiteSpace(TxtEmail.Text))
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,35 +87,13 @@ namespace VienaStore.C_Presentacion.Vendedor
                 this.TxtDNI.Clear();
                 this.TxtDireccion.Clear();
                 this.TxtEmail.Clear();
-                this.TxtTelefono.Clear();       
+                this.TxtTelefono.Clear();
             }
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void FNuevoCliente_Load(object sender, EventArgs e)
-        {
-            TxtApellido.Focus();
-        }
-
-
-        private void TxtEmail_Leave(object sender, EventArgs e)
-        {
-            if (C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
-            {
-                // Correo válido, puedes hacer algo aquí si es necesario
-            }
-            else
-            {
-                MessageBox.Show("Dirección de correo electrónico no es valida, el correo debe tener el formato: nombre@dominio.com," +
-                                "por favor seleccione un correo válido", "Validación de correo electrónico",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TxtEmail.SelectAll();
-                TxtEmail.Focus();
-            }
         }
     }
 }
