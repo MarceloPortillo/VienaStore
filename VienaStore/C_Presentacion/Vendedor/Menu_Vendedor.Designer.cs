@@ -154,7 +154,7 @@
             this.BtnRegistrarCliente.BackColor = System.Drawing.Color.Coral;
             this.BtnRegistrarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnRegistrarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.nuevoUsuario;
+            this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnRegistrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 111);
             this.BtnRegistrarCliente.Name = "BtnRegistrarCliente";

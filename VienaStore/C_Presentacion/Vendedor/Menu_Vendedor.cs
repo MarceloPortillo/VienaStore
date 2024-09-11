@@ -17,10 +17,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void fecha_Tick(object sender, EventArgs e)
         {
@@ -36,37 +33,37 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnModificarCliente_Click(object sender, EventArgs e)
         {
-            FModificarCliente nuevo = new FModificarCliente();
+            /*FModificarCliente nuevo = new FModificarCliente();
             nuevo.MdiParent = this;
-            nuevo.Show();
+            nuevo.Show();*/
         }
 
         private void BtnBuscarCliente_Click(object sender, EventArgs e)
         {
-            FBuscarCliente nuevo = new FBuscarCliente();
+            /*FBuscarCliente nuevo = new FBuscarCliente();
             nuevo.MdiParent = this;
-            nuevo.Show();
+            nuevo.Show();*/
         }
 
         private void BtnListarCliente_Click(object sender, EventArgs e)
         {
-            FListarCliente nuevo = new FListarCliente();
+           /* FListarCliente nuevo = new FListarCliente();
             nuevo.MdiParent = this;
-            nuevo.Show();
+            nuevo.Show();*/
         }
 
         private void BtnBuscarProd_Click(object sender, EventArgs e)
         {
-            FBuscarProd nuevo = new FBuscarProd();
+            /*FBuscarProd nuevo = new FBuscarProd();
             nuevo.MdiParent = this;
-            nuevo.Show();
+            nuevo.Show();*/
         }
 
         private void BtnListarProd_Click(object sender, EventArgs e)
         {
-            FListarProd nuevo = new FListarProd();
+           /* FListarProd nuevo = new FListarProd();
             nuevo.MdiParent = this;
-            nuevo.Show();
+            nuevo.Show();*/
         }
     }
 }

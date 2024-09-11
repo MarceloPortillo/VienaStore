@@ -133,9 +133,10 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logotipo1 {
+        internal static System.Drawing.Bitmap Alta_Cliente_240x240px
+        {
             get {
-                object obj = ResourceManager.GetObject("logotipo1", resourceCulture);
+                object obj = ResourceManager.GetObject("Alta_Cliente_240x240px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +144,10 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logotipo2 {
+        internal static System.Drawing.Bitmap cancelar_48x48_px
+        {
             get {
-                object obj = ResourceManager.GetObject("logotipo2", resourceCulture);
+                object obj = ResourceManager.GetObject("cancelar_48x48_px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +155,10 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nuevoUsuario {
+        internal static System.Drawing.Bitmap guardar_48x48_px
+        {
             get {
-                object obj = ResourceManager.GetObject("nuevoUsuario", resourceCulture);
+                object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
