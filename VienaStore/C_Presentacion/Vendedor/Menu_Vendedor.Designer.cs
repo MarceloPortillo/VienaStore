@@ -1,6 +1,6 @@
 ﻿namespace VienaStore.C_Presentacion.Vendedor
 {
-    partial class Form3
+    partial class Menu_Vendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Vendedor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnListarProd = new System.Windows.Forms.Button();
+            this.BtnBuscarProd = new System.Windows.Forms.Button();
+            this.BtnListarCliente = new System.Windows.Forms.Button();
+            this.BtnBuscarCliente = new System.Windows.Forms.Button();
+            this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.BtnRegistrarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.TxtFecha = new System.Windows.Forms.Label();
             this.LblBienvenido = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Timer(this.components);
@@ -52,11 +52,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnListarProd);
+            this.panel1.Controls.Add(this.BtnBuscarProd);
+            this.panel1.Controls.Add(this.BtnListarCliente);
+            this.panel1.Controls.Add(this.BtnBuscarCliente);
+            this.panel1.Controls.Add(this.BtnModificarCliente);
             this.panel1.Controls.Add(this.BtnRegistrarCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -74,75 +74,80 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button6
+            // BtnListarProd
             // 
-            this.button6.BackColor = System.Drawing.Color.Coral;
-            this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::VienaStore.Properties.Resources.listaProductos;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(25, 433);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 57);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "LISTAR \r\nPRODUCTOS";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.BtnListarProd.BackColor = System.Drawing.Color.Coral;
+            this.BtnListarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnListarProd.Image = global::VienaStore.Properties.Resources.listaProductos;
+            this.BtnListarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnListarProd.Location = new System.Drawing.Point(25, 433);
+            this.BtnListarProd.Name = "BtnListarProd";
+            this.BtnListarProd.Size = new System.Drawing.Size(155, 57);
+            this.BtnListarProd.TabIndex = 5;
+            this.BtnListarProd.Text = "LISTAR \r\nPRODUCTOS";
+            this.BtnListarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnListarProd.UseVisualStyleBackColor = false;
+            this.BtnListarProd.Click += new System.EventHandler(this.BtnListarProd_Click);
             // 
-            // button5
+            // BtnBuscarProd
             // 
-            this.button5.BackColor = System.Drawing.Color.Coral;
-            this.button5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::VienaStore.Properties.Resources.buscarProducto;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(25, 368);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 59);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "BUSCAR\r\nPRODUCTOS";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnBuscarProd.BackColor = System.Drawing.Color.Coral;
+            this.BtnBuscarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarProd.Image = global::VienaStore.Properties.Resources.buscarProducto;
+            this.BtnBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscarProd.Location = new System.Drawing.Point(25, 368);
+            this.BtnBuscarProd.Name = "BtnBuscarProd";
+            this.BtnBuscarProd.Size = new System.Drawing.Size(155, 59);
+            this.BtnBuscarProd.TabIndex = 4;
+            this.BtnBuscarProd.Text = "BUSCAR\r\nPRODUCTOS";
+            this.BtnBuscarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBuscarProd.UseVisualStyleBackColor = false;
+            this.BtnBuscarProd.Click += new System.EventHandler(this.BtnBuscarProd_Click);
             // 
-            // button4
+            // BtnListarCliente
             // 
-            this.button4.BackColor = System.Drawing.Color.Coral;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::VienaStore.Properties.Resources.Listar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(25, 299);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 59);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "   LISTAR     CLIENTES";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnListarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnListarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnListarCliente.Image = global::VienaStore.Properties.Resources.Listar;
+            this.BtnListarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnListarCliente.Location = new System.Drawing.Point(25, 299);
+            this.BtnListarCliente.Name = "BtnListarCliente";
+            this.BtnListarCliente.Size = new System.Drawing.Size(155, 59);
+            this.BtnListarCliente.TabIndex = 3;
+            this.BtnListarCliente.Text = "   LISTAR     CLIENTES";
+            this.BtnListarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnListarCliente.UseVisualStyleBackColor = false;
+            this.BtnListarCliente.Click += new System.EventHandler(this.BtnListarCliente_Click);
             // 
-            // button3
+            // BtnBuscarCliente
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::VienaStore.Properties.Resources.buscarCliente;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(25, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 55);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "  BUSCAR   CLIENTE";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnBuscarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnBuscarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscarCliente.Image = global::VienaStore.Properties.Resources.buscarCliente;
+            this.BtnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 238);
+            this.BtnBuscarCliente.Name = "BtnBuscarCliente";
+            this.BtnBuscarCliente.Size = new System.Drawing.Size(155, 55);
+            this.BtnBuscarCliente.TabIndex = 2;
+            this.BtnBuscarCliente.Text = "  BUSCAR   CLIENTE";
+            this.BtnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBuscarCliente.UseVisualStyleBackColor = false;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
             // 
-            // button2
+            // BtnModificarCliente
             // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::VienaStore.Properties.Resources.editar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(25, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "MODIFICAR \r\nCLIENTE";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.editar;
+            this.BtnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 173);
+            this.BtnModificarCliente.Name = "BtnModificarCliente";
+            this.BtnModificarCliente.Size = new System.Drawing.Size(155, 59);
+            this.BtnModificarCliente.TabIndex = 1;
+            this.BtnModificarCliente.Text = "MODIFICAR \r\nCLIENTE";
+            this.BtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnRegistrarCliente
             // 
@@ -166,7 +171,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.BtnCerrarSesion);
             this.panel2.Controls.Add(this.TxtFecha);
             this.panel2.Controls.Add(this.LblBienvenido);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -175,15 +180,15 @@
             this.panel2.Size = new System.Drawing.Size(596, 51);
             this.panel2.TabIndex = 1;
             // 
-            // button7
+            // BtnCerrarSesion
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button7.Image = global::VienaStore.Properties.Resources.CierreSesion;
-            this.button7.Location = new System.Drawing.Point(547, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(49, 51);
-            this.button7.TabIndex = 3;
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnCerrarSesion.Image = global::VienaStore.Properties.Resources.CierreSesion;
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(547, 0);
+            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(49, 51);
+            this.BtnCerrarSesion.TabIndex = 3;
+            this.BtnCerrarSesion.UseVisualStyleBackColor = true;
             // 
             // TxtFecha
             // 
@@ -210,7 +215,7 @@
             this.fecha.Enabled = true;
             this.fecha.Tick += new System.EventHandler(this.fecha_Tick);
             // 
-            // Form3
+            // Menu_Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,7 +226,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "Form3";
+            this.Name = "Menu_Vendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Vendedor";
             this.panel1.ResumeLayout(false);
@@ -235,17 +240,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnListarProd;
+        private System.Windows.Forms.Button BtnBuscarProd;
+        private System.Windows.Forms.Button BtnListarCliente;
+        private System.Windows.Forms.Button BtnBuscarCliente;
+        private System.Windows.Forms.Button BtnModificarCliente;
         private System.Windows.Forms.Button BtnRegistrarCliente;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnCerrarSesion;
     }
 }
