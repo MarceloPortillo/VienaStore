@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using VienaStore.C_Negocio;
 
 
+
 namespace VienaStore.C_Presentacion.Vendedor
 {
-    public partial class FNuevoCliente : Form
+    public partial class FNuevoCliente : Form 
     {
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
@@ -88,6 +89,12 @@ namespace VienaStore.C_Presentacion.Vendedor
             if (ask == DialogResult.Yes)
             {
                 MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " " + "Se inserto Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.TxtApellido.Clear();
+                this.TxtNombre.Clear();
+                this.TxtDNI.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtEmail.Clear();
+                this.TxtTelefono.Clear();
                 return;
             }
             else
@@ -103,7 +110,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

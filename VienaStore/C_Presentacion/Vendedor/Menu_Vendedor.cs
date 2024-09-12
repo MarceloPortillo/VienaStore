@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Presentacion.Vendedor;
+
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
@@ -29,9 +31,9 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnRegistrarCliente_Click(object sender, EventArgs e)
         {
-           /* FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
+            FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
             nuevo.MdiParent = this;
-            nuevo.Show();*/
+            nuevo.Show();
         }
 
         private void BtnModificarCliente_Click(object sender, EventArgs e)

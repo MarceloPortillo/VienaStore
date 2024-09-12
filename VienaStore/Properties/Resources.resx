@@ -126,6 +126,29 @@
   </data>
   <data name="cancelar_48x48_px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancelar_48x48_px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  </data>
+  <data name="buscarCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscarCliente.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listaProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\listaProductos.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logotipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscarProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscarProducto.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CierreSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CierreSesion.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Listar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Listar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuevoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevoUsuario.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

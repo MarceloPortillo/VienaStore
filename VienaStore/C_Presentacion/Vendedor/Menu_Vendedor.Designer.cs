@@ -78,7 +78,7 @@
             // 
             this.BtnListarProd.BackColor = System.Drawing.Color.Coral;
             this.BtnListarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListarProd.Image = global::VienaStore.Properties.Resources.listaProductos;
+            this.BtnListarProd.Image = ((System.Drawing.Image)(resources.GetObject("BtnListarProd.Image")));
             this.BtnListarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnListarProd.Location = new System.Drawing.Point(25, 433);
             this.BtnListarProd.Name = "BtnListarProd";
@@ -93,7 +93,7 @@
             // 
             this.BtnBuscarProd.BackColor = System.Drawing.Color.Coral;
             this.BtnBuscarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscarProd.Image = global::VienaStore.Properties.Resources.buscarProducto;
+            this.BtnBuscarProd.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarProd.Image")));
             this.BtnBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnBuscarProd.Location = new System.Drawing.Point(25, 368);
             this.BtnBuscarProd.Name = "BtnBuscarProd";
@@ -108,7 +108,7 @@
             // 
             this.BtnListarCliente.BackColor = System.Drawing.Color.Coral;
             this.BtnListarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListarCliente.Image = global::VienaStore.Properties.Resources.Listar;
+            this.BtnListarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnListarCliente.Image")));
             this.BtnListarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnListarCliente.Location = new System.Drawing.Point(25, 299);
             this.BtnListarCliente.Name = "BtnListarCliente";
@@ -123,7 +123,7 @@
             // 
             this.BtnBuscarCliente.BackColor = System.Drawing.Color.Coral;
             this.BtnBuscarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscarCliente.Image = global::VienaStore.Properties.Resources.buscarCliente;
+            this.BtnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarCliente.Image")));
             this.BtnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 238);
             this.BtnBuscarCliente.Name = "BtnBuscarCliente";
@@ -138,7 +138,7 @@
             // 
             this.BtnModificarCliente.BackColor = System.Drawing.Color.Coral;
             this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.editar;
+            this.BtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarCliente.Image")));
             this.BtnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarCliente.Location = new System.Drawing.Point(25, 173);
             this.BtnModificarCliente.Name = "BtnModificarCliente";
@@ -154,7 +154,7 @@
             this.BtnRegistrarCliente.BackColor = System.Drawing.Color.Coral;
             this.BtnRegistrarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnRegistrarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.nuevoUsuario;
+            this.BtnRegistrarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegistrarCliente.Image")));
             this.BtnRegistrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 111);
             this.BtnRegistrarCliente.Name = "BtnRegistrarCliente";
@@ -183,7 +183,7 @@
             // BtnCerrarSesion
             // 
             this.BtnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BtnCerrarSesion.Image = global::VienaStore.Properties.Resources.CierreSesion;
+            this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
             this.BtnCerrarSesion.Location = new System.Drawing.Point(547, 0);
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
             this.BtnCerrarSesion.Size = new System.Drawing.Size(49, 51);
