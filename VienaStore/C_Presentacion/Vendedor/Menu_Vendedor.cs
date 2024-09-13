@@ -72,5 +72,10 @@ namespace VienaStore.C_Presentacion.Vendedor
             nuevo.MdiParent = this;
             nuevo.Show();*/
         }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

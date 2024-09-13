@@ -128,5 +128,14 @@
   <ItemGroup>
     <None Include="Resources\cancel_77947.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagenFondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagenFondoEstrellas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoPanel %281%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

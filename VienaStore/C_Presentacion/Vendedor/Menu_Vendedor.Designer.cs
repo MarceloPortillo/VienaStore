@@ -52,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BackgroundImage = global::VienaStore.Properties.Resources.fondoPanel__1_;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnListarProd);
             this.panel1.Controls.Add(this.BtnBuscarProd);
@@ -67,6 +68,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::VienaStore.Properties.Resources.fondoPanel__1_;
             this.pictureBox1.Image = global::VienaStore.Properties.Resources.logotipo;
             this.pictureBox1.Location = new System.Drawing.Point(9, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -171,7 +173,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel2.Controls.Add(this.BtnCerrarSesion);
             this.panel2.Controls.Add(this.TxtFecha);
             this.panel2.Controls.Add(this.LblBienvenido);
@@ -190,6 +192,7 @@
             this.BtnCerrarSesion.Size = new System.Drawing.Size(49, 51);
             this.BtnCerrarSesion.TabIndex = 3;
             this.BtnCerrarSesion.UseVisualStyleBackColor = true;
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
             // TxtFecha
             // 
@@ -205,7 +208,7 @@
             // 
             this.LblBienvenido.AutoSize = true;
             this.LblBienvenido.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBienvenido.Location = new System.Drawing.Point(214, 31);
+            this.LblBienvenido.Location = new System.Drawing.Point(3, 31);
             this.LblBienvenido.Name = "LblBienvenido";
             this.LblBienvenido.Size = new System.Drawing.Size(130, 20);
             this.LblBienvenido.TabIndex = 0;
@@ -218,6 +221,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackgroundImage = global::VienaStore.Properties.Resources.ImagenFondoEstrellas;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(204, 51);
             this.panel3.Name = "panel3";

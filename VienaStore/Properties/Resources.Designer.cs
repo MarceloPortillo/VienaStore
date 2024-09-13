@@ -123,9 +123,39 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoPanel__1_ {
+            get {
+                object obj = ResourceManager.GetObject("fondoPanel (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
                 object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagenFondo {
+            get {
+                object obj = ResourceManager.GetObject("imagenFondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImagenFondoEstrellas {
+            get {
+                object obj = ResourceManager.GetObject("ImagenFondoEstrellas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
