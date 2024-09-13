@@ -52,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(82, 11);
+            this.label1.Location = new System.Drawing.Point(225, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 34);
@@ -74,7 +74,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(91, 180);
+            this.LblNombre.Location = new System.Drawing.Point(86, 180);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 16);
@@ -85,7 +85,7 @@
             // 
             this.LblApellido.AutoSize = true;
             this.LblApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellido.Location = new System.Drawing.Point(116, 248);
+            this.LblApellido.Location = new System.Drawing.Point(86, 249);
             this.LblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblApellido.Name = "LblApellido";
             this.LblApellido.Size = new System.Drawing.Size(33, 16);
@@ -96,7 +96,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(75, 314);
+            this.LblDireccion.Location = new System.Drawing.Point(86, 314);
             this.LblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(72, 16);
@@ -107,7 +107,7 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(80, 451);
+            this.LblTelefono.Location = new System.Drawing.Point(86, 451);
             this.LblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(69, 16);
@@ -163,7 +163,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(92, 388);
+            this.LblEmail.Location = new System.Drawing.Point(86, 388);
             this.LblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(51, 16);
@@ -247,7 +247,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FNuevoCliente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NUEVO CLIENTE";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FNuevoCliente_Load);

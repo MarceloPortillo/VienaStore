@@ -32,7 +32,9 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void BtnRegistrarCliente_Click(object sender, EventArgs e)
         {
             FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
-            nuevo.MdiParent = this;
+            nuevo.TopLevel = false;
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
             nuevo.Show();
         }
 

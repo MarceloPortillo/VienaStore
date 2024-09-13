@@ -18,13 +18,19 @@ namespace VienaStore.C_Presentacion.Vendedor
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
         {
-            if(instancia==null)
-            {
-                instancia = new FNuevoCliente();
-                return instancia;   
-            }
+                    
+            
+
+                if (instancia == null)
+                {
+                    instancia = new FNuevoCliente();
+                    return instancia;
+            }                 
+            
+            
             return instancia;
         }
+
         public FNuevoCliente()
         {
             InitializeComponent();
@@ -110,6 +116,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
+            instancia = null;
             this.Close();
         }
     }

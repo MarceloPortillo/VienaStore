@@ -43,6 +43,7 @@
             this.TxtFecha = new System.Windows.Forms.Label();
             this.LblBienvenido = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -215,12 +216,21 @@
             this.fecha.Enabled = true;
             this.fecha.Tick += new System.EventHandler(this.fecha_Tick);
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(204, 51);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(596, 451);
+            this.panel3.TabIndex = 3;
+            // 
             // Menu_Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -229,6 +239,7 @@
             this.Name = "Menu_Vendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Vendedor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -252,5 +263,6 @@
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
         private System.Windows.Forms.Button BtnCerrarSesion;
+        private System.Windows.Forms.Panel panel3;
     }
 }
