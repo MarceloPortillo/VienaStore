@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C_Negocio\Validaciones.cs" />
+    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
+      <DependentUpon>FEditarCLiente.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
+      <DependentUpon>FEditarCLiente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
