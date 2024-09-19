@@ -253,20 +253,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnListarProd;
-        private System.Windows.Forms.Button BtnBuscarProd;
-        private System.Windows.Forms.Button BtnListarCliente;
-        private System.Windows.Forms.Button BtnBuscarCliente;
-        private System.Windows.Forms.Button BtnModificarCliente;
-        private System.Windows.Forms.Button BtnRegistrarCliente;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LblBienvenido;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
         private System.Windows.Forms.Button BtnCerrarSesion;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button BtnListarProd;
+        public System.Windows.Forms.Button BtnBuscarProd;
+        public System.Windows.Forms.Button BtnListarCliente;
+        public System.Windows.Forms.Button BtnBuscarCliente;
+        public System.Windows.Forms.Button BtnModificarCliente;
+        public System.Windows.Forms.Button BtnRegistrarCliente;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }

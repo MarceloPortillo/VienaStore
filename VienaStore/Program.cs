@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Presentacion.Vendedor;
+using VienaStore.C_Presentacion.Administrador;
 
 namespace VienaStore
 {
@@ -17,7 +18,7 @@ namespace VienaStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_Vendedor());
+            Application.Run(new menu_administrador());
         }
     }
 }
