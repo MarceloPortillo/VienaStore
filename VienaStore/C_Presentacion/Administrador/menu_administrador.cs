@@ -15,10 +15,6 @@ namespace VienaStore.C_Presentacion.Administrador
         public menu_administrador()
         {
             InitializeComponent();
-        }
-
-        
-
-        
+        }       
     }
 }

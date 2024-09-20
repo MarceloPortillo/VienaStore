@@ -145,5 +145,47 @@
   <ItemGroup>
     <None Include="Resources\fondoPanel %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_usuario_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_cliente_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_cliente_32px1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listar_clientes_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_prod_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_prod_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista_prod_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graficos_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_up_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_usuario_32px %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_usuario_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_usu_32px.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

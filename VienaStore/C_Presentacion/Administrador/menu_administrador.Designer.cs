@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu_administrador));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,33 +40,39 @@
             // 
             // BtnListarProd
             // 
+            this.BtnListarProd.Image = global::VienaStore.Properties.Resources.lista_prod_32px;
             this.BtnListarProd.Location = new System.Drawing.Point(25, 345);
             this.BtnListarProd.Size = new System.Drawing.Size(155, 45);
             // 
             // BtnBuscarProd
             // 
+            this.BtnBuscarProd.Image = global::VienaStore.Properties.Resources.buscar_prod_32px;
             this.BtnBuscarProd.Location = new System.Drawing.Point(25, 294);
             this.BtnBuscarProd.Size = new System.Drawing.Size(155, 45);
             this.BtnBuscarProd.Text = "BUSCAR\r\nPRODUCTO";
             // 
             // BtnListarCliente
             // 
+            this.BtnListarCliente.Image = global::VienaStore.Properties.Resources.listar_clientes_32px;
             this.BtnListarCliente.Location = new System.Drawing.Point(25, 192);
             this.BtnListarCliente.Size = new System.Drawing.Size(155, 45);
             // 
             // BtnBuscarCliente
             // 
+            this.BtnBuscarCliente.Image = global::VienaStore.Properties.Resources.buscar_cliente_32px;
             this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 141);
             this.BtnBuscarCliente.Size = new System.Drawing.Size(155, 45);
             // 
             // BtnModificarCliente
             // 
+            this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.graficos_32px;
             this.BtnModificarCliente.Location = new System.Drawing.Point(25, 396);
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnModificarCliente.Text = "GENERAR REPORTES";
             // 
             // BtnRegistrarCliente
             // 
+            this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px;
             this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 90);
             this.BtnRegistrarCliente.Size = new System.Drawing.Size(155, 45);
             // 
@@ -103,7 +108,7 @@
             this.button1.BackColor = System.Drawing.Color.Coral;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::VienaStore.Properties.Resources.compras_32px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(25, 447);
             this.button1.Name = "button1";
@@ -121,7 +126,7 @@
             this.button2.BackColor = System.Drawing.Color.Coral;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::VienaStore.Properties.Resources.back_up_32px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(25, 498);
             this.button2.Name = "button2";
@@ -139,7 +144,7 @@
             this.button3.BackColor = System.Drawing.Color.Coral;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(25, 549);
             this.button3.Name = "button3";
@@ -157,7 +162,7 @@
             this.button4.BackColor = System.Drawing.Color.Coral;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Image = global::VienaStore.Properties.Resources.agregar_prod_32px;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(25, 243);
             this.button4.Name = "button4";
@@ -175,7 +180,7 @@
             this.button5.BackColor = System.Drawing.Color.Coral;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Image = global::VienaStore.Properties.Resources.buscar_usu_32px;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(25, 651);
             this.button5.Name = "button5";
@@ -183,7 +188,7 @@
             this.button5.TabIndex = 11;
             this.button5.TabStop = false;
             this.button5.Tag = "2";
-            this.button5.Text = "BUSCAR USUARIO";
+            this.button5.Text = "    BUSCAR \r\n   USUARIO";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseCompatibleTextRendering = true;
             this.button5.UseVisualStyleBackColor = false;
@@ -193,7 +198,7 @@
             this.button6.BackColor = System.Drawing.Color.Coral;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px__2_;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(25, 600);
             this.button6.Name = "button6";
@@ -213,7 +218,7 @@
             this.ClientSize = new System.Drawing.Size(800, 749);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "menu_administrador";
-            this.Text = "Form1";
+            this.Text = "MENÚ ADMINISTRADOR";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
