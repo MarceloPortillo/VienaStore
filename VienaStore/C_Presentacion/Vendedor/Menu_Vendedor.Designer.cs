@@ -254,7 +254,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label LblBienvenido;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
         private System.Windows.Forms.Button BtnCerrarSesion;
@@ -267,5 +266,6 @@
         public System.Windows.Forms.Button BtnRegistrarCliente;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label LblBienvenido;
     }
 }

@@ -43,38 +43,43 @@
             this.BtnListarProd.Image = global::VienaStore.Properties.Resources.lista_prod_32px;
             this.BtnListarProd.Location = new System.Drawing.Point(25, 345);
             this.BtnListarProd.Size = new System.Drawing.Size(155, 45);
+            this.BtnListarProd.Text = "   LISTAR \r\n   PRODUCTOS";
             // 
             // BtnBuscarProd
             // 
             this.BtnBuscarProd.Image = global::VienaStore.Properties.Resources.buscar_prod_32px;
             this.BtnBuscarProd.Location = new System.Drawing.Point(25, 294);
             this.BtnBuscarProd.Size = new System.Drawing.Size(155, 45);
-            this.BtnBuscarProd.Text = "BUSCAR\r\nPRODUCTO";
+            this.BtnBuscarProd.Text = "    BUSCAR\r\n  PRODUCTO";
             // 
             // BtnListarCliente
             // 
             this.BtnListarCliente.Image = global::VienaStore.Properties.Resources.listar_clientes_32px;
             this.BtnListarCliente.Location = new System.Drawing.Point(25, 192);
             this.BtnListarCliente.Size = new System.Drawing.Size(155, 45);
+            this.BtnListarCliente.Text = "     LISTAR       CLIENTES";
             // 
             // BtnBuscarCliente
             // 
             this.BtnBuscarCliente.Image = global::VienaStore.Properties.Resources.buscar_cliente_32px;
             this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 141);
             this.BtnBuscarCliente.Size = new System.Drawing.Size(155, 45);
+            this.BtnBuscarCliente.Text = "    BUSCAR \r\n    CLIENTE";
             // 
             // BtnModificarCliente
             // 
+            this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.graficos_32px;
             this.BtnModificarCliente.Location = new System.Drawing.Point(25, 396);
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 45);
-            this.BtnModificarCliente.Text = "GENERAR REPORTES";
+            this.BtnModificarCliente.Text = "    GENERAR \r\n   REPORTES";
             // 
             // BtnRegistrarCliente
             // 
             this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px;
             this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 90);
             this.BtnRegistrarCliente.Size = new System.Drawing.Size(155, 45);
+            this.BtnRegistrarCliente.Text = "  REGISTRAR \r\n  CLIENTE";
             // 
             // panel1
             // 
@@ -103,6 +108,14 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(9, 3);
             // 
+            // LblBienvenido
+            // 
+            this.LblBienvenido.Location = new System.Drawing.Point(321, 14);
+            this.LblBienvenido.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LblBienvenido.Size = new System.Drawing.Size(220, 20);
+            this.LblBienvenido.Text = "MENÚ ADMINISTRADOR";
+            this.LblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Coral;
@@ -116,7 +129,7 @@
             this.button1.TabIndex = 7;
             this.button1.TabStop = false;
             this.button1.Tag = "2";
-            this.button1.Text = "GESTIONAR COMPRAS";
+            this.button1.Text = "   GESTIONAR \r\n    COMPRAS";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseCompatibleTextRendering = true;
             this.button1.UseVisualStyleBackColor = false;
@@ -134,7 +147,7 @@
             this.button2.TabIndex = 8;
             this.button2.TabStop = false;
             this.button2.Tag = "2";
-            this.button2.Text = "REALIZAR BACKUP";
+            this.button2.Text = "     REALIZAR     \r\n      BACKUP";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseCompatibleTextRendering = true;
             this.button2.UseVisualStyleBackColor = false;
@@ -143,7 +156,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Coral;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(25, 549);
@@ -170,7 +183,7 @@
             this.button4.TabIndex = 10;
             this.button4.TabStop = false;
             this.button4.Tag = "2";
-            this.button4.Text = "AGREGAR PRODUCTO";
+            this.button4.Text = "     AGREGAR\r\n    PRODUCTO";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseCompatibleTextRendering = true;
             this.button4.UseVisualStyleBackColor = false;
@@ -188,7 +201,7 @@
             this.button5.TabIndex = 11;
             this.button5.TabStop = false;
             this.button5.Tag = "2";
-            this.button5.Text = "    BUSCAR \r\n   USUARIO";
+            this.button5.Text = "        BUSCAR \r\n       USUARIO";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseCompatibleTextRendering = true;
             this.button5.UseVisualStyleBackColor = false;
@@ -206,7 +219,7 @@
             this.button6.TabIndex = 12;
             this.button6.TabStop = false;
             this.button6.Tag = "2";
-            this.button6.Text = "CREAR USUARIO";
+            this.button6.Text = "      CREAR\r\n      USUARIO";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseCompatibleTextRendering = true;
             this.button6.UseVisualStyleBackColor = false;
