@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnGestionarCompras = new System.Windows.Forms.Button();
+            this.BtnRealizarBackUp = new System.Windows.Forms.Button();
+            this.BtnProveedores = new System.Windows.Forms.Button();
+            this.BtnAgregarProducto = new System.Windows.Forms.Button();
+            this.BtnBuescarUsuario = new System.Windows.Forms.Button();
+            this.BtnCrearUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +68,13 @@
             // 
             // BtnModificarCliente
             // 
+            this.BtnModificarCliente.Enabled = true;
             this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.graficos_32px;
             this.BtnModificarCliente.Location = new System.Drawing.Point(25, 396);
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnModificarCliente.Text = "    GENERAR \r\n   REPORTES";
+            this.BtnModificarCliente.Visible = true;
             // 
             // BtnRegistrarCliente
             // 
@@ -83,12 +85,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnCrearUsuario);
+            this.panel1.Controls.Add(this.BtnBuescarUsuario);
+            this.panel1.Controls.Add(this.BtnAgregarProducto);
+            this.panel1.Controls.Add(this.BtnProveedores);
+            this.panel1.Controls.Add(this.BtnRealizarBackUp);
+            this.panel1.Controls.Add(this.BtnGestionarCompras);
             this.panel1.Size = new System.Drawing.Size(204, 749);
             this.panel1.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel1.Controls.SetChildIndex(this.BtnRegistrarCliente, 0);
@@ -97,12 +99,12 @@
             this.panel1.Controls.SetChildIndex(this.BtnListarCliente, 0);
             this.panel1.Controls.SetChildIndex(this.BtnBuscarProd, 0);
             this.panel1.Controls.SetChildIndex(this.BtnListarProd, 0);
-            this.panel1.Controls.SetChildIndex(this.button1, 0);
-            this.panel1.Controls.SetChildIndex(this.button2, 0);
-            this.panel1.Controls.SetChildIndex(this.button3, 0);
-            this.panel1.Controls.SetChildIndex(this.button4, 0);
-            this.panel1.Controls.SetChildIndex(this.button5, 0);
-            this.panel1.Controls.SetChildIndex(this.button6, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnGestionarCompras, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnRealizarBackUp, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnProveedores, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnAgregarProducto, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnBuescarUsuario, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnCrearUsuario, 0);
             // 
             // pictureBox1
             // 
@@ -116,113 +118,113 @@
             this.LblBienvenido.Text = "MENÚ ADMINISTRADOR";
             this.LblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // BtnGestionarCompras
             // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::VienaStore.Properties.Resources.compras_32px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 45);
-            this.button1.TabIndex = 7;
-            this.button1.TabStop = false;
-            this.button1.Tag = "2";
-            this.button1.Text = "   GESTIONAR \r\n    COMPRAS";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnGestionarCompras.BackColor = System.Drawing.Color.Coral;
+            this.BtnGestionarCompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnGestionarCompras.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestionarCompras.Image = global::VienaStore.Properties.Resources.compras_32px;
+            this.BtnGestionarCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGestionarCompras.Location = new System.Drawing.Point(25, 447);
+            this.BtnGestionarCompras.Name = "BtnGestionarCompras";
+            this.BtnGestionarCompras.Size = new System.Drawing.Size(155, 45);
+            this.BtnGestionarCompras.TabIndex = 7;
+            this.BtnGestionarCompras.TabStop = false;
+            this.BtnGestionarCompras.Tag = "2";
+            this.BtnGestionarCompras.Text = "   GESTIONAR \r\n    COMPRAS";
+            this.BtnGestionarCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnGestionarCompras.UseCompatibleTextRendering = true;
+            this.BtnGestionarCompras.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BtnRealizarBackUp
             // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::VienaStore.Properties.Resources.back_up_32px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(25, 498);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 45);
-            this.button2.TabIndex = 8;
-            this.button2.TabStop = false;
-            this.button2.Tag = "2";
-            this.button2.Text = "     REALIZAR     \r\n      BACKUP";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnRealizarBackUp.BackColor = System.Drawing.Color.Coral;
+            this.BtnRealizarBackUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnRealizarBackUp.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRealizarBackUp.Image = global::VienaStore.Properties.Resources.back_up_32px;
+            this.BtnRealizarBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRealizarBackUp.Location = new System.Drawing.Point(25, 498);
+            this.BtnRealizarBackUp.Name = "BtnRealizarBackUp";
+            this.BtnRealizarBackUp.Size = new System.Drawing.Size(155, 45);
+            this.BtnRealizarBackUp.TabIndex = 8;
+            this.BtnRealizarBackUp.TabStop = false;
+            this.BtnRealizarBackUp.Tag = "2";
+            this.BtnRealizarBackUp.Text = "     REALIZAR     \r\n      BACKUP";
+            this.BtnRealizarBackUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRealizarBackUp.UseCompatibleTextRendering = true;
+            this.BtnRealizarBackUp.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // BtnProveedores
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::VienaStore.Properties.Resources.proveedor_32px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(25, 549);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 45);
-            this.button3.TabIndex = 9;
-            this.button3.TabStop = false;
-            this.button3.Tag = "2";
-            this.button3.Text = " PROVEEDORES";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseCompatibleTextRendering = true;
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnProveedores.BackColor = System.Drawing.Color.Coral;
+            this.BtnProveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnProveedores.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProveedores.Image = global::VienaStore.Properties.Resources.proveedor_32px;
+            this.BtnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProveedores.Location = new System.Drawing.Point(25, 549);
+            this.BtnProveedores.Name = "BtnProveedores";
+            this.BtnProveedores.Size = new System.Drawing.Size(155, 45);
+            this.BtnProveedores.TabIndex = 9;
+            this.BtnProveedores.TabStop = false;
+            this.BtnProveedores.Tag = "2";
+            this.BtnProveedores.Text = " PROVEEDORES";
+            this.BtnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnProveedores.UseCompatibleTextRendering = true;
+            this.BtnProveedores.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // BtnAgregarProducto
             // 
-            this.button4.BackColor = System.Drawing.Color.Coral;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::VienaStore.Properties.Resources.agregar_prod_32px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(25, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 45);
-            this.button4.TabIndex = 10;
-            this.button4.TabStop = false;
-            this.button4.Tag = "2";
-            this.button4.Text = "     AGREGAR\r\n    PRODUCTO";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseCompatibleTextRendering = true;
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnAgregarProducto.BackColor = System.Drawing.Color.Coral;
+            this.BtnAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnAgregarProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarProducto.Image = global::VienaStore.Properties.Resources.agregar_prod_32px;
+            this.BtnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarProducto.Location = new System.Drawing.Point(25, 243);
+            this.BtnAgregarProducto.Name = "BtnAgregarProducto";
+            this.BtnAgregarProducto.Size = new System.Drawing.Size(155, 45);
+            this.BtnAgregarProducto.TabIndex = 10;
+            this.BtnAgregarProducto.TabStop = false;
+            this.BtnAgregarProducto.Tag = "2";
+            this.BtnAgregarProducto.Text = "     AGREGAR\r\n    PRODUCTO";
+            this.BtnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAgregarProducto.UseCompatibleTextRendering = true;
+            this.BtnAgregarProducto.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // BtnBuescarUsuario
             // 
-            this.button5.BackColor = System.Drawing.Color.Coral;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::VienaStore.Properties.Resources.buscar_usu_32px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(25, 651);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 45);
-            this.button5.TabIndex = 11;
-            this.button5.TabStop = false;
-            this.button5.Tag = "2";
-            this.button5.Text = "        BUSCAR \r\n       USUARIO";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseCompatibleTextRendering = true;
-            this.button5.UseVisualStyleBackColor = false;
+            this.BtnBuescarUsuario.BackColor = System.Drawing.Color.Coral;
+            this.BtnBuescarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBuescarUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuescarUsuario.Image = global::VienaStore.Properties.Resources.buscar_usu_32px;
+            this.BtnBuescarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuescarUsuario.Location = new System.Drawing.Point(25, 651);
+            this.BtnBuescarUsuario.Name = "BtnBuescarUsuario";
+            this.BtnBuescarUsuario.Size = new System.Drawing.Size(155, 45);
+            this.BtnBuescarUsuario.TabIndex = 11;
+            this.BtnBuescarUsuario.TabStop = false;
+            this.BtnBuescarUsuario.Tag = "2";
+            this.BtnBuescarUsuario.Text = "        BUSCAR \r\n       USUARIO";
+            this.BtnBuescarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBuescarUsuario.UseCompatibleTextRendering = true;
+            this.BtnBuescarUsuario.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // BtnCrearUsuario
             // 
-            this.button6.BackColor = System.Drawing.Color.Coral;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px__2_;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(25, 600);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 45);
-            this.button6.TabIndex = 12;
-            this.button6.TabStop = false;
-            this.button6.Tag = "2";
-            this.button6.Text = "      CREAR\r\n      USUARIO";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseCompatibleTextRendering = true;
-            this.button6.UseVisualStyleBackColor = false;
+            this.BtnCrearUsuario.BackColor = System.Drawing.Color.Coral;
+            this.BtnCrearUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnCrearUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCrearUsuario.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px__2_;
+            this.BtnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCrearUsuario.Location = new System.Drawing.Point(25, 600);
+            this.BtnCrearUsuario.Name = "BtnCrearUsuario";
+            this.BtnCrearUsuario.Size = new System.Drawing.Size(155, 45);
+            this.BtnCrearUsuario.TabIndex = 12;
+            this.BtnCrearUsuario.TabStop = false;
+            this.BtnCrearUsuario.Tag = "2";
+            this.BtnCrearUsuario.Text = "      CREAR\r\n      USUARIO";
+            this.BtnCrearUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnCrearUsuario.UseCompatibleTextRendering = true;
+            this.BtnCrearUsuario.UseVisualStyleBackColor = false;
             // 
             // menu_administrador
             // 
@@ -240,11 +242,11 @@
 
         #endregion
 
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button BtnProveedores;
+        public System.Windows.Forms.Button BtnRealizarBackUp;
+        public System.Windows.Forms.Button BtnGestionarCompras;
+        public System.Windows.Forms.Button BtnAgregarProducto;
+        public System.Windows.Forms.Button BtnBuescarUsuario;
+        public System.Windows.Forms.Button BtnCrearUsuario;
     }
 }
