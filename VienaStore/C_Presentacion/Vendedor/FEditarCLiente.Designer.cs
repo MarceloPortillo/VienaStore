@@ -38,7 +38,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(333, 534);
+            this.BtnGuardar.Location = new System.Drawing.Point(441, 534);
             this.BtnGuardar.Size = new System.Drawing.Size(187, 82);
             this.BtnGuardar.Text = "MODIFICAR";
             // 

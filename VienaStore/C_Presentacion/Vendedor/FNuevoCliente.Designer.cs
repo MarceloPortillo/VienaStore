@@ -258,21 +258,21 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label LblDNI;
-        private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.Label LblApellido;
-        private System.Windows.Forms.Label LblDireccion;
-        private System.Windows.Forms.Label LblTelefono;
-        private System.Windows.Forms.TextBox TxtApellido;
-        private System.Windows.Forms.TextBox TxtDNI;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox TxtEmail;
-        private System.Windows.Forms.Label LblEmail;
-        private System.Windows.Forms.MaskedTextBox TxtTelefono;
-        private System.Windows.Forms.Button BtnCancelar;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button BtnGuardar;
+        public System.Windows.Forms.Label LblDNI;
+        public System.Windows.Forms.Label LblNombre;
+        public System.Windows.Forms.Label LblApellido;
+        public System.Windows.Forms.Label LblDireccion;
+        public System.Windows.Forms.Label LblTelefono;
+        public System.Windows.Forms.TextBox TxtApellido;
+        public System.Windows.Forms.TextBox TxtDNI;
+        public System.Windows.Forms.TextBox TxtNombre;
+        public System.Windows.Forms.TextBox TxtDireccion;
+        public System.Windows.Forms.TextBox TxtEmail;
+        public System.Windows.Forms.Label LblEmail;
+        public System.Windows.Forms.MaskedTextBox TxtTelefono;
+        public System.Windows.Forms.Button BtnCancelar;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
