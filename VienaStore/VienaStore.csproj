@@ -146,5 +146,8 @@
   <ItemGroup>
     <None Include="Resources\fondoPanel %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar_Cliente_240x240px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

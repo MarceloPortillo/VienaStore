@@ -123,6 +123,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Editar_Cliente_240x240px {
+            get {
+                object obj = ResourceManager.GetObject("Editar_Cliente_240x240px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondoPanel__1_ {
             get {
                 object obj = ResourceManager.GetObject("fondoPanel (1)", resourceCulture);
