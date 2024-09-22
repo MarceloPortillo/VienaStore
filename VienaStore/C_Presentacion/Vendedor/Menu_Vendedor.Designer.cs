@@ -51,14 +51,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
-            this.panel1.BackgroundImage = global::VienaStore.Properties.Resources.fondoPanel__1_;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel1.Controls.Add(this.BtnModificarCliente);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnListarProd);
             this.panel1.Controls.Add(this.BtnBuscarProd);
             this.panel1.Controls.Add(this.BtnListarCliente);
             this.panel1.Controls.Add(this.BtnBuscarCliente);
-            this.panel1.Controls.Add(this.BtnModificarCliente);
             this.panel1.Controls.Add(this.BtnRegistrarCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -68,7 +67,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::VienaStore.Properties.Resources.fondoPanel__1_;
             this.pictureBox1.Image = global::VienaStore.Properties.Resources.logotipo;
             this.pictureBox1.Location = new System.Drawing.Point(9, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -83,7 +81,7 @@
             this.BtnListarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnListarProd.Image = ((System.Drawing.Image)(resources.GetObject("BtnListarProd.Image")));
             this.BtnListarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnListarProd.Location = new System.Drawing.Point(25, 433);
+            this.BtnListarProd.Location = new System.Drawing.Point(25, 364);
             this.BtnListarProd.Name = "BtnListarProd";
             this.BtnListarProd.Size = new System.Drawing.Size(155, 57);
             this.BtnListarProd.TabIndex = 5;
@@ -98,7 +96,7 @@
             this.BtnBuscarProd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarProd.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarProd.Image")));
             this.BtnBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBuscarProd.Location = new System.Drawing.Point(25, 368);
+            this.BtnBuscarProd.Location = new System.Drawing.Point(25, 299);
             this.BtnBuscarProd.Name = "BtnBuscarProd";
             this.BtnBuscarProd.Size = new System.Drawing.Size(155, 59);
             this.BtnBuscarProd.TabIndex = 4;
@@ -113,7 +111,7 @@
             this.BtnListarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnListarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnListarCliente.Image")));
             this.BtnListarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnListarCliente.Location = new System.Drawing.Point(25, 299);
+            this.BtnListarCliente.Location = new System.Drawing.Point(25, 234);
             this.BtnListarCliente.Name = "BtnListarCliente";
             this.BtnListarCliente.Size = new System.Drawing.Size(155, 59);
             this.BtnListarCliente.TabIndex = 3;
@@ -128,7 +126,7 @@
             this.BtnBuscarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscarCliente.Image")));
             this.BtnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 238);
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 173);
             this.BtnBuscarCliente.Name = "BtnBuscarCliente";
             this.BtnBuscarCliente.Size = new System.Drawing.Size(155, 55);
             this.BtnBuscarCliente.TabIndex = 2;
@@ -140,16 +138,18 @@
             // BtnModificarCliente
             // 
             this.BtnModificarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnModificarCliente.Enabled = false;
             this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarCliente.Image")));
             this.BtnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 173);
+            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 427);
             this.BtnModificarCliente.Name = "BtnModificarCliente";
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 59);
             this.BtnModificarCliente.TabIndex = 1;
             this.BtnModificarCliente.Text = "MODIFICAR \r\nCLIENTE";
             this.BtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Visible = false;
             this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnRegistrarCliente
@@ -173,7 +173,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.BtnCerrarSesion);
             this.panel2.Controls.Add(this.TxtFecha);
             this.panel2.Controls.Add(this.LblBienvenido);
@@ -208,11 +208,11 @@
             // 
             this.LblBienvenido.AutoSize = true;
             this.LblBienvenido.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBienvenido.Location = new System.Drawing.Point(3, 31);
+            this.LblBienvenido.Location = new System.Drawing.Point(350, 14);
             this.LblBienvenido.Name = "LblBienvenido";
-            this.LblBienvenido.Size = new System.Drawing.Size(130, 20);
+            this.LblBienvenido.Size = new System.Drawing.Size(166, 20);
             this.LblBienvenido.TabIndex = 0;
-            this.LblBienvenido.Text = "Bienvenido...";
+            this.LblBienvenido.Text = "MENÚ VENDEDOR";
             // 
             // fecha
             // 
@@ -221,7 +221,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = global::VienaStore.Properties.Resources.ImagenFondoEstrellas;
+            this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(204, 51);
             this.panel3.Name = "panel3";
@@ -253,20 +253,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BtnListarProd;
-        private System.Windows.Forms.Button BtnBuscarProd;
-        private System.Windows.Forms.Button BtnListarCliente;
-        private System.Windows.Forms.Button BtnBuscarCliente;
-        private System.Windows.Forms.Button BtnModificarCliente;
-        private System.Windows.Forms.Button BtnRegistrarCliente;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label LblBienvenido;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
         private System.Windows.Forms.Button BtnCerrarSesion;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button BtnListarProd;
+        public System.Windows.Forms.Button BtnBuscarProd;
+        public System.Windows.Forms.Button BtnListarCliente;
+        public System.Windows.Forms.Button BtnBuscarCliente;
+        public System.Windows.Forms.Button BtnModificarCliente;
+        public System.Windows.Forms.Button BtnRegistrarCliente;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label LblBienvenido;
     }
 }
