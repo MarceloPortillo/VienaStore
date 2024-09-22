@@ -47,11 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C_Negocio\Validaciones.cs" />
-    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
-      <DependentUpon>FEditarCLiente.cs</DependentUpon>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +67,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
-      <DependentUpon>FEditarCLiente.cs</DependentUpon>
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,7 +146,6 @@
     <None Include="Resources\fondoPanel %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Editar_Cliente_240x240px.png" />
     <None Include="Resources\agregar_usuario_32px.ico" />
   </ItemGroup>
   <ItemGroup>
