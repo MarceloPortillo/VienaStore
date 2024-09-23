@@ -53,6 +53,18 @@
     <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.Designer.cs">
+      <DependentUpon>FBuscarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
+      <DependentUpon>FEditarCLiente.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FBuscarClientes.resx">
+      <DependentUpon>FBuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
+      <DependentUpon>FEditarCLiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
@@ -146,46 +164,13 @@
     <None Include="Resources\fondoPanel %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\agregar_usuario_32px.ico" />
+    <None Include="Resources\Editar_Cliente_240x240px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buscar_cliente_32px.ico" />
+    <None Include="Resources\Eliminar_48x48px.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\buscar_cliente_32px1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\listar_clientes_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\agregar_prod_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar_prod_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lista_prod_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\graficos_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\compras_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back_up_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\proveedor_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\agregar_usuario_32px %282%29.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar_usuario_32px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar_usu_32px.ico" />
+    <None Include="Resources\Editar_Cliente_48x48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
