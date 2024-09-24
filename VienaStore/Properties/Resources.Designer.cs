@@ -193,6 +193,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscarProveedor_48px {
+            get {
+                object obj = ResourceManager.GetObject("buscarProveedor_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancelar_48x48_px {
             get {
                 object obj = ResourceManager.GetObject("cancelar_48x48_px", resourceCulture);
