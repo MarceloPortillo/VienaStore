@@ -172,5 +172,8 @@
   <ItemGroup>
     <None Include="Resources\Editar_Cliente_48x48px.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

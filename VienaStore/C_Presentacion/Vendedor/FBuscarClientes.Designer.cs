@@ -35,6 +35,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -97,9 +99,9 @@
             this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(704, 714);
+            this.BtnEliminar.Location = new System.Drawing.Point(238, 714);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(177, 68);
+            this.BtnEliminar.Size = new System.Drawing.Size(195, 68);
             this.BtnEliminar.TabIndex = 3;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,13 +113,42 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(897, 714);
+            this.BtnEditar.Location = new System.Drawing.Point(456, 714);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(177, 68);
+            this.BtnEditar.Size = new System.Drawing.Size(195, 68);
             this.BtnEditar.TabIndex = 4;
             this.BtnEditar.Text = "EDITAR";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditar.UseVisualStyleBackColor = false;
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
+            this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLimpiar.Location = new System.Drawing.Point(670, 714);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(195, 68);
+            this.BtnLimpiar.TabIndex = 5;
+            this.BtnLimpiar.Text = "LIMPIAR";
+            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelar.Location = new System.Drawing.Point(879, 714);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(195, 68);
+            this.BtnCancelar.TabIndex = 6;
+            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // FBuscarClientes
             // 
@@ -125,6 +156,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1200, 813);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.dataGridView1);
@@ -144,13 +177,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox CBBuscar;
-        private System.Windows.Forms.TextBox TxtBuscar;
-        private System.Windows.Forms.Label LblCLientes;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnEditar;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox TxtBuscar;
+        public System.Windows.Forms.Label LblCLientes;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button BtnEliminar;
+        public System.Windows.Forms.Button BtnEditar;
+        public System.Windows.Forms.Button BtnLimpiar;
+        public System.Windows.Forms.Button BtnCancelar;
     }
 }
