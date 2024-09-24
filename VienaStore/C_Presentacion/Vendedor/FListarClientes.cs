@@ -16,5 +16,10 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             InitializeComponent();
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
