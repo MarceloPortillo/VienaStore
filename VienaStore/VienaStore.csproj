@@ -73,6 +73,12 @@
     <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarClientes.Designer.cs">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FListarClientes.resx">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
