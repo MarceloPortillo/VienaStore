@@ -113,6 +113,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap borrar {
+            get {
+                object obj = ResourceManager.GetObject("borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buscar_cliente_32px {
             get {
                 object obj = ResourceManager.GetObject("buscar_cliente_32px", resourceCulture);
@@ -253,6 +263,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap graficos_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("graficos_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
                 object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
@@ -276,6 +296,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap ImagenFondoEstrellas {
             get {
                 object obj = ResourceManager.GetObject("ImagenFondoEstrellas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imprimir {
+            get {
+                object obj = ResourceManager.GetObject("imprimir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
