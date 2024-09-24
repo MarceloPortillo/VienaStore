@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
     <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
       <SubType>Form</SubType>
@@ -55,6 +56,12 @@
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs" />
+    <Compile Include="C_Presentacion\Administrador\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +79,12 @@
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarClientes.Designer.cs">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
@@ -91,6 +104,9 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FListarClientes.resx">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
@@ -192,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\graficos_32px1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscarProveedor_48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
