@@ -13,7 +13,7 @@ using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
-    public partial class FNuevoCliente : Form 
+    public partial class FNuevoCliente : Form
     {
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()

@@ -113,6 +113,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap borrar {
+            get {
+                object obj = ResourceManager.GetObject("borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buscar_cliente_32px {
             get {
                 object obj = ResourceManager.GetObject("buscar_cliente_32px", resourceCulture);
@@ -217,6 +227,36 @@ namespace VienaStore.Properties {
             get {
                 object obj = ResourceManager.GetObject("editar", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_Cliente_240x240px {
+            get {
+                object obj = ResourceManager.GetObject("Editar_Cliente_240x240px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_Cliente_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Editar_Cliente_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eliminar_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Eliminar_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

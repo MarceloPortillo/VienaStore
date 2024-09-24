@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -38,37 +38,34 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(441, 534);
+            this.BtnGuardar.Location = new System.Drawing.Point(609, 595);
             this.BtnGuardar.Size = new System.Drawing.Size(187, 82);
             this.BtnGuardar.Text = "MODIFICAR";
             // 
-            // checkedListBox1
+            // BtnCancelar
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(510, 589);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(38, 4);
-            this.checkedListBox1.TabIndex = 21;
+            this.BtnCancelar.Location = new System.Drawing.Point(823, 595);
+            this.BtnCancelar.Size = new System.Drawing.Size(187, 82);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VienaStore.Properties.Resources.Editar_Cliente_240x240px;
+            this.pictureBox1.InitialImage = global::VienaStore.Properties.Resources.Editar_Cliente_240x240px;
             // 
             // FEditarCLiente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 763);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(1042, 775);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FEditarCLiente";
             this.Text = "FEditarCLiente";
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.BtnGuardar, 0);
-            this.Controls.SetChildIndex(this.checkedListBox1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
