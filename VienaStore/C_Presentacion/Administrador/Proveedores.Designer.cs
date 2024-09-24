@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.LblBuscar = new System.Windows.Forms.Label();
@@ -45,20 +47,20 @@
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtCuit = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LisProductos = new System.Windows.Forms.ListBox();
             this.LblProdcutos = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
+            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ColEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             this.SuspendLayout();
@@ -102,54 +104,60 @@
             // LblEmpresa
             // 
             this.LblEmpresa.AutoSize = true;
-            this.LblEmpresa.Location = new System.Drawing.Point(51, 61);
+            this.LblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmpresa.Location = new System.Drawing.Point(39, 60);
             this.LblEmpresa.Name = "LblEmpresa";
-            this.LblEmpresa.Size = new System.Drawing.Size(48, 13);
+            this.LblEmpresa.Size = new System.Drawing.Size(75, 18);
             this.LblEmpresa.TabIndex = 4;
             this.LblEmpresa.Text = "Empresa";
             // 
             // LblTelefono
             // 
             this.LblTelefono.AutoSize = true;
-            this.LblTelefono.Location = new System.Drawing.Point(51, 172);
+            this.LblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTelefono.Location = new System.Drawing.Point(40, 172);
             this.LblTelefono.Name = "LblTelefono";
-            this.LblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.LblTelefono.Size = new System.Drawing.Size(74, 18);
             this.LblTelefono.TabIndex = 5;
             this.LblTelefono.Text = "Telefono";
             // 
             // LblCuit
             // 
             this.LblCuit.AutoSize = true;
-            this.LblCuit.Location = new System.Drawing.Point(51, 94);
+            this.LblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCuit.Location = new System.Drawing.Point(39, 93);
             this.LblCuit.Name = "LblCuit";
-            this.LblCuit.Size = new System.Drawing.Size(32, 13);
+            this.LblCuit.Size = new System.Drawing.Size(46, 18);
             this.LblCuit.TabIndex = 6;
             this.LblCuit.Text = "CUIT";
             // 
             // LblDireccion
             // 
             this.LblDireccion.AutoSize = true;
-            this.LblDireccion.Location = new System.Drawing.Point(51, 136);
+            this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDireccion.Location = new System.Drawing.Point(39, 136);
             this.LblDireccion.Name = "LblDireccion";
-            this.LblDireccion.Size = new System.Drawing.Size(82, 13);
+            this.LblDireccion.Size = new System.Drawing.Size(130, 18);
             this.LblDireccion.TabIndex = 7;
             this.LblDireccion.Text = "Direccion Fiscal";
             // 
             // LblCorreo
             // 
             this.LblCorreo.AutoSize = true;
-            this.LblCorreo.Location = new System.Drawing.Point(51, 207);
+            this.LblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCorreo.Location = new System.Drawing.Point(40, 207);
             this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(92, 13);
+            this.LblCorreo.Size = new System.Drawing.Size(56, 18);
             this.LblCorreo.TabIndex = 8;
-            this.LblCorreo.Text = "correo electronico";
+            this.LblCorreo.Text = "E-mail";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(51, 245);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 9;
             // 
             // TxtEmpresa
@@ -193,7 +201,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel1.Controls.Add(this.LisProductos);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.LblProdcutos);
             this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnEditar);
@@ -214,20 +222,13 @@
             this.panel1.Size = new System.Drawing.Size(462, 457);
             this.panel1.TabIndex = 16;
             // 
-            // LisProductos
-            // 
-            this.LisProductos.FormattingEnabled = true;
-            this.LisProductos.Location = new System.Drawing.Point(175, 241);
-            this.LisProductos.Name = "LisProductos";
-            this.LisProductos.Size = new System.Drawing.Size(233, 121);
-            this.LisProductos.TabIndex = 27;
-            // 
             // LblProdcutos
             // 
             this.LblProdcutos.AutoSize = true;
-            this.LblProdcutos.Location = new System.Drawing.Point(51, 241);
+            this.LblProdcutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProdcutos.Location = new System.Drawing.Point(39, 244);
             this.LblProdcutos.Name = "LblProdcutos";
-            this.LblProdcutos.Size = new System.Drawing.Size(55, 13);
+            this.LblProdcutos.Size = new System.Drawing.Size(86, 18);
             this.LblProdcutos.TabIndex = 26;
             this.LblProdcutos.Text = "Productos";
             // 
@@ -284,7 +285,16 @@
             this.DtaProveedores.AllowUserToOrderColumns = true;
             this.DtaProveedores.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtaProveedores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DtaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DtaProveedores.ColumnHeadersHeight = 50;
+            this.DtaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColEmpresa,
             this.ColCuit,
@@ -292,42 +302,22 @@
             this.ColTelefono,
             this.ColCorreo,
             this.ColProductos});
-            this.DtaProveedores.Location = new System.Drawing.Point(598, 193);
+            this.DtaProveedores.EnableHeadersVisualStyles = false;
+            this.DtaProveedores.Location = new System.Drawing.Point(613, 193);
             this.DtaProveedores.Name = "DtaProveedores";
-            this.DtaProveedores.Size = new System.Drawing.Size(642, 296);
-            this.DtaProveedores.TabIndex = 17;
-            // 
-            // ColEmpresa
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColEmpresa.HeaderText = "Empresa";
-            this.ColEmpresa.Name = "ColEmpresa";
-            // 
-            // ColCuit
-            // 
-            this.ColCuit.HeaderText = "CUIT";
-            this.ColCuit.Name = "ColCuit";
-            // 
-            // ColDireccion
-            // 
-            this.ColDireccion.HeaderText = "Dirección Fiscal";
-            this.ColDireccion.Name = "ColDireccion";
-            // 
-            // ColTelefono
-            // 
-            this.ColTelefono.HeaderText = "Teléfono";
-            this.ColTelefono.Name = "ColTelefono";
-            // 
-            // ColCorreo
-            // 
-            this.ColCorreo.HeaderText = "correo electrónico";
-            this.ColCorreo.Name = "ColCorreo";
-            // 
-            // ColProductos
-            // 
-            this.ColProductos.HeaderText = "Productos";
-            this.ColProductos.Name = "ColProductos";
+            this.DtaProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DtaProveedores.RowHeadersVisible = false;
+            this.DtaProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DtaProveedores.Size = new System.Drawing.Size(623, 306);
+            this.DtaProveedores.TabIndex = 0;
             // 
             // LblProveedoresRegistrados
             // 
@@ -354,6 +344,47 @@
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(175, 245);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 21);
+            this.comboBox1.TabIndex = 27;
+            // 
+            // ColEmpresa
+            // 
+            this.ColEmpresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColEmpresa.HeaderText = "Empresa";
+            this.ColEmpresa.Name = "ColEmpresa";
+            // 
+            // ColCuit
+            // 
+            this.ColCuit.HeaderText = "CUIT";
+            this.ColCuit.Name = "ColCuit";
+            // 
+            // ColDireccion
+            // 
+            this.ColDireccion.HeaderText = "Dirección Fiscal";
+            this.ColDireccion.Name = "ColDireccion";
+            // 
+            // ColTelefono
+            // 
+            this.ColTelefono.HeaderText = "Teléfono";
+            this.ColTelefono.Name = "ColTelefono";
+            // 
+            // ColCorreo
+            // 
+            this.ColCorreo.HeaderText = "E-mail";
+            this.ColCorreo.Name = "ColCorreo";
+            // 
+            // ColProductos
+            // 
+            this.ColProductos.HeaderText = "Productos";
+            this.ColProductos.Name = "ColProductos";
             // 
             // Proveedores
             // 
@@ -404,8 +435,8 @@
         public System.Windows.Forms.Button BtnSalir;
         public System.Windows.Forms.Button BtnEditar;
         public System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.ListBox LisProductos;
         private System.Windows.Forms.Label LblProdcutos;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
