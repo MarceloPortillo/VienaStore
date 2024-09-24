@@ -71,5 +71,14 @@ namespace VienaStore.C_Presentacion.Administrador
                 this.TxtTelefono.Clear();
             }
         }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.TxtEmpresa.Clear();
+            this.TxtCuit.Clear();
+            this.TxtCorreo.Clear();
+            this.TxtDireccion.Clear();
+            this.TxtTelefono.Clear();
+        }
     }
 }
