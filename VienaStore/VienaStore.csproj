@@ -54,11 +54,13 @@
     <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs" />
     <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.Designer.cs">
       <DependentUpon>FBuscarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +72,6 @@
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.Designer.cs">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
-    <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs">
-      <DependentUpon>menu_administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
@@ -88,26 +85,20 @@
     <Compile Include="C_Presentacion\Vendedor\Menu_Vendedor.Designer.cs">
       <DependentUpon>Menu_Vendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
+      <DependentUpon>menu_administrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
-    <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
-      <DependentUpon>menu_administrador.cs</DependentUpon>
-    <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
-      <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FBuscarClientes.resx">
       <DependentUpon>FBuscarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
-      <DependentUpon>FEditarCLiente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
-      <DependentUpon>FEditarCLiente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
@@ -192,9 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Editar_Cliente_48x48px.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\borrar.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrar.ico" />
