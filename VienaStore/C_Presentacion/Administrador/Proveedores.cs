@@ -80,5 +80,39 @@ namespace VienaStore.C_Presentacion.Administrador
             this.TxtDireccion.Clear();
             this.TxtTelefono.Clear();
         }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtEmpresa.Text) ||
+                string.IsNullOrWhiteSpace(TxtCuit.Text) ||
+                string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
+                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
+                string.IsNullOrWhiteSpace(TxtTelefono.Text))
+
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DialogResult ask = MessageBox.Show("¿Seguro que desea agregar un nuevo proveedor?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+                MessageBox.Show("El Proveedor: " + this.TxtEmpresa.Text + "\n" + "CUIT N°" + " " + this.TxtCuit.Text + "" + " \nSe agregó Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.TxtEmpresa.Clear();
+                this.TxtCuit.Clear();
+                this.TxtCorreo.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtTelefono.Clear();
+                return;
+            }
+            else
+            {
+                this.TxtEmpresa.Clear();
+                this.TxtCuit.Clear();
+                this.TxtCorreo.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtTelefono.Clear();
+            }
+        }
     }
 }

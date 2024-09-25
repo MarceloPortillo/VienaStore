@@ -72,7 +72,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 TxtEmail.Focus();
             }
         }
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        public virtual void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||

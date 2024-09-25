@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.LblUsuario = new System.Windows.Forms.Label();
@@ -35,13 +36,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.DtaUsuario = new System.Windows.Forms.DataGridView();
+            this.ColLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(469, 9);
             this.label1.Size = new System.Drawing.Size(328, 34);
             this.label1.Text = "REGISTRAR USUARIO";
@@ -102,6 +114,10 @@
             // 
             this.BtnCancelar.Location = new System.Drawing.Point(696, 637);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(815, 628);
+            // 
             // TxtUsuario
             // 
             this.TxtUsuario.Location = new System.Drawing.Point(143, 346);
@@ -117,6 +133,7 @@
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.Size = new System.Drawing.Size(334, 22);
             this.TxtContraseña.TabIndex = 22;
+            this.TxtContraseña.UseSystemPasswordChar = true;
             // 
             // LblUsuario
             // 
@@ -191,7 +208,7 @@
             "Vendedor",
             "Encargado",
             "Administrador"});
-            this.comboBox1.Location = new System.Drawing.Point(324, 441);
+            this.comboBox1.Location = new System.Drawing.Point(313, 447);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(153, 24);
             this.comboBox1.TabIndex = 26;
@@ -201,48 +218,125 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(263, 449);
+            this.label2.Location = new System.Drawing.Point(277, 447);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 25;
             this.label2.Text = "Rol";
             // 
-            // button1
+            // BtnLimpiar
             // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::VienaStore.Properties.Resources.borrar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(293, 637);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 82);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "LIMPIAR";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnLimpiar.BackColor = System.Drawing.Color.Coral;
+            this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
+            this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLimpiar.Location = new System.Drawing.Point(293, 637);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(162, 82);
+            this.BtnLimpiar.TabIndex = 26;
+            this.BtnLimpiar.Text = "LIMPIAR";
+            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DtaUsuario
+            // 
+            this.DtaUsuario.AllowUserToAddRows = false;
+            this.DtaUsuario.AllowUserToOrderColumns = true;
+            this.DtaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtaUsuario.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.DtaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DtaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DtaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColLegajo,
+            this.ColNombre,
+            this.ColApellido,
+            this.ColDni,
+            this.ColEmail,
+            this.ColDireccion,
+            this.ColTel,
+            this.ColUsuario});
+            this.DtaUsuario.EnableHeadersVisualStyles = false;
+            this.DtaUsuario.Location = new System.Drawing.Point(610, 219);
+            this.DtaUsuario.Name = "DtaUsuario";
+            this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DtaUsuario.RowHeadersVisible = false;
+            this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DtaUsuario.Size = new System.Drawing.Size(646, 242);
+            this.DtaUsuario.TabIndex = 0;
+            // 
+            // ColLegajo
+            // 
+            this.ColLegajo.HeaderText = "Legajo";
+            this.ColLegajo.Name = "ColLegajo";
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.Name = "ColNombre";
+            // 
+            // ColApellido
+            // 
+            this.ColApellido.HeaderText = "Apellido";
+            this.ColApellido.Name = "ColApellido";
+            // 
+            // ColDni
+            // 
+            this.ColDni.HeaderText = "Dni";
+            this.ColDni.Name = "ColDni";
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.HeaderText = "E-mail";
+            this.ColEmail.Name = "ColEmail";
+            // 
+            // ColDireccion
+            // 
+            this.ColDireccion.HeaderText = "Dirección";
+            this.ColDireccion.Name = "ColDireccion";
+            // 
+            // ColTel
+            // 
+            this.ColTel.HeaderText = "Teléfono";
+            this.ColTel.Name = "ColTel";
+            // 
+            // ColUsuario
+            // 
+            this.ColUsuario.HeaderText = "Usuario";
+            this.ColUsuario.Name = "ColUsuario";
             // 
             // FCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 757);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1253, 757);
+            this.Controls.Add(this.DtaUsuario);
+            this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FCrearUsuario";
             this.Text = "FCrearUsuario";
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.BtnLimpiar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.BtnGuardar, 0);
             this.Controls.SetChildIndex(this.BtnCancelar, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.DtaUsuario, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,8 +349,17 @@
         public System.Windows.Forms.Label LblUsuario;
         public System.Windows.Forms.Label LblContraseña;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView DtaUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColLegajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColUsuario;
     }
 }

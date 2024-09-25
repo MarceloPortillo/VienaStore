@@ -47,20 +47,23 @@
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtCuit = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.CheBilletera = new System.Windows.Forms.CheckBox();
+            this.CheMochicla = new System.Windows.Forms.CheckBox();
+            this.CheCartera = new System.Windows.Forms.CheckBox();
             this.LblProdcutos = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
-            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ColEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             this.SuspendLayout();
@@ -81,13 +84,13 @@
             this.LblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBuscar.Location = new System.Drawing.Point(38, 94);
             this.LblBuscar.Name = "LblBuscar";
-            this.LblBuscar.Size = new System.Drawing.Size(74, 24);
+            this.LblBuscar.Size = new System.Drawing.Size(155, 24);
             this.LblBuscar.TabIndex = 1;
-            this.LblBuscar.Text = "Buscar";
+            this.LblBuscar.Text = "Ingrese el CUIT";
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(131, 99);
+            this.TxtBuscar.Location = new System.Drawing.Point(215, 98);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(233, 20);
             this.TxtBuscar.TabIndex = 2;
@@ -95,7 +98,7 @@
             // BtnBuscar
             // 
             this.BtnBuscar.Image = global::VienaStore.Properties.Resources.buscarProveedor_48px;
-            this.BtnBuscar.Location = new System.Drawing.Point(389, 82);
+            this.BtnBuscar.Location = new System.Drawing.Point(480, 82);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(60, 53);
             this.BtnBuscar.TabIndex = 3;
@@ -105,7 +108,7 @@
             // 
             this.LblEmpresa.AutoSize = true;
             this.LblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmpresa.Location = new System.Drawing.Point(39, 60);
+            this.LblEmpresa.Location = new System.Drawing.Point(22, 60);
             this.LblEmpresa.Name = "LblEmpresa";
             this.LblEmpresa.Size = new System.Drawing.Size(75, 18);
             this.LblEmpresa.TabIndex = 4;
@@ -115,7 +118,7 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(40, 172);
+            this.LblTelefono.Location = new System.Drawing.Point(22, 172);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(74, 18);
             this.LblTelefono.TabIndex = 5;
@@ -125,7 +128,7 @@
             // 
             this.LblCuit.AutoSize = true;
             this.LblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCuit.Location = new System.Drawing.Point(39, 93);
+            this.LblCuit.Location = new System.Drawing.Point(22, 93);
             this.LblCuit.Name = "LblCuit";
             this.LblCuit.Size = new System.Drawing.Size(46, 18);
             this.LblCuit.TabIndex = 6;
@@ -135,7 +138,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(39, 136);
+            this.LblDireccion.Location = new System.Drawing.Point(22, 136);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(130, 18);
             this.LblDireccion.TabIndex = 7;
@@ -145,7 +148,7 @@
             // 
             this.LblCorreo.AutoSize = true;
             this.LblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCorreo.Location = new System.Drawing.Point(40, 207);
+            this.LblCorreo.Location = new System.Drawing.Point(22, 207);
             this.LblCorreo.Name = "LblCorreo";
             this.LblCorreo.Size = new System.Drawing.Size(56, 18);
             this.LblCorreo.TabIndex = 8;
@@ -155,7 +158,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 245);
+            this.label8.Location = new System.Drawing.Point(22, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 9;
@@ -164,7 +167,7 @@
             // 
             this.TxtEmpresa.Location = new System.Drawing.Point(175, 58);
             this.TxtEmpresa.Name = "TxtEmpresa";
-            this.TxtEmpresa.Size = new System.Drawing.Size(233, 20);
+            this.TxtEmpresa.Size = new System.Drawing.Size(233, 21);
             this.TxtEmpresa.TabIndex = 10;
             this.TxtEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpresa_KeyPress);
             // 
@@ -172,14 +175,14 @@
             // 
             this.TxtCorreo.Location = new System.Drawing.Point(175, 207);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(233, 20);
+            this.TxtCorreo.Size = new System.Drawing.Size(233, 21);
             this.TxtCorreo.TabIndex = 12;
             // 
             // TxtTelefono
             // 
             this.TxtTelefono.Location = new System.Drawing.Point(175, 172);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(233, 20);
+            this.TxtTelefono.Size = new System.Drawing.Size(233, 21);
             this.TxtTelefono.TabIndex = 13;
             this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
@@ -187,21 +190,24 @@
             // 
             this.TxtDireccion.Location = new System.Drawing.Point(175, 136);
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(233, 20);
+            this.TxtDireccion.Size = new System.Drawing.Size(233, 21);
             this.TxtDireccion.TabIndex = 14;
             // 
             // TxtCuit
             // 
             this.TxtCuit.Location = new System.Drawing.Point(175, 94);
             this.TxtCuit.Name = "TxtCuit";
-            this.TxtCuit.Size = new System.Drawing.Size(233, 20);
+            this.TxtCuit.Size = new System.Drawing.Size(233, 21);
             this.TxtCuit.TabIndex = 15;
             this.TxtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuit_KeyPress);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.BtnAgregar);
+            this.panel1.Controls.Add(this.CheBilletera);
+            this.panel1.Controls.Add(this.CheMochicla);
+            this.panel1.Controls.Add(this.CheCartera);
             this.panel1.Controls.Add(this.LblProdcutos);
             this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnEditar);
@@ -217,20 +223,70 @@
             this.panel1.Controls.Add(this.LblCuit);
             this.panel1.Controls.Add(this.LblTelefono);
             this.panel1.Controls.Add(this.LblEmpresa);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 457);
+            this.panel1.Size = new System.Drawing.Size(595, 457);
             this.panel1.TabIndex = 16;
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.Coral;
+            this.BtnAgregar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
+            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregar.Location = new System.Drawing.Point(25, 378);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(133, 60);
+            this.BtnAgregar.TabIndex = 30;
+            this.BtnAgregar.Text = "  AGREGAR";
+            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // CheBilletera
+            // 
+            this.CheBilletera.AutoSize = true;
+            this.CheBilletera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheBilletera.Location = new System.Drawing.Point(186, 303);
+            this.CheBilletera.Name = "CheBilletera";
+            this.CheBilletera.Size = new System.Drawing.Size(84, 19);
+            this.CheBilletera.TabIndex = 29;
+            this.CheBilletera.Text = "Deportivo";
+            this.CheBilletera.UseVisualStyleBackColor = true;
+            // 
+            // CheMochicla
+            // 
+            this.CheMochicla.AutoSize = true;
+            this.CheMochicla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheMochicla.Location = new System.Drawing.Point(186, 278);
+            this.CheMochicla.Name = "CheMochicla";
+            this.CheMochicla.Size = new System.Drawing.Size(68, 19);
+            this.CheMochicla.TabIndex = 28;
+            this.CheMochicla.Text = "Formal";
+            this.CheMochicla.UseVisualStyleBackColor = true;
+            // 
+            // CheCartera
+            // 
+            this.CheCartera.AutoSize = true;
+            this.CheCartera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheCartera.Location = new System.Drawing.Point(186, 253);
+            this.CheCartera.Name = "CheCartera";
+            this.CheCartera.Size = new System.Drawing.Size(67, 19);
+            this.CheCartera.TabIndex = 27;
+            this.CheCartera.Text = "Casual";
+            this.CheCartera.UseVisualStyleBackColor = true;
             // 
             // LblProdcutos
             // 
             this.LblProdcutos.AutoSize = true;
             this.LblProdcutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProdcutos.Location = new System.Drawing.Point(39, 244);
+            this.LblProdcutos.Location = new System.Drawing.Point(22, 248);
             this.LblProdcutos.Name = "LblProdcutos";
-            this.LblProdcutos.Size = new System.Drawing.Size(86, 18);
+            this.LblProdcutos.Size = new System.Drawing.Size(81, 18);
             this.LblProdcutos.TabIndex = 26;
-            this.LblProdcutos.Text = "Productos";
+            this.LblProdcutos.Text = "Categoria";
             // 
             // BtnEliminar
             // 
@@ -238,7 +294,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(302, 378);
+            this.BtnEliminar.Location = new System.Drawing.Point(442, 378);
             this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(134, 60);
@@ -253,7 +309,7 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(153, 378);
+            this.BtnEditar.Location = new System.Drawing.Point(162, 378);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(134, 60);
@@ -269,7 +325,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(4, 378);
+            this.BtnLimpiar.Location = new System.Drawing.Point(302, 378);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(134, 60);
@@ -319,40 +375,6 @@
             this.DtaProveedores.Size = new System.Drawing.Size(623, 306);
             this.DtaProveedores.TabIndex = 0;
             // 
-            // LblProveedoresRegistrados
-            // 
-            this.LblProveedoresRegistrados.AutoSize = true;
-            this.LblProveedoresRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(799, 129);
-            this.LblProveedoresRegistrados.Name = "LblProveedoresRegistrados";
-            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(245, 24);
-            this.LblProveedoresRegistrados.TabIndex = 18;
-            this.LblProveedoresRegistrados.Text = "Proveedores Registrados";
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Coral;
-            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(1122, 559);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(141, 69);
-            this.BtnSalir.TabIndex = 22;
-            this.BtnSalir.Text = "SALIR";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(175, 245);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 21);
-            this.comboBox1.TabIndex = 27;
-            // 
             // ColEmpresa
             // 
             this.ColEmpresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -383,15 +405,41 @@
             // 
             // ColProductos
             // 
-            this.ColProductos.HeaderText = "Productos";
+            this.ColProductos.HeaderText = "Categoria";
             this.ColProductos.Name = "ColProductos";
+            // 
+            // LblProveedoresRegistrados
+            // 
+            this.LblProveedoresRegistrados.AutoSize = true;
+            this.LblProveedoresRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(799, 129);
+            this.LblProveedoresRegistrados.Name = "LblProveedoresRegistrados";
+            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(245, 24);
+            this.LblProveedoresRegistrados.TabIndex = 18;
+            this.LblProveedoresRegistrados.Text = "Proveedores Registrados";
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.Coral;
+            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(1122, 559);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(141, 69);
+            this.BtnSalir.TabIndex = 22;
+            this.BtnSalir.Text = "SALIR";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1338, 650);
+            this.ClientSize = new System.Drawing.Size(1338, 697);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.LblProveedoresRegistrados);
             this.Controls.Add(this.DtaProveedores);
@@ -437,12 +485,15 @@
         public System.Windows.Forms.Button BtnEditar;
         public System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label LblProdcutos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox CheBilletera;
+        private System.Windows.Forms.CheckBox CheMochicla;
+        private System.Windows.Forms.CheckBox CheCartera;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
+        public System.Windows.Forms.Button BtnAgregar;
     }
 }
