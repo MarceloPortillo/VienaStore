@@ -8,11 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Negocio;
+using VienaStore.C_Presentacion.Vendedor;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class Proveedores : Form
     {
+        private static Proveedores instancia = null;
+        public static Proveedores Ventana_unica()
+        {
+
+
+
+            if (instancia == null)
+            {
+                instancia = new Proveedores();
+                return instancia;
+            }
+            return instancia;
+        }
         public Proveedores()
         {
             InitializeComponent();
@@ -20,6 +34,7 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            instancia = null;
             this.Close();
         }
 

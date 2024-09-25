@@ -75,6 +75,7 @@
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnModificarCliente.Text = "    GENERAR \r\n   REPORTES";
             this.BtnModificarCliente.Visible = true;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnRegistrarCliente
             // 
@@ -117,6 +118,10 @@
             this.LblBienvenido.Size = new System.Drawing.Size(220, 20);
             this.LblBienvenido.Text = "MENÚ ADMINISTRADOR";
             this.LblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Size = new System.Drawing.Size(596, 698);
             // 
             // BtnGestionarCompras
             // 
@@ -171,6 +176,7 @@
             this.BtnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnProveedores.UseCompatibleTextRendering = true;
             this.BtnProveedores.UseVisualStyleBackColor = false;
+            this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
             // 
             // BtnAgregarProducto
             // 
@@ -225,6 +231,7 @@
             this.BtnCrearUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCrearUsuario.UseCompatibleTextRendering = true;
             this.BtnCrearUsuario.UseVisualStyleBackColor = false;
+            this.BtnCrearUsuario.Click += new System.EventHandler(this.BtnCrearUsuario_Click);
             // 
             // menu_administrador
             // 

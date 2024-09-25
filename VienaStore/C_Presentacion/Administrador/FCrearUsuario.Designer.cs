@@ -113,6 +113,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.Location = new System.Drawing.Point(696, 637);
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // pictureBox1
             // 

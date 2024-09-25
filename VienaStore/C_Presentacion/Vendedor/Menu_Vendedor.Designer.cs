@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Vendedor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnListarProd = new System.Windows.Forms.Button();
             this.BtnBuscarProd = new System.Windows.Forms.Button();
             this.BtnListarCliente = new System.Windows.Forms.Button();
             this.BtnBuscarCliente = new System.Windows.Forms.Button();
-            this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.BtnRegistrarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
@@ -64,6 +64,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 502);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnModificarCliente
+            // 
+            this.BtnModificarCliente.BackColor = System.Drawing.Color.Coral;
+            this.BtnModificarCliente.Enabled = false;
+            this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarCliente.Image")));
+            this.BtnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 427);
+            this.BtnModificarCliente.Name = "BtnModificarCliente";
+            this.BtnModificarCliente.Size = new System.Drawing.Size(155, 59);
+            this.BtnModificarCliente.TabIndex = 1;
+            this.BtnModificarCliente.Text = "MODIFICAR \r\nCLIENTE";
+            this.BtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnModificarCliente.UseVisualStyleBackColor = false;
+            this.BtnModificarCliente.Visible = false;
+            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // pictureBox1
             // 
@@ -134,23 +151,6 @@
             this.BtnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnBuscarCliente.UseVisualStyleBackColor = false;
             this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
-            // 
-            // BtnModificarCliente
-            // 
-            this.BtnModificarCliente.BackColor = System.Drawing.Color.Coral;
-            this.BtnModificarCliente.Enabled = false;
-            this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarCliente.Image")));
-            this.BtnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 427);
-            this.BtnModificarCliente.Name = "BtnModificarCliente";
-            this.BtnModificarCliente.Size = new System.Drawing.Size(155, 59);
-            this.BtnModificarCliente.TabIndex = 1;
-            this.BtnModificarCliente.Text = "MODIFICAR \r\nCLIENTE";
-            this.BtnModificarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnModificarCliente.UseVisualStyleBackColor = false;
-            this.BtnModificarCliente.Visible = false;
-            this.BtnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // BtnRegistrarCliente
             // 
@@ -257,7 +257,6 @@
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.Timer fecha;
         private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button BtnListarProd;
         public System.Windows.Forms.Button BtnBuscarProd;
         public System.Windows.Forms.Button BtnListarCliente;
@@ -267,5 +266,6 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label LblBienvenido;
+        public System.Windows.Forms.Panel panel3;
     }
 }

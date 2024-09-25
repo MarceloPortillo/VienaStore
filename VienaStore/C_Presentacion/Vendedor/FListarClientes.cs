@@ -12,6 +12,19 @@ namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FListarClientes : Form
     {
+        private static FListarClientes instancia = null;
+        public static FListarClientes Ventana_unica()
+        {
+
+
+
+            if (instancia == null)
+            {
+                instancia = new FListarClientes();
+                return instancia;
+            }
+            return instancia;
+        }
         public FListarClientes()
         {
             InitializeComponent();
@@ -19,6 +32,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
+            instancia = null;
             this.Close();
         }
     }

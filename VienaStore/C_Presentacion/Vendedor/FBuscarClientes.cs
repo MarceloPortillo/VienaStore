@@ -9,9 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VienaStore.C_Presentacion.Vendedor
-{
+{    
     public partial class FBuscarClientes : Form
     {
+        private static FBuscarClientes instancia = null;
+        public static FBuscarClientes Ventana_unica()
+        {
+
+
+
+            if (instancia == null)
+            {
+                instancia = new FBuscarClientes();
+                return instancia;
+            }
+            return instancia;
+        }
         public FBuscarClientes()
         {
             InitializeComponent();
@@ -19,6 +32,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            instancia = null;
             this.Close();
         }
     }

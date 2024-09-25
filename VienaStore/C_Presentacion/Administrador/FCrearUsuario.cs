@@ -13,6 +13,16 @@ namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class FCrearUsuario : VienaStore.C_Presentacion.Vendedor.FNuevoCliente
     {
+        private static FCrearUsuario instancia = null;
+        public static FCrearUsuario Ventana_unica1()
+        {
+            if (instancia == null)
+            {
+                instancia = new FCrearUsuario();
+                return instancia;
+            }
+            return instancia;
+        }
         public FCrearUsuario()
         {
             InitializeComponent();
@@ -71,5 +81,9 @@ namespace VienaStore.C_Presentacion.Administrador
             }
         }
 
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            instancia = null;
+        }
     }
 }
