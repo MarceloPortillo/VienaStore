@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
+    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.Designer.cs">
+      <DependentUpon>FCrearUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Administrador\FCrearUsuario.resx">
+      <DependentUpon>FCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
