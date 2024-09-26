@@ -37,6 +37,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
             nuevo.TopLevel = false;
             /*Pasan el estado de las instancias a null*/
+            FListarProductos.limpiar();
             FCrearUsuario.Limpiar();
             reportes.limpiar();
             Proveedores.limpiar();
@@ -64,7 +65,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             FBuscarClientes nuevo = FBuscarClientes.Ventana_unica();
             nuevo.TopLevel = false;
 
-
+            FListarProductos.limpiar();
             FCrearUsuario.Limpiar();
             reportes.limpiar();
             Proveedores.limpiar();
@@ -86,6 +87,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             nuevo.TopLevel = false;
 
             /*Pasan el estado de las instancias a null*/
+            FListarProductos.limpiar();
             FCrearUsuario.Limpiar();
             reportes.limpiar();
             Proveedores.limpiar();
@@ -109,9 +111,25 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnListarProd_Click(object sender, EventArgs e)
         {
-            /*FListarProd nuevo = new FListarProd();
-            nuevo.MdiParent = this;
-            nuevo.Show();*/
+            CerrarOtrosFormularios();
+
+            FListarProductos nuevo = FListarProductos.Ventana_unica();
+            nuevo.TopLevel = false;
+
+            /*Pasan el estado de las instancias a null*/
+            FListarProductos.limpiar();
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
+
+            this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
         }
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
