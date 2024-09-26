@@ -17,8 +17,7 @@ namespace VienaStore.C_Presentacion.Vendedor
     {
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
-        {
-                    
+        {                    
             
 
                 if (instancia == null)
@@ -59,25 +58,20 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void FNuevoCliente_Load(object sender, EventArgs e)
         {
-            TxtApellido.Focus();
+            TxtNombre.Focus();
         }
 
         private void TxtEmail_Leave(object sender, EventArgs e)
         {
-            if (C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
+            if (!string.IsNullOrWhiteSpace(TxtEmail.Text) && !C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
             {
-                // Correo válido, puedes hacer algo aquí si es necesario
-            }
-            else
-            {
-                MessageBox.Show("Dirección de correo electrónico no es valida, el correo debe tener el formato: nombre@dominio.com," +
-                                "por favor seleccione un correo válido", "Validación de correo electrónico",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dirección de correo electrónico no es válida. El correo debe tener el formato: nombre@dominio.com",
+                                "Validación de correo electrónico", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtEmail.SelectAll();
                 TxtEmail.Focus();
             }
         }
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        public virtual void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||
@@ -116,8 +110,13 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
-            instancia = null;
+            limpiar();
             this.Close();
+        }
+
+        public static void limpiar()
+        {
+            instancia = null;
         }
     }
 }

@@ -12,6 +12,16 @@ namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class reportes : Form
     {
+        private static reportes instancia = null;
+        public static reportes Ventana_unica()
+        {
+            if (instancia == null)
+            {
+                instancia = new reportes();
+                return instancia;
+            }
+            return instancia;
+        }
         public reportes()
         {
             InitializeComponent();
@@ -19,7 +29,12 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            limpiar();
             this.Close();
+        }
+        public static void limpiar()
+        {
+            instancia = null;
         }
     }
 }
