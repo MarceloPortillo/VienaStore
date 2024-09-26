@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Presentacion.Vendedor;
+using VienaStore.C_Presentacion.Administrador;
 
 
 namespace VienaStore.C_Presentacion.Vendedor
@@ -35,7 +36,14 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
             nuevo.TopLevel = false;
-
+            /*Pasan el estado de las instancias a null*/
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
             this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
@@ -56,6 +64,14 @@ namespace VienaStore.C_Presentacion.Vendedor
             FBuscarClientes nuevo = FBuscarClientes.Ventana_unica();
             nuevo.TopLevel = false;
 
+
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+
             this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
@@ -68,6 +84,15 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             FListarClientes nuevo = FListarClientes.Ventana_unica();
             nuevo.TopLevel = false;
+
+            /*Pasan el estado de las instancias a null*/
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
 
             this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);

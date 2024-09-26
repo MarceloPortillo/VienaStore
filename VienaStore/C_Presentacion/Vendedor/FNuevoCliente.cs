@@ -17,8 +17,7 @@ namespace VienaStore.C_Presentacion.Vendedor
     {
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
-        {
-                    
+        {                    
             
 
                 if (instancia == null)
@@ -111,8 +110,13 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
-            instancia = null;
+            limpiar();
             this.Close();
+        }
+
+        public static void limpiar()
+        {
+            instancia = null;
         }
     }
 }

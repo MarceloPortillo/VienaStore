@@ -34,8 +34,13 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            instancia = null;
+            limpiar();
             this.Close();
+        }
+
+        public static void limpiar()
+        {
+            instancia = null;
         }
 
         private void TxtEmpresa_KeyPress(object sender, KeyPressEventArgs e)

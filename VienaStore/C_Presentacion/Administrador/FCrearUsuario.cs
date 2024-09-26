@@ -83,6 +83,15 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            Limpiar();
+        }
+
+        private void FCrearUsuario_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;  // Esto permite que el formulario llene todo el espacio disponible
+        }
+        public static void Limpiar()
+        {
             instancia = null;
         }
     }

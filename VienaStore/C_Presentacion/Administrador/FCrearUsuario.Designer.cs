@@ -179,7 +179,7 @@
             this.panel1.Controls.Add(this.LblApellido);
             this.panel1.Controls.Add(this.LblNombre);
             this.panel1.Controls.Add(this.LblDNI);
-            this.panel1.Location = new System.Drawing.Point(61, 81);
+            this.panel1.Location = new System.Drawing.Point(23, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(522, 523);
             this.panel1.TabIndex = 25;
@@ -268,7 +268,7 @@
             this.ColTel,
             this.ColUsuario});
             this.DtaUsuario.EnableHeadersVisualStyles = false;
-            this.DtaUsuario.Location = new System.Drawing.Point(610, 219);
+            this.DtaUsuario.Location = new System.Drawing.Point(551, 215);
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DtaUsuario.RowHeadersVisible = false;
@@ -320,13 +320,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 757);
+            this.ClientSize = new System.Drawing.Size(1253, 727);
             this.Controls.Add(this.DtaUsuario);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FCrearUsuario";
             this.Text = "FCrearUsuario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Load += new System.EventHandler(this.FCrearUsuario_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.BtnLimpiar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
