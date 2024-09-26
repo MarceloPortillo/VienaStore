@@ -68,6 +68,12 @@
     <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FBuscarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FListarClientes.Designer.cs">
       <DependentUpon>FListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FListarProductos.Designer.cs">
+      <DependentUpon>FListarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
@@ -122,6 +134,9 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FListarClientes.resx">
       <DependentUpon>FListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FListarProductos.resx">
+      <DependentUpon>FListarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>

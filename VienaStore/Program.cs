@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Presentacion.Vendedor;
 using VienaStore.C_Presentacion.Administrador;
+using VienaStore.C_Presentacion;
 
 namespace VienaStore
 {
