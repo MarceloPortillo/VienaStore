@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LblDesde = new System.Windows.Forms.Label();
             this.LblHasta = new System.Windows.Forms.Label();
             this.LblTitulo = new System.Windows.Forms.Label();
@@ -42,9 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.BtnGererar = new System.Windows.Forms.Button();
             this.CboSeleccionar = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -175,75 +172,29 @@
             this.CboSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboSeleccionar.FormattingEnabled = true;
             this.CboSeleccionar.Items.AddRange(new object[] {
-            "TODAS LAS VENTAS",
-            "VENTAS POR PRODUCTOS",
+            "VENTAS POR CATEGORIA",
             "VENTAS POR USUARIOS",
             "COMPRA PROVEEDORES"});
-            this.CboSeleccionar.Location = new System.Drawing.Point(254, 79);
+            this.CboSeleccionar.Location = new System.Drawing.Point(459, 79);
             this.CboSeleccionar.Name = "CboSeleccionar";
-            this.CboSeleccionar.Size = new System.Drawing.Size(326, 28);
+            this.CboSeleccionar.Size = new System.Drawing.Size(265, 28);
             this.CboSeleccionar.TabIndex = 6;
             this.CboSeleccionar.Text = "Seleccione el tipo de informe";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Todos",
-            "Carteras",
-            "Mochilas",
-            "Billeteras"});
-            this.comboBox1.Location = new System.Drawing.Point(606, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 28);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.Text = "Productos";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Todos",
-            "Carteras S.A",
-            "Mochilas Himawari",
-            "Billeteras Lop"});
-            this.comboBox2.Location = new System.Drawing.Point(793, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(172, 28);
-            this.comboBox2.TabIndex = 26;
-            this.comboBox2.Text = "Proveedores";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Todos",
-            "Rodriguez Gaston",
-            "Portillo Juan",
-            "Becker Pablito"});
-            this.comboBox3.Location = new System.Drawing.Point(983, 79);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(172, 28);
-            this.comboBox3.TabIndex = 27;
-            this.comboBox3.Text = "Usuarios";
-            // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(782, 270);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(395, 287);
             this.chart1.TabIndex = 28;
             this.chart1.Text = "chart1";
@@ -255,9 +206,6 @@
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1189, 668);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnGererar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnCancelar);
@@ -293,9 +241,6 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button BtnGererar;
         private System.Windows.Forms.ComboBox CboSeleccionar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

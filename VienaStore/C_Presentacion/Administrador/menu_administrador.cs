@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Presentacion.Vendedor;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
@@ -15,6 +16,71 @@ namespace VienaStore.C_Presentacion.Administrador
         public menu_administrador()
         {
             InitializeComponent();
-        }       
+        }
+
+        private void BtnProveedores_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            Proveedores nuevo = Proveedores.Ventana_unica();
+            nuevo.TopLevel = false;
+
+            /*Pasan el estado de las instancias a null*/
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
+
+            this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
+
+        private void BtnModificarCliente_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            reportes nuevo = reportes.Ventana_unica();
+            nuevo.TopLevel = false;
+
+            /*Pasan el estado de las instancias a null*/
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
+
+            this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
+
+        private void BtnCrearUsuario_Click(object sender, EventArgs e)
+        {
+            FCrearUsuario nuevo = FCrearUsuario.Ventana_unica1();
+            nuevo.TopLevel = false;
+
+            /*Pasan el estado de las instancias a null*/
+            FCrearUsuario.Limpiar();
+            reportes.limpiar();
+            Proveedores.limpiar();
+            FEditarCLiente.limpiar();
+            FListarClientes.limpiar();
+            FBuscarClientes.limpiar();
+            FNuevoCliente.limpiar();
+
+            this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+
+        }
     }
 }
