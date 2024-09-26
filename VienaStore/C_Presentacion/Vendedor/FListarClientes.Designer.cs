@@ -87,7 +87,7 @@
             this.Teléfono});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(36, 130);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -165,7 +165,7 @@
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.Location = new System.Drawing.Point(720, 546);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(115, 52);
             this.BtnSalir.TabIndex = 1;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FListarClientes";
@@ -196,15 +196,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblLista;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dirección;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         public System.Windows.Forms.Button BtnSalir;
+        public System.Windows.Forms.Label LblLista;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        public System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Dirección;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
     }
 }
