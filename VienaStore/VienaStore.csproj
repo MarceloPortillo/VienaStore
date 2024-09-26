@@ -98,6 +98,12 @@
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.Designer.cs">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FRegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FRegistrarVenta.Designer.cs">
+      <DependentUpon>FRegistrarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\Menu_Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FRegistrarVenta.resx">
+      <DependentUpon>FRegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\Menu_Vendedor.resx">
       <DependentUpon>Menu_Vendedor.cs</DependentUpon>

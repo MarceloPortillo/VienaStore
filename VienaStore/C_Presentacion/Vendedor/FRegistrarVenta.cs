@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
-    public partial class Form2 : Form
+    public partial class FRegistrarVenta : Form
     {
-        public Form2()
+        public FRegistrarVenta()
         {
             InitializeComponent();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
