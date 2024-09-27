@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VienaStore.C_Negocio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class FBuscarUsuario : Form

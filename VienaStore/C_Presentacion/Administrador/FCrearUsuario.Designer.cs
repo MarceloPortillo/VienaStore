@@ -34,7 +34,7 @@
             this.LblUsuario = new System.Windows.Forms.Label();
             this.LblContraseña = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CboRol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
@@ -61,6 +61,7 @@
             // BtnGuardar
             // 
             this.BtnGuardar.Location = new System.Drawing.Point(503, 637);
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click_1);
             // 
             // LblDNI
             // 
@@ -161,7 +162,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Coral;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.CboRol);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.LblContraseña);
             this.panel1.Controls.Add(this.LblUsuario);
@@ -200,20 +201,20 @@
             this.panel1.Controls.SetChildIndex(this.LblUsuario, 0);
             this.panel1.Controls.SetChildIndex(this.LblContraseña, 0);
             this.panel1.Controls.SetChildIndex(this.label2, 0);
-            this.panel1.Controls.SetChildIndex(this.comboBox1, 0);
+            this.panel1.Controls.SetChildIndex(this.CboRol, 0);
             // 
-            // comboBox1
+            // CboRol
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CboRol.FormattingEnabled = true;
+            this.CboRol.Items.AddRange(new object[] {
             "Vendedor",
             "Encargado",
             "Administrador"});
-            this.comboBox1.Location = new System.Drawing.Point(313, 447);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 26;
-            this.comboBox1.Text = "Seleccione un Rol";
+            this.CboRol.Location = new System.Drawing.Point(313, 447);
+            this.CboRol.Name = "CboRol";
+            this.CboRol.Size = new System.Drawing.Size(153, 24);
+            this.CboRol.TabIndex = 26;
+            this.CboRol.Text = "Seleccione un Rol";
             // 
             // label2
             // 
@@ -351,7 +352,7 @@
         public System.Windows.Forms.Label LblUsuario;
         public System.Windows.Forms.Label LblContraseña;
         public System.Windows.Forms.Button BtnLimpiar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CboRol;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColLegajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
