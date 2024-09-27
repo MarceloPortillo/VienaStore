@@ -116,6 +116,8 @@ namespace VienaStore.C_Presentacion.Vendedor
             // Volver a agregar los controles de hora y fecha
             this.panel3.Controls.Add(LblFecha);
             this.panel3.Controls.Add(LblHora);
+            this.panel3.Controls.Add(LblEstrellas);
+            this.panel3.Controls.Add(PBoxLogotipo);
         }
 
         private void THora_Tick(object sender, EventArgs e)
