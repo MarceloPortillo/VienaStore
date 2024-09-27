@@ -60,7 +60,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(500, 637);
+            this.BtnGuardar.Location = new System.Drawing.Point(503, 637);
             // 
             // LblDNI
             // 
@@ -112,7 +112,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(696, 637);
+            this.BtnCancelar.Location = new System.Drawing.Point(707, 637);
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // pictureBox1
@@ -268,7 +268,7 @@
             this.ColTel,
             this.ColUsuario});
             this.DtaUsuario.EnableHeadersVisualStyles = false;
-            this.DtaUsuario.Location = new System.Drawing.Point(551, 215);
+            this.DtaUsuario.Location = new System.Drawing.Point(582, 203);
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DtaUsuario.RowHeadersVisible = false;
@@ -320,14 +320,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 727);
+            this.ClientSize = new System.Drawing.Size(1253, 788);
             this.Controls.Add(this.DtaUsuario);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FCrearUsuario";
             this.Text = "FCrearUsuario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.FCrearUsuario_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.BtnLimpiar, 0);
@@ -351,11 +350,9 @@
         public System.Windows.Forms.TextBox TxtContraseña;
         public System.Windows.Forms.Label LblUsuario;
         public System.Windows.Forms.Label LblContraseña;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView DtaUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColLegajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColApellido;
@@ -364,5 +361,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTel;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColUsuario;
+        public System.Windows.Forms.DataGridView DtaUsuario;
+        public System.Windows.Forms.Panel panel1;
     }
 }
