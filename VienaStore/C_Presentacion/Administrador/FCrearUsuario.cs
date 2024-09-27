@@ -47,7 +47,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 string.IsNullOrWhiteSpace(TxtNombre.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
                (string.IsNullOrWhiteSpace(TxtTelefono.Text) || !TxtTelefono.MaskFull) ||
-                string.IsNullOrWhiteSpace(TxtEmail.Text))
+                string.IsNullOrWhiteSpace(TxtEmail.Text) ||
+                CboRol.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -93,6 +94,11 @@ namespace VienaStore.C_Presentacion.Administrador
         public static void Limpiar()
         {
             instancia = null;
+        }
+
+        private void BtnGuardar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

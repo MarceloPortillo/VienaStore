@@ -195,6 +195,7 @@
             this.BtnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAgregarProducto.UseCompatibleTextRendering = true;
             this.BtnAgregarProducto.UseVisualStyleBackColor = false;
+            this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
             // BtnBuescarUsuario
             // 
@@ -213,6 +214,7 @@
             this.BtnBuescarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnBuescarUsuario.UseCompatibleTextRendering = true;
             this.BtnBuescarUsuario.UseVisualStyleBackColor = false;
+            this.BtnBuescarUsuario.Click += new System.EventHandler(this.BtnBuescarUsuario_Click);
             // 
             // BtnCrearUsuario
             // 

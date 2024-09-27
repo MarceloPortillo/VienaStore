@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Presentacion.Vendedor;
 using VienaStore.C_Presentacion.Administrador;
+using VienaStore.C_Negocio;
 
 
 namespace VienaStore.C_Presentacion.Vendedor
@@ -27,7 +28,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void fecha_Tick(object sender, EventArgs e)
         {
-            TxtFecha.Text = DateTime.Now.ToString("dddd dd MMMM yyy");
+            LblFecha.Text = DateTime.Now.ToString("dddd dd MMMM yyy");
         }
 
         private void BtnRegistrarCliente_Click(object sender, EventArgs e)
@@ -36,16 +37,9 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             FNuevoCliente nuevo = FNuevoCliente.Ventana_unica();
             nuevo.TopLevel = false;
-            /*Pasan el estado de las instancias a null*/
-            FListarProductos.limpiar();
-            FCrearUsuario.Limpiar();
-            reportes.limpiar();
-            Proveedores.limpiar();
-            FEditarCLiente.limpiar();
-            FListarClientes.limpiar();
-            FBuscarClientes.limpiar();
-            FNuevoCliente.limpiar();
-            this.panel3.Controls.Clear();
+
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
             nuevo.Show();
@@ -64,16 +58,8 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             FBuscarClientes nuevo = FBuscarClientes.Ventana_unica();
             nuevo.TopLevel = false;
-
-            FListarProductos.limpiar();
-            FCrearUsuario.Limpiar();
-            reportes.limpiar();
-            Proveedores.limpiar();
-            FEditarCLiente.limpiar();
-            FListarClientes.limpiar();
-            FBuscarClientes.limpiar();
-
-            this.panel3.Controls.Clear();
+            CerrarInstancias.InstanciasNull();
+           // this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
             nuevo.Show();
@@ -84,19 +70,9 @@ namespace VienaStore.C_Presentacion.Vendedor
             CerrarOtrosFormularios();
 
             FListarClientes nuevo = FListarClientes.Ventana_unica();
-            nuevo.TopLevel = false;
-
-            /*Pasan el estado de las instancias a null*/
-            FListarProductos.limpiar();
-            FCrearUsuario.Limpiar();
-            reportes.limpiar();
-            Proveedores.limpiar();
-            FEditarCLiente.limpiar();
-            FListarClientes.limpiar();
-            FBuscarClientes.limpiar();
-            FNuevoCliente.limpiar();
-
-            this.panel3.Controls.Clear();
+            nuevo.TopLevel = false;            
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
             nuevo.Show();
@@ -115,18 +91,8 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             FListarProductos nuevo = FListarProductos.Ventana_unica();
             nuevo.TopLevel = false;
-
-            /*Pasan el estado de las instancias a null*/
-            FListarProductos.limpiar();
-            FCrearUsuario.Limpiar();
-            reportes.limpiar();
-            Proveedores.limpiar();
-            FEditarCLiente.limpiar();
-            FListarClientes.limpiar();
-            FBuscarClientes.limpiar();
-            FNuevoCliente.limpiar();
-
-            this.panel3.Controls.Clear();
+            CerrarInstancias.InstanciasNull();
+           // this.panel3.Controls.Clear();
             this.panel3.Controls.Add(nuevo);
             //nuevo.MdiParent = this;
             nuevo.Show();
@@ -138,11 +104,25 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
 
         public void CerrarOtrosFormularios()
-        {            
+        {
             foreach (Form formHijo in this.MdiChildren)
             {
                 formHijo.Close();
             }
+
+            // Limpiar el panel3 y agregar los labels de fecha y hora
+            this.panel3.Controls.Clear();
+
+            // Volver a agregar los controles de hora y fecha
+            this.panel3.Controls.Add(LblFecha);
+            this.panel3.Controls.Add(LblHora);
+            this.panel3.Controls.Add(LblEstrellas);
+            this.panel3.Controls.Add(PBoxLogotipo);
+        }
+
+        private void THora_Tick(object sender, EventArgs e)
+        {
+            LblHora.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
