@@ -12,6 +12,16 @@ namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class FAgregarProducto : Form
     {
+        private static FAgregarProducto instancia = null;
+        public static FAgregarProducto Ventana_unica1()
+        {
+            if (instancia == null)
+            {
+                instancia = new FAgregarProducto();
+                return instancia;
+            }
+            return instancia;
+        }
         public FAgregarProducto()
         {
             InitializeComponent();
@@ -68,12 +78,17 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            Limpiar();
             this.Close();
         }
 
         private void TBCodigoProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
             C_Negocio.Validaciones.SoloNumeros(e);
+        }
+        public static void Limpiar()
+        {
+            instancia = null;
         }
     }
 }

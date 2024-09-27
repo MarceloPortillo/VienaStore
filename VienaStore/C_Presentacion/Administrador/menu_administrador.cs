@@ -67,5 +67,17 @@ namespace VienaStore.C_Presentacion.Administrador
             //nuevo.MdiParent = this;
             nuevo.Show();
         }
+
+        private void BtnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            FAgregarProducto nuevo = FAgregarProducto.Ventana_unica1();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+
+        }
     }
 }

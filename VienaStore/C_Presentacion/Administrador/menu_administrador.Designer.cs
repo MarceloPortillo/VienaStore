@@ -195,6 +195,7 @@
             this.BtnAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAgregarProducto.UseCompatibleTextRendering = true;
             this.BtnAgregarProducto.UseVisualStyleBackColor = false;
+            this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
             // BtnBuescarUsuario
             // 
