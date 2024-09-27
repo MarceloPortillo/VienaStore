@@ -50,7 +50,7 @@
             this.LblApellido = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblDNI = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CboRol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LblContraseña = new System.Windows.Forms.Label();
             this.LblUsuario = new System.Windows.Forms.Label();
@@ -149,6 +149,7 @@
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(334, 20);
             this.TxtTelefono.TabIndex = 30;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // LblEmail
             // 
@@ -168,6 +169,7 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(334, 20);
             this.TxtEmail.TabIndex = 28;
+            this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
             // 
             // TxtDireccion
             // 
@@ -184,6 +186,7 @@
             this.TxtDNI.Name = "TxtDNI";
             this.TxtDNI.Size = new System.Drawing.Size(334, 20);
             this.TxtDNI.TabIndex = 26;
+            this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
             // 
             // TxtApellido
             // 
@@ -192,6 +195,7 @@
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(334, 20);
             this.TxtApellido.TabIndex = 25;
+            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
             // 
             // TxtNombre
             // 
@@ -201,6 +205,7 @@
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(334, 20);
             this.TxtNombre.TabIndex = 24;
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // LblTelefono
             // 
@@ -257,19 +262,19 @@
             this.LblDNI.TabIndex = 19;
             this.LblDNI.Text = "Nombre";
             // 
-            // comboBox1
+            // CboRol
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboRol.FormattingEnabled = true;
+            this.CboRol.Items.AddRange(new object[] {
             "Vendedor",
             "Encargado",
             "Administrador"});
-            this.comboBox1.Location = new System.Drawing.Point(298, 588);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 36;
-            this.comboBox1.Text = "Seleccione un Rol";
+            this.CboRol.Location = new System.Drawing.Point(298, 588);
+            this.CboRol.Name = "CboRol";
+            this.CboRol.Size = new System.Drawing.Size(153, 21);
+            this.CboRol.TabIndex = 36;
+            this.CboRol.Text = "Seleccione un Rol";
             // 
             // label2
             // 
@@ -337,6 +342,7 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(233, 20);
             this.TxtBuscar.TabIndex = 38;
+            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
             // 
             // LblBuscar
             // 
@@ -362,6 +368,7 @@
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCancelar
             // 
@@ -432,7 +439,7 @@
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CboRol);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LblContraseña);
             this.Controls.Add(this.LblUsuario);
@@ -484,7 +491,7 @@
         public System.Windows.Forms.Label LblApellido;
         public System.Windows.Forms.Label LblNombre;
         public System.Windows.Forms.Label LblDNI;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CboRol;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label LblContraseña;
         public System.Windows.Forms.Label LblUsuario;
