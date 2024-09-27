@@ -64,6 +64,7 @@
             this.ColProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             this.SuspendLayout();
@@ -204,12 +205,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Controls.Add(this.CheBilletera);
             this.panel1.Controls.Add(this.CheMochicla);
             this.panel1.Controls.Add(this.CheCartera);
             this.panel1.Controls.Add(this.LblProdcutos);
-            this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnEditar);
             this.panel1.Controls.Add(this.BtnLimpiar);
             this.panel1.Controls.Add(this.TxtCuit);
@@ -235,7 +236,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(25, 378);
+            this.BtnAgregar.Location = new System.Drawing.Point(19, 378);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(133, 60);
@@ -294,10 +295,10 @@
             this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(442, 378);
+            this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
             this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(134, 60);
+            this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
             this.BtnEliminar.TabIndex = 25;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -309,7 +310,7 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(162, 378);
+            this.BtnEditar.Location = new System.Drawing.Point(300, 378);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(134, 60);
@@ -325,7 +326,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(302, 378);
+            this.BtnLimpiar.Location = new System.Drawing.Point(159, 378);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(134, 60);
@@ -434,6 +435,21 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.Coral;
+            this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
+            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
+            this.BtnGuardar.TabIndex = 22;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +461,7 @@
             this.Controls.Add(this.LblProveedoresRegistrados);
             this.Controls.Add(this.DtaProveedores);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.LblBuscar);
@@ -497,5 +514,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
         public System.Windows.Forms.Button BtnAgregar;
+        public System.Windows.Forms.Button BtnGuardar;
     }
 }
