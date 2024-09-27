@@ -48,7 +48,8 @@ namespace VienaStore.C_Presentacion.Administrador
                string.IsNullOrWhiteSpace(TBDescripcion.Text) ||
                string.IsNullOrWhiteSpace(TBStock.Text) ||
                string.IsNullOrWhiteSpace(TBPrecioCompra.Text) ||
-               string.IsNullOrWhiteSpace(TBPrecioVenta.Text))
+               string.IsNullOrWhiteSpace(TBPrecioVenta.Text) ||
+                CBCategoria.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
