@@ -213,6 +213,7 @@
             this.BtnBuescarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnBuescarUsuario.UseCompatibleTextRendering = true;
             this.BtnBuescarUsuario.UseVisualStyleBackColor = false;
+            this.BtnBuescarUsuario.Click += new System.EventHandler(this.BtnBuescarUsuario_Click);
             // 
             // BtnCrearUsuario
             // 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Negocio;
 using VienaStore.C_Presentacion.Vendedor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
@@ -17,8 +18,6 @@ namespace VienaStore.C_Presentacion.Administrador
         private static Proveedores instancia = null;
         public static Proveedores Ventana_unica()
         {
-
-
 
             if (instancia == null)
             {
@@ -63,8 +62,8 @@ namespace VienaStore.C_Presentacion.Administrador
             if (string.IsNullOrWhiteSpace(TxtEmpresa.Text) ||
                 string.IsNullOrWhiteSpace(TxtCuit.Text) ||
                 string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
-                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxtTelefono.Text) )
+            string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
+            string.IsNullOrWhiteSpace(TxtTelefono.Text) || (!CheCartera.Checked && !CheMochicla.Checked && !CheBilletera.Checked))
                 
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -107,7 +106,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 string.IsNullOrWhiteSpace(TxtCuit.Text) ||
                 string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxtTelefono.Text))
+                string.IsNullOrWhiteSpace(TxtTelefono.Text) || (!CheCartera.Checked && !CheMochicla.Checked && !CheBilletera.Checked))
 
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
