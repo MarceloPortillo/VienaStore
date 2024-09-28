@@ -75,6 +75,11 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             C_Negocio.Validaciones.SoloNumeros(e);
         }
+
+        private void LblNombreProducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
