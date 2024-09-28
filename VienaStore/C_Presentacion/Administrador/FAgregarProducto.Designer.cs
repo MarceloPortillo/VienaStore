@@ -137,7 +137,7 @@
             this.TBNombreProducto.Margin = new System.Windows.Forms.Padding(4);
             this.TBNombreProducto.Name = "TBNombreProducto";
             this.TBNombreProducto.Size = new System.Drawing.Size(334, 28);
-            this.TBNombreProducto.TabIndex = 74;
+            this.TBNombreProducto.TabIndex = 2;
             this.TBNombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNombreProducto_KeyPress);
             // 
             // CBCategoria
@@ -152,7 +152,7 @@
             this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.CBCategoria.Name = "CBCategoria";
             this.CBCategoria.Size = new System.Drawing.Size(334, 28);
-            this.CBCategoria.TabIndex = 79;
+            this.CBCategoria.TabIndex = 3;
             this.CBCategoria.Text = "Seleccione la Categoría";
             // 
             // TBDescripcion
@@ -162,7 +162,7 @@
             this.TBDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.TBDescripcion.Name = "TBDescripcion";
             this.TBDescripcion.Size = new System.Drawing.Size(334, 28);
-            this.TBDescripcion.TabIndex = 49;
+            this.TBDescripcion.TabIndex = 4;
             // 
             // TBStock
             // 
@@ -171,7 +171,7 @@
             this.TBStock.Margin = new System.Windows.Forms.Padding(4);
             this.TBStock.Name = "TBStock";
             this.TBStock.Size = new System.Drawing.Size(334, 28);
-            this.TBStock.TabIndex = 81;
+            this.TBStock.TabIndex = 5;
             this.TBStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBStock_KeyPress);
             // 
             // TBPrecioCompra
@@ -181,7 +181,7 @@
             this.TBPrecioCompra.Margin = new System.Windows.Forms.Padding(4);
             this.TBPrecioCompra.Name = "TBPrecioCompra";
             this.TBPrecioCompra.Size = new System.Drawing.Size(334, 28);
-            this.TBPrecioCompra.TabIndex = 82;
+            this.TBPrecioCompra.TabIndex = 6;
             // 
             // TBPrecioVenta
             // 
@@ -190,7 +190,7 @@
             this.TBPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
             this.TBPrecioVenta.Name = "TBPrecioVenta";
             this.TBPrecioVenta.Size = new System.Drawing.Size(334, 28);
-            this.TBPrecioVenta.TabIndex = 83;
+            this.TBPrecioVenta.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -210,7 +210,7 @@
             this.BtnGuardar.Location = new System.Drawing.Point(532, 562);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(200, 82);
-            this.BtnGuardar.TabIndex = 85;
+            this.BtnGuardar.TabIndex = 9;
             this.BtnGuardar.Text = "AGREGAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@
             this.BtnCancelar.Location = new System.Drawing.Point(738, 562);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(200, 82);
-            this.BtnCancelar.TabIndex = 86;
+            this.BtnCancelar.TabIndex = 10;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -259,7 +259,7 @@
             this.TBCodigoProducto.Location = new System.Drawing.Point(207, 34);
             this.TBCodigoProducto.Name = "TBCodigoProducto";
             this.TBCodigoProducto.Size = new System.Drawing.Size(334, 28);
-            this.TBCodigoProducto.TabIndex = 85;
+            this.TBCodigoProducto.TabIndex = 1;
             this.TBCodigoProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCodigoProducto_KeyPress);
             // 
             // LblCodigoProducto
@@ -281,7 +281,7 @@
             this.BtnLimpiar.Location = new System.Drawing.Point(325, 562);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(200, 82);
-            this.BtnLimpiar.TabIndex = 88;
+            this.BtnLimpiar.TabIndex = 8;
             this.BtnLimpiar.Text = "LIMPIAR";
             this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnLimpiar.UseVisualStyleBackColor = false;
