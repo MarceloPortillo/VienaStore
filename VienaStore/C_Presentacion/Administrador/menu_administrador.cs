@@ -82,5 +82,17 @@ namespace VienaStore.C_Presentacion.Administrador
             nuevo.Show();
 
         }
+
+        private void BtnRealizarBackUp_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+            FBackUp nuevo = FBackUp.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
     }
 }

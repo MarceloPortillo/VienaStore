@@ -49,6 +49,7 @@ namespace VienaStore.C_Presentacion.Administrador
                string.IsNullOrWhiteSpace(TBStock.Text) ||
                string.IsNullOrWhiteSpace(TBPrecioCompra.Text) ||
                string.IsNullOrWhiteSpace(TBPrecioVenta.Text) ||
+               string.IsNullOrWhiteSpace(TBCodigoProducto.Text) ||
                 CBCategoria.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -65,6 +66,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 this.TBStock.Clear();
                 this.TBPrecioCompra.Clear();
                 this.TBPrecioVenta.Clear();
+                this.TBCodigoProducto.Clear();
                 return;
             }
             else
@@ -74,6 +76,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 this.TBStock.Clear();
                 this.TBPrecioCompra.Clear();
                 this.TBPrecioVenta.Clear();
+                this.TBCodigoProducto.Clear();
             }
         }
 

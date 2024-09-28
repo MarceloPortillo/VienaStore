@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VienaStore.C_Presentacion;
 using VienaStore.C_Presentacion.Administrador;
 using VienaStore.C_Presentacion.Vendedor;
 
@@ -13,6 +14,7 @@ namespace VienaStore.C_Negocio
         public static void InstanciasNull()
         {
             /*Pasan el estado de las instancias a null*/
+            FBackUp.limpiar();
             FAgregarProducto.Limpiar();
             FBuscarUsuario.limpiar();
             FListarProductos.limpiar();

@@ -36,6 +36,8 @@
             this.BtnCrearUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxLogotipo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnListarProd
@@ -158,6 +160,7 @@
             this.BtnRealizarBackUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRealizarBackUp.UseCompatibleTextRendering = true;
             this.BtnRealizarBackUp.UseVisualStyleBackColor = false;
+            this.BtnRealizarBackUp.Click += new System.EventHandler(this.BtnRealizarBackUp_Click);
             // 
             // BtnProveedores
             // 
@@ -245,6 +248,9 @@
             this.Text = "MENÚ ADMINISTRADOR";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxLogotipo)).EndInit();
             this.ResumeLayout(false);
 
         }
