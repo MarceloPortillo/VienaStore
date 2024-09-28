@@ -23,7 +23,7 @@ namespace VienaStore.C_Negocio
             else
             {
                 f.Handled = true;
-                MessageBox.Show("Error: Ingrese solo números enteros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: Ingrese solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

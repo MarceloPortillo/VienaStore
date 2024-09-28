@@ -48,12 +48,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C_Negocio\CampoVacios.cs" />
+    <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
+<<<<<<< HEAD
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.Designer.cs">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
+=======
+    <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.Designer.cs">
+      <DependentUpon>FBuscarUsuario.cs</DependentUpon>
+>>>>>>> origin/dev
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FCrearUsuario.cs">
       <SubType>Form</SubType>
@@ -133,6 +142,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="C_Presentacion\Administrador\FAgregarProducto.resx">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarUsuario.resx">
+      <DependentUpon>FBuscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FCrearUsuario.resx">
       <DependentUpon>FCrearUsuario.cs</DependentUpon>
@@ -261,7 +272,11 @@
     <None Include="Resources\buscarProveedor_48px.ico" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\Agregar_Producto_240x240px.png" />
+=======
+    <None Include="Resources\lupaBuscar_32px.ico" />
+>>>>>>> origin/dev
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
