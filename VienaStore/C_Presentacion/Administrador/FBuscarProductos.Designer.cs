@@ -69,12 +69,12 @@
             // 
             this.LblProducto.AutoSize = true;
             this.LblProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProducto.ForeColor = System.Drawing.Color.Teal;
+            this.LblProducto.ForeColor = System.Drawing.Color.Black;
             this.LblProducto.Location = new System.Drawing.Point(89, 44);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(189, 40);
+            this.LblProducto.Size = new System.Drawing.Size(245, 42);
             this.LblProducto.TabIndex = 0;
-            this.LblProducto.Text = "Productos";
+            this.LblProducto.Text = "PRODUCTOS";
             // 
             // DGProdcuto
             // 

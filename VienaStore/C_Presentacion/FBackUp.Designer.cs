@@ -45,10 +45,10 @@
             // 
             this.LblBackUp.AutoSize = true;
             this.LblBackUp.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBackUp.ForeColor = System.Drawing.Color.Teal;
+            this.LblBackUp.ForeColor = System.Drawing.Color.Black;
             this.LblBackUp.Location = new System.Drawing.Point(561, 143);
             this.LblBackUp.Name = "LblBackUp";
-            this.LblBackUp.Size = new System.Drawing.Size(177, 42);
+            this.LblBackUp.Size = new System.Drawing.Size(172, 40);
             this.LblBackUp.TabIndex = 0;
             this.LblBackUp.Text = "BACK UP";
             // 
