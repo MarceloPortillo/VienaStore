@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblProducto = new System.Windows.Forms.Label();
             this.DGProdcuto = new System.Windows.Forms.DataGridView();
             this.CondProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,7 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblEditar = new System.Windows.Forms.Label();
             this.LblEditarProducto = new System.Windows.Forms.Label();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGProdcuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEditarProducto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -72,7 +73,7 @@
             this.LblProducto.ForeColor = System.Drawing.Color.Black;
             this.LblProducto.Location = new System.Drawing.Point(89, 44);
             this.LblProducto.Name = "LblProducto";
-            this.LblProducto.Size = new System.Drawing.Size(245, 42);
+            this.LblProducto.Size = new System.Drawing.Size(236, 40);
             this.LblProducto.TabIndex = 0;
             this.LblProducto.Text = "PRODUCTOS";
             // 
@@ -85,14 +86,14 @@
             this.DGProdcuto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGProdcuto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGProdcuto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGProdcuto.ColumnHeadersHeight = 30;
             this.DGProdcuto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGProdcuto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -186,7 +187,7 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(466, 502);
+            this.BtnEditar.Location = new System.Drawing.Point(697, 502);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(195, 68);
             this.BtnEditar.TabIndex = 2;
@@ -198,13 +199,13 @@
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.Coral;
             this.BtnAgregar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Image = global::VienaStore.Properties.Resources.Agregar_Producto_48x48px;
+            this.BtnAgregar.Image = global::VienaStore.Properties.Resources.buscarProveedor_48px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(895, 502);
+            this.BtnAgregar.Location = new System.Drawing.Point(491, 502);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(195, 68);
             this.BtnAgregar.TabIndex = 3;
-            this.BtnAgregar.Text = "AGREGAR";
+            this.BtnAgregar.Text = "BUSCAR";
             this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAgregar.UseVisualStyleBackColor = false;
             // 
@@ -214,7 +215,7 @@
             this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(680, 502);
+            this.BtnEliminar.Location = new System.Drawing.Point(898, 502);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(195, 68);
             this.BtnEliminar.TabIndex = 4;
@@ -411,12 +412,22 @@
             this.LblEditarProducto.TabIndex = 8;
             this.LblEditarProducto.Text = "Producto";
             // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.Location = new System.Drawing.Point(96, 522);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(373, 28);
+            this.TxtBuscar.TabIndex = 39;
+            // 
             // FBuscarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1102, 995);
+            this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.LblEditarProducto);
             this.Controls.Add(this.LblEditar);
             this.Controls.Add(this.panel1);
@@ -473,5 +484,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
+        private System.Windows.Forms.TextBox TxtBuscar;
     }
 }
