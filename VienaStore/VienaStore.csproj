@@ -87,6 +87,12 @@
     <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.Designer.cs">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\FBackUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\FDataTracker.resx">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\FBackUp.resx">
       <DependentUpon>FBackUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,7 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="C_Datos\" />
-    <Folder Include="C_Presentacion\Encargado\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuevoUsuario.ico" />
