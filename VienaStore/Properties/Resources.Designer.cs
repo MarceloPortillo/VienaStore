@@ -83,6 +83,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agregar_Producto_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Agregar_Producto_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario_32px {
             get {
                 object obj = ResourceManager.GetObject("agregar_usuario_32px", resourceCulture);
@@ -236,6 +246,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap compras_32px {
             get {
                 object obj = ResourceManager.GetObject("compras_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Confirmar_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Confirmar_48x48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

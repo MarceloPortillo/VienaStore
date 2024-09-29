@@ -56,6 +56,12 @@
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.Designer.cs">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.Designer.cs">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="C_Presentacion\Administrador\FAgregarProducto.resx">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarProductos.resx">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarUsuario.resx">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
@@ -282,6 +291,12 @@
   <ItemGroup>
     <None Include="Resources\Agregar_Producto_240x240px.png" />
     <None Include="Resources\lupaBuscar_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_Producto_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar_48x48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
