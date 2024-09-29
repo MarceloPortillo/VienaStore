@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblProducto = new System.Windows.Forms.Label();
             this.DGProdcuto = new System.Windows.Forms.DataGridView();
             this.CondProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +61,7 @@
             this.LblEditar = new System.Windows.Forms.Label();
             this.LblEditarProducto = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGProdcuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBEditarProducto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,14 +87,14 @@
             this.DGProdcuto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGProdcuto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGProdcuto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGProdcuto.ColumnHeadersHeight = 30;
             this.DGProdcuto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGProdcuto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -415,11 +416,21 @@
             // TxtBuscar
             // 
             this.TxtBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.Location = new System.Drawing.Point(96, 522);
+            this.TxtBuscar.Location = new System.Drawing.Point(96, 542);
             this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(373, 28);
             this.TxtBuscar.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 516);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 22);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Ingrese el nombre del producto";
             // 
             // FBuscarProductos
             // 
@@ -427,6 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1102, 995);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.LblEditarProducto);
             this.Controls.Add(this.LblEditar);
@@ -485,5 +497,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
         private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }
