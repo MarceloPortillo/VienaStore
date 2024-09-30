@@ -145,6 +145,9 @@
   <data name="buscarCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscarCliente.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="informes_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informes_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImagenFondoEstrellas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImagenFondoEstrellas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,6 +202,9 @@
   <data name="Editar_Cliente_240x240px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar_Cliente_240x240px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Confirmar_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirmar_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back_up_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_up_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,7 +238,7 @@
   <data name="nuevoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevoUsuario.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Confirmar_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Confirmar_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="anularVenta_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anularVenta_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

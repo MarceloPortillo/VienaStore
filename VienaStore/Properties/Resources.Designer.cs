@@ -123,6 +123,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anularVenta_32px {
+            get {
+                object obj = ResourceManager.GetObject("anularVenta_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_up_32px {
             get {
                 object obj = ResourceManager.GetObject("back_up_32px", resourceCulture);
@@ -366,6 +376,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap imprimir {
             get {
                 object obj = ResourceManager.GetObject("imprimir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap informes_32px {
+            get {
+                object obj = ResourceManager.GetObject("informes_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

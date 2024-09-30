@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VienaStore.C_Presentacion;
 using VienaStore.C_Presentacion.Administrador;
+using VienaStore.C_Presentacion.Encargado;
 using VienaStore.C_Presentacion.Vendedor;
 
 namespace VienaStore.C_Negocio
@@ -14,6 +15,8 @@ namespace VienaStore.C_Negocio
         public static void InstanciasNull()
         {
             /*Pasan el estado de las instancias a null*/
+            FAnularVenta.limpiar();
+            FDataTracker.limpiar();
             FBuscarProductos.limpiar();
             FRegistrarVenta.limpiar();
             FBackUp.limpiar();

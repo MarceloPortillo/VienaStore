@@ -20,7 +20,7 @@ namespace VienaStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu_administrador());
+            Application.Run(new menu_encargado());
         }
     }
 }

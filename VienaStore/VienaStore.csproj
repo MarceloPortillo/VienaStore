@@ -89,11 +89,23 @@
     <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Encargado\FAnularVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FAnularVenta.Designer.cs">
+      <DependentUpon>FAnularVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Encargado\FDataTracker.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_Presentacion\Encargado\FDataTracker.Designer.cs">
       <DependentUpon>FDataTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\menu_encargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\menu_encargado.Designer.cs">
+      <DependentUpon>menu_encargado.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\FBackUp.cs">
       <SubType>Form</SubType>
@@ -176,8 +188,14 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\FAnularVenta.resx">
+      <DependentUpon>FAnularVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Encargado\FDataTracker.resx">
       <DependentUpon>FDataTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\menu_encargado.resx">
+      <DependentUpon>menu_encargado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\FBackUp.resx">
       <DependentUpon>FBackUp.cs</DependentUpon>
@@ -232,7 +250,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\informes_32px.ico" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuevoUsuario.ico" />
   </ItemGroup>
@@ -305,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Confirmar_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularVenta_32px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
