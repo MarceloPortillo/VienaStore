@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAcces.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
@@ -55,6 +57,12 @@
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.Designer.cs">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.Designer.cs">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.cs">
       <SubType>Form</SubType>
@@ -80,6 +88,12 @@
     </Compile>
     <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.Designer.cs">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\FBackUp.cs">
       <SubType>Form</SubType>
@@ -147,6 +161,9 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\FAgregarProducto.resx">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarProductos.resx">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarUsuario.resx">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\FDataTracker.resx">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\FBackUp.resx">
       <DependentUpon>FBackUp.cs</DependentUpon>
@@ -213,8 +233,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="C_Datos\" />
     <Folder Include="C_Presentacion\Encargado\" />
+    <Folder Include="C_Datos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuevoUsuario.ico" />
@@ -282,6 +302,12 @@
   <ItemGroup>
     <None Include="Resources\Agregar_Producto_240x240px.png" />
     <None Include="Resources\lupaBuscar_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_Producto_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar_48x48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

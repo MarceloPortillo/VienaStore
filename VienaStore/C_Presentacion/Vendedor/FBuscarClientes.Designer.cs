@@ -46,7 +46,7 @@
             this.groupBox1.Controls.Add(this.TxtBuscar);
             this.groupBox1.Controls.Add(this.CBBuscar);
             this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(66, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(772, 127);
@@ -75,7 +75,7 @@
             // 
             this.LblCLientes.AutoSize = true;
             this.LblCLientes.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCLientes.ForeColor = System.Drawing.Color.Teal;
+            this.LblCLientes.ForeColor = System.Drawing.Color.Black;
             this.LblCLientes.Location = new System.Drawing.Point(59, 250);
             this.LblCLientes.Name = "LblCLientes";
             this.LblCLientes.Size = new System.Drawing.Size(167, 38);

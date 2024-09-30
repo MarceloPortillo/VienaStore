@@ -7,34 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VienaStore.C_Datos;
-using VienaStore.C_Negocio;
+using VienaStore.C_Presentacion.Vendedor;
 using VienaStore.C_Presentacion;
 
-namespace VienaStore.C_Presentacion.Vendedor
-{    
-    public partial class FRegistrarVenta : Form
+namespace VienaStore.C_Presentacion.Administrador
+{
+    public partial class FBuscarProductos : Form
     {
-        private static FRegistrarVenta instancia = null;
-        public static FRegistrarVenta Ventana_unica()
+        private static FBuscarProductos instancia = null;
+        public static FBuscarProductos Ventana_unica()
         {
 
 
             if (instancia == null)
             {
-                instancia = new FRegistrarVenta();
+                instancia = new FBuscarProductos();
                 return instancia;
             }
 
 
             return instancia;
         }
-        public FRegistrarVenta()
+        public FBuscarProductos()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
             this.Close();
