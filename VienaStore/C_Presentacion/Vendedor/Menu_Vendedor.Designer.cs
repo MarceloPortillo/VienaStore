@@ -288,7 +288,7 @@
             this.BtnRegistrarVenta.TabIndex = 8;
             this.BtnRegistrarVenta.TabStop = false;
             this.BtnRegistrarVenta.Tag = "2";
-            this.BtnRegistrarVenta.Text = "   REGISTRAR\r\n    VENTA";
+            this.BtnRegistrarVenta.Text = "   GESTIONAR    VENTAS";
             this.BtnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRegistrarVenta.UseCompatibleTextRendering = true;
             this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
