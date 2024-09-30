@@ -80,9 +80,15 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnBuscarProd_Click(object sender, EventArgs e)
         {
-           /* FBuscarProd nuevo = new FBuscarProd();
-            nuevo.MdiParent = this;
-            nuevo.Show();*/
+            CerrarOtrosFormularios();
+
+            FBuscarProductos nuevo = FBuscarProductos.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
         }
 
         private void BtnListarProd_Click(object sender, EventArgs e)
