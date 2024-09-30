@@ -83,6 +83,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agregar_Producto_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Agregar_Producto_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_usuario_32px {
             get {
                 object obj = ResourceManager.GetObject("agregar_usuario_32px", resourceCulture);
@@ -106,6 +116,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap Alta_Cliente_240x240px {
             get {
                 object obj = ResourceManager.GetObject("Alta_Cliente_240x240px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anularVenta_32px {
+            get {
+                object obj = ResourceManager.GetObject("anularVenta_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -241,6 +261,16 @@ namespace VienaStore.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Confirmar_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Confirmar_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon editar {
@@ -313,6 +343,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guardaCliente_48px {
+            get {
+                object obj = ResourceManager.GetObject("guardaCliente_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
                 object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
@@ -346,6 +386,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap imprimir {
             get {
                 object obj = ResourceManager.GetObject("imprimir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap informes_32px {
+            get {
+                object obj = ResourceManager.GetObject("informes_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -5,11 +5,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Datos;
+using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Negocio
 {
     internal class Validaciones
     {
+        private DataAcces dataAcces;
         public static void SoloNumeros(KeyPressEventArgs f)
         {
             if (char.IsNumber(f.KeyChar))
@@ -52,6 +55,23 @@ namespace VienaStore.C_Negocio
         {
             string expresion = @"^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, expresion);
+        }
+
+        public Validaciones()
+        {
+            dataAcces = new DataAcces();
+        }
+        public void GuardarCliente(Clientes cliente)
+        {
+            if(cliente.id == 0)
+            {
+               dataAcces.InsertCliente(cliente);
+            }
+            else
+            {
+                MessageBox.Show("Error");
+                //return dataAcces.UpdateCliente(cliente);
+            }
         }
     }
 }

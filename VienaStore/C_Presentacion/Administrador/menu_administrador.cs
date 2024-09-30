@@ -48,7 +48,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void BtnCrearUsuario_Click(object sender, EventArgs e)
         {
             CerrarOtrosFormularios();
-            FCrearUsuario nuevo = FCrearUsuario.Ventana_unica1();
+            CrearUsuarioNuevo nuevo = CrearUsuarioNuevo.Ventana_unica();
             nuevo.TopLevel = false;
             CerrarInstancias.InstanciasNull();
             //this.panel3.Controls.Clear();
@@ -81,6 +81,18 @@ namespace VienaStore.C_Presentacion.Administrador
             //nuevo.MdiParent = this;
             nuevo.Show();
 
+        }
+
+        private void BtnRealizarBackUp_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+            FBackUp nuevo = FBackUp.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
         }
     }
 }

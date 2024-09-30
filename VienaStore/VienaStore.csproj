@@ -47,26 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAcces.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
+    <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.Designer.cs">
+      <DependentUpon>CrearUsuarioNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.Designer.cs">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
-	</Compile>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FBuscarProductos.Designer.cs">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.Designer.cs">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.Designer.cs">
-      <DependentUpon>FCrearUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
       <SubType>Form</SubType>
@@ -80,6 +88,30 @@
     </Compile>
     <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FAnularVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FAnularVenta.Designer.cs">
+      <DependentUpon>FAnularVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\FDataTracker.Designer.cs">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\menu_encargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Encargado\menu_encargado.Designer.cs">
+      <DependentUpon>menu_encargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\FBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\FBackUp.Designer.cs">
+      <DependentUpon>FBackUp.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\FLogin.cs">
       <SubType>Form</SubType>
@@ -138,20 +170,35 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Administrador\CrearUsuarioNuevo.resx">
+      <DependentUpon>CrearUsuarioNuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FAgregarProducto.resx">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarProductos.resx">
+      <DependentUpon>FBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarUsuario.resx">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="C_Presentacion\Administrador\FCrearUsuario.resx">
-      <DependentUpon>FCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\FAnularVenta.resx">
+      <DependentUpon>FAnularVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\FDataTracker.resx">
+      <DependentUpon>FDataTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Encargado\menu_encargado.resx">
+      <DependentUpon>menu_encargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\FBackUp.resx">
+      <DependentUpon>FBackUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -204,8 +251,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="C_Datos\" />
-    <Folder Include="C_Presentacion\Encargado\" />
+    <None Include="Resources\informes_32px.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuevoUsuario.ico" />
@@ -273,6 +319,18 @@
   <ItemGroup>
     <None Include="Resources\Agregar_Producto_240x240px.png" />
     <None Include="Resources\lupaBuscar_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_Producto_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularVenta_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardaCliente_48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

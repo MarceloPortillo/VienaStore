@@ -80,9 +80,15 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnBuscarProd_Click(object sender, EventArgs e)
         {
-           /* FBuscarProd nuevo = new FBuscarProd();
-            nuevo.MdiParent = this;
-            nuevo.Show();*/
+            CerrarOtrosFormularios();
+
+            FBuscarProductos nuevo = FBuscarProductos.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
         }
 
         private void BtnListarProd_Click(object sender, EventArgs e)
@@ -101,6 +107,19 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            FRegistrarVenta nuevo = FRegistrarVenta.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            // this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
         }
 
         public void CerrarOtrosFormularios()
@@ -124,5 +143,6 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             LblHora.Text = DateTime.Now.ToLongTimeString();
         }
+        
     }
 }

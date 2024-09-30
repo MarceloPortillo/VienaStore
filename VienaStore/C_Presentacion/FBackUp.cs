@@ -7,34 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VienaStore.C_Datos;
-using VienaStore.C_Negocio;
-using VienaStore.C_Presentacion;
+using VienaStore.C_Presentacion.Administrador;
 
-namespace VienaStore.C_Presentacion.Vendedor
-{    
-    public partial class FRegistrarVenta : Form
+namespace VienaStore.C_Presentacion
+{
+    public partial class FBackUp : Form
     {
-        private static FRegistrarVenta instancia = null;
-        public static FRegistrarVenta Ventana_unica()
+        private static FBackUp instancia = null;
+        public static FBackUp Ventana_unica()
         {
-
 
             if (instancia == null)
             {
-                instancia = new FRegistrarVenta();
+                instancia = new FBackUp();
                 return instancia;
             }
-
-
             return instancia;
         }
-        public FRegistrarVenta()
+        public FBackUp()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void FBackUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
             this.Close();

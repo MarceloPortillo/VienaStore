@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnGestionarCompras = new System.Windows.Forms.Button();
             this.BtnRealizarBackUp = new System.Windows.Forms.Button();
             this.BtnProveedores = new System.Windows.Forms.Button();
             this.BtnAgregarProducto = new System.Windows.Forms.Button();
@@ -36,6 +35,8 @@
             this.BtnCrearUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxLogotipo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnListarProd
@@ -91,8 +92,8 @@
             this.panel1.Controls.Add(this.BtnAgregarProducto);
             this.panel1.Controls.Add(this.BtnProveedores);
             this.panel1.Controls.Add(this.BtnRealizarBackUp);
-            this.panel1.Controls.Add(this.BtnGestionarCompras);
             this.panel1.Size = new System.Drawing.Size(204, 749);
+            this.panel1.Controls.SetChildIndex(this.BtnRegistrarVenta, 0);
             this.panel1.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel1.Controls.SetChildIndex(this.BtnRegistrarCliente, 0);
             this.panel1.Controls.SetChildIndex(this.BtnModificarCliente, 0);
@@ -100,7 +101,6 @@
             this.panel1.Controls.SetChildIndex(this.BtnListarCliente, 0);
             this.panel1.Controls.SetChildIndex(this.BtnBuscarProd, 0);
             this.panel1.Controls.SetChildIndex(this.BtnListarProd, 0);
-            this.panel1.Controls.SetChildIndex(this.BtnGestionarCompras, 0);
             this.panel1.Controls.SetChildIndex(this.BtnRealizarBackUp, 0);
             this.panel1.Controls.SetChildIndex(this.BtnProveedores, 0);
             this.panel1.Controls.SetChildIndex(this.BtnAgregarProducto, 0);
@@ -123,23 +123,10 @@
             // 
             this.panel3.Size = new System.Drawing.Size(596, 698);
             // 
-            // BtnGestionarCompras
+            // BtnRegistrarVenta
             // 
-            this.BtnGestionarCompras.BackColor = System.Drawing.Color.Coral;
-            this.BtnGestionarCompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnGestionarCompras.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGestionarCompras.Image = global::VienaStore.Properties.Resources.compras_32px;
-            this.BtnGestionarCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGestionarCompras.Location = new System.Drawing.Point(25, 447);
-            this.BtnGestionarCompras.Name = "BtnGestionarCompras";
-            this.BtnGestionarCompras.Size = new System.Drawing.Size(155, 45);
-            this.BtnGestionarCompras.TabIndex = 7;
-            this.BtnGestionarCompras.TabStop = false;
-            this.BtnGestionarCompras.Tag = "2";
-            this.BtnGestionarCompras.Text = "   GESTIONAR \r\n    COMPRAS";
-            this.BtnGestionarCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnGestionarCompras.UseCompatibleTextRendering = true;
-            this.BtnGestionarCompras.UseVisualStyleBackColor = false;
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 447);
+            this.BtnRegistrarVenta.Size = new System.Drawing.Size(155, 45);
             // 
             // BtnRealizarBackUp
             // 
@@ -148,7 +135,7 @@
             this.BtnRealizarBackUp.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRealizarBackUp.Image = global::VienaStore.Properties.Resources.back_up_32px;
             this.BtnRealizarBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRealizarBackUp.Location = new System.Drawing.Point(25, 498);
+            this.BtnRealizarBackUp.Location = new System.Drawing.Point(25, 549);
             this.BtnRealizarBackUp.Name = "BtnRealizarBackUp";
             this.BtnRealizarBackUp.Size = new System.Drawing.Size(155, 45);
             this.BtnRealizarBackUp.TabIndex = 8;
@@ -158,6 +145,7 @@
             this.BtnRealizarBackUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRealizarBackUp.UseCompatibleTextRendering = true;
             this.BtnRealizarBackUp.UseVisualStyleBackColor = false;
+            this.BtnRealizarBackUp.Click += new System.EventHandler(this.BtnRealizarBackUp_Click);
             // 
             // BtnProveedores
             // 
@@ -166,7 +154,7 @@
             this.BtnProveedores.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProveedores.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProveedores.Location = new System.Drawing.Point(25, 549);
+            this.BtnProveedores.Location = new System.Drawing.Point(25, 498);
             this.BtnProveedores.Name = "BtnProveedores";
             this.BtnProveedores.Size = new System.Drawing.Size(155, 45);
             this.BtnProveedores.TabIndex = 9;
@@ -245,17 +233,18 @@
             this.Text = "MENÚ ADMINISTRADOR";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxLogotipo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Button BtnProveedores;
         public System.Windows.Forms.Button BtnRealizarBackUp;
-        public System.Windows.Forms.Button BtnGestionarCompras;
         public System.Windows.Forms.Button BtnAgregarProducto;
         public System.Windows.Forms.Button BtnBuescarUsuario;
         public System.Windows.Forms.Button BtnCrearUsuario;
+        public System.Windows.Forms.Button BtnProveedores;
     }
 }
