@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.LblBuscar = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
@@ -47,14 +47,15 @@
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtCuit = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.CheBilletera = new System.Windows.Forms.CheckBox();
             this.CheMochicla = new System.Windows.Forms.CheckBox();
             this.CheCartera = new System.Windows.Forms.CheckBox();
             this.LblProdcutos = new System.Windows.Forms.Label();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
             this.ColEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +63,9 @@
             this.ColTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // TxtBuscar
             // 
+            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscar.Location = new System.Drawing.Point(215, 98);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(233, 20);
@@ -230,6 +232,21 @@
             this.panel1.Size = new System.Drawing.Size(595, 457);
             this.panel1.TabIndex = 16;
             // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.Coral;
+            this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
+            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
+            this.BtnGuardar.TabIndex = 22;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            // 
             // BtnAgregar
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.Coral;
@@ -289,21 +306,6 @@
             this.LblProdcutos.TabIndex = 26;
             this.LblProdcutos.Text = "Categoria";
             // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.Coral;
-            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
-            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
-            this.BtnEliminar.TabIndex = 25;
-            this.BtnEliminar.Text = "ELIMINAR";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminar.UseVisualStyleBackColor = false;
-            // 
             // BtnEditar
             // 
             this.BtnEditar.BackColor = System.Drawing.Color.Coral;
@@ -336,20 +338,35 @@
             this.BtnLimpiar.UseVisualStyleBackColor = false;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.Coral;
+            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
+            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
+            this.BtnEliminar.TabIndex = 25;
+            this.BtnEliminar.Text = "ELIMINAR";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            // 
             // DtaProveedores
             // 
             this.DtaProveedores.AllowUserToAddRows = false;
             this.DtaProveedores.AllowUserToOrderColumns = true;
             this.DtaProveedores.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtaProveedores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtaProveedores.ColumnHeadersHeight = 50;
             this.DtaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -358,29 +375,30 @@
             this.ColDireccion,
             this.ColTelefono,
             this.ColCorreo,
-            this.ColProductos});
+            this.ColProductos,
+            this.ColEstado});
             this.DtaProveedores.EnableHeadersVisualStyles = false;
             this.DtaProveedores.Location = new System.Drawing.Point(613, 193);
             this.DtaProveedores.Name = "DtaProveedores";
             this.DtaProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DtaProveedores.RowHeadersVisible = false;
             this.DtaProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaProveedores.Size = new System.Drawing.Size(623, 306);
+            this.DtaProveedores.Size = new System.Drawing.Size(693, 306);
             this.DtaProveedores.TabIndex = 0;
             // 
             // ColEmpresa
             // 
             this.ColEmpresa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColEmpresa.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColEmpresa.HeaderText = "Empresa";
             this.ColEmpresa.Name = "ColEmpresa";
             // 
@@ -409,6 +427,11 @@
             this.ColProductos.HeaderText = "Categoria";
             this.ColProductos.Name = "ColProductos";
             // 
+            // ColEstado
+            // 
+            this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.Name = "ColEstado";
+            // 
             // LblProveedoresRegistrados
             // 
             this.LblProveedoresRegistrados.AutoSize = true;
@@ -434,21 +457,6 @@
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.Coral;
-            this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
-            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
-            this.BtnGuardar.TabIndex = 22;
-            this.BtnGuardar.Text = "GUARDAR";
-            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
             // Proveedores
             // 
@@ -507,13 +515,14 @@
         private System.Windows.Forms.CheckBox CheBilletera;
         private System.Windows.Forms.CheckBox CheMochicla;
         private System.Windows.Forms.CheckBox CheCartera;
+        public System.Windows.Forms.Button BtnAgregar;
+        public System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
-        public System.Windows.Forms.Button BtnAgregar;
-        public System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
     }
 }

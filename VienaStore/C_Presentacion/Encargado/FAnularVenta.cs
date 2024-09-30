@@ -8,31 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VienaStore.C_Presentacion.Vendedor;
+using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Presentacion.Encargado
 {
-    public partial class FDataTracker : Form
+    public partial class FAnularVenta : Form
     {
-        private static FDataTracker instancia = null;
-        public static FDataTracker Ventana_unica()
+        private static FAnularVenta instancia = null;
+        public static FAnularVenta Ventana_unica()
         {
 
 
             if (instancia == null)
             {
-                instancia = new FDataTracker();
+                instancia = new FAnularVenta();
                 return instancia;
             }
 
 
             return instancia;
         }
-        public FDataTracker()
+        public FAnularVenta()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void BtnSalirAnularVenta_Click(object sender, EventArgs e)
         {
             limpiar();
             this.Close();

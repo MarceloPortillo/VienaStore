@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblLista = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dirección = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnSalir = new System.Windows.Forms.Button();
+            this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +49,10 @@
             this.LblLista.AutoSize = true;
             this.LblLista.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLista.ForeColor = System.Drawing.Color.Black;
-            this.LblLista.Location = new System.Drawing.Point(83, 94);
+            this.LblLista.Location = new System.Drawing.Point(62, 76);
+            this.LblLista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblLista.Name = "LblLista";
-            this.LblLista.Size = new System.Drawing.Size(338, 38);
+            this.LblLista.Size = new System.Drawing.Size(269, 29);
             this.LblLista.TabIndex = 0;
             this.LblLista.Text = "LISTA DE CLIENTES";
             // 
@@ -81,12 +82,12 @@
             this.Nombre,
             this.Apellido,
             this.DNI,
-            this.Dirección,
             this.Email,
-            this.Teléfono});
+            this.Teléfono,
+            this.ColEstado});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 160);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 130);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,8 +108,24 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 497);
+            this.dataGridView1.Size = new System.Drawing.Size(780, 404);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(720, 546);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(115, 52);
+            this.BtnSalir.TabIndex = 1;
+            this.BtnSalir.Text = "SALIR";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // Nombre
             // 
@@ -137,15 +154,6 @@
             this.DNI.Name = "DNI";
             this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Dirección
-            // 
-            this.Dirección.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Dirección.FillWeight = 47.73008F;
-            this.Dirección.HeaderText = "Dirección";
-            this.Dirección.MinimumWidth = 6;
-            this.Dirección.Name = "Dirección";
-            this.Dirección.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -164,33 +172,22 @@
             this.Teléfono.Name = "Teléfono";
             this.Teléfono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // BtnSalir
+            // ColEstado
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(960, 672);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(153, 64);
-            this.BtnSalir.TabIndex = 1;
-            this.BtnSalir.Text = "SALIR";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.Name = "ColEstado";
             // 
             // FListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1181, 766);
+            this.ClientSize = new System.Drawing.Size(886, 622);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FListarClientes";
@@ -203,13 +200,13 @@
 
         #endregion
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         public System.Windows.Forms.Button BtnSalir;
         public System.Windows.Forms.Label LblLista;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        public System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Dirección;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        public System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
     }
 }

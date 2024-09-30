@@ -241,11 +241,10 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.Button BtnProveedores;
         public System.Windows.Forms.Button BtnRealizarBackUp;
         public System.Windows.Forms.Button BtnAgregarProducto;
         public System.Windows.Forms.Button BtnBuescarUsuario;
         public System.Windows.Forms.Button BtnCrearUsuario;
+        public System.Windows.Forms.Button BtnProveedores;
     }
 }
