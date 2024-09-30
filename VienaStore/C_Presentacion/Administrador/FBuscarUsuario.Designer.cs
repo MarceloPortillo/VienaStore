@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
-            this.ColLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
@@ -64,6 +56,14 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.ColLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,14 +74,14 @@
             this.DtaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtaUsuario.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtaUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColLegajo,
@@ -89,57 +89,17 @@
             this.ColApellido,
             this.ColDni,
             this.ColEmail,
-            this.ColDireccion,
             this.ColTel,
-            this.ColUsuario});
+            this.ColUsuario,
+            this.ColEstado});
             this.DtaUsuario.EnableHeadersVisualStyles = false;
-            this.DtaUsuario.Location = new System.Drawing.Point(531, 133);
+            this.DtaUsuario.Location = new System.Drawing.Point(483, 133);
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DtaUsuario.RowHeadersVisible = false;
             this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaUsuario.Size = new System.Drawing.Size(646, 242);
+            this.DtaUsuario.Size = new System.Drawing.Size(694, 242);
             this.DtaUsuario.TabIndex = 1;
-            // 
-            // ColLegajo
-            // 
-            this.ColLegajo.HeaderText = "Legajo";
-            this.ColLegajo.Name = "ColLegajo";
-            // 
-            // ColNombre
-            // 
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.Name = "ColNombre";
-            // 
-            // ColApellido
-            // 
-            this.ColApellido.HeaderText = "Apellido";
-            this.ColApellido.Name = "ColApellido";
-            // 
-            // ColDni
-            // 
-            this.ColDni.HeaderText = "Dni";
-            this.ColDni.Name = "ColDni";
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.HeaderText = "E-mail";
-            this.ColEmail.Name = "ColEmail";
-            // 
-            // ColDireccion
-            // 
-            this.ColDireccion.HeaderText = "Dirección";
-            this.ColDireccion.Name = "ColDireccion";
-            // 
-            // ColTel
-            // 
-            this.ColTel.HeaderText = "Teléfono";
-            this.ColTel.Name = "ColTel";
-            // 
-            // ColUsuario
-            // 
-            this.ColUsuario.HeaderText = "Usuario";
-            this.ColUsuario.Name = "ColUsuario";
             // 
             // TxtTelefono
             // 
@@ -425,6 +385,46 @@
             this.BtnBuscar.TabIndex = 44;
             this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
+            // ColLegajo
+            // 
+            this.ColLegajo.HeaderText = "Legajo";
+            this.ColLegajo.Name = "ColLegajo";
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.Name = "ColNombre";
+            // 
+            // ColApellido
+            // 
+            this.ColApellido.HeaderText = "Apellido";
+            this.ColApellido.Name = "ColApellido";
+            // 
+            // ColDni
+            // 
+            this.ColDni.HeaderText = "Dni";
+            this.ColDni.Name = "ColDni";
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.HeaderText = "E-mail";
+            this.ColEmail.Name = "ColEmail";
+            // 
+            // ColTel
+            // 
+            this.ColTel.HeaderText = "Teléfono";
+            this.ColTel.Name = "ColTel";
+            // 
+            // ColUsuario
+            // 
+            this.ColUsuario.HeaderText = "Usuario";
+            this.ColUsuario.Name = "ColUsuario";
+            // 
+            // ColEstado
+            // 
+            this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.Name = "ColEstado";
+            // 
             // FBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,14 +471,6 @@
         #endregion
 
         public System.Windows.Forms.DataGridView DtaUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColLegajo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColUsuario;
         public System.Windows.Forms.MaskedTextBox TxtTelefono;
         public System.Windows.Forms.Label LblEmail;
         public System.Windows.Forms.TextBox TxtEmail;
@@ -505,5 +497,13 @@
         public System.Windows.Forms.Button BtnEliminar;
         public System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColLegajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
     }
 }

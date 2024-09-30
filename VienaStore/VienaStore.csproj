@@ -52,6 +52,12 @@
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
+    <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.Designer.cs">
+      <DependentUpon>CrearUsuarioNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\FAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="C_Presentacion\Administrador\FBuscarUsuario.Designer.cs">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="C_Presentacion\Administrador\FCrearUsuario.Designer.cs">
-      <DependentUpon>FCrearUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.cs">
       <SubType>Form</SubType>
@@ -170,6 +170,9 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Administrador\CrearUsuarioNuevo.resx">
+      <DependentUpon>CrearUsuarioNuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FAgregarProducto.resx">
       <DependentUpon>FAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\FBuscarUsuario.resx">
       <DependentUpon>FBuscarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="C_Presentacion\Administrador\FCrearUsuario.resx">
-      <DependentUpon>FCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
@@ -328,6 +328,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anularVenta_32px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardaCliente_48px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

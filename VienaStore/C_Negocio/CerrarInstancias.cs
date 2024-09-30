@@ -23,7 +23,7 @@ namespace VienaStore.C_Negocio
             FAgregarProducto.Limpiar();
             FBuscarUsuario.limpiar();
             FListarProductos.limpiar();
-            FCrearUsuario.Limpiar();
+            CrearUsuarioNuevo.limpiar();
             reportes.limpiar();
             Proveedores.limpiar();
             FEditarCLiente.limpiar();

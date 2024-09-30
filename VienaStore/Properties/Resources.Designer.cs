@@ -343,6 +343,16 @@ namespace VienaStore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guardaCliente_48px {
+            get {
+                object obj = ResourceManager.GetObject("guardaCliente_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_48x48_px {
             get {
                 object obj = ResourceManager.GetObject("guardar_48x48_px", resourceCulture);
