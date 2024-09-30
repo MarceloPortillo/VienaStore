@@ -48,13 +48,12 @@
             // 
             this.LblLista.AutoSize = true;
             this.LblLista.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLista.ForeColor = System.Drawing.Color.Teal;
-            this.LblLista.Location = new System.Drawing.Point(62, 76);
-            this.LblLista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblLista.ForeColor = System.Drawing.Color.Black;
+            this.LblLista.Location = new System.Drawing.Point(83, 94);
             this.LblLista.Name = "LblLista";
-            this.LblLista.Size = new System.Drawing.Size(224, 29);
+            this.LblLista.Size = new System.Drawing.Size(338, 38);
             this.LblLista.TabIndex = 0;
-            this.LblLista.Text = "Lista de Clientes";
+            this.LblLista.Text = "LISTA DE CLIENTES";
             // 
             // dataGridView1
             // 
@@ -86,8 +85,8 @@
             this.Email,
             this.Teléfono});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 130);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -98,6 +97,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,7 +107,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(1040, 497);
             this.dataGridView1.TabIndex = 0;
             // 
             // Nombre
@@ -115,6 +115,7 @@
             this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nombre.FillWeight = 29.34149F;
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -123,6 +124,7 @@
             this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Apellido.FillWeight = 34.86686F;
             this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
             this.Apellido.Name = "Apellido";
             this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -131,6 +133,7 @@
             this.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DNI.FillWeight = 41.1991F;
             this.DNI.HeaderText = "DNI";
+            this.DNI.MinimumWidth = 6;
             this.DNI.Name = "DNI";
             this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -139,6 +142,7 @@
             this.Dirección.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Dirección.FillWeight = 47.73008F;
             this.Dirección.HeaderText = "Dirección";
+            this.Dirección.MinimumWidth = 6;
             this.Dirección.Name = "Dirección";
             this.Dirección.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -147,6 +151,7 @@
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Email.FillWeight = 51.40083F;
             this.Email.HeaderText = "E-mail";
+            this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
             this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -155,6 +160,7 @@
             this.Teléfono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Teléfono.FillWeight = 39.08376F;
             this.Teléfono.HeaderText = "Teléfono";
+            this.Teléfono.MinimumWidth = 6;
             this.Teléfono.Name = "Teléfono";
             this.Teléfono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -164,10 +170,10 @@
             this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(720, 546);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSalir.Location = new System.Drawing.Point(960, 672);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(115, 52);
+            this.BtnSalir.Size = new System.Drawing.Size(153, 64);
             this.BtnSalir.TabIndex = 1;
             this.BtnSalir.Text = "SALIR";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,15 +182,15 @@
             // 
             // FListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(886, 622);
+            this.ClientSize = new System.Drawing.Size(1181, 766);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FListarClientes";

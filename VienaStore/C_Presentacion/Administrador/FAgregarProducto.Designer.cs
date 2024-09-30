@@ -56,7 +56,7 @@
             // 
             this.LblAgregarProducto.AutoSize = true;
             this.LblAgregarProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAgregarProducto.ForeColor = System.Drawing.Color.Teal;
+            this.LblAgregarProducto.ForeColor = System.Drawing.Color.Black;
             this.LblAgregarProducto.Location = new System.Drawing.Point(218, 23);
             this.LblAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAgregarProducto.Name = "LblAgregarProducto";
