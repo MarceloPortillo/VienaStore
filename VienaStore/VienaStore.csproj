@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAcces.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
@@ -231,6 +233,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="C_Presentacion\Encargado\" />
     <Folder Include="C_Datos\" />
   </ItemGroup>
   <ItemGroup>

@@ -40,14 +40,15 @@
             this.BtnRegistrarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
-            this.LblFecha = new System.Windows.Forms.Label();
             this.LblBienvenido = new System.Windows.Forms.Label();
+            this.LblFecha = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LblEstrellas = new System.Windows.Forms.Label();
+            this.PBoxLogotipo = new System.Windows.Forms.PictureBox();
             this.LblHora = new System.Windows.Forms.Label();
             this.THora = new System.Windows.Forms.Timer(this.components);
-            this.PBoxLogotipo = new System.Windows.Forms.PictureBox();
-            this.LblEstrellas = new System.Windows.Forms.Label();
+            this.BtnRegistrarVenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel1.Controls.Add(this.BtnRegistrarVenta);
             this.panel1.Controls.Add(this.BtnModificarCliente);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.BtnListarProd);
@@ -199,16 +201,6 @@
             this.BtnCerrarSesion.UseVisualStyleBackColor = true;
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
-            // LblFecha
-            // 
-            this.LblFecha.AutoSize = true;
-            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.Location = new System.Drawing.Point(315, 272);
-            this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(126, 46);
-            this.LblFecha.TabIndex = 2;
-            this.LblFecha.Text = "label2";
-            // 
             // LblBienvenido
             // 
             this.LblBienvenido.AutoSize = true;
@@ -218,6 +210,16 @@
             this.LblBienvenido.Size = new System.Drawing.Size(166, 20);
             this.LblBienvenido.TabIndex = 0;
             this.LblBienvenido.Text = "MENÚ VENDEDOR";
+            // 
+            // LblFecha
+            // 
+            this.LblFecha.AutoSize = true;
+            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFecha.Location = new System.Drawing.Point(315, 272);
+            this.LblFecha.Name = "LblFecha";
+            this.LblFecha.Size = new System.Drawing.Size(126, 46);
+            this.LblFecha.TabIndex = 2;
+            this.LblFecha.Text = "label2";
             // 
             // fecha
             // 
@@ -238,6 +240,26 @@
             this.panel3.Size = new System.Drawing.Size(766, 564);
             this.panel3.TabIndex = 3;
             // 
+            // LblEstrellas
+            // 
+            this.LblEstrellas.AutoSize = true;
+            this.LblEstrellas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEstrellas.Location = new System.Drawing.Point(514, 487);
+            this.LblEstrellas.Name = "LblEstrellas";
+            this.LblEstrellas.Size = new System.Drawing.Size(114, 31);
+            this.LblEstrellas.TabIndex = 8;
+            this.LblEstrellas.Text = "⭐⭐⭐⭐⭐";
+            // 
+            // PBoxLogotipo
+            // 
+            this.PBoxLogotipo.Image = global::VienaStore.Properties.Resources.logotipo;
+            this.PBoxLogotipo.Location = new System.Drawing.Point(470, 391);
+            this.PBoxLogotipo.Name = "PBoxLogotipo";
+            this.PBoxLogotipo.Size = new System.Drawing.Size(195, 93);
+            this.PBoxLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PBoxLogotipo.TabIndex = 7;
+            this.PBoxLogotipo.TabStop = false;
+            // 
             // LblHora
             // 
             this.LblHora.AutoSize = true;
@@ -253,25 +275,24 @@
             this.THora.Enabled = true;
             this.THora.Tick += new System.EventHandler(this.THora_Tick);
             // 
-            // PBoxLogotipo
+            // BtnRegistrarVenta
             // 
-            this.PBoxLogotipo.Image = global::VienaStore.Properties.Resources.logotipo;
-            this.PBoxLogotipo.Location = new System.Drawing.Point(470, 391);
-            this.PBoxLogotipo.Name = "PBoxLogotipo";
-            this.PBoxLogotipo.Size = new System.Drawing.Size(195, 93);
-            this.PBoxLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.PBoxLogotipo.TabIndex = 7;
-            this.PBoxLogotipo.TabStop = false;
-            // 
-            // LblEstrellas
-            // 
-            this.LblEstrellas.AutoSize = true;
-            this.LblEstrellas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEstrellas.Location = new System.Drawing.Point(514, 487);
-            this.LblEstrellas.Name = "LblEstrellas";
-            this.LblEstrellas.Size = new System.Drawing.Size(114, 31);
-            this.LblEstrellas.TabIndex = 8;
-            this.LblEstrellas.Text = "⭐⭐⭐⭐⭐";
+            this.BtnRegistrarVenta.BackColor = System.Drawing.Color.Coral;
+            this.BtnRegistrarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnRegistrarVenta.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarVenta.Image = global::VienaStore.Properties.Resources.compras_32px;
+            this.BtnRegistrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 427);
+            this.BtnRegistrarVenta.Name = "BtnRegistrarVenta";
+            this.BtnRegistrarVenta.Size = new System.Drawing.Size(155, 59);
+            this.BtnRegistrarVenta.TabIndex = 8;
+            this.BtnRegistrarVenta.TabStop = false;
+            this.BtnRegistrarVenta.Tag = "2";
+            this.BtnRegistrarVenta.Text = "   GESTIONAR    VENTAS";
+            this.BtnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRegistrarVenta.UseCompatibleTextRendering = true;
+            this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.BtnRegistrarVenta.Click += new System.EventHandler(this.BtnRegistrarVenta_Click);
             // 
             // Menu_Vendedor
             // 
@@ -319,5 +340,6 @@
         private System.Windows.Forms.Timer THora;
         public System.Windows.Forms.PictureBox PBoxLogotipo;
         private System.Windows.Forms.Label LblEstrellas;
+        public System.Windows.Forms.Button BtnRegistrarVenta;
     }
 }
