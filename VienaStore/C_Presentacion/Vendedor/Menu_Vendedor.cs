@@ -103,6 +103,19 @@ namespace VienaStore.C_Presentacion.Vendedor
             this.Close();
         }
 
+        private void BtnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            FRegistrarVenta nuevo = FRegistrarVenta.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            // this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
+
         public void CerrarOtrosFormularios()
         {
             foreach (Form formHijo in this.MdiChildren)
@@ -124,5 +137,6 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             LblHora.Text = DateTime.Now.ToLongTimeString();
         }
+        
     }
 }
