@@ -232,10 +232,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="C_Presentacion\Encargado\" />
-    <Folder Include="C_Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\nuevoUsuario.ico" />
   </ItemGroup>
