@@ -73,5 +73,10 @@ namespace VienaStore.C_Negocio
                 //return dataAcces.UpdateCliente(cliente);
             }
         }
+
+        public List<Clientes> GetClientes()
+        {
+            return dataAcces.GetClientes();
+        }
     }
 }

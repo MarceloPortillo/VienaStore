@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Datos;
+using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FListarClientes : Form
     {
+        private Validaciones validacion;
+
         private static FListarClientes instancia = null;
         public static FListarClientes Ventana_unica()
         {
@@ -28,6 +32,8 @@ namespace VienaStore.C_Presentacion.Vendedor
         public FListarClientes()
         {
             InitializeComponent();
+            validacion = new Validaciones();
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -39,5 +45,18 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             instancia = null;
         }
+
+        private void FListarClientes_Load(object sender, EventArgs e)
+        {
+            ListarContactos();
+        }
+
+        private void ListarContactos()
+        {
+            List<Clientes> clientes =  validacion.GetClientes();
+            dataGridView1.DataSource = clientes;    
+        }
+ 
     }
 }
+    
