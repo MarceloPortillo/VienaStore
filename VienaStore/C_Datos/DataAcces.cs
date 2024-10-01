@@ -8,12 +8,14 @@ using VienaStore.C_Datos;
 using VienaStore.C_Presentacion;
 using VienaStore.C_Negocio;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
 
 namespace VienaStore.C_Datos
 {
     internal class DataAcces
     {
-        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=MARCELO\\SQLEXPRESS\r\n");
+        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=VistaPremier\\SQLEXPRESS");
 
         public void InsertCliente(Clientes cliente)
         {
@@ -46,6 +48,46 @@ namespace VienaStore.C_Datos
                 conn.Close();
             }
         }
+
+        public List<Clientes> GetClientes()
+        {
+            List<Clientes> clientes = new List<Clientes>(); 
+
+            try
+            {
+                conn.Open();
+                string query = @"SELECT id_cliente, dni, nombre, apellido, direccion, email, telefono
+                                 FROM Clientes";
+
+                SqlCommand command = new SqlCommand(query, conn);   
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    clientes.Add(new Clientes
+                    {
+                        id = int.Parse(reader["id_cliente"].ToString()),
+                        dni = int.Parse(reader["dni"].ToString()),
+                        nombre = reader["nombre"].ToString(),
+                        apellido = reader["apellido"].ToString(),
+                        direccion = reader["direccion"].ToString(),
+                        email = reader["email"].ToString(),
+                        telefono = reader["telefono"].ToString()
+                    });
+                }
+            }
+            catch (Exception)
+            {   
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return clientes;
+
+        }
+
+
 
     }
 }

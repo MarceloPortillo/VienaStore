@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VienaStore.C_Datos
 {
-    internal class Clientes
+    public class Clientes
     {
         public int id { get; set; }
 
