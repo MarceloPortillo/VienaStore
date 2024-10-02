@@ -132,6 +132,12 @@
     <Compile Include="C_Presentacion\Administrador\reportes.Designer.cs">
       <DependentUpon>reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FBuscarProductoVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FBuscarProductoVendedor.Designer.cs">
+      <DependentUpon>FBuscarProductoVendedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FEditarCLiente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FBuscarProductoVendedor.resx">
+      <DependentUpon>FBuscarProductoVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FEditarCLiente.resx">
       <DependentUpon>FEditarCLiente.cs</DependentUpon>
