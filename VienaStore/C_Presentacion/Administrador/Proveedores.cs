@@ -133,5 +133,10 @@ namespace VienaStore.C_Presentacion.Administrador
                 this.TxtTelefono.Clear();
             }
         }
+
+        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
 }
