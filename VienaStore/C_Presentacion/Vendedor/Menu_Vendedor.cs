@@ -83,7 +83,7 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             CerrarOtrosFormularios();
 
-            FBuscarProductos nuevo = FBuscarProductos.Ventana_unica();
+            FBuscarProductoVendedor nuevo = FBuscarProductoVendedor.Ventana_unica();
             nuevo.TopLevel = false;
             CerrarInstancias.InstanciasNull();
             //this.panel3.Controls.Clear();
