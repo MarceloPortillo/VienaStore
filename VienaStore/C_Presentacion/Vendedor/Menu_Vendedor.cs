@@ -79,7 +79,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             nuevo.Show();
         }
 
-        private void BtnBuscarProd_Click(object sender, EventArgs e)
+        public virtual void BtnBuscarProd_Click(object sender, EventArgs e)
         {
             CerrarOtrosFormularios();
 
