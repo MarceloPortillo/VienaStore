@@ -98,7 +98,7 @@
             // 
             // BtnRegistrarVenta
             // 
-            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 396);
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 296);
             // 
             // BtnInformes
             // 
@@ -107,7 +107,7 @@
             this.BtnInformes.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInformes.Image = global::VienaStore.Properties.Resources.informes_32px;
             this.BtnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInformes.Location = new System.Drawing.Point(25, 447);
+            this.BtnInformes.Location = new System.Drawing.Point(25, 347);
             this.BtnInformes.Name = "BtnInformes";
             this.BtnInformes.Size = new System.Drawing.Size(155, 45);
             this.BtnInformes.TabIndex = 13;
@@ -126,7 +126,7 @@
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::VienaStore.Properties.Resources.anularVenta_32px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 498);
+            this.button1.Location = new System.Drawing.Point(25, 398);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 45);
             this.button1.TabIndex = 14;

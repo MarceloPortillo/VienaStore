@@ -15,7 +15,7 @@ namespace VienaStore.C_Datos
 {
     internal class DataAcces
     {
-        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=VistaPremier\\SQLEXPRESS");
+        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=MARCELO\\SQLEXPRESS");
 
         public void InsertCliente(Clientes cliente)
         {

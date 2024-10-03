@@ -42,37 +42,39 @@
             // BtnListarProd
             // 
             this.BtnListarProd.Image = global::VienaStore.Properties.Resources.lista_prod_32px;
-            this.BtnListarProd.Location = new System.Drawing.Point(25, 345);
+            this.BtnListarProd.Location = new System.Drawing.Point(25, 245);
             this.BtnListarProd.Size = new System.Drawing.Size(155, 45);
             this.BtnListarProd.Text = "   LISTAR \r\n   PRODUCTOS";
             // 
             // BtnBuscarProd
             // 
             this.BtnBuscarProd.Image = global::VienaStore.Properties.Resources.buscar_prod_32px;
-            this.BtnBuscarProd.Location = new System.Drawing.Point(25, 294);
+            this.BtnBuscarProd.Location = new System.Drawing.Point(25, 194);
             this.BtnBuscarProd.Size = new System.Drawing.Size(155, 45);
             this.BtnBuscarProd.Text = "    BUSCAR\r\n  PRODUCTO";
             // 
             // BtnListarCliente
             // 
             this.BtnListarCliente.Image = global::VienaStore.Properties.Resources.listar_clientes_32px;
-            this.BtnListarCliente.Location = new System.Drawing.Point(25, 192);
+            this.BtnListarCliente.Location = new System.Drawing.Point(25, 90);
             this.BtnListarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnListarCliente.Text = "     LISTAR       CLIENTES";
             // 
             // BtnBuscarCliente
             // 
+            this.BtnBuscarCliente.Enabled = false;
             this.BtnBuscarCliente.Image = global::VienaStore.Properties.Resources.buscar_cliente_32px;
-            this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 141);
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(25, 90);
             this.BtnBuscarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnBuscarCliente.Text = "    BUSCAR \r\n    CLIENTE";
+            this.BtnBuscarCliente.Visible = false;
             // 
             // BtnModificarCliente
             // 
             this.BtnModificarCliente.Enabled = true;
             this.BtnModificarCliente.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificarCliente.Image = global::VienaStore.Properties.Resources.graficos_32px;
-            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 396);
+            this.BtnModificarCliente.Location = new System.Drawing.Point(25, 296);
             this.BtnModificarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnModificarCliente.Text = "    GENERAR \r\n   REPORTES";
             this.BtnModificarCliente.Visible = true;
@@ -80,10 +82,12 @@
             // 
             // BtnRegistrarCliente
             // 
+            this.BtnRegistrarCliente.Enabled = false;
             this.BtnRegistrarCliente.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px;
             this.BtnRegistrarCliente.Location = new System.Drawing.Point(25, 90);
             this.BtnRegistrarCliente.Size = new System.Drawing.Size(155, 45);
             this.BtnRegistrarCliente.Text = "  REGISTRAR \r\n  CLIENTE";
+            this.BtnRegistrarCliente.Visible = false;
             // 
             // panel1
             // 
@@ -125,7 +129,7 @@
             // 
             // BtnRegistrarVenta
             // 
-            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 447);
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 347);
             this.BtnRegistrarVenta.Size = new System.Drawing.Size(155, 45);
             // 
             // BtnRealizarBackUp
@@ -135,7 +139,7 @@
             this.BtnRealizarBackUp.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRealizarBackUp.Image = global::VienaStore.Properties.Resources.back_up_32px;
             this.BtnRealizarBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRealizarBackUp.Location = new System.Drawing.Point(25, 549);
+            this.BtnRealizarBackUp.Location = new System.Drawing.Point(25, 449);
             this.BtnRealizarBackUp.Name = "BtnRealizarBackUp";
             this.BtnRealizarBackUp.Size = new System.Drawing.Size(155, 45);
             this.BtnRealizarBackUp.TabIndex = 8;
@@ -154,7 +158,7 @@
             this.BtnProveedores.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProveedores.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProveedores.Location = new System.Drawing.Point(25, 498);
+            this.BtnProveedores.Location = new System.Drawing.Point(25, 398);
             this.BtnProveedores.Name = "BtnProveedores";
             this.BtnProveedores.Size = new System.Drawing.Size(155, 45);
             this.BtnProveedores.TabIndex = 9;
@@ -173,7 +177,7 @@
             this.BtnAgregarProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarProducto.Image = global::VienaStore.Properties.Resources.agregar_prod_32px;
             this.BtnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarProducto.Location = new System.Drawing.Point(25, 243);
+            this.BtnAgregarProducto.Location = new System.Drawing.Point(25, 141);
             this.BtnAgregarProducto.Name = "BtnAgregarProducto";
             this.BtnAgregarProducto.Size = new System.Drawing.Size(155, 45);
             this.BtnAgregarProducto.TabIndex = 10;
@@ -192,7 +196,7 @@
             this.BtnBuescarUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuescarUsuario.Image = global::VienaStore.Properties.Resources.buscar_usu_32px;
             this.BtnBuescarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBuescarUsuario.Location = new System.Drawing.Point(25, 651);
+            this.BtnBuescarUsuario.Location = new System.Drawing.Point(25, 551);
             this.BtnBuescarUsuario.Name = "BtnBuescarUsuario";
             this.BtnBuescarUsuario.Size = new System.Drawing.Size(155, 45);
             this.BtnBuescarUsuario.TabIndex = 11;
@@ -211,7 +215,7 @@
             this.BtnCrearUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCrearUsuario.Image = global::VienaStore.Properties.Resources.agregar_usuario_32px__2_;
             this.BtnCrearUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCrearUsuario.Location = new System.Drawing.Point(25, 600);
+            this.BtnCrearUsuario.Location = new System.Drawing.Point(25, 500);
             this.BtnCrearUsuario.Name = "BtnCrearUsuario";
             this.BtnCrearUsuario.Size = new System.Drawing.Size(155, 45);
             this.BtnCrearUsuario.TabIndex = 12;

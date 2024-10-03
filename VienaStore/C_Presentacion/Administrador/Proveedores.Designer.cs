@@ -74,10 +74,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(745, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(559, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 60);
+            this.label1.Size = new System.Drawing.Size(208, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "PROVEEDORES";
             // 
@@ -85,30 +84,27 @@
             // 
             this.LblBuscar.AutoSize = true;
             this.LblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBuscar.Location = new System.Drawing.Point(51, 116);
-            this.LblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblBuscar.Location = new System.Drawing.Point(38, 94);
             this.LblBuscar.Name = "LblBuscar";
-            this.LblBuscar.Size = new System.Drawing.Size(197, 29);
+            this.LblBuscar.Size = new System.Drawing.Size(155, 24);
             this.LblBuscar.TabIndex = 1;
             this.LblBuscar.Text = "Ingrese el CUIT";
             // 
             // TxtBuscar
             // 
             this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.Location = new System.Drawing.Point(287, 121);
-            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtBuscar.Location = new System.Drawing.Point(215, 98);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(309, 23);
+            this.TxtBuscar.Size = new System.Drawing.Size(233, 20);
             this.TxtBuscar.TabIndex = 2;
             this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
             // 
             // BtnBuscar
             // 
             this.BtnBuscar.Image = global::VienaStore.Properties.Resources.buscarProveedor_48px;
-            this.BtnBuscar.Location = new System.Drawing.Point(640, 101);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnBuscar.Location = new System.Drawing.Point(480, 82);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(80, 65);
+            this.BtnBuscar.Size = new System.Drawing.Size(60, 53);
             this.BtnBuscar.TabIndex = 3;
             this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -116,10 +112,9 @@
             // 
             this.LblEmpresa.AutoSize = true;
             this.LblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmpresa.Location = new System.Drawing.Point(29, 74);
-            this.LblEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEmpresa.Location = new System.Drawing.Point(22, 60);
             this.LblEmpresa.Name = "LblEmpresa";
-            this.LblEmpresa.Size = new System.Drawing.Size(93, 24);
+            this.LblEmpresa.Size = new System.Drawing.Size(75, 18);
             this.LblEmpresa.TabIndex = 4;
             this.LblEmpresa.Text = "Empresa";
             // 
@@ -127,10 +122,9 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(29, 212);
-            this.LblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTelefono.Location = new System.Drawing.Point(22, 172);
             this.LblTelefono.Name = "LblTelefono";
-            this.LblTelefono.Size = new System.Drawing.Size(93, 24);
+            this.LblTelefono.Size = new System.Drawing.Size(74, 18);
             this.LblTelefono.TabIndex = 5;
             this.LblTelefono.Text = "Telefono";
             // 
@@ -138,10 +132,9 @@
             // 
             this.LblCuit.AutoSize = true;
             this.LblCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCuit.Location = new System.Drawing.Point(29, 114);
-            this.LblCuit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCuit.Location = new System.Drawing.Point(22, 93);
             this.LblCuit.Name = "LblCuit";
-            this.LblCuit.Size = new System.Drawing.Size(56, 24);
+            this.LblCuit.Size = new System.Drawing.Size(46, 18);
             this.LblCuit.TabIndex = 6;
             this.LblCuit.Text = "CUIT";
             // 
@@ -149,10 +142,9 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(29, 167);
-            this.LblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDireccion.Location = new System.Drawing.Point(22, 136);
             this.LblDireccion.Name = "LblDireccion";
-            this.LblDireccion.Size = new System.Drawing.Size(160, 24);
+            this.LblDireccion.Size = new System.Drawing.Size(130, 18);
             this.LblDireccion.TabIndex = 7;
             this.LblDireccion.Text = "Direccion Fiscal";
             // 
@@ -160,10 +152,9 @@
             // 
             this.LblCorreo.AutoSize = true;
             this.LblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCorreo.Location = new System.Drawing.Point(29, 255);
-            this.LblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCorreo.Location = new System.Drawing.Point(22, 207);
             this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(69, 24);
+            this.LblCorreo.Size = new System.Drawing.Size(56, 18);
             this.LblCorreo.TabIndex = 8;
             this.LblCorreo.Text = "E-mail";
             // 
@@ -171,52 +162,46 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 302);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(22, 245);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 24);
+            this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 9;
             // 
             // TxtEmpresa
             // 
-            this.TxtEmpresa.Location = new System.Drawing.Point(233, 71);
-            this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmpresa.Location = new System.Drawing.Point(175, 58);
             this.TxtEmpresa.Name = "TxtEmpresa";
-            this.TxtEmpresa.Size = new System.Drawing.Size(309, 24);
+            this.TxtEmpresa.Size = new System.Drawing.Size(233, 21);
             this.TxtEmpresa.TabIndex = 10;
             this.TxtEmpresa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpresa_KeyPress);
             // 
             // TxtCorreo
             // 
-            this.TxtCorreo.Location = new System.Drawing.Point(233, 255);
-            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCorreo.Location = new System.Drawing.Point(175, 207);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(309, 24);
+            this.TxtCorreo.Size = new System.Drawing.Size(233, 21);
             this.TxtCorreo.TabIndex = 12;
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(233, 212);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTelefono.Location = new System.Drawing.Point(175, 172);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(309, 24);
+            this.TxtTelefono.Size = new System.Drawing.Size(233, 21);
             this.TxtTelefono.TabIndex = 13;
             this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(233, 167);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtDireccion.Location = new System.Drawing.Point(175, 136);
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(309, 24);
+            this.TxtDireccion.Size = new System.Drawing.Size(233, 21);
             this.TxtDireccion.TabIndex = 14;
             // 
             // TxtCuit
             // 
-            this.TxtCuit.Location = new System.Drawing.Point(233, 116);
-            this.TxtCuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCuit.Location = new System.Drawing.Point(175, 94);
             this.TxtCuit.Name = "TxtCuit";
-            this.TxtCuit.Size = new System.Drawing.Size(309, 24);
+            this.TxtCuit.Size = new System.Drawing.Size(233, 21);
             this.TxtCuit.TabIndex = 15;
             this.TxtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuit_KeyPress);
             // 
@@ -243,10 +228,9 @@
             this.panel1.Controls.Add(this.LblTelefono);
             this.panel1.Controls.Add(this.LblEmpresa);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(16, 223);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 181);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 562);
+            this.panel1.Size = new System.Drawing.Size(595, 457);
             this.panel1.TabIndex = 16;
             // 
             // BtnGuardar
@@ -255,10 +239,10 @@
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(587, 465);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(179, 74);
+            this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
             this.BtnGuardar.TabIndex = 22;
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -270,10 +254,10 @@
             this.BtnAgregar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(25, 465);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAgregar.Location = new System.Drawing.Point(19, 378);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(177, 74);
+            this.BtnAgregar.Size = new System.Drawing.Size(133, 60);
             this.BtnAgregar.TabIndex = 30;
             this.BtnAgregar.Text = "  AGREGAR";
             this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -284,10 +268,9 @@
             // 
             this.CheBilletera.AutoSize = true;
             this.CheBilletera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheBilletera.Location = new System.Drawing.Point(248, 373);
-            this.CheBilletera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheBilletera.Location = new System.Drawing.Point(186, 303);
             this.CheBilletera.Name = "CheBilletera";
-            this.CheBilletera.Size = new System.Drawing.Size(99, 22);
+            this.CheBilletera.Size = new System.Drawing.Size(84, 19);
             this.CheBilletera.TabIndex = 29;
             this.CheBilletera.Text = "Deportivo";
             this.CheBilletera.UseVisualStyleBackColor = true;
@@ -296,10 +279,9 @@
             // 
             this.CheMochicla.AutoSize = true;
             this.CheMochicla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheMochicla.Location = new System.Drawing.Point(248, 342);
-            this.CheMochicla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheMochicla.Location = new System.Drawing.Point(186, 278);
             this.CheMochicla.Name = "CheMochicla";
-            this.CheMochicla.Size = new System.Drawing.Size(79, 22);
+            this.CheMochicla.Size = new System.Drawing.Size(68, 19);
             this.CheMochicla.TabIndex = 28;
             this.CheMochicla.Text = "Formal";
             this.CheMochicla.UseVisualStyleBackColor = true;
@@ -308,10 +290,9 @@
             // 
             this.CheCartera.AutoSize = true;
             this.CheCartera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheCartera.Location = new System.Drawing.Point(248, 311);
-            this.CheCartera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheCartera.Location = new System.Drawing.Point(186, 253);
             this.CheCartera.Name = "CheCartera";
-            this.CheCartera.Size = new System.Drawing.Size(78, 22);
+            this.CheCartera.Size = new System.Drawing.Size(67, 19);
             this.CheCartera.TabIndex = 27;
             this.CheCartera.Text = "Casual";
             this.CheCartera.UseVisualStyleBackColor = true;
@@ -320,10 +301,9 @@
             // 
             this.LblProdcutos.AutoSize = true;
             this.LblProdcutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProdcutos.Location = new System.Drawing.Point(29, 305);
-            this.LblProdcutos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblProdcutos.Location = new System.Drawing.Point(22, 248);
             this.LblProdcutos.Name = "LblProdcutos";
-            this.LblProdcutos.Size = new System.Drawing.Size(99, 24);
+            this.LblProdcutos.Size = new System.Drawing.Size(81, 18);
             this.LblProdcutos.TabIndex = 26;
             this.LblProdcutos.Text = "Categoria";
             // 
@@ -333,10 +313,10 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(400, 465);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEditar.Location = new System.Drawing.Point(300, 378);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(179, 74);
+            this.BtnEditar.Size = new System.Drawing.Size(134, 60);
             this.BtnEditar.TabIndex = 24;
             this.BtnEditar.Text = "EDITAR";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -349,10 +329,10 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(212, 465);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnLimpiar.Location = new System.Drawing.Point(159, 378);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(179, 74);
+            this.BtnLimpiar.Size = new System.Drawing.Size(134, 60);
             this.BtnLimpiar.TabIndex = 23;
             this.BtnLimpiar.Text = "LIMPIAR";
             this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -365,10 +345,10 @@
             this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(1285, 688);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(188, 85);
+            this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
             this.BtnEliminar.TabIndex = 25;
             this.BtnEliminar.Text = "ELIMINAR";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -399,8 +379,7 @@
             this.ColProductos,
             this.ColEstado});
             this.DtaProveedores.EnableHeadersVisualStyles = false;
-            this.DtaProveedores.Location = new System.Drawing.Point(817, 238);
-            this.DtaProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtaProveedores.Location = new System.Drawing.Point(613, 193);
             this.DtaProveedores.Name = "DtaProveedores";
             this.DtaProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -414,7 +393,7 @@
             this.DtaProveedores.RowHeadersVisible = false;
             this.DtaProveedores.RowHeadersWidth = 51;
             this.DtaProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaProveedores.Size = new System.Drawing.Size(924, 377);
+            this.DtaProveedores.Size = new System.Drawing.Size(693, 306);
             this.DtaProveedores.TabIndex = 0;
             // 
             // ColEmpresa
@@ -472,10 +451,9 @@
             // 
             this.LblProveedoresRegistrados.AutoSize = true;
             this.LblProveedoresRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(1065, 159);
-            this.LblProveedoresRegistrados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(799, 129);
             this.LblProveedoresRegistrados.Name = "LblProveedoresRegistrados";
-            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(311, 29);
+            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(245, 24);
             this.LblProveedoresRegistrados.TabIndex = 18;
             this.LblProveedoresRegistrados.Text = "Proveedores Registrados";
             // 
@@ -485,10 +463,10 @@
             this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(1496, 688);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnSalir.Location = new System.Drawing.Point(1122, 559);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(188, 85);
+            this.BtnSalir.Size = new System.Drawing.Size(141, 69);
             this.BtnSalir.TabIndex = 22;
             this.BtnSalir.Text = "SALIR";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -497,11 +475,11 @@
             // 
             // Proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1784, 858);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.LblProveedoresRegistrados);
             this.Controls.Add(this.DtaProveedores);
@@ -512,7 +490,6 @@
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
@@ -543,7 +520,6 @@
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.TextBox TxtCuit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView DtaProveedores;
         private System.Windows.Forms.Label LblProveedoresRegistrados;
         public System.Windows.Forms.Button BtnLimpiar;
         public System.Windows.Forms.Button BtnSalir;
@@ -562,5 +538,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
+        public System.Windows.Forms.DataGridView DtaProveedores;
     }
 }
