@@ -57,6 +57,20 @@ namespace VienaStore.C_Presentacion.Administrador
             nuevo.Show();
 
         }
+        public override void BtnBuscarProd_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            FBuscarProductos nuevo = FBuscarProductos.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
+
+
 
         private void BtnBuescarUsuario_Click(object sender, EventArgs e)
         {

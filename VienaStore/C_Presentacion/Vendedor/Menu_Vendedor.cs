@@ -79,11 +79,11 @@ namespace VienaStore.C_Presentacion.Vendedor
             nuevo.Show();
         }
 
-        private void BtnBuscarProd_Click(object sender, EventArgs e)
+        public virtual void BtnBuscarProd_Click(object sender, EventArgs e)
         {
             CerrarOtrosFormularios();
 
-            FBuscarProductos nuevo = FBuscarProductos.Ventana_unica();
+            FBuscarProductoVendedor nuevo = FBuscarProductoVendedor.Ventana_unica();
             nuevo.TopLevel = false;
             CerrarInstancias.InstanciasNull();
             //this.panel3.Controls.Clear();

@@ -98,5 +98,10 @@ namespace VienaStore.C_Presentacion.Vendedor
             this.TxtEmail.Clear();
             this.TxtTelefono.Clear();
         }
+
+        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
 }

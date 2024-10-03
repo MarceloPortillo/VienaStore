@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblListaProductos = new System.Windows.Forms.Label();
             this.DtaProductos = new System.Windows.Forms.DataGridView();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +51,9 @@
             this.LblListaProductos.AutoSize = true;
             this.LblListaProductos.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblListaProductos.ForeColor = System.Drawing.Color.Black;
-            this.LblListaProductos.Location = new System.Drawing.Point(77, 79);
-            this.LblListaProductos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblListaProductos.Location = new System.Drawing.Point(103, 97);
             this.LblListaProductos.Name = "LblListaProductos";
-            this.LblListaProductos.Size = new System.Drawing.Size(342, 34);
+            this.LblListaProductos.Size = new System.Drawing.Size(412, 40);
             this.LblListaProductos.TabIndex = 1;
             this.LblListaProductos.Text = "LISTA DE PRODUCTOS";
             // 
@@ -90,8 +89,8 @@
             this.Teléfono,
             this.ColEstado});
             this.DtaProductos.EnableHeadersVisualStyles = false;
-            this.DtaProductos.Location = new System.Drawing.Point(32, 133);
-            this.DtaProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtaProductos.Location = new System.Drawing.Point(43, 164);
+            this.DtaProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DtaProductos.Name = "DtaProductos";
             this.DtaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -112,24 +111,8 @@
             this.DtaProductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DtaProductos.RowTemplate.Height = 24;
             this.DtaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaProductos.Size = new System.Drawing.Size(857, 404);
+            this.DtaProductos.Size = new System.Drawing.Size(1143, 497);
             this.DtaProductos.TabIndex = 2;
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(697, 560);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(115, 52);
-            this.BtnSalir.TabIndex = 3;
-            this.BtnSalir.Text = "SALIR";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // Nombre
             // 
@@ -195,18 +178,37 @@
             // ColEstado
             // 
             this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.MinimumWidth = 6;
             this.ColEstado.Name = "ColEstado";
+            this.ColEstado.Width = 125;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(929, 689);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(153, 64);
+            this.BtnSalir.TabIndex = 3;
+            this.BtnSalir.Text = "SALIR";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FListarProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(857, 613);
+            this.ClientSize = new System.Drawing.Size(1143, 754);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DtaProductos);
             this.Controls.Add(this.LblListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FListarProductos";
             this.Text = "FListarProductos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
