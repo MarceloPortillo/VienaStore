@@ -36,6 +36,7 @@ namespace VienaStore.C_Negocio
                 // Abre el formulario de InicioAdministrador
                 menu_administrador formAdmin = new menu_administrador();
                 formAdmin.Show();
+                return;
                 
             }
             // Verificación para usuario Encargado
@@ -44,6 +45,7 @@ namespace VienaStore.C_Negocio
                 // Abre el formulario de InicioEncargado
                 menu_encargado formEncargado = new menu_encargado();
                 formEncargado.Show();
+                return;
            
             }
             // Verificación para usuario Vendedor
@@ -52,12 +54,16 @@ namespace VienaStore.C_Negocio
                 // Abre el formulario de InicioVendedor
                 Menu_Vendedor formVendedor = new Menu_Vendedor();
                 formVendedor.Show();
+                return;
             }
-            else
+            else if (string.IsNullOrWhiteSpace(usuarioIngresado) ||
+                     string.IsNullOrWhiteSpace(contraseñaIngresada))
             {
+                MessageBox.Show("Debe Completar todos los campos","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 // Si los datos no coinciden, mostramos un mensaje de error
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
