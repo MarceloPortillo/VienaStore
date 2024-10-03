@@ -123,10 +123,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 if (confirmacion == DialogResult.Yes)
                 {
                     // Eliminar la fila
-                    dataGridView1.Rows.RemoveAt(rowIndex);
-
-                    // O si tienes enlazado el DataGridView a una fuente de datos, puedes eliminar de la fuente también
-                    // dataTable.Rows[rowIndex].Delete(); // En caso de que esté ligado a un DataTable
+                    dataGridView1.Rows.RemoveAt(rowIndex);                    
                 }
             }
             else
