@@ -98,5 +98,40 @@ namespace VienaStore.C_Presentacion.Vendedor
             this.TxtEmail.Clear();
             this.TxtTelefono.Clear();
         }
+
+        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            CampoVacios.CamposVacios(TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail);
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtener la fila seleccionada
+                int rowIndex = dataGridView1.SelectedRows[0].Index;
+
+                // Confirmar si el usuario desea eliminar la fila
+                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas eliminar la fila seleccionada?",
+                    "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    // Eliminar la fila
+                    dataGridView1.Rows.RemoveAt(rowIndex);                    
+                }
+            }
+            else
+            {
+                // Mostrar un mensaje si no se ha seleccionado ninguna fila
+                MessageBox.Show("Por favor, seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+

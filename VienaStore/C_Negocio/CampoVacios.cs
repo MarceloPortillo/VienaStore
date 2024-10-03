@@ -19,5 +19,20 @@ namespace VienaStore.C_Negocio
             }
             return true;
         }
+
+        public static void CamposVacios(TextBox TxtApellido, TextBox TxtDNI, TextBox TxtNombre, TextBox TxtDireccion, MaskedTextBox TxtTelefono, TextBox TxtEmail)
+        {
+            if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
+                string.IsNullOrWhiteSpace(TxtDNI.Text) ||
+                string.IsNullOrWhiteSpace(TxtNombre.Text) ||
+                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
+                (string.IsNullOrWhiteSpace(TxtTelefono.Text) || !TxtTelefono.MaskFull) ||
+                string.IsNullOrWhiteSpace(TxtEmail.Text))
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            return;
+        }
     }
 }

@@ -97,6 +97,7 @@
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(233, 20);
             this.TxtBuscar.TabIndex = 2;
+            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
             // 
             // BtnBuscar
             // 
@@ -239,7 +240,7 @@
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
             this.BtnGuardar.TabIndex = 22;
@@ -254,7 +255,7 @@
             this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAgregar.Location = new System.Drawing.Point(19, 378);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(133, 60);
             this.BtnAgregar.TabIndex = 30;
@@ -313,7 +314,7 @@
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEditar.Location = new System.Drawing.Point(300, 378);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(134, 60);
             this.BtnEditar.TabIndex = 24;
@@ -329,7 +330,7 @@
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLimpiar.Location = new System.Drawing.Point(159, 378);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(134, 60);
             this.BtnLimpiar.TabIndex = 23;
@@ -345,7 +346,7 @@
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
             this.BtnEliminar.TabIndex = 25;
@@ -390,6 +391,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DtaProveedores.RowHeadersVisible = false;
+            this.DtaProveedores.RowHeadersWidth = 51;
             this.DtaProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaProveedores.Size = new System.Drawing.Size(693, 306);
             this.DtaProveedores.TabIndex = 0;
@@ -400,37 +402,50 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColEmpresa.HeaderText = "Empresa";
+            this.ColEmpresa.MinimumWidth = 6;
             this.ColEmpresa.Name = "ColEmpresa";
             // 
             // ColCuit
             // 
             this.ColCuit.HeaderText = "CUIT";
+            this.ColCuit.MinimumWidth = 6;
             this.ColCuit.Name = "ColCuit";
+            this.ColCuit.Width = 125;
             // 
             // ColDireccion
             // 
             this.ColDireccion.HeaderText = "Dirección Fiscal";
+            this.ColDireccion.MinimumWidth = 6;
             this.ColDireccion.Name = "ColDireccion";
+            this.ColDireccion.Width = 125;
             // 
             // ColTelefono
             // 
             this.ColTelefono.HeaderText = "Teléfono";
+            this.ColTelefono.MinimumWidth = 6;
             this.ColTelefono.Name = "ColTelefono";
+            this.ColTelefono.Width = 125;
             // 
             // ColCorreo
             // 
             this.ColCorreo.HeaderText = "E-mail";
+            this.ColCorreo.MinimumWidth = 6;
             this.ColCorreo.Name = "ColCorreo";
+            this.ColCorreo.Width = 125;
             // 
             // ColProductos
             // 
             this.ColProductos.HeaderText = "Categoria";
+            this.ColProductos.MinimumWidth = 6;
             this.ColProductos.Name = "ColProductos";
+            this.ColProductos.Width = 125;
             // 
             // ColEstado
             // 
             this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.MinimumWidth = 6;
             this.ColEstado.Name = "ColEstado";
+            this.ColEstado.Width = 125;
             // 
             // LblProveedoresRegistrados
             // 
@@ -449,7 +464,7 @@
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.Location = new System.Drawing.Point(1122, 559);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(141, 69);
             this.BtnSalir.TabIndex = 22;
@@ -464,7 +479,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1338, 697);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.LblProveedoresRegistrados);
             this.Controls.Add(this.DtaProveedores);
@@ -505,7 +520,6 @@
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.TextBox TxtCuit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView DtaProveedores;
         private System.Windows.Forms.Label LblProveedoresRegistrados;
         public System.Windows.Forms.Button BtnLimpiar;
         public System.Windows.Forms.Button BtnSalir;
@@ -524,5 +538,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
+        public System.Windows.Forms.DataGridView DtaProveedores;
     }
 }
