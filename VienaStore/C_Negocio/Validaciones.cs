@@ -56,27 +56,5 @@ namespace VienaStore.C_Negocio
             string expresion = @"^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, expresion);
         }
-
-        public Validaciones()
-        {
-            dataAcces = new DataAcces();
-        }
-        public void GuardarCliente(Clientes cliente)
-        {
-            if(cliente.id == 0)
-            {
-               dataAcces.InsertCliente(cliente);
-            }
-            else
-            {
-                MessageBox.Show("Error");
-                //return dataAcces.UpdateCliente(cliente);
-            }
-        }
-
-        public List<Clientes> GetClientes()
-        {
-            return dataAcces.GetClientes();
-        }
     }
 }
