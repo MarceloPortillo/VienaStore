@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C_Datos\Clientes.cs" />
-    <Compile Include="C_Datos\DataAcces.cs" />
+    <Compile Include="C_Datos\DataAccesClientes.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />

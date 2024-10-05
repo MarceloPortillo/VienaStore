@@ -11,7 +11,7 @@ namespace VienaStore.C_Negocio
 {
     internal class BusinessCliente
     {
-        private DataAcces dataAcces;
+        private DataAccesClientes dataAcces;
 
         public void GuardarCliente(Clientes cliente)
         {
@@ -28,7 +28,7 @@ namespace VienaStore.C_Negocio
 
         public BusinessCliente()
         {
-            dataAcces = new DataAcces();
+            dataAcces = new DataAccesClientes();
         }
 
         public List<Clientes> GetClientes()

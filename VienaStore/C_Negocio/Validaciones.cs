@@ -12,7 +12,7 @@ namespace VienaStore.C_Negocio
 {
     internal class Validaciones
     {
-        private DataAcces dataAcces;
+        private DataAccesClientes dataAcces;
         public static void SoloNumeros(KeyPressEventArgs f)
         {
             if (char.IsNumber(f.KeyChar))

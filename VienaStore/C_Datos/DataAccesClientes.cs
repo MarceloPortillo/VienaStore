@@ -13,7 +13,7 @@ using System.Net;
 
 namespace VienaStore.C_Datos
 {
-    internal class DataAcces
+    internal class DataAccesClientes
     {
         private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=MARCELO\\SQLEXPRESS");
 
