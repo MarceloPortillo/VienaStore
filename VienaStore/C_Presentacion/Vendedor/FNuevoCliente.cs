@@ -16,7 +16,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FNuevoCliente : Form
     {
-        private Validaciones validacion;
+        private BusinessCliente businessCliente;
 
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
@@ -36,7 +36,7 @@ namespace VienaStore.C_Presentacion.Vendedor
         public FNuevoCliente()
         {
             InitializeComponent();
-            validacion = new Validaciones();
+            businessCliente = new BusinessCliente();
 
         }
 
@@ -110,7 +110,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             if (ask == DialogResult.Yes)
             {
-                validacion.GuardarCliente(cliente);
+                businessCliente.GuardarCliente(cliente);
                 MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " se insertó Correctamente",
                                 "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 
