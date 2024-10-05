@@ -108,6 +108,8 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
+            FLogin sesion = new FLogin();
+            sesion.Show();
             this.Close();
         }
 
