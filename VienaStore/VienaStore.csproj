@@ -52,6 +52,7 @@
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
+    <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Login.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
     <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.cs">

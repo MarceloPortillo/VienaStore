@@ -61,9 +61,15 @@ namespace VienaStore.C_Negocio
             {
                 MessageBox.Show("Debe Completar todos los campos","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 // Si los datos no coinciden, mostramos un mensaje de error
+               FLogin otro = new FLogin();
+                otro.Show();
                 return;
             }
-            MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FLogin nuevo = new FLogin();
+                nuevo.Show();
+                return;
         }
+
     }
 }
