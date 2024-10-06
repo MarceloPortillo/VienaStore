@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Negocio;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
@@ -50,7 +51,9 @@ namespace VienaStore.C_Presentacion.Administrador
                string.IsNullOrWhiteSpace(TBPrecioCompra.Text) ||
                string.IsNullOrWhiteSpace(TBPrecioVenta.Text) ||
                string.IsNullOrWhiteSpace(TBCodigoProducto.Text) ||
-                CBCategoria.SelectedIndex == -1)
+                CBCategoria.SelectedIndex == -1 || 
+                string.IsNullOrWhiteSpace(TxtStockMin.Text) ||
+                CboProveedor.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -61,22 +64,12 @@ namespace VienaStore.C_Presentacion.Administrador
             if (ask == DialogResult.Yes)
             {
                 MessageBox.Show("El Producto: " + this.TBNombreProducto.Text + " " + this.TBDescripcion.Text + " " + "Se inserto Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.TBNombreProducto.Clear();
-                this.TBDescripcion.Clear();
-                this.TBStock.Clear();
-                this.TBPrecioCompra.Clear();
-                this.TBPrecioVenta.Clear();
-                this.TBCodigoProducto.Clear();
+                C_Negocio.Limpiar.limpiarAgregarProducto(TBNombreProducto, TBDescripcion, TBStock, TBPrecioCompra, TBPrecioVenta, TBCodigoProducto, TxtStockMin, CboProveedor, CBCategoria);
                 return;
             }
             else
             {
-                this.TBNombreProducto.Clear();
-                this.TBDescripcion.Clear();
-                this.TBStock.Clear();
-                this.TBPrecioCompra.Clear();
-                this.TBPrecioVenta.Clear();
-                this.TBCodigoProducto.Clear();
+                C_Negocio.Limpiar.limpiarAgregarProducto(TBNombreProducto, TBDescripcion, TBStock, TBPrecioCompra, TBPrecioVenta, TBCodigoProducto, TxtStockMin, CboProveedor, CBCategoria);
             }
         }
 
@@ -93,6 +86,11 @@ namespace VienaStore.C_Presentacion.Administrador
         public static void Limpiar()
         {
             instancia = null;
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            C_Negocio.Limpiar.limpiarAgregarProducto(TBNombreProducto, TBDescripcion, TBStock, TBPrecioCompra, TBPrecioVenta, TBCodigoProducto, TxtStockMin, CboProveedor, CBCategoria);
         }
     }
 }
