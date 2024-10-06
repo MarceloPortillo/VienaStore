@@ -15,18 +15,16 @@ namespace VienaStore.C_Datos
 {
     internal class DataAccesClientes
     {
-        private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=MARCELO\\SQLEXPRESS");
-
         public void InsertCliente(Clientes cliente)
         {
             try
             {
-                conn.Open();
+                DataAccess.DatabaseConnection.GetConnection();                
                 string query = @"
                         INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono)
                         VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono)";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
                 // Agregar los parámetros correctamente
                 cmd.Parameters.AddWithValue("@dni", cliente.dni);
@@ -45,7 +43,7 @@ namespace VienaStore.C_Datos
             }
             finally
             {
-                conn.Close();
+                DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
 
@@ -55,11 +53,11 @@ namespace VienaStore.C_Datos
 
             try
             {
-                conn.Open();
+                DataAccess.DatabaseConnection.GetConnection();
                 string query = @"SELECT id_cliente, dni, nombre, apellido, direccion, email, telefono
                                  FROM Clientes";
 
-                SqlCommand command = new SqlCommand(query, conn);   
+                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());   
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -82,7 +80,7 @@ namespace VienaStore.C_Datos
 
                 throw;
             }
-            finally { conn.Close(); }
+            finally { DataAccess.DatabaseConnection.GetConnection().Close(); }
             return clientes;
 
         }
