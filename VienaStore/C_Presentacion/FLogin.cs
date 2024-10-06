@@ -24,7 +24,23 @@ namespace VienaStore.C_Presentacion
         // Evento click del botón Ingresar
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Login.registro(TBUsuario.Text, TBContrasenia.Text);            
+            Login.registro(TBUsuario.Text, TBContrasenia.Text);
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+            Hora.saludo(LblBuenDia);
         }
     }
 }
