@@ -53,27 +53,6 @@ namespace VienaStore.C_Presentacion.Vendedor
             List<Clientes> clientes = businessCliente.GetClientes();
             dataGridView1.DataSource = clientes;
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewLinkCell cell = (DataGridViewLinkCell)dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
-            if (cell.Value.ToString() == "Editar")
-            {
-                FNuevoCliente fNuevoCliente = new FNuevoCliente();
-                fNuevoCliente.CargarClientes(new Clientes   
-                {
-                    id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()),
-                    dni = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()), 
-                    nombre = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                    apellido = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(),
-                    direccion = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(),
-                    email = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(),
-                    telefono = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(),
-                });
-                fNuevoCliente.ShowDialog(this);
-            }
-        }
     }
 }
     

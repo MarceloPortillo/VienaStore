@@ -122,6 +122,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 this.TxtDireccion.Clear();
                 this.TxtEmail.Clear();
                 this.TxtTelefono.Clear();
+                ListarContactos();
             }
             else
             {
@@ -237,6 +238,11 @@ namespace VienaStore.C_Presentacion.Vendedor
             TxtDireccion.Text = string.Empty;
             TxtEmail.Text = string.Empty;
             TxtTelefono.Text = string.Empty;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
