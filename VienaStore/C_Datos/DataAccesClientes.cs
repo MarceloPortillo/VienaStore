@@ -85,6 +85,52 @@ namespace VienaStore.C_Datos
 
         }
 
+        public void UpdateCliente(Clientes cliente)
+        {
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
+                string query = @"UPDATE  Clientes
+                         SET dni = @dni,
+                             nombre = @nombre,
+                             apellido = @apellido,
+                             direccion = @direccion,
+                             email = @email,
+                             telefono = @telefono
+                         WHERE id_cliente = @id";
+
+                SqlParameter dni = new SqlParameter("@dni", cliente.dni);
+                SqlParameter nombre = new SqlParameter("@nombre", cliente.nombre);
+                SqlParameter apellido = new SqlParameter("@apellido", cliente.apellido);
+                SqlParameter direccion = new SqlParameter("@direccion", cliente.direccion);
+                SqlParameter email = new SqlParameter("@email", cliente.email);
+                SqlParameter telefono = new SqlParameter("@telefono", cliente.telefono);
+                SqlParameter id = new SqlParameter("@id", cliente.id);
+
+                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
+                command.Parameters.Add(dni);
+                command.Parameters.Add(nombre);
+                command.Parameters.Add(apellido);
+                command.Parameters.Add(direccion);
+                command.Parameters.Add(email);
+                command.Parameters.Add(telefono);
+                command.Parameters.Add(id);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                DataAccess.DatabaseConnection.GetConnection().Close();
+            }
+        }
+
+
+
+
 
 
     }

@@ -17,6 +17,7 @@ namespace VienaStore.C_Presentacion.Vendedor
     public partial class FNuevoCliente : Form
     {
         private BusinessCliente businessCliente;
+        private Clientes _cliente;
 
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
@@ -102,9 +103,9 @@ namespace VienaStore.C_Presentacion.Vendedor
             cliente.nombre = TxtNombre.Text;
             cliente.apellido = TxtApellido.Text;
             cliente.direccion = TxtDireccion.Text;
-            cliente.email = TxtEmail.Text;
-            
+            cliente.email = TxtEmail.Text;           
             cliente.telefono = TxtTelefono.Text; 
+            cliente.id = _cliente != null ? _cliente.id : 0;    
             
             DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -130,6 +131,31 @@ namespace VienaStore.C_Presentacion.Vendedor
                 this.TxtEmail.Clear();
                 this.TxtTelefono.Clear();
             }
+        }
+
+        public void CargarClientes(Clientes clientes)
+        {
+            _cliente = clientes;    
+            if (clientes != null)
+            {
+                LimpiarFormulario();
+                TxtNombre.Text = clientes.nombre;
+                TxtApellido.Text = clientes.apellido;
+                TxtDNI.Text = clientes.dni.ToString();
+                TxtDireccion.Text = clientes.direccion;
+                TxtEmail.Text = clientes.email;
+                TxtTelefono.Text = clientes.telefono;
+            }
+        }
+
+        private void LimpiarFormulario()
+        {
+            TxtNombre.Text = string.Empty;
+            TxtApellido.Text = string.Empty;
+            TxtDNI.Text = string.Empty;
+            TxtDireccion.Text = string.Empty;
+            TxtEmail.Text = string.Empty;
+            TxtTelefono.Text = string.Empty;
         }
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
