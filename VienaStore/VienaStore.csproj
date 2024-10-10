@@ -346,5 +346,11 @@
   <ItemGroup>
     <None Include="Resources\guardaCliente_48px.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Descargar_PDF_48x48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Descargar2_PDF_48x48px.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
