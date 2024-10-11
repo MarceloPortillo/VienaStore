@@ -222,13 +222,11 @@ namespace VienaStore.C_Presentacion.Vendedor
             ListarContactos();
         }
 
-        private void ListarContactos()
+        public void ListarContactos(string searchText = null)
         {
-            List<Clientes> clientes = businessCliente.GetClientes();
+            List<Clientes> clientes = businessCliente.GetClientes(searchText);
             dataGridView1.DataSource = clientes;
         }
-
-       
 
         private void LimpiarFormulario()
         {
@@ -243,6 +241,12 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            ListarContactos(TxtBuscar.Text);
+            TxtBuscar.Text = string.Empty;
         }
     }
 }

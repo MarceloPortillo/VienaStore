@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBuscarClientes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.CBBuscar = new System.Windows.Forms.ComboBox();
             this.LblCLientes = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -63,6 +63,7 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,8 +72,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnBuscar);
             this.groupBox1.Controls.Add(this.TxtBuscar);
-            this.groupBox1.Controls.Add(this.CBBuscar);
             this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(15, 80);
@@ -84,25 +85,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BUSCAR CLIENTE";
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Image = global::VienaStore.Properties.Resources.lupaBuscar_32px;
+            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscar.Location = new System.Drawing.Point(587, 38);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(157, 45);
+            this.BtnBuscar.TabIndex = 3;
+            this.BtnBuscar.Text = "BUSCAR";
+            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(220, 52);
+            this.TxtBuscar.Location = new System.Drawing.Point(21, 51);
             this.TxtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(508, 32);
             this.TxtBuscar.TabIndex = 2;
-            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
-            // 
-            // CBBuscar
-            // 
-            this.CBBuscar.BackColor = System.Drawing.Color.LightSalmon;
-            this.CBBuscar.FormattingEnabled = true;
-            this.CBBuscar.Location = new System.Drawing.Point(33, 52);
-            this.CBBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CBBuscar.Name = "CBBuscar";
-            this.CBBuscar.Size = new System.Drawing.Size(121, 34);
-            this.CBBuscar.TabIndex = 1;
-            this.CBBuscar.Text = "DNI";
             // 
             // LblCLientes
             // 
@@ -143,7 +147,8 @@
             this.apellidoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn});
+            this.telefonoDataGridViewTextBoxColumn,
+            this.estado});
             this.dataGridView1.DataSource = this.clientesBindingSource;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(15, 321);
@@ -446,6 +451,14 @@
             this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "estado";
+            this.estado.MinimumWidth = 6;
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
             // FBuscarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -480,7 +493,6 @@
         }
 
         #endregion
-        public System.Windows.Forms.ComboBox CBBuscar;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.TextBox TxtBuscar;
         public System.Windows.Forms.Label LblCLientes;
@@ -504,6 +516,7 @@
         public System.Windows.Forms.Label LblNombre;
         public System.Windows.Forms.Label LblDNI;
         private System.Windows.Forms.BindingSource clientesBindingSource;
+        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -511,5 +524,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

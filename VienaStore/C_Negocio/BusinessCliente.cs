@@ -31,9 +31,9 @@ namespace VienaStore.C_Negocio
             dataAcces = new DataAccesClientes();
         }
 
-        public List<Clientes> GetClientes()
+        public List<Clientes> GetClientes(string searchText = null)
         {
-            return dataAcces.GetClientes();
+            return dataAcces.GetClientes(searchText);
         }
 
     }

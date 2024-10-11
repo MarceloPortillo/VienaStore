@@ -10,6 +10,7 @@ using VienaStore.C_Negocio;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
+using System.Data;
 
 namespace VienaStore.C_Datos
 {
@@ -21,8 +22,8 @@ namespace VienaStore.C_Datos
             {
                 DataAccess.DatabaseConnection.GetConnection();                
                 string query = @"
-                        INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono)
-                        VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono)";
+                        INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono, estado)
+                        VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono, estado)";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
@@ -33,6 +34,7 @@ namespace VienaStore.C_Datos
                 cmd.Parameters.AddWithValue("@direccion", cliente.direccion);
                 cmd.Parameters.AddWithValue("@email", cliente.email);
                 cmd.Parameters.AddWithValue("@telefono", cliente.telefono);
+                cmd.Parameters.AddWithValue("@estado", cliente.estado);
 
                 // Ejecutar la consulta
                 cmd.ExecuteNonQuery();
@@ -47,43 +49,68 @@ namespace VienaStore.C_Datos
             }
         }
 
-        public List<Clientes> GetClientes()
+        public List<Clientes> GetClientes(string search = null)
         {
-            List<Clientes> clientes = new List<Clientes>(); 
+            List<Clientes> clientes = new List<Clientes>();
 
             try
             {
-                DataAccess.DatabaseConnection.GetConnection();
-                string query = @"SELECT id_cliente, dni, nombre, apellido, direccion, email, telefono
-                                 FROM Clientes";
-
-                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());   
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                // Obtén la conexión de la clase DatabaseConnection
+                using (SqlConnection connection = DataAccess.DatabaseConnection.GetConnection())
                 {
-                    clientes.Add(new Clientes
+                    // Abre la conexión si no está abierta
+                    if (connection.State == ConnectionState.Closed)
                     {
-                        id = int.Parse(reader["id_cliente"].ToString()),
-                        dni = int.Parse(reader["dni"].ToString()),
-                        nombre = reader["nombre"].ToString(),
-                        apellido = reader["apellido"].ToString(),
-                        direccion = reader["direccion"].ToString(),
-                        email = reader["email"].ToString(),
-                        telefono = reader["telefono"].ToString()
-                    });
+                        connection.Open(); // Abre la conexión solo si está cerrada
+                    }
+
+                    string query = @"SELECT id_cliente, dni, nombre, apellido, direccion, email, telefono, estado
+                             FROM Clientes";
+
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.Connection = connection; // Asigna la conexión al comando
+
+                        if (!string.IsNullOrEmpty(search))
+                        {
+                            query += @" WHERE id_cliente LIKE @Buscar OR dni LIKE @Buscar OR nombre LIKE @Buscar 
+                                    OR apellido LIKE @Buscar OR direccion LIKE @Buscar OR email LIKE @Buscar 
+                                    OR telefono LIKE @Buscar";
+                            command.Parameters.Add(new SqlParameter("@Buscar", $"%{search}%"));
+                        }
+
+                        command.CommandText = query;
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                clientes.Add(new Clientes
+                                {
+                                    id = int.Parse(reader["id_cliente"].ToString()),
+                                    dni = int.Parse(reader["dni"].ToString()),
+                                    nombre = reader["nombre"].ToString(),
+                                    apellido = reader["apellido"].ToString(),
+                                    direccion = reader["direccion"].ToString(),
+                                    email = reader["email"].ToString(),
+                                    telefono = reader["telefono"].ToString(),
+                                    estado = reader["estado"].ToString()
+                                });
+                            }
+                        }
+                    }
                 }
             }
-            catch (Exception)
-            {   
-
-                throw;
+            catch (Exception ex)
+            {
+                // Manejo de errores personalizado
+                throw new Exception("Error al obtener clientes: " + ex.Message);
             }
-            finally { DataAccess.DatabaseConnection.GetConnection().Close(); }
-            return clientes;
 
+            return clientes;
         }
+
+
 
         public void UpdateCliente(Clientes cliente)
         {
@@ -96,7 +123,8 @@ namespace VienaStore.C_Datos
                              apellido = @apellido,
                              direccion = @direccion,
                              email = @email,
-                             telefono = @telefono
+                             telefono = @telefono,
+                             estado = @estado
                          WHERE id_cliente = @id";
 
                 SqlParameter dni = new SqlParameter("@dni", cliente.dni);
@@ -105,6 +133,7 @@ namespace VienaStore.C_Datos
                 SqlParameter direccion = new SqlParameter("@direccion", cliente.direccion);
                 SqlParameter email = new SqlParameter("@email", cliente.email);
                 SqlParameter telefono = new SqlParameter("@telefono", cliente.telefono);
+                SqlParameter estado = new SqlParameter("@estado", cliente.estado);
                 SqlParameter id = new SqlParameter("@id", cliente.id);
 
                 SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
@@ -114,6 +143,7 @@ namespace VienaStore.C_Datos
                 command.Parameters.Add(direccion);
                 command.Parameters.Add(email);
                 command.Parameters.Add(telefono);
+                command.Parameters.Add(estado);
                 command.Parameters.Add(id);
 
                 command.ExecuteNonQuery();
@@ -127,11 +157,6 @@ namespace VienaStore.C_Datos
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
-
-
-
-
-
 
     }
 }
