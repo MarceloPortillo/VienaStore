@@ -16,12 +16,12 @@ namespace VienaStore.C_Negocio
         public void GuardarCliente(Clientes cliente)
         {
             if (cliente.id == 0)
-            
+
                 dataAcces.InsertCliente(cliente);
-           
-            else           
-           
-              // MessageBox.Show("Error");
+
+            else
+
+                // MessageBox.Show("Error");
                 dataAcces.UpdateCliente(cliente);
             //return cliente;            
         }
@@ -45,8 +45,5 @@ namespace VienaStore.C_Negocio
         {
             dataAcces.CambiarEstadoCliente(idCliente, nuevoEstado);
         }
-
-
-
     }
 }

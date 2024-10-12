@@ -12,7 +12,7 @@ using VienaStore.C_Negocio;
 using VienaStore.C_Presentacion;
 
 namespace VienaStore.C_Presentacion.Vendedor
-{    
+{
     public partial class FBuscarClientes : Form
     {
         private BusinessCliente businessCliente;
@@ -203,7 +203,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+
         private void FBuscarClientes_Load(object sender, EventArgs e)
         {
             ListarContactos();
@@ -216,39 +216,39 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-{
-    // Verifica si se ha hecho clic en la columna del botón de estado
-    if (e.ColumnIndex == dataGridView1.Columns["Estado"].Index && e.RowIndex >= 0)
-    {
-        // Recupera el valor de la fila seleccionada
-        int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-        string estadoActual = dataGridView1.Rows[e.RowIndex].Cells["estado"].Value.ToString();
+        {
+            // Verifica si se ha hecho clic en la columna del botón de estado
+            if (e.ColumnIndex == dataGridView1.Columns["Estado"].Index && e.RowIndex >= 0)
+            {
+                // Recupera el valor de la fila seleccionada
+                int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                string estadoActual = dataGridView1.Rows[e.RowIndex].Cells["estado"].Value.ToString();
 
-        // Determina la acción a tomar según el estado actual
-        if (estadoActual == "Inactivo")
-        {
-            DialogResult ask = MessageBox.Show("¿Desea activar este cliente?", "Activar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ask == DialogResult.Yes)
-            {
-                // Cambiar el estado a 'activo'
-                businessCliente.CambiarEstadoCliente(id, "Activo");
-                MessageBox.Show("El cliente ha sido activado.", "Activación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ListarContactos(); // Refresca la lista de clientes
+                // Determina la acción a tomar según el estado actual
+                if (estadoActual == "Inactivo")
+                {
+                    DialogResult ask = MessageBox.Show("¿Desea activar este cliente?", "Activar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (ask == DialogResult.Yes)
+                    {
+                        // Cambiar el estado a 'activo'
+                        businessCliente.CambiarEstadoCliente(id, "Activo");
+                        MessageBox.Show("El cliente ha sido activado.", "Activación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ListarContactos(); // Refresca la lista de clientes
+                    }
+                }
+                else if (estadoActual == "Activo")
+                {
+                    DialogResult ask = MessageBox.Show("¿Desea eliminar este cliente?", "Eliminar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (ask == DialogResult.Yes)
+                    {
+                        // Cambiar el estado a 'inactivo'
+                        businessCliente.CambiarEstadoCliente(id, "Inactivo");
+                        MessageBox.Show("El cliente ha sido desactivado.", "Desactivación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ListarContactos(); // Refresca la lista de clientes
+                    }
+                }
             }
         }
-        else if (estadoActual == "Activo")
-        {
-            DialogResult ask = MessageBox.Show("¿Desea eliminar este cliente?", "Eliminar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (ask == DialogResult.Yes)
-            {
-                // Cambiar el estado a 'inactivo'
-                businessCliente.CambiarEstadoCliente(id, "Inactivo");
-                MessageBox.Show("El cliente ha sido desactivado.", "Desactivación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ListarContactos(); // Refresca la lista de clientes
-            }
-        }
-    }
-}
 
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -323,4 +323,3 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
     }
 }
-

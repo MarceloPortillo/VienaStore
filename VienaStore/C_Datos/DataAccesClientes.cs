@@ -22,8 +22,8 @@ namespace VienaStore.C_Datos
             {
                 DataAccess.DatabaseConnection.GetConnection();
                 string query = @"
-                        INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono, estado)
-                        VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono, estado)";
+                        INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono)
+                        VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono)";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
@@ -34,7 +34,6 @@ namespace VienaStore.C_Datos
                 cmd.Parameters.AddWithValue("@direccion", cliente.direccion);
                 cmd.Parameters.AddWithValue("@email", cliente.email);
                 cmd.Parameters.AddWithValue("@telefono", cliente.telefono);
-                cmd.Parameters.AddWithValue("@estado", cliente.estado);
 
                 // Ejecutar la consulta
                 cmd.ExecuteNonQuery();
@@ -218,5 +217,3 @@ namespace VienaStore.C_Datos
 
     }
 }
-
-

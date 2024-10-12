@@ -56,5 +56,6 @@ namespace VienaStore.C_Negocio
             string expresion = @"^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, expresion);
         }
+
     }
 }
