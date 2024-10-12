@@ -186,39 +186,24 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.CurrentRow != null) // Verifica que haya una fila seleccionada
             {
-                // Obtener la fila seleccionada
-                int rowIndex = dataGridView1.SelectedRows[0].Index;
+                int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                DialogResult ask = MessageBox.Show("¿Seguro que desea eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                // Confirmar si el usuario desea eliminar la fila
-                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas eliminar la fila seleccionada?",
-                    "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirmacion == DialogResult.Yes)
+                if (ask == DialogResult.Yes)
                 {
-                    // Eliminar la fila
-                    dataGridView1.Rows.RemoveAt(rowIndex);                    
+                    businessCliente.EliminarCliente(id);
+                    MessageBox.Show("El cliente ha sido eliminado exitosamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ListarContactos(); // Refrescar la lista de clientes
                 }
             }
             else
             {
-                // Mostrar un mensaje si no se ha seleccionado ninguna fila
-                MessageBox.Show("Por favor, seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         
-
-        private void LimpiarFormulario1()
-        {
-            TxtNombre.Text = string.Empty;
-            TxtApellido.Text = string.Empty;
-            TxtDNI.Text = string.Empty;
-            TxtDireccion.Text = string.Empty;
-            TxtEmail.Text = string.Empty;
-            TxtTelefono.Text = string.Empty;
-        }
-
         private void FBuscarClientes_Load(object sender, EventArgs e)
         {
             ListarContactos();
@@ -230,25 +215,111 @@ namespace VienaStore.C_Presentacion.Vendedor
             dataGridView1.DataSource = clientes;
         }
 
-        private void LimpiarFormulario()
-        {
-            TxtNombre.Text = string.Empty;
-            TxtApellido.Text = string.Empty;
-            TxtDNI.Text = string.Empty;
-            TxtDireccion.Text = string.Empty;
-            TxtEmail.Text = string.Empty;
-            TxtTelefono.Text = string.Empty;
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+{
+    // Verifica si se ha hecho clic en la columna del botón de estado
+    if (e.ColumnIndex == dataGridView1.Columns["Estado"].Index && e.RowIndex >= 0)
+    {
+        // Recupera el valor de la fila seleccionada
+        int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        string estadoActual = dataGridView1.Rows[e.RowIndex].Cells["estado"].Value.ToString();
 
+        // Determina la acción a tomar según el estado actual
+        if (estadoActual == "Inactivo")
+        {
+            DialogResult ask = MessageBox.Show("¿Desea activar este cliente?", "Activar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ask == DialogResult.Yes)
+            {
+                // Cambiar el estado a 'activo'
+                businessCliente.CambiarEstadoCliente(id, "Activo");
+                MessageBox.Show("El cliente ha sido activado.", "Activación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListarContactos(); // Refresca la lista de clientes
+            }
         }
+        else if (estadoActual == "Activo")
+        {
+            DialogResult ask = MessageBox.Show("¿Desea eliminar este cliente?", "Eliminar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ask == DialogResult.Yes)
+            {
+                // Cambiar el estado a 'inactivo'
+                businessCliente.CambiarEstadoCliente(id, "Inactivo");
+                MessageBox.Show("El cliente ha sido desactivado.", "Desactivación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListarContactos(); // Refresca la lista de clientes
+            }
+        }
+    }
+}
+
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             ListarContactos(TxtBuscar.Text);
             TxtBuscar.Text = string.Empty;
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // Obtener el texto actual del TextBox
+            string terminoBusqueda = TxtBuscar.Text.Trim();
+
+            // Llamar al método GetClientes con el término de búsqueda
+            List<Clientes> clientesFiltrados = businessCliente.GetClientes(terminoBusqueda);
+
+            // Actualizar la DataGridView con los clientes filtrados
+            dataGridView1.DataSource = clientesFiltrados;
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica que la columna que estás formateando sea la columna del botón 'Estado'
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "estado")
+            {
+                // Obtén el valor de la celda de estado (que es donde se encuentra el botón)
+                string estado = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                // Verifica si la fila es 'Inactiva' o 'Activa' y aplica color solo al botón de esa columna
+                if (estado == "Inactivo")
+                {
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red; // Color para inactivos
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+                else if (estado == "Activo")
+                {
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.LightGreen; // Color para activos
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Verifica que la columna que estás pintando sea la columna del botón 'Estado'
+            if (e.ColumnIndex == dataGridView1.Columns["estado"].Index && e.RowIndex >= 0)
+            {
+                // Obtén el valor de la celda de estado
+                string estado = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                // Pinta el botón manualmente según el estado
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                if (estado == "Inactivo")
+                {
+                    // Pinta el fondo del botón rojo
+                    e.Graphics.FillRectangle(Brushes.Red, e.CellBounds);
+                }
+                else if (estado == "Activo")
+                {
+                    // Pinta el fondo del botón verde
+                    e.Graphics.FillRectangle(Brushes.LightGreen, e.CellBounds);
+                }
+
+                // Dibuja el borde y el texto del botón
+                e.Graphics.DrawRectangle(Pens.Black, e.CellBounds.X, e.CellBounds.Y, e.CellBounds.Width, e.CellBounds.Height);
+                TextRenderer.DrawText(e.Graphics, estado, e.CellStyle.Font, e.CellBounds, Color.Black, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                // Evita que el sistema dibuje el botón por defecto
+                e.Handled = true;
+            }
         }
     }
 }

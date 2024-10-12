@@ -20,7 +20,7 @@ namespace VienaStore.C_Datos
         {
             try
             {
-                DataAccess.DatabaseConnection.GetConnection();                
+                DataAccess.DatabaseConnection.GetConnection();
                 string query = @"
                         INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono, estado)
                         VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono, estado)";
@@ -64,22 +64,26 @@ namespace VienaStore.C_Datos
                         connection.Open(); // Abre la conexión solo si está cerrada
                     }
 
+                    // Consulta base para obtener los clientes
                     string query = @"SELECT id_cliente, dni, nombre, apellido, direccion, email, telefono, estado
                              FROM Clientes";
 
-                    using (SqlCommand command = new SqlCommand())
+                    // Si hay un término de búsqueda, añade una cláusula WHERE
+                    if (!string.IsNullOrEmpty(search))
                     {
-                        command.Connection = connection; // Asigna la conexión al comando
+                        query += @" WHERE id_cliente LIKE @Buscar OR dni LIKE @Buscar OR nombre LIKE @Buscar 
+                            OR apellido LIKE @Buscar OR direccion LIKE @Buscar OR email LIKE @Buscar 
+                            OR telefono LIKE @Buscar";
+                    }
 
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Si hay un término de búsqueda, añade el parámetro con el comodín para búsqueda dinámica
                         if (!string.IsNullOrEmpty(search))
                         {
-                            query += @" WHERE id_cliente LIKE @Buscar OR dni LIKE @Buscar OR nombre LIKE @Buscar 
-                                    OR apellido LIKE @Buscar OR direccion LIKE @Buscar OR email LIKE @Buscar 
-                                    OR telefono LIKE @Buscar";
-                            command.Parameters.Add(new SqlParameter("@Buscar", $"%{search}%"));
+                            // Usa el comodín '%' para buscar coincidencias parciales
+                            command.Parameters.Add(new SqlParameter("@Buscar", "%" + search + "%"));
                         }
-
-                        command.CommandText = query;
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -109,6 +113,7 @@ namespace VienaStore.C_Datos
 
             return clientes;
         }
+
 
 
 
@@ -154,6 +159,62 @@ namespace VienaStore.C_Datos
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
+
+        public void EliminarCliente(int idCliente)
+        {
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
+                string query = @"UPDATE Clientes
+                         SET estado = 'Inactivo'
+                         WHERE id_cliente = @id";
+
+                SqlParameter id = new SqlParameter("@id", idCliente);
+
+                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
+                command.Parameters.Add(id);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar el cliente", ex);
+            }
+            finally
+            {
+                DataAccess.DatabaseConnection.GetConnection().Close();
+            }
+        }
+
+        public void CambiarEstadoCliente(int idCliente, string nuevoEstado)
+        {
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
+                string query = @"UPDATE Clientes
+                         SET estado = @nuevoEstado
+                         WHERE id_cliente = @id";
+
+                SqlParameter estadoParam = new SqlParameter("@nuevoEstado", nuevoEstado);
+                SqlParameter idParam = new SqlParameter("@id", idCliente);
+
+                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
+                command.Parameters.Add(estadoParam);
+                command.Parameters.Add(idParam);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cambiar el estado del cliente", ex);
+            }
+            finally
+            {
+                DataAccess.DatabaseConnection.GetConnection().Close();
+            }
+        }
+
+
 
     }
 }

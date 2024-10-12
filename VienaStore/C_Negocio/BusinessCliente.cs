@@ -36,5 +36,17 @@ namespace VienaStore.C_Negocio
             return dataAcces.GetClientes(searchText);
         }
 
+        public void EliminarCliente(int idCliente)
+        {
+            dataAcces.EliminarCliente(idCliente);
+        }
+
+        public void CambiarEstadoCliente(int idCliente, string nuevoEstado)
+        {
+            dataAcces.CambiarEstadoCliente(idCliente, nuevoEstado);
+        }
+
+
+
     }
 }
