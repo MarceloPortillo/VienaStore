@@ -163,6 +163,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 string direccion = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 string email = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                 string telefono = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                string estado = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
                 // Carga los datos en el formulario o en los campos
                 TxtNombre.Text = nombre;
@@ -171,6 +172,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 TxtDireccion.Text = direccion;
                 TxtEmail.Text = email;
                 TxtTelefono.Text = telefono;
+
 
                 _cliente = new Clientes();
                 _cliente.id = id; // Aquí guardas el id del cliente seleccionado

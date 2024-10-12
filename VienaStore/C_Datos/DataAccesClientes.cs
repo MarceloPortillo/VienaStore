@@ -123,8 +123,7 @@ namespace VienaStore.C_Datos
                              apellido = @apellido,
                              direccion = @direccion,
                              email = @email,
-                             telefono = @telefono,
-                             estado = @estado
+                             telefono = @telefono
                          WHERE id_cliente = @id";
 
                 SqlParameter dni = new SqlParameter("@dni", cliente.dni);
@@ -133,7 +132,6 @@ namespace VienaStore.C_Datos
                 SqlParameter direccion = new SqlParameter("@direccion", cliente.direccion);
                 SqlParameter email = new SqlParameter("@email", cliente.email);
                 SqlParameter telefono = new SqlParameter("@telefono", cliente.telefono);
-                SqlParameter estado = new SqlParameter("@estado", cliente.estado);
                 SqlParameter id = new SqlParameter("@id", cliente.id);
 
                 SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
@@ -143,7 +141,6 @@ namespace VienaStore.C_Datos
                 command.Parameters.Add(direccion);
                 command.Parameters.Add(email);
                 command.Parameters.Add(telefono);
-                command.Parameters.Add(estado);
                 command.Parameters.Add(id);
 
                 command.ExecuteNonQuery();
