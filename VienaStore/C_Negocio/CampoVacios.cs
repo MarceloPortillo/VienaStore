@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Datos;
+using VienaStore.C_Presentacion.Administrador;
 
 namespace VienaStore.C_Negocio
 {
-    internal class CampoVacios
+    public class CampoVacios
     {
+        public TextBox nombre;
+        public TextBox descripcion;
         public static bool ValidarCampoVacio(TextBox textBox, string nombreCampo)
         {
             if (string.IsNullOrWhiteSpace(textBox.Text))
@@ -33,6 +37,16 @@ namespace VienaStore.C_Negocio
                 return;
             }
             return;
+        }
+
+        public static bool camposCategoria(TextBox nombre, TextBox descripcion)
+        {
+            if (string.IsNullOrWhiteSpace(nombre.Text) || string.IsNullOrWhiteSpace(descripcion.Text))
+            {
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }

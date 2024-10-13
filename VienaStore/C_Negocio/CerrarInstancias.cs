@@ -15,6 +15,7 @@ namespace VienaStore.C_Negocio
         public static void InstanciasNull()
         {
             /*Pasan el estado de las instancias a null*/
+            FGestionCategorias.limpiar();
             FBuscarProductoVendedor.limpiar();
             FAnularVenta.limpiar();
             FDataTracker.limpiar();

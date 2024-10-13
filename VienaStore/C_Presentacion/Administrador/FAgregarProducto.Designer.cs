@@ -45,13 +45,13 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CboProveedor = new System.Windows.Forms.ComboBox();
+            this.LblProveedor = new System.Windows.Forms.Label();
+            this.TxtStockMin = new System.Windows.Forms.TextBox();
+            this.LblStockMin = new System.Windows.Forms.Label();
             this.TBCodigoProducto = new System.Windows.Forms.TextBox();
             this.LblCodigoProducto = new System.Windows.Forms.Label();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.TxtStockMin = new System.Windows.Forms.TextBox();
-            this.LblStockMin = new System.Windows.Forms.Label();
-            this.LblProveedor = new System.Windows.Forms.Label();
-            this.CboProveedor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -164,7 +164,7 @@
             this.TBStock.Location = new System.Drawing.Point(162, 212);
             this.TBStock.Name = "TBStock";
             this.TBStock.Size = new System.Drawing.Size(252, 24);
-            this.TBStock.TabIndex = 5;
+            this.TBStock.TabIndex = 6;
             this.TBStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBStock_KeyPress);
             // 
             // TBPrecioCompra
@@ -173,7 +173,8 @@
             this.TBPrecioCompra.Location = new System.Drawing.Point(162, 256);
             this.TBPrecioCompra.Name = "TBPrecioCompra";
             this.TBPrecioCompra.Size = new System.Drawing.Size(252, 24);
-            this.TBPrecioCompra.TabIndex = 6;
+            this.TBPrecioCompra.TabIndex = 7;
+            this.TBPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPrecioCompra_KeyPress);
             // 
             // TBPrecioVenta
             // 
@@ -181,13 +182,14 @@
             this.TBPrecioVenta.Location = new System.Drawing.Point(162, 303);
             this.TBPrecioVenta.Name = "TBPrecioVenta";
             this.TBPrecioVenta.Size = new System.Drawing.Size(252, 24);
-            this.TBPrecioVenta.TabIndex = 7;
+            this.TBPrecioVenta.TabIndex = 8;
+            this.TBPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPrecioVenta_KeyPress);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VienaStore.Properties.Resources.Agregar_Producto_240x240px;
             this.pictureBox1.Location = new System.Drawing.Point(460, 129);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(247, 244);
             this.pictureBox1.TabIndex = 84;
@@ -200,10 +202,10 @@
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGuardar.Location = new System.Drawing.Point(399, 457);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(150, 67);
-            this.BtnGuardar.TabIndex = 9;
+            this.BtnGuardar.TabIndex = 11;
             this.BtnGuardar.Text = "AGREGAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.UseVisualStyleBackColor = false;
@@ -216,10 +218,10 @@
             this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCancelar.Location = new System.Drawing.Point(554, 457);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(150, 67);
-            this.BtnCancelar.TabIndex = 10;
+            this.BtnCancelar.TabIndex = 12;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -247,16 +249,58 @@
             this.panel1.Controls.Add(this.LblCategoria);
             this.panel1.Controls.Add(this.LblNombreProducto);
             this.panel1.Location = new System.Drawing.Point(4, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 373);
             this.panel1.TabIndex = 87;
+            // 
+            // CboProveedor
+            // 
+            this.CboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboProveedor.FormattingEnabled = true;
+            this.CboProveedor.Items.AddRange(new object[] {
+            "Tommy"});
+            this.CboProveedor.Location = new System.Drawing.Point(162, 339);
+            this.CboProveedor.Name = "CboProveedor";
+            this.CboProveedor.Size = new System.Drawing.Size(252, 25);
+            this.CboProveedor.TabIndex = 9;
+            this.CboProveedor.Text = "Seleccione un Proveedor";
+            // 
+            // LblProveedor
+            // 
+            this.LblProveedor.AutoSize = true;
+            this.LblProveedor.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProveedor.Location = new System.Drawing.Point(21, 342);
+            this.LblProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblProveedor.Name = "LblProveedor";
+            this.LblProveedor.Size = new System.Drawing.Size(85, 18);
+            this.LblProveedor.TabIndex = 88;
+            this.LblProveedor.Text = "Proveedor:";
+            // 
+            // TxtStockMin
+            // 
+            this.TxtStockMin.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStockMin.Location = new System.Drawing.Point(162, 170);
+            this.TxtStockMin.Name = "TxtStockMin";
+            this.TxtStockMin.Size = new System.Drawing.Size(252, 24);
+            this.TxtStockMin.TabIndex = 5;
+            this.TxtStockMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtStockMin_KeyPress);
+            // 
+            // LblStockMin
+            // 
+            this.LblStockMin.AutoSize = true;
+            this.LblStockMin.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStockMin.Location = new System.Drawing.Point(21, 173);
+            this.LblStockMin.Name = "LblStockMin";
+            this.LblStockMin.Size = new System.Drawing.Size(82, 18);
+            this.LblStockMin.TabIndex = 86;
+            this.LblStockMin.Text = "Stock Min:";
             // 
             // TBCodigoProducto
             // 
             this.TBCodigoProducto.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBCodigoProducto.Location = new System.Drawing.Point(162, 6);
-            this.TBCodigoProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBCodigoProducto.Margin = new System.Windows.Forms.Padding(2);
             this.TBCodigoProducto.Name = "TBCodigoProducto";
             this.TBCodigoProducto.Size = new System.Drawing.Size(252, 24);
             this.TBCodigoProducto.TabIndex = 1;
@@ -280,55 +324,14 @@
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLimpiar.Location = new System.Drawing.Point(244, 457);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(150, 67);
-            this.BtnLimpiar.TabIndex = 8;
+            this.BtnLimpiar.TabIndex = 10;
             this.BtnLimpiar.Text = "LIMPIAR";
             this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnLimpiar.UseVisualStyleBackColor = false;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // TxtStockMin
-            // 
-            this.TxtStockMin.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStockMin.Location = new System.Drawing.Point(162, 170);
-            this.TxtStockMin.Name = "TxtStockMin";
-            this.TxtStockMin.Size = new System.Drawing.Size(252, 24);
-            this.TxtStockMin.TabIndex = 85;
-            // 
-            // LblStockMin
-            // 
-            this.LblStockMin.AutoSize = true;
-            this.LblStockMin.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStockMin.Location = new System.Drawing.Point(21, 173);
-            this.LblStockMin.Name = "LblStockMin";
-            this.LblStockMin.Size = new System.Drawing.Size(82, 18);
-            this.LblStockMin.TabIndex = 86;
-            this.LblStockMin.Text = "Stock Min:";
-            // 
-            // LblProveedor
-            // 
-            this.LblProveedor.AutoSize = true;
-            this.LblProveedor.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProveedor.Location = new System.Drawing.Point(21, 342);
-            this.LblProveedor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblProveedor.Name = "LblProveedor";
-            this.LblProveedor.Size = new System.Drawing.Size(85, 18);
-            this.LblProveedor.TabIndex = 88;
-            this.LblProveedor.Text = "Proveedor:";
-            // 
-            // CboProveedor
-            // 
-            this.CboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboProveedor.FormattingEnabled = true;
-            this.CboProveedor.Items.AddRange(new object[] {
-            "Tommy"});
-            this.CboProveedor.Location = new System.Drawing.Point(162, 339);
-            this.CboProveedor.Name = "CboProveedor";
-            this.CboProveedor.Size = new System.Drawing.Size(252, 25);
-            this.CboProveedor.TabIndex = 89;
-            this.CboProveedor.Text = "Seleccione un Proveedor";
             // 
             // FAgregarProducto
             // 
@@ -343,7 +346,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblAgregarProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FAgregarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAgregarProducto";

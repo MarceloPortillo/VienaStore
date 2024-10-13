@@ -92,6 +92,21 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             C_Negocio.Limpiar.limpiarAgregarProducto(TBNombreProducto, TBDescripcion, TBStock, TBPrecioCompra, TBPrecioVenta, TBCodigoProducto, TxtStockMin, CboProveedor, CBCategoria);
         }
+
+        private void TxtStockMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void TBPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.numerosDecimales(e);
+        }
+
+        private void TBPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.numerosDecimales(e);
+        }
     }
 }
 

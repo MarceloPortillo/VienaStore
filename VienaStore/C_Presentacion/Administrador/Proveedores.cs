@@ -63,7 +63,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 string.IsNullOrWhiteSpace(TxtCuit.Text) ||
                 string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
             string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-            string.IsNullOrWhiteSpace(TxtTelefono.Text) || (!CheCartera.Checked && !CheMochicla.Checked && !CheBilletera.Checked))
+            string.IsNullOrWhiteSpace(TxtTelefono.Text))
                 
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -106,7 +106,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 string.IsNullOrWhiteSpace(TxtCuit.Text) ||
                 string.IsNullOrWhiteSpace(TxtCorreo.Text) ||
                 string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(TxtTelefono.Text) || (!CheCartera.Checked && !CheMochicla.Checked && !CheBilletera.Checked))
+                string.IsNullOrWhiteSpace(TxtTelefono.Text))
 
             {
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

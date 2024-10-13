@@ -108,5 +108,17 @@ namespace VienaStore.C_Presentacion.Administrador
             //nuevo.MdiParent = this;
             nuevo.Show();
         }
+
+        private void BtnAgregarCat_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+            FGestionCategorias nuevo = FGestionCategorias.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+        }
     }
 }
