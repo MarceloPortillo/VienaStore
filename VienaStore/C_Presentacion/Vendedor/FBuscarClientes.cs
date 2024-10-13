@@ -165,6 +165,13 @@ namespace VienaStore.C_Presentacion.Vendedor
                 string telefono = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 string estado = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
+                // Verifica si el cliente está inactivo
+                if (estado.ToLower() == "inactivo")
+                {
+                    MessageBox.Show("No se puede editar un cliente inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Salir sin permitir la edición
+                }
+
                 // Carga los datos en el formulario o en los campos
                 TxtNombre.Text = nombre;
                 TxtApellido.Text = apellido;
@@ -173,7 +180,6 @@ namespace VienaStore.C_Presentacion.Vendedor
                 TxtEmail.Text = email;
                 TxtTelefono.Text = telefono;
 
-
                 _cliente = new Clientes();
                 _cliente.id = id; // Aquí guardas el id del cliente seleccionado
             }
@@ -181,8 +187,8 @@ namespace VienaStore.C_Presentacion.Vendedor
             {
                 MessageBox.Show("Seleccione un cliente para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            //CampoVacios.CamposVacios(TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail);
         }
+
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
