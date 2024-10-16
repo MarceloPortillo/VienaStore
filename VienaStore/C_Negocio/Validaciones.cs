@@ -58,6 +58,8 @@ namespace VienaStore.C_Negocio
             return Regex.IsMatch(email, expresion);
         }
 
+<<<<<<< HEAD
+=======
         public static void numerosDecimales(KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
@@ -84,5 +86,6 @@ namespace VienaStore.C_Negocio
             }
             return false;
         }
+>>>>>>> origin/dev_nota_cat
     }
 }

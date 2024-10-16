@@ -15,15 +15,25 @@ namespace VienaStore.C_Negocio
 
         public void GuardarCliente(Clientes cliente)
         {
-            if (cliente.id == 0)
+            try
             {
-                dataAcces.InsertCliente(cliente);
+                if (cliente.id == 0)
+
+                    dataAcces.InsertCliente(cliente);
+
+                else
+
+                    // MessageBox.Show("Error");
+                    dataAcces.UpdateCliente(cliente);
+                //return cliente;            
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Error");
-                //return dataAcces.UpdateCliente(cliente);
+
+                throw new Exception (ex.Message);
             }
+           
         }
 
         public BusinessCliente()
@@ -31,9 +41,19 @@ namespace VienaStore.C_Negocio
             dataAcces = new DataAccesClientes();
         }
 
-        public List<Clientes> GetClientes()
+        public List<Clientes> GetClientes(string searchText = null)
         {
-            return dataAcces.GetClientes();
+            return dataAcces.GetClientes(searchText);
+        }
+
+        public void EliminarCliente(int idCliente)
+        {
+            dataAcces.EliminarCliente(idCliente);
+        }
+
+        public void CambiarEstadoCliente(int idCliente, string nuevoEstado)
+        {
+            dataAcces.CambiarEstadoCliente(idCliente, nuevoEstado);
         }
     }
 }

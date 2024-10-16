@@ -24,7 +24,7 @@ namespace VienaStore.C_Negocio
             string contraseñaEncargado = "encargado123";
 
             string usuarioVendedor = "vendedor";
-            string contraseñaVendedor = "vendedor123";
+            string contraseñaVendedor = "123";
 
             // Obtenemos los valores ingresados
             string usuarioIngresado = usuario;

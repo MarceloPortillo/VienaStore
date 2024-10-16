@@ -42,10 +42,13 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.BtnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +57,9 @@
             this.LblLista.AutoSize = true;
             this.LblLista.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLista.ForeColor = System.Drawing.Color.Black;
-            this.LblLista.Location = new System.Drawing.Point(62, 76);
-            this.LblLista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblLista.Location = new System.Drawing.Point(83, 94);
             this.LblLista.Name = "LblLista";
-            this.LblLista.Size = new System.Drawing.Size(269, 29);
+            this.LblLista.Size = new System.Drawing.Size(338, 38);
             this.LblLista.TabIndex = 0;
             this.LblLista.Text = "LISTA DE CLIENTES";
             // 
@@ -92,11 +94,12 @@
             this.apellidoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.clientesBindingSource;
+            this.telefonoDataGridViewTextBoxColumn,
+            this.estado});
+            this.dataGridView1.DataSource = this.clientesBindingSource1;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 130);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -111,13 +114,13 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(935, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(1561, 497);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -169,9 +172,16 @@
             this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             // 
-            // clientesBindingSource
+            // estado
             // 
-            this.clientesBindingSource.DataSource = typeof(VienaStore.C_Datos.Clientes);
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.MinimumWidth = 6;
+            this.estado.Name = "estado";
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataSource = typeof(VienaStore.C_Datos.Clientes);
             // 
             // BtnSalir
             // 
@@ -179,10 +189,10 @@
             this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(753, 548);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSalir.Location = new System.Drawing.Point(1376, 674);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(115, 52);
+            this.BtnSalir.Size = new System.Drawing.Size(233, 64);
             this.BtnSalir.TabIndex = 1;
             this.BtnSalir.Text = "SALIR";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,35 +203,40 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightSalmon;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.button1.Image = global::VienaStore.Properties.Resources.Descargar2_PDF_48x48px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(558, 548);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(1125, 674);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 52);
+            this.button1.Size = new System.Drawing.Size(233, 64);
             this.button1.TabIndex = 2;
             this.button1.Text = "GENERAR PDF";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(VienaStore.C_Datos.Clientes);
+            // 
             // FListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1027, 622);
+            this.ClientSize = new System.Drawing.Size(1647, 766);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FListarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FListarClientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FListarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,6 +249,7 @@
         public System.Windows.Forms.Label LblLista;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource clientesBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -241,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

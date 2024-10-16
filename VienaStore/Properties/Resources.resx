@@ -238,6 +238,9 @@
   <data name="Eliminar_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eliminar_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Descargar_PDF_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descargar_PDF_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="informes_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informes_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,6 +253,8 @@
   <data name="nuevoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevoUsuario.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Descargar2_PDF_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descargar2_PDF_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   <data name="signoMas_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signoMas_48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
