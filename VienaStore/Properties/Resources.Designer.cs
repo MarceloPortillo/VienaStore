@@ -241,6 +241,16 @@ namespace VienaStore.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categories_32PX {
+            get {
+                object obj = ResourceManager.GetObject("categories_32PX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon CierreSesion {
@@ -266,6 +276,26 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap Confirmar_48x48px {
             get {
                 object obj = ResourceManager.GetObject("Confirmar_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Descargar_PDF_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Descargar_PDF_48x48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Descargar2_PDF_48x48px {
+            get {
+                object obj = ResourceManager.GetObject("Descargar2_PDF_48x48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -461,6 +491,16 @@ namespace VienaStore.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modificar_48px {
+            get {
+                object obj = ResourceManager.GetObject("modificar_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon nuevoUsuario {
@@ -476,6 +516,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap proveedor_32px {
             get {
                 object obj = ResourceManager.GetObject("proveedor_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signoMas_48 {
+            get {
+                object obj = ResourceManager.GetObject("signoMas_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

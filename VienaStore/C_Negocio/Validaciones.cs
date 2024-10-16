@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -56,5 +57,34 @@ namespace VienaStore.C_Negocio
             string expresion = @"^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, expresion);
         }
+
+
+        public static void numerosDecimales(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Error: Ingrese solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static bool ValidarLength(string nombre, int numero)
+        {                     
+            if (nombre.Length < numero)
+            {
+                MessageBox.Show("El nombre debe tener al menos 3 caracteres.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                return true;
+            }
+            return false;
+        }
+
     }
 }

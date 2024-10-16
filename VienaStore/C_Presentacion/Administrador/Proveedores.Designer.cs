@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,9 +50,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.CheBilletera = new System.Windows.Forms.CheckBox();
-            this.CheMochicla = new System.Windows.Forms.CheckBox();
-            this.CheCartera = new System.Windows.Forms.CheckBox();
             this.LblProdcutos = new System.Windows.Forms.Label();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -66,6 +64,7 @@
             this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             this.SuspendLayout();
@@ -208,11 +207,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.BtnAgregar);
-            this.panel1.Controls.Add(this.CheBilletera);
-            this.panel1.Controls.Add(this.CheMochicla);
-            this.panel1.Controls.Add(this.CheCartera);
             this.panel1.Controls.Add(this.LblProdcutos);
             this.panel1.Controls.Add(this.BtnEditar);
             this.panel1.Controls.Add(this.BtnLimpiar);
@@ -237,10 +234,10 @@
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.Coral;
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
+            this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGuardar.Location = new System.Drawing.Point(440, 378);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(134, 60);
             this.BtnGuardar.TabIndex = 22;
@@ -255,7 +252,7 @@
             this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAgregar.Location = new System.Drawing.Point(19, 378);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(133, 60);
             this.BtnAgregar.TabIndex = 30;
@@ -263,39 +260,6 @@
             this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // CheBilletera
-            // 
-            this.CheBilletera.AutoSize = true;
-            this.CheBilletera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheBilletera.Location = new System.Drawing.Point(186, 303);
-            this.CheBilletera.Name = "CheBilletera";
-            this.CheBilletera.Size = new System.Drawing.Size(84, 19);
-            this.CheBilletera.TabIndex = 29;
-            this.CheBilletera.Text = "Deportivo";
-            this.CheBilletera.UseVisualStyleBackColor = true;
-            // 
-            // CheMochicla
-            // 
-            this.CheMochicla.AutoSize = true;
-            this.CheMochicla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheMochicla.Location = new System.Drawing.Point(186, 278);
-            this.CheMochicla.Name = "CheMochicla";
-            this.CheMochicla.Size = new System.Drawing.Size(68, 19);
-            this.CheMochicla.TabIndex = 28;
-            this.CheMochicla.Text = "Formal";
-            this.CheMochicla.UseVisualStyleBackColor = true;
-            // 
-            // CheCartera
-            // 
-            this.CheCartera.AutoSize = true;
-            this.CheCartera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheCartera.Location = new System.Drawing.Point(186, 253);
-            this.CheCartera.Name = "CheCartera";
-            this.CheCartera.Size = new System.Drawing.Size(67, 19);
-            this.CheCartera.TabIndex = 27;
-            this.CheCartera.Text = "Casual";
-            this.CheCartera.UseVisualStyleBackColor = true;
             // 
             // LblProdcutos
             // 
@@ -314,7 +278,7 @@
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEditar.Location = new System.Drawing.Point(300, 378);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(134, 60);
             this.BtnEditar.TabIndex = 24;
@@ -327,10 +291,10 @@
             // 
             this.BtnLimpiar.BackColor = System.Drawing.Color.Coral;
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
+            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLimpiar.Location = new System.Drawing.Point(159, 378);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(134, 60);
             this.BtnLimpiar.TabIndex = 23;
@@ -346,7 +310,7 @@
             this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminar.Location = new System.Drawing.Point(964, 559);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
             this.BtnEliminar.TabIndex = 25;
@@ -461,10 +425,10 @@
             // 
             this.BtnSalir.BackColor = System.Drawing.Color.Coral;
             this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalir.Location = new System.Drawing.Point(1122, 559);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(141, 69);
             this.BtnSalir.TabIndex = 22;
@@ -472,6 +436,15 @@
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(175, 256);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(233, 23);
+            this.comboBox1.TabIndex = 31;
+            this.comboBox1.Text = "Seleccione una categoria";
             // 
             // Proveedores
             // 
@@ -526,9 +499,6 @@
         public System.Windows.Forms.Button BtnEditar;
         public System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label LblProdcutos;
-        private System.Windows.Forms.CheckBox CheBilletera;
-        private System.Windows.Forms.CheckBox CheMochicla;
-        private System.Windows.Forms.CheckBox CheCartera;
         public System.Windows.Forms.Button BtnAgregar;
         public System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmpresa;
@@ -539,5 +509,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
         public System.Windows.Forms.DataGridView DtaProveedores;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

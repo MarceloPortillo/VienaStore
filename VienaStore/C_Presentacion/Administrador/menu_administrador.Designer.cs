@@ -33,6 +33,7 @@
             this.BtnAgregarProducto = new System.Windows.Forms.Button();
             this.BtnBuescarUsuario = new System.Windows.Forms.Button();
             this.BtnCrearUsuario = new System.Windows.Forms.Button();
+            this.BtnAgregarCat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnAgregarCat);
             this.panel1.Controls.Add(this.BtnCrearUsuario);
             this.panel1.Controls.Add(this.BtnBuescarUsuario);
             this.panel1.Controls.Add(this.BtnAgregarProducto);
@@ -110,6 +112,7 @@
             this.panel1.Controls.SetChildIndex(this.BtnAgregarProducto, 0);
             this.panel1.Controls.SetChildIndex(this.BtnBuescarUsuario, 0);
             this.panel1.Controls.SetChildIndex(this.BtnCrearUsuario, 0);
+            this.panel1.Controls.SetChildIndex(this.BtnAgregarCat, 0);
             // 
             // pictureBox1
             // 
@@ -125,7 +128,7 @@
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(596, 698);
+            this.panel3.Size = new System.Drawing.Size(768, 698);
             // 
             // BtnRegistrarVenta
             // 
@@ -227,11 +230,30 @@
             this.BtnCrearUsuario.UseVisualStyleBackColor = false;
             this.BtnCrearUsuario.Click += new System.EventHandler(this.BtnCrearUsuario_Click);
             // 
+            // BtnAgregarCat
+            // 
+            this.BtnAgregarCat.BackColor = System.Drawing.Color.Coral;
+            this.BtnAgregarCat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnAgregarCat.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarCat.Image = global::VienaStore.Properties.Resources.categories_32PX;
+            this.BtnAgregarCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarCat.Location = new System.Drawing.Point(25, 602);
+            this.BtnAgregarCat.Name = "BtnAgregarCat";
+            this.BtnAgregarCat.Size = new System.Drawing.Size(155, 45);
+            this.BtnAgregarCat.TabIndex = 13;
+            this.BtnAgregarCat.TabStop = false;
+            this.BtnAgregarCat.Tag = "2";
+            this.BtnAgregarCat.Text = "  GESTIONAR\r\n CATEGORIAS";
+            this.BtnAgregarCat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAgregarCat.UseCompatibleTextRendering = true;
+            this.BtnAgregarCat.UseVisualStyleBackColor = false;
+            this.BtnAgregarCat.Click += new System.EventHandler(this.BtnAgregarCat_Click);
+            // 
             // menu_administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.ClientSize = new System.Drawing.Size(972, 749);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "menu_administrador";
             this.Text = "MENÚ ADMINISTRADOR";
@@ -250,5 +272,6 @@
         public System.Windows.Forms.Button BtnBuescarUsuario;
         public System.Windows.Forms.Button BtnCrearUsuario;
         public System.Windows.Forms.Button BtnProveedores;
+        public System.Windows.Forms.Button BtnAgregarCat;
     }
 }

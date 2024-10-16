@@ -50,10 +50,9 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void ListarContactos()
         {
-            List<Clientes> clientes =  businessCliente.GetClientes();
-            dataGridView1.DataSource = clientes;    
+            List<Clientes> clientes = businessCliente.GetClientes();
+            dataGridView1.DataSource = clientes;
         }
- 
     }
 }
     
