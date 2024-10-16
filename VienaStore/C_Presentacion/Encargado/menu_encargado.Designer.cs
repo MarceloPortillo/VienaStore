@@ -60,6 +60,12 @@
             this.BtnProveedores.Location = new System.Drawing.Point(28, 610);
             this.BtnProveedores.Visible = false;
             // 
+            // BtnAgregarCat
+            // 
+            this.BtnAgregarCat.Enabled = false;
+            this.BtnAgregarCat.Location = new System.Drawing.Point(25, 449);
+            this.BtnAgregarCat.Visible = false;
+            // 
             // BtnModificarCliente
             // 
             this.BtnModificarCliente.Enabled = false;
@@ -71,6 +77,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BtnInformes);
             this.panel1.Size = new System.Drawing.Size(204, 718);
+            this.panel1.Controls.SetChildIndex(this.BtnAgregarCat, 0);
             this.panel1.Controls.SetChildIndex(this.BtnRegistrarVenta, 0);
             this.panel1.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel1.Controls.SetChildIndex(this.BtnRegistrarCliente, 0);

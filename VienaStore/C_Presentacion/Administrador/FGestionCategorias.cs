@@ -29,12 +29,13 @@ namespace VienaStore.C_Presentacion.Administrador
 
             return instancia;
         }
+
         public FGestionCategorias()
         {
             InitializeComponent();
             _businessCategoria = new BusinessCategoria();
             TxtBuscarCategoria.TextChanged += TxtBuscarCategoria_TextChanged;
-        }      
+        }
 
         public static void limpiar()
         {
@@ -48,34 +49,8 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnAgreCat_Click(object sender, EventArgs e)
         {
-            if (!CampoVacios.camposCategoria(TxtNombre, TxtDescripcion) || Validaciones.ValidarLength(TxtNombre.Text, 3))
-            {
-                Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
-                return;
-            }
-            Categorias categoria = new Categorias();
-            categoria.nombre = TxtNombre.Text;
-            categoria.descripcion = TxtDescripcion.Text;
-            try
-            {
-                DialogResult ask = MessageBox.Show("¿Seguro que desea agregar una nueva categoría?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (ask == DialogResult.Yes)
-                {
-                    _businessCategoria.guardar(categoria);
-                    Dialogos.DialogoCategoria(TxtNombre.Text);
-                    Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
-                    ListarCategorias();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
+            agregar();
         }
-
 
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -86,18 +61,10 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
         }
+
         public void saveCategoria()
         {
-            if (CampoVacios.camposCategoria(TxtNombre, TxtDescripcion))
-            {
-                Categorias categoria = new Categorias();
-                categoria.id_Categoria = Convert.ToInt32(DtaUsuario.CurrentRow.Cells["id_Categoria"].Value);
-                categoria.nombre = TxtNombre.Text;
-                categoria.descripcion = TxtDescripcion.Text;
-                categoria.estado = Convert.ToString(DtaUsuario.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
-
-            _businessCategoria.guardar(categoria);
-            }
+            GuardarCategoria();
         }
 
         private void FGestionCategorias_Load(object sender, EventArgs e)
@@ -120,16 +87,36 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            edit();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            BotonGuardar();
+        }
+
+        private void DtaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DatagridEliminar(e);
+        }
+
+        private void EliminarCategoria(int id)
+        {
+            _businessCategoria.DeleteCategoria(id);
+        }
+
+        private void edit()
+        {
             if (DtaUsuario.SelectedRows.Count > 0)
-            {                
+            {
                 DataGridViewRow fila = DtaUsuario.SelectedRows[0];
                 int id_Categoria = Convert.ToInt32(fila.Cells["id_categoria"].Value);
                 TxtNombre.Text = Convert.ToString(fila.Cells["nombre"].Value);
                 TxtDescripcion.Text = Convert.ToString(fila.Cells["descripcion"].Value);
                 string estado = Convert.ToString(fila.Cells["BtnActivarDesactivar"].Value);
-                if(estado == "Inactivo")
+                if (estado == "Inactivo")
                 {
-                    MessageBox.Show("No puedes Modificar una Categoria Inactiva","Inactiva", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("No puedes Modificar una Categoria Inactiva", "Inactiva", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
                     return;
                 }
@@ -137,13 +124,14 @@ namespace VienaStore.C_Presentacion.Administrador
             else
             {
                 MessageBox.Show("Por favor, seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BotonGuardar() 
         {
-            if(CampoVacios.camposCategoria(TxtNombre, TxtDescripcion)){
-                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar una categoria?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (CampoVacios.camposCategoria(TxtNombre, TxtDescripcion))
+            {
+                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar esta categoria?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmacion == DialogResult.Yes)
                 {
@@ -155,16 +143,14 @@ namespace VienaStore.C_Presentacion.Administrador
             }
             else
             {
-                MessageBox.Show("No puede guardar sin haber modificado antes","Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No puede guardar sin haber modificado antes", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
 
-        private void DtaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DatagridEliminar(DataGridViewCellEventArgs e)
         {
-            
             if (e.RowIndex >= 0 && DtaUsuario.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
-            {                
+            {
                 int id = int.Parse(DtaUsuario.Rows[e.RowIndex].Cells["id_Categoria"].Value.ToString());
                 string estado = DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value.ToString();
                 if (estado == "Activo")
@@ -198,9 +184,49 @@ namespace VienaStore.C_Presentacion.Administrador
             }
         }
 
-        private void EliminarCategoria(int id)
+        private void agregar()
         {
-            _businessCategoria.DeleteCategoria(id);
+            if (!CampoVacios.camposCategoria(TxtNombre, TxtDescripcion) || Validaciones.ValidarLength(TxtNombre.Text, 3))
+            {
+                Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
+                return;
+            }
+            Categorias categoria = new Categorias();
+            categoria.nombre = TxtNombre.Text;
+            categoria.descripcion = TxtDescripcion.Text;
+            try
+            {
+                DialogResult ask = MessageBox.Show("¿Seguro que desea agregar una nueva categoría?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (ask == DialogResult.Yes)
+                {
+                    _businessCategoria.guardar(categoria);
+                    Dialogos.DialogoCategoria(TxtNombre.Text);
+                    Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
+                    ListarCategorias();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        private void GuardarCategoria()
+        {
+            if (CampoVacios.camposCategoria(TxtNombre, TxtDescripcion))
+            {
+                Categorias categoria = new Categorias();
+                categoria.id_Categoria = Convert.ToInt32(DtaUsuario.CurrentRow.Cells["id_Categoria"].Value);
+                categoria.nombre = TxtNombre.Text;
+                categoria.descripcion = TxtDescripcion.Text;
+                categoria.estado = Convert.ToString(DtaUsuario.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
+
+                _businessCategoria.guardar(categoria);
+            }
         }
     }
+
 }
