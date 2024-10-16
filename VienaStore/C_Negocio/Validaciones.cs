@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace VienaStore.C_Negocio
 {
     internal class Validaciones
     {
-        private DataAcces dataAcces;
+        private DataAccesClientes dataAcces;
         public static void SoloNumeros(KeyPressEventArgs f)
         {
             if (char.IsNumber(f.KeyChar))
@@ -57,26 +58,33 @@ namespace VienaStore.C_Negocio
             return Regex.IsMatch(email, expresion);
         }
 
-        public Validaciones()
+
+        public static void numerosDecimales(KeyPressEventArgs e)
         {
-            dataAcces = new DataAcces();
-        }
-        public void GuardarCliente(Clientes cliente)
-        {
-            if(cliente.id == 0)
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
             {
-               dataAcces.InsertCliente(cliente);
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
             }
             else
             {
-                MessageBox.Show("Error");
-                //return dataAcces.UpdateCliente(cliente);
+                e.Handled = true;
+                MessageBox.Show("Error: Ingrese solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public List<Clientes> GetClientes()
-        {
-            return dataAcces.GetClientes();
+        public static bool ValidarLength(string nombre, int numero)
+        {                     
+            if (nombre.Length < numero)
+            {
+                MessageBox.Show("El nombre debe tener al menos 3 caracteres.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                return true;
+            }
+            return false;
         }
+
     }
 }

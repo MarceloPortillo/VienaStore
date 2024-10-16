@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,8 @@ namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FNuevoCliente : Form
     {
-        private Validaciones validacion;
+        private BusinessCliente businessCliente;
+        private Clientes _cliente;
 
         private  static FNuevoCliente instancia=null;
         public static FNuevoCliente Ventana_unica()
@@ -36,7 +38,7 @@ namespace VienaStore.C_Presentacion.Vendedor
         public FNuevoCliente()
         {
             InitializeComponent();
-            validacion = new Validaciones();
+            businessCliente = new BusinessCliente();
 
         }
 
@@ -78,6 +80,47 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
         public virtual void BtnGuardar_Click(object sender, EventArgs e)
         {
+            GuardarCliente();
+        }
+
+        public void CargarClientes(Clientes clientes)
+        {
+            _cliente = clientes;    
+            if (clientes != null)
+            {
+                LimpiarFormulario();
+                TxtNombre.Text = clientes.nombre;
+                TxtApellido.Text = clientes.apellido;
+                TxtDNI.Text = clientes.dni.ToString();
+                TxtDireccion.Text = clientes.direccion;
+                TxtEmail.Text = clientes.email;
+                TxtTelefono.Text = clientes.telefono;
+            }
+        }
+
+        private void LimpiarFormulario()
+        {
+            TxtNombre.Text = string.Empty;
+            TxtApellido.Text = string.Empty;
+            TxtDNI.Text = string.Empty;
+            TxtDireccion.Text = string.Empty;
+            TxtEmail.Text = string.Empty;
+            TxtTelefono.Text = string.Empty;
+        }
+
+        private void BtnCancelar_Click_1(object sender, EventArgs e)
+        {
+            limpiar();
+            this.Close();
+        }
+
+        public static void limpiar()
+        {
+            instancia = null;
+        }
+
+        private void GuardarCliente()
+        {
             // Verificar si los campos están vacíos
             if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
                 string.IsNullOrWhiteSpace(TxtDNI.Text) ||
@@ -91,56 +134,56 @@ namespace VienaStore.C_Presentacion.Vendedor
             }
 
             Clientes cliente = new Clientes();
-            
+
             if (!decimal.TryParse(TxtDNI.Text, out decimal dni))
             {
                 MessageBox.Show("El DNI ingresado no tiene un formato numérico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             cliente.dni = dni;
             cliente.nombre = TxtNombre.Text;
             cliente.apellido = TxtApellido.Text;
             cliente.direccion = TxtDireccion.Text;
             cliente.email = TxtEmail.Text;
-            
-            cliente.telefono = TxtTelefono.Text; 
-            
-            DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            cliente.telefono = TxtTelefono.Text;
+            cliente.id = _cliente != null ? _cliente.id : 0;
 
-            if (ask == DialogResult.Yes)
+            try
             {
-                validacion.GuardarCliente(cliente);
-                MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " se insertó Correctamente",
-                                "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                
-                this.TxtApellido.Clear();
-                this.TxtNombre.Clear();
-                this.TxtDNI.Clear();
-                this.TxtDireccion.Clear();
-                this.TxtEmail.Clear();
-                this.TxtTelefono.Clear();
+                DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (ask == DialogResult.Yes)
+                {
+                    businessCliente.GuardarCliente(cliente);
+                    MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " se insertó Correctamente",
+                                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.TxtApellido.Clear();
+                    this.TxtNombre.Clear();
+                    this.TxtDNI.Clear();
+                    this.TxtDireccion.Clear();
+                    this.TxtEmail.Clear();
+                    this.TxtTelefono.Clear();
+                }
+                else
+                {
+                    this.TxtApellido.Clear();
+                    this.TxtNombre.Clear();
+                    this.TxtDNI.Clear();
+                    this.TxtDireccion.Clear();
+                    this.TxtEmail.Clear();
+                    this.TxtTelefono.Clear();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.TxtApellido.Clear();
-                this.TxtNombre.Clear();
-                this.TxtDNI.Clear();
-                this.TxtDireccion.Clear();
-                this.TxtEmail.Clear();
-                this.TxtTelefono.Clear();
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
+
+
         }
 
-        private void BtnCancelar_Click_1(object sender, EventArgs e)
-        {
-            limpiar();
-            this.Close();
-        }
-
-        public static void limpiar()
-        {
-            instancia = null;
-        }
     }
 }

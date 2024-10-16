@@ -53,7 +53,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(691, 502);
+            this.BtnCancelar.Location = new System.Drawing.Point(518, 408);
             // 
             // LblEditar
             // 
@@ -67,12 +67,13 @@
             // 
             // FBuscarProductoVendedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 993);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.BtnCancelar);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FBuscarProductoVendedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FBuscarProductoVendedor";
             ((System.ComponentModel.ISupportInitialize)(this.PBEditarProducto)).EndInit();
             this.ResumeLayout(false);

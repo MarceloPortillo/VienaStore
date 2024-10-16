@@ -118,8 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="modificar_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modificar_48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categories_32PX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categories_32PX.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buscar_cliente_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar_cliente_32px1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardaCliente_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardaCliente_48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Agregar_Producto_240x240px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar_Producto_240x240px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -129,9 +138,6 @@
   </data>
   <data name="CierreSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CierreSesion.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="graficos_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\graficos_32px1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Agregar_Producto_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar_Producto_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,20 +163,23 @@
   <data name="cancelar_48x48_px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancelar_48x48_px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eliminar_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buscarProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscarProducto.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregar_usuario_32px (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar_usuario_32px (2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar_prod_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar_prod_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="graficos_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graficos_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar_prod_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar_prod_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="graficos_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graficos_32px1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listar_clientes_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\listar_clientes_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Listar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Listar.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +235,11 @@
   <data name="Editar_Cliente_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar_Cliente_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="listar_clientes_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\listar_clientes_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Eliminar_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Descargar_PDF_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descargar_PDF_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="informes_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informes_32px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,7 +253,10 @@
   <data name="nuevoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevoUsuario.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="guardaCliente_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guardaCliente_48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Descargar2_PDF_48x48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descargar2_PDF_48x48px.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+	  <data name="signoMas_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signoMas_48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

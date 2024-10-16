@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -41,6 +42,7 @@
             this.BtnGuardar.Location = new System.Drawing.Point(609, 595);
             this.BtnGuardar.Size = new System.Drawing.Size(187, 82);
             this.BtnGuardar.Text = "MODIFICAR";
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click_1);
             // 
             // BtnCancelar
             // 
@@ -61,6 +63,8 @@
             this.Name = "FEditarCLiente";
             this.Text = "FEditarCLiente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

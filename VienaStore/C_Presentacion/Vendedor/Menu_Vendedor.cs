@@ -19,7 +19,8 @@ namespace VienaStore.C_Presentacion.Vendedor
         public Menu_Vendedor()
         {
             InitializeComponent();
-            
+            CerrarInstancias.InstanciasNull();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -107,6 +108,10 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
+            this.THora.Stop();
+            this.fecha.Stop();
+            FLogin sesion = new FLogin();
+            sesion.Show();
             this.Close();
         }
 

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Vendedor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnRegistrarVenta = new System.Windows.Forms.Button();
             this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnListarProd = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.PBoxLogotipo = new System.Windows.Forms.PictureBox();
             this.LblHora = new System.Windows.Forms.Label();
             this.THora = new System.Windows.Forms.Timer(this.components);
-            this.BtnRegistrarVenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,6 +72,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 615);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnRegistrarVenta
+            // 
+            this.BtnRegistrarVenta.BackColor = System.Drawing.Color.Coral;
+            this.BtnRegistrarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnRegistrarVenta.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarVenta.Image = global::VienaStore.Properties.Resources.compras_32px;
+            this.BtnRegistrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 427);
+            this.BtnRegistrarVenta.Name = "BtnRegistrarVenta";
+            this.BtnRegistrarVenta.Size = new System.Drawing.Size(155, 59);
+            this.BtnRegistrarVenta.TabIndex = 8;
+            this.BtnRegistrarVenta.TabStop = false;
+            this.BtnRegistrarVenta.Tag = "2";
+            this.BtnRegistrarVenta.Text = "   GESTIONAR    VENTAS";
+            this.BtnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRegistrarVenta.UseCompatibleTextRendering = true;
+            this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.BtnRegistrarVenta.Click += new System.EventHandler(this.BtnRegistrarVenta_Click);
             // 
             // BtnModificarCliente
             // 
@@ -274,25 +293,6 @@
             // 
             this.THora.Enabled = true;
             this.THora.Tick += new System.EventHandler(this.THora_Tick);
-            // 
-            // BtnRegistrarVenta
-            // 
-            this.BtnRegistrarVenta.BackColor = System.Drawing.Color.Coral;
-            this.BtnRegistrarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnRegistrarVenta.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarVenta.Image = global::VienaStore.Properties.Resources.compras_32px;
-            this.BtnRegistrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegistrarVenta.Location = new System.Drawing.Point(25, 427);
-            this.BtnRegistrarVenta.Name = "BtnRegistrarVenta";
-            this.BtnRegistrarVenta.Size = new System.Drawing.Size(155, 59);
-            this.BtnRegistrarVenta.TabIndex = 8;
-            this.BtnRegistrarVenta.TabStop = false;
-            this.BtnRegistrarVenta.Tag = "2";
-            this.BtnRegistrarVenta.Text = "   GESTIONAR    VENTAS";
-            this.BtnRegistrarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnRegistrarVenta.UseCompatibleTextRendering = true;
-            this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
-            this.BtnRegistrarVenta.Click += new System.EventHandler(this.BtnRegistrarVenta_Click);
             // 
             // Menu_Vendedor
             // 

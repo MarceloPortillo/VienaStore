@@ -14,14 +14,11 @@ namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FListarClientes : Form
     {
-        private Validaciones validacion;
+        private BusinessCliente businessCliente;
 
         private static FListarClientes instancia = null;
         public static FListarClientes Ventana_unica()
         {
-
-
-
             if (instancia == null)
             {
                 instancia = new FListarClientes();
@@ -32,7 +29,7 @@ namespace VienaStore.C_Presentacion.Vendedor
         public FListarClientes()
         {
             InitializeComponent();
-            validacion = new Validaciones();
+            businessCliente = new BusinessCliente();
 
         }
 
@@ -53,10 +50,9 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void ListarContactos()
         {
-            List<Clientes> clientes =  validacion.GetClientes();
-            dataGridView1.DataSource = clientes;    
+            List<Clientes> clientes = businessCliente.GetClientes();
+            dataGridView1.DataSource = clientes;
         }
- 
     }
 }
     
