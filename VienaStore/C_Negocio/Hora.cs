@@ -12,7 +12,7 @@ namespace VienaStore.C_Negocio
         public static void saludo(Label LblHora)
         {
             DateTime ahora = DateTime.Now;
-            int hora = ahora.Hour;
+            int hora = ahora.Hour;            
             if (hora > 6 && hora <= 13)
             {
                 LblHora.Text = "Buenos Días";

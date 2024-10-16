@@ -47,15 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Datos\Categorias.cs" />
     <Compile Include="C_Datos\Clientes.cs" />
     <Compile Include="C_Datos\DataAccesClientes.cs" />
     <Compile Include="C_Datos\DataAccess.cs" />
+    <Compile Include="C_Datos\DataAccessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
+    <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
+    <Compile Include="C_Negocio\Dialogos.cs" />
     <Compile Include="C_Negocio\Hora.cs" />
+    <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
+    <Compile Include="C_Negocio\Producto.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
+    <Compile Include="C_Presentacion\Administrador\FGestionCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Administrador\FGestionCategorias.Designer.cs">
+      <DependentUpon>FGestionCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Administrador\CrearUsuarioNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,9 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C_Presentacion\Administrador\FGestionCategorias.resx">
+      <DependentUpon>FGestionCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Administrador\CrearUsuarioNuevo.resx">
       <DependentUpon>CrearUsuarioNuevo.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +260,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -345,6 +361,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guardaCliente_48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories_32PX.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar_48px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signoMas_48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
