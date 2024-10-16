@@ -126,7 +126,13 @@ namespace VienaStore.C_Presentacion.Administrador
                 int id_Categoria = Convert.ToInt32(fila.Cells["id_categoria"].Value);
                 TxtNombre.Text = Convert.ToString(fila.Cells["nombre"].Value);
                 TxtDescripcion.Text = Convert.ToString(fila.Cells["descripcion"].Value);
-                string estado = Convert.ToString(fila.Cells["estadoDataGridViewTextBoxColumn"].Value);
+                string estado = Convert.ToString(fila.Cells["BtnActivarDesactivar"].Value);
+                if(estado == "Inactivo")
+                {
+                    MessageBox.Show("No puedes Modificar una Categoria Inactiva","Inactiva", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    Limpiar.LimpiarCategoria(TxtNombre, TxtDescripcion);
+                    return;
+                }
             }
             else
             {
