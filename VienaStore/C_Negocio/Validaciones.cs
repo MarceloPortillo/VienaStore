@@ -79,7 +79,7 @@ namespace VienaStore.C_Negocio
         {                     
             if (nombre.Length < numero)
             {
-                MessageBox.Show("El nombre de la categoría debe tener al menos 3 caracteres.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                MessageBox.Show("El nombre debe tener al menos 3 caracteres.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
                 return true;
             }
             return false;

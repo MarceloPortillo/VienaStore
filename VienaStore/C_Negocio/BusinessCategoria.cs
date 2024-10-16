@@ -27,7 +27,7 @@ namespace VienaStore.C_Negocio
                 }
                 else
                 {
-                    // _dataAccessCategoria.UpdateCategoria()
+                    _dataAccessCategoria.UpdateCategoria(categoria);
 
                 }
             }
@@ -35,6 +35,17 @@ namespace VienaStore.C_Negocio
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public List<Categorias> GetCategorias(string buscarText = null)
+        {
+            return _dataAccessCategoria.GetCategorias(buscarText);
+        }
+
+
+        public void DeleteCategoria(int id) 
+        {
+            _dataAccessCategoria.DeleteCategoria(id);
         }
     }
 }

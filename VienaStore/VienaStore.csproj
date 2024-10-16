@@ -260,6 +260,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

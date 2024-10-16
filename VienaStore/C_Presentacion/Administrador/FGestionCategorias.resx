@@ -117,20 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ColNom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="id_Categoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ColDescrip.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="BtnActivarDesactivar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ColEstado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="categoriasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAArdJREFUaEPtl09LG0EYxvMRirdWv1QvfoEKij1opRhcBQ81GI3banNKaYwKgsGD
+        vAAADrwBlbxySQAAArdJREFUaEPtl09LG0EYxvMRirdWv1QvfoEKij1opRhcBQ81GI3banNKaYwKgsGD
         KYLxD4ihkMSW9GJMaqgU7KH0lvYg6CHjvnFG1jhvdnd2ZncKPvCcDM7zvPkxmTfyKI968crsGTKW5iYS
         meLoTCo/MPG2n/5Jfw0aZq+xsPJ9v1gjx9ULUj65IKu5Qmt4KjlHP6KvIHw0nmkUKj/Il9Nf95zNl6wS
         7xP0o/oJwr+e/djI7n8ju6Wz9vQflNjRtIQ9fK5QbRstkS+RIZ1K3IZP3wvvooQe3wRv8p3WFic34Zm1
@@ -148,7 +148,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAABIhJREFUaEPtmdlOFFEQhjtxuRrE7Q1c8X18Bd+BxfgGsiRG0YjblRducV/AFZBF
+        vAAADrwBlbxySQAABIhJREFUaEPtmdlOFFEQhjtxuRrE7Q1c8X18Bd+BxfgGsiRG0YjblRducV/AFZBF
         GUAFgdFEFgXF68EL2v9vu7A9VvepxhHmgkq+BLqrzqn/PzXMDB1sxEb8pzgWBJvbg2BLNcBe4rb8cbJQ
         ONReUxgAZbBUJZRP1RT6zxQKdXGb6YHEwcu128JbFebmP8KeKCJuU48jPDIovr29NrxjhLlrAU2AgKXM
         ccLNrRDw4y4K7u7YXhHupIE98kAR0TjB5Ljdv0ME3EPyPWyyVmjCXSjCLOA+kh+g6L4HCtWu58G3xorQ
