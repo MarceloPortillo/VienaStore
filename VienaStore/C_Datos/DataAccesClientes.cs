@@ -21,7 +21,7 @@ namespace VienaStore.C_Datos
             try
             {
                 DataAccess.DatabaseConnection.GetConnection();
-                string query = @"
+                string query = @" 
                         INSERT INTO Clientes (dni, nombre, apellido, direccion, email, telefono)
                         VALUES (@dni, @nombre, @apellido, @direccion, @email, @telefono)";
 
@@ -40,12 +40,15 @@ namespace VienaStore.C_Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al insertar el cliente: " + ex.Message);
+              
+                  MessageBox.Show("El DNI o el Email ingresado ya existe en el Sistema.", ex.Message);
+              
             }
             finally
             {
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
+
         }
 
         public List<Clientes> GetClientes(string search = null)

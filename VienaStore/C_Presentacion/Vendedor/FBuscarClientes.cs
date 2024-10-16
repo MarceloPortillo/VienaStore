@@ -20,9 +20,6 @@ namespace VienaStore.C_Presentacion.Vendedor
         private static FBuscarClientes instancia = null;
         public static FBuscarClientes Ventana_unica()
         {
-
-
-
             if (instancia == null)
             {
                 instancia = new FBuscarClientes();
@@ -80,60 +77,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            // Verificar si los campos están vacíos
-            if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
-                string.IsNullOrWhiteSpace(TxtDNI.Text) ||
-                string.IsNullOrWhiteSpace(TxtNombre.Text) ||
-                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
-                (string.IsNullOrWhiteSpace(TxtTelefono.Text) || !TxtTelefono.MaskFull) ||
-                string.IsNullOrWhiteSpace(TxtEmail.Text))
-            {
-                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            Clientes cliente = _cliente != null ? _cliente : new Clientes();
-
-            if (!decimal.TryParse(TxtDNI.Text, out decimal dni))
-            {
-                MessageBox.Show("El DNI ingresado no tiene un formato numérico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            cliente.dni = dni;
-            cliente.nombre = TxtNombre.Text;
-            cliente.apellido = TxtApellido.Text;
-            cliente.direccion = TxtDireccion.Text;
-            cliente.email = TxtEmail.Text;
-            cliente.telefono = TxtTelefono.Text;
-            cliente.id = _cliente != null ? _cliente.id : 0;
-
-            DialogResult ask = MessageBox.Show("¿Seguro que desea modificar el Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (ask == DialogResult.Yes)
-            {
-                businessCliente.GuardarCliente(cliente);
-                MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " se modificó Correctamente",
-                                "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                this.TxtApellido.Clear();
-                this.TxtNombre.Clear();
-                this.TxtDNI.Clear();
-                this.TxtDireccion.Clear();
-                this.TxtEmail.Clear();
-                this.TxtTelefono.Clear();
-                ListarContactos();
-            }
-            else
-            {
-                this.TxtApellido.Clear();
-                this.TxtNombre.Clear();
-                this.TxtDNI.Clear();
-                this.TxtDireccion.Clear();
-                this.TxtEmail.Clear();
-                this.TxtTelefono.Clear();
-            }
-
+            GuardarCliente();
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -153,61 +97,13 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null) // Verifica que haya una fila seleccionada
-            {
-                // Recupera los valores de la fila seleccionada
-                int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                int dni = int.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                string nombre = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                string apellido = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                string direccion = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                string email = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                string telefono = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                string estado = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-
-                // Verifica si el cliente está inactivo
-                if (estado.ToLower() == "inactivo")
-                {
-                    MessageBox.Show("No se puede editar un cliente inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Salir sin permitir la edición
-                }
-
-                // Carga los datos en el formulario o en los campos
-                TxtNombre.Text = nombre;
-                TxtApellido.Text = apellido;
-                TxtDNI.Text = dni.ToString();
-                TxtDireccion.Text = direccion;
-                TxtEmail.Text = email;
-                TxtTelefono.Text = telefono;
-
-                _cliente = new Clientes();
-                _cliente.id = id; // Aquí guardas el id del cliente seleccionado
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un cliente para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            EditarCliente();
         }
 
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null) // Verifica que haya una fila seleccionada
-            {
-                int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                DialogResult ask = MessageBox.Show("¿Seguro que desea eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (ask == DialogResult.Yes)
-                {
-                    businessCliente.EliminarCliente(id);
-                    MessageBox.Show("El cliente ha sido eliminado exitosamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ListarContactos(); // Refrescar la lista de clientes
-                }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            EliminarCLiente();
         }
 
         private void FBuscarClientes_Load(object sender, EventArgs e)
@@ -325,6 +221,121 @@ namespace VienaStore.C_Presentacion.Vendedor
 
                 // Evita que el sistema dibuje el botón por defecto
                 e.Handled = true;
+            }
+        }
+
+        private void GuardarCliente()
+        {
+            // Verificar si los campos están vacíos
+            if (string.IsNullOrWhiteSpace(TxtApellido.Text) ||
+                string.IsNullOrWhiteSpace(TxtDNI.Text) ||
+                string.IsNullOrWhiteSpace(TxtNombre.Text) ||
+                string.IsNullOrWhiteSpace(TxtDireccion.Text) ||
+                (string.IsNullOrWhiteSpace(TxtTelefono.Text) || !TxtTelefono.MaskFull) ||
+                string.IsNullOrWhiteSpace(TxtEmail.Text))
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Clientes cliente = _cliente != null ? _cliente : new Clientes();
+
+            if (!decimal.TryParse(TxtDNI.Text, out decimal dni))
+            {
+                MessageBox.Show("El DNI ingresado no tiene un formato numérico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            cliente.dni = dni;
+            cliente.nombre = TxtNombre.Text;
+            cliente.apellido = TxtApellido.Text;
+            cliente.direccion = TxtDireccion.Text;
+            cliente.email = TxtEmail.Text;
+            cliente.telefono = TxtTelefono.Text;
+            cliente.id = _cliente != null ? _cliente.id : 0;
+
+            DialogResult ask = MessageBox.Show("¿Seguro que desea modificar el Cliente?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+                businessCliente.GuardarCliente(cliente);
+                MessageBox.Show("El Cliente: " + this.TxtApellido.Text + " " + this.TxtDNI.Text + " se modificó Correctamente",
+                                "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.TxtApellido.Clear();
+                this.TxtNombre.Clear();
+                this.TxtDNI.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtEmail.Clear();
+                this.TxtTelefono.Clear();
+                ListarContactos();
+            }
+            else
+            {
+                this.TxtApellido.Clear();
+                this.TxtNombre.Clear();
+                this.TxtDNI.Clear();
+                this.TxtDireccion.Clear();
+                this.TxtEmail.Clear();
+                this.TxtTelefono.Clear();
+            }
+        }
+
+        private void EditarCliente() 
+        {
+            if (dataGridView1.CurrentRow != null) // Verifica que haya una fila seleccionada
+            {
+                // Recupera los valores de la fila seleccionada
+                int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                int dni = int.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                string nombre = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                string apellido = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                string direccion = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                string email = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                string telefono = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                string estado = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+
+                // Verifica si el cliente está inactivo
+                if (estado.ToLower() == "inactivo")
+                {
+                    MessageBox.Show("No se puede editar un cliente inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Salir sin permitir la edición
+                }
+
+                // Carga los datos en el formulario o en los campos
+                TxtNombre.Text = nombre;
+                TxtApellido.Text = apellido;
+                TxtDNI.Text = dni.ToString();
+                TxtDireccion.Text = direccion;
+                TxtEmail.Text = email;
+                TxtTelefono.Text = telefono;
+
+                _cliente = new Clientes();
+                _cliente.id = id; // Aquí guardas el id del cliente seleccionado
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void EliminarCLiente() 
+        {
+            if (dataGridView1.CurrentRow != null) // Verifica que haya una fila seleccionada
+            {
+                int id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                DialogResult ask = MessageBox.Show("¿Seguro que desea eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (ask == DialogResult.Yes)
+                {
+                    businessCliente.EliminarCliente(id);
+                    MessageBox.Show("El cliente ha sido eliminado exitosamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ListarContactos(); // Refrescar la lista de clientes
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

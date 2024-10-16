@@ -15,15 +15,25 @@ namespace VienaStore.C_Negocio
 
         public void GuardarCliente(Clientes cliente)
         {
-            if (cliente.id == 0)
+            try
+            {
+                if (cliente.id == 0)
 
-                dataAcces.InsertCliente(cliente);
+                    dataAcces.InsertCliente(cliente);
 
-            else
+                else
 
-                // MessageBox.Show("Error");
-                dataAcces.UpdateCliente(cliente);
-            //return cliente;            
+                    // MessageBox.Show("Error");
+                    dataAcces.UpdateCliente(cliente);
+                //return cliente;            
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception (ex.Message);
+            }
+           
         }
 
         public BusinessCliente()
