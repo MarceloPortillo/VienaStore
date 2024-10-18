@@ -172,7 +172,7 @@ namespace VienaStore.C_Presentacion.Administrador
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere Activar esta Categoría?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value = "Activo";
+                        DtaUsuario.Rows[e.RowIndex].Cells["estado"].Value = "Activo";
                         EliminarCategoria(id);
                         MessageBox.Show("Se ha Activado correctamente", "Reestablecido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
