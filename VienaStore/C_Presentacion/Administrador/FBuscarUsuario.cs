@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VienaStore.C_Datos;
 using VienaStore.C_Negocio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -15,6 +16,7 @@ namespace VienaStore.C_Presentacion.Administrador
 {
     public partial class FBuscarUsuario : Form
     {
+        private BusinessUsuarios _businessUsuario;
         private static FBuscarUsuario instancia = null;
         public static FBuscarUsuario Ventana_unica()
         {
@@ -31,6 +33,7 @@ namespace VienaStore.C_Presentacion.Administrador
         public FBuscarUsuario()
         {
             InitializeComponent();
+            _businessUsuario = new BusinessUsuarios();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -120,6 +123,24 @@ namespace VienaStore.C_Presentacion.Administrador
                 this.TxtTelefono.Clear();
                 this.TxtContraseña.Clear();
                 this.TxtUsuario.Clear();
+            }
+        }
+
+        private void FBuscarUsuario_Load(object sender, EventArgs e)
+        {
+            ListarUsuarios();
+        }
+
+        public void ListarUsuarios()
+        {
+            try
+            {
+                List<Usuarios> usuario = _businessUsuario.GetUsuarios();
+                DtaUsuario.DataSource = usuario;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar usuarios: " + ex.Message);
             }
         }
     }

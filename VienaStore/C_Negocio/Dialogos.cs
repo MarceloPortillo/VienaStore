@@ -14,5 +14,10 @@ namespace VienaStore.C_Negocio
         {
             MessageBox.Show(respuesta + " se agregó Correctamente",    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public static void DialogoUsuario(string respuesta)
+        {
+            MessageBox.Show("El Usuario: " + respuesta + " " + " se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
