@@ -14,7 +14,7 @@ namespace VienaStore.C_Datos
 
             public string apellido { get; set; }
 
-            public long dni { get; set; } 
+            public decimal dni { get; set; } 
 
             public string direccion { get; set; }
 

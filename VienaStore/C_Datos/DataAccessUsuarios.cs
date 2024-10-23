@@ -19,13 +19,11 @@ namespace VienaStore.C_Datos
             try
             {
                 DataAccess.DatabaseConnection.GetConnection();
-                string query = @"
-                INSERT INTO Usuarios (nombre, apellido, dni, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, estado, id_rol)
-                VALUES (@nombre, @apellido, @dni, @direccion, @email, @telefono, @usuario, @fechaNacimiento, @contrasenia, @estado, @id_rol)";
-
+               string query = "INSERT INTO Usuarios (nombre, apellido, dni, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, id_rol) VALUES " +
+                                                   "(@nombre,@apellido,@dni,@direccion,@email,@telefono,@usuario,@fechaNacimiento,@contrasenia,@id_rol)";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
-
+           
                 cmd.Parameters.AddWithValue("@nombre", usuario.nombre);
                 cmd.Parameters.AddWithValue("@apellido", usuario.apellido);
                 cmd.Parameters.AddWithValue("@dni", usuario.dni);
@@ -35,17 +33,16 @@ namespace VienaStore.C_Datos
                 cmd.Parameters.AddWithValue("@usuario", usuario.usuario);
                 cmd.Parameters.AddWithValue("@fechaNacimiento", usuario.fechaNacimiento);
                 cmd.Parameters.AddWithValue("@contrasenia", usuario.contrasenia);
-                cmd.Parameters.AddWithValue("@estado", usuario.estado ?? "Activo");
                 cmd.Parameters.AddWithValue("@id_rol", usuario.id_rol);
-                cmd.ExecuteNonQuery();
 
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                throw new Exception("El DNI o el email ingresado ya existen en el sistema.\n Por favor, ingrese un DNI o email diferente.", ex);
+                MessageBox.Show(ex.Message);
             }
 
-            finally 
+            finally
             {
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }

@@ -34,7 +34,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
             this.CboRol = new System.Windows.Forms.ComboBox();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.LblRol = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,9 +56,6 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
-            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,12 +68,16 @@
             this.contraseniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idrolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +112,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(208, 242);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(444, 29);
@@ -140,10 +141,6 @@
             this.CboRol.Name = "CboRol";
             this.CboRol.Size = new System.Drawing.Size(444, 31);
             this.CboRol.TabIndex = 11;
-            // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // LblRol
             // 
@@ -427,18 +424,6 @@
             this.DtaUsuario.Size = new System.Drawing.Size(1434, 298);
             this.DtaUsuario.TabIndex = 28;
             // 
-            // usuariosBindingSource1
-            // 
-            this.usuariosBindingSource1.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
-            // usuariosBindingSource3
-            // 
-            this.usuariosBindingSource3.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
             // idusuarioDataGridViewTextBoxColumn
             // 
             this.idusuarioDataGridViewTextBoxColumn.DataPropertyName = "id_usuario";
@@ -535,6 +520,22 @@
             this.idrolDataGridViewTextBoxColumn.Name = "idrolDataGridViewTextBoxColumn";
             this.idrolDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // usuariosBindingSource3
+            // 
+            this.usuariosBindingSource3.DataSource = typeof(VienaStore.C_Datos.Usuarios);
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
+            // 
+            // usuariosBindingSource1
+            // 
+            this.usuariosBindingSource1.DataSource = typeof(VienaStore.C_Datos.Usuarios);
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataSource = typeof(VienaStore.C_Datos.Usuarios);
+            // 
             // CrearUsuarioNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -555,11 +556,11 @@
             this.Load += new System.EventHandler(this.CrearUsuarioNuevo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

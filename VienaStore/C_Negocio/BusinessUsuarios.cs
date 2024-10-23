@@ -10,11 +10,11 @@ namespace VienaStore.C_Negocio
     internal class BusinessUsuarios
     {
 
-        private DataAccessUsuarios _dataAccesUsuarios;
+        private DataAccessUsuarios _dataAccessUsuarios;
 
         public BusinessUsuarios()
         {
-            _dataAccesUsuarios = new DataAccessUsuarios();  
+            _dataAccessUsuarios = new DataAccessUsuarios();  
         }
         public void GuardarUsuario(Usuarios usuario)
         {
@@ -22,18 +22,26 @@ namespace VienaStore.C_Negocio
             {
                 if (usuario.id_usuario == 0)
                 {
-                    _dataAccesUsuarios.InsertUsuario(usuario);
+                    _dataAccessUsuarios.InsertUsuario(usuario);
                 }
+                else
+                {
+                    //     _dataAccessUsuarios.UpdateUsuario(usuario);
+                }
+                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new Exception(ex.Message);
+
+                // Lanzar la excepción con más contexto si es necesario
+                //throw new Exception("Error al guardar el usuario: " + ex.Message);
             }
         }
 
+
         public List<Usuarios> GetUsuarios(string searchText = null)
         {
-            return _dataAccesUsuarios.GetUsuarios(searchText);
+            return _dataAccessUsuarios.GetUsuarios(searchText);
         }
     }
 }

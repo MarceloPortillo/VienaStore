@@ -98,10 +98,9 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void GuardarNuevoUsuario()
         {
-
             if (!CampoVacios.CamposUsuario(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña) || Validaciones.ValidarLength(TxtNombre.Text, 3))
             {
-                MessageBox.Show("Debe completar todos los campos obligatorios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return;
             }
 
@@ -110,8 +109,8 @@ namespace VienaStore.C_Presentacion.Administrador
             usuario.nombre = TxtNombre.Text;
             usuario.apellido = TxtApellido.Text;
 
-            int DNI = 0;
-            if (int.TryParse(TxtDNI.Text, out DNI))
+            decimal DNI = 0;
+            if (decimal.TryParse(TxtDNI.Text, out DNI))
             {
                usuario.dni = DNI;
             }
@@ -122,7 +121,6 @@ namespace VienaStore.C_Presentacion.Administrador
             usuario.contrasenia = TxtContraseña.Text;
             usuario.fechaNacimiento = dateTimePicker1.Value;
             usuario.id_rol = Convert.ToInt32(CboRol.SelectedValue);
-//            usuario.id_usuario = _usuario != null ? _usuario.id_usuario : 0;
 
             try
             {
@@ -130,14 +128,14 @@ namespace VienaStore.C_Presentacion.Administrador
 
                 if (ask == DialogResult.Yes)
                 {
-                    _businessUsuarios.GuardarUsuario (usuario);
-                    Dialogos.DialogoUsuario(TxtUsuario.Text);
-                    Limpiar.LimpiarUsuarios(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, dateTimePicker1, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña, CboRol);
+                    _businessUsuarios.GuardarUsuario(usuario);
+                     Dialogos.DialogoUsuario(TxtUsuario.Text);
+                     Limpiar.LimpiarUsuarios(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, dateTimePicker1, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña, CboRol);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
