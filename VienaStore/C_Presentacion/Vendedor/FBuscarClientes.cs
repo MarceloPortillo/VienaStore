@@ -244,7 +244,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             cliente.nombre = TxtNombre.Text.ToUpper();
             cliente.apellido = TxtApellido.Text.ToUpper();
             cliente.direccion = TxtDireccion.Text.ToUpper();
-            cliente.email = TxtEmail.Text.ToUpper();
+            cliente.email = TxtEmail.Text;
             cliente.telefono = TxtTelefono.Text;
             cliente.id = _cliente != null ? _cliente.id : 0;
 

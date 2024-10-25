@@ -82,6 +82,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             GuardarNuevoUsuario();
+            ListarUsuarios();
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void CrearUsuarioNuevo_Load(object sender, EventArgs e)
         {
             ListarRoles();
+            ListarUsuarios();
         }
 
         private void RecuperarInformacion()
@@ -183,6 +185,20 @@ namespace VienaStore.C_Presentacion.Administrador
             MessageBox.Show(usuario.contrasenia);
             MessageBox.Show(usuario.id_rol.ToString());
             MessageBox.Show(usuario.fechaNacimiento.ToString("dd/MM/yyyy"));
+        }
+
+        public void ListarUsuarios()
+        {
+            try
+            {
+                List<Usuario_Rol> usuario = _businessUsuarios.GetUsuarios();
+                DtaUsuario.DataSource = usuario;
+                DtaUsuario.Columns[11].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar usuarios: " + ex.Message);
+            }
         }
     }
 }

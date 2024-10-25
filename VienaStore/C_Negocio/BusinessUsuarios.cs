@@ -26,7 +26,7 @@ namespace VienaStore.C_Negocio
                 }
                 else
                 {
-                    //     _dataAccessUsuarios.UpdateUsuario(usuario);
+                    _dataAccessUsuarios.UpdateUsuario(usuario);
                 }
                 
             }
@@ -39,9 +39,14 @@ namespace VienaStore.C_Negocio
         }
 
 
-        public List<Usuarios> GetUsuarios(string searchText = null)
+        public List<Usuario_Rol> GetUsuarios(string searchText = null)
         {
             return _dataAccessUsuarios.GetUsuarios(searchText);
+        }
+
+        public void DeleteUsuario(int id)
+        {
+            _dataAccessUsuarios.DeleteUsuario(id);
         }
     }
 }

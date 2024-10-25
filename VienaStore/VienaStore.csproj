@@ -56,6 +56,7 @@
     <Compile Include="C_Datos\DataAccessUsuarios.cs" />
     <Compile Include="C_Datos\Rol.cs" />
     <Compile Include="C_Datos\Usuarios.cs" />
+    <Compile Include="C_Datos\Usuario_Rol.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
@@ -269,6 +270,7 @@
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Rol.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Usuarios.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
