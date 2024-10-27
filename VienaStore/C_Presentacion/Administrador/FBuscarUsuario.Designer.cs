@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
+            this.BtnActivarDesactivar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
@@ -62,19 +63,6 @@
             this.LblContrasenia = new System.Windows.Forms.Label();
             this.FechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
-            this.BtnActivarDesactivar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idrolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
@@ -91,7 +79,6 @@
             this.DtaUsuario.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtaUsuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DtaUsuario.AutoGenerateColumns = false;
             this.DtaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtaUsuario.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtaUsuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -106,20 +93,7 @@
             this.DtaUsuario.ColumnHeadersHeight = 50;
             this.DtaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idusuarioDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.dniDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.usuarioDataGridViewTextBoxColumn,
-            this.fechaNacimientoDataGridViewTextBoxColumn,
-            this.contraseniaDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn,
-            this.idrolDataGridViewTextBoxColumn,
             this.BtnActivarDesactivar});
-            this.DtaUsuario.DataSource = this.usuariosBindingSource;
             this.DtaUsuario.EnableHeadersVisualStyles = false;
             this.DtaUsuario.Location = new System.Drawing.Point(45, 101);
             this.DtaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -139,6 +113,22 @@
             this.DtaUsuario.Size = new System.Drawing.Size(1668, 319);
             this.DtaUsuario.TabIndex = 1;
             this.DtaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaUsuario_CellContentClick);
+            // 
+            // BtnActivarDesactivar
+            // 
+            this.BtnActivarDesactivar.DataPropertyName = "estado";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.BtnActivarDesactivar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BtnActivarDesactivar.HeaderText = "ESTADO";
+            this.BtnActivarDesactivar.MinimumWidth = 6;
+            this.BtnActivarDesactivar.Name = "BtnActivarDesactivar";
+            this.BtnActivarDesactivar.ReadOnly = true;
+            this.BtnActivarDesactivar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BtnActivarDesactivar.Text = "ELIMINAR";
             // 
             // TxtTelefono
             // 
@@ -322,7 +312,7 @@
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Font = new System.Drawing.Font("MS Reference Specialty", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.TxtBuscar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscar.Location = new System.Drawing.Point(1294, 451);
             this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBuscar.Name = "TxtBuscar";
@@ -474,122 +464,6 @@
             this.LblFechaNacimiento.TabIndex = 37;
             this.LblFechaNacimiento.Text = "Fecha Nacimiento:";
             // 
-            // BtnActivarDesactivar
-            // 
-            this.BtnActivarDesactivar.DataPropertyName = "estado";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.BtnActivarDesactivar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BtnActivarDesactivar.HeaderText = "ESTADO";
-            this.BtnActivarDesactivar.MinimumWidth = 6;
-            this.BtnActivarDesactivar.Name = "BtnActivarDesactivar";
-            this.BtnActivarDesactivar.ReadOnly = true;
-            this.BtnActivarDesactivar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BtnActivarDesactivar.Text = "ELIMINAR";
-            // 
-            // idusuarioDataGridViewTextBoxColumn
-            // 
-            this.idusuarioDataGridViewTextBoxColumn.DataPropertyName = "id_usuario";
-            this.idusuarioDataGridViewTextBoxColumn.HeaderText = "id_usuario";
-            this.idusuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idusuarioDataGridViewTextBoxColumn.Name = "idusuarioDataGridViewTextBoxColumn";
-            this.idusuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idusuarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "APELLIDO";
-            this.apellidoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dniDataGridViewTextBoxColumn
-            // 
-            this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
-            this.dniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
-            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "DIRECCION";
-            this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "EMAIL";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "TELEFONO";
-            this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioDataGridViewTextBoxColumn
-            // 
-            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "usuario";
-            this.usuarioDataGridViewTextBoxColumn.HeaderText = "USUARIO";
-            this.usuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
-            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "FECHANACIMIENTO";
-            this.fechaNacimientoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contraseniaDataGridViewTextBoxColumn
-            // 
-            this.contraseniaDataGridViewTextBoxColumn.DataPropertyName = "contrasenia";
-            this.contraseniaDataGridViewTextBoxColumn.HeaderText = "CONTRASE";
-            this.contraseniaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.contraseniaDataGridViewTextBoxColumn.Name = "contraseniaDataGridViewTextBoxColumn";
-            this.contraseniaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contraseniaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idrolDataGridViewTextBoxColumn
-            // 
-            this.idrolDataGridViewTextBoxColumn.DataPropertyName = "id_rol";
-            this.idrolDataGridViewTextBoxColumn.HeaderText = "id_rol";
-            this.idrolDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idrolDataGridViewTextBoxColumn.Name = "idrolDataGridViewTextBoxColumn";
-            this.idrolDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idrolDataGridViewTextBoxColumn.Visible = false;
-            // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataSource = typeof(VienaStore.C_Datos.Usuarios);
@@ -662,18 +536,6 @@
         private System.Windows.Forms.BindingSource rolBindingSource;
         public System.Windows.Forms.Label LblContrasenia;
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraseniaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idrolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn BtnActivarDesactivar;
     }
 }

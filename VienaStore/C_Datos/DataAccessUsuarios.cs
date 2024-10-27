@@ -59,14 +59,19 @@ namespace VienaStore.C_Datos
                         connection.Open();
                     }
 
-                    string query = @"SELECT id_usuario, dni, nombre, apellido, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, estado, u.id_rol as id, descripcion 
-                 FROM Usuarios u JOIN rol r on u.id_rol = r.id_rol";
+                    string query = @"
+                                      SELECT 
+                                            id_usuario, dni, nombre, apellido, direccion, email, telefono, usuario, 
+                                            CONVERT(VARCHAR(10), fechaNacimiento, 120) AS fechaNacimiento, 
+                                            contrasenia, estado, u.id_rol AS id, descripcion
+                                            FROM Usuarios u 
+                                            JOIN rol r ON u.id_rol = r.id_rol";
 
                     if (!string.IsNullOrEmpty(search))
                     {
-                        query += @" WHERE dni LIKE @Buscar OR nombre LIKE @Buscar OR apellido LIKE @Buscar 
-               OR direccion LIKE @Buscar OR email LIKE @Buscar 
-               OR telefono LIKE @Buscar OR usuario LIKE @Buscar";
+                        query += @" WHERE id_usuario LIKE @Buscar OR dni LIKE @Buscar OR nombre LIKE @Buscar OR apellido LIKE @Buscar 
+                                    OR direccion LIKE @Buscar OR email LIKE @Buscar 
+                                    OR telefono LIKE @Buscar OR usuario LIKE @Buscar OR descripcion LIKE @Buscar OR estado LIKE @Buscar";
                     }
 
                     using (SqlCommand command = new SqlCommand(query, connection))

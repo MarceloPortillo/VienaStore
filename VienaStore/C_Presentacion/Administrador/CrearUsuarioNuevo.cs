@@ -11,6 +11,7 @@ using VienaStore.C_Presentacion.Vendedor;
 using VienaStore.C_Negocio;
 using System.Runtime.Remoting.Contexts;
 using VienaStore.C_Datos;
+using System.Runtime.CompilerServices;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
@@ -168,6 +169,15 @@ namespace VienaStore.C_Presentacion.Administrador
                 List<Usuario_Rol> usuario = _businessUsuarios.GetUsuarios();
                 DtaUsuario.DataSource = usuario;
                 DtaUsuario.Columns[11].Visible = false;
+                DtaUsuario.Columns[0].Visible = false;
+                DtaUsuario.Columns["contrasenia"].Visible = false;
+                foreach (DataGridViewColumn column in DtaUsuario.Columns)
+                {
+                    column.HeaderText = column.HeaderText.ToUpper();
+                    DtaUsuario.Columns["fechaNacimiento"].HeaderText = "FEC NAC";
+                    DtaUsuario.Columns["descripcion"].HeaderText = "PERFIL";
+                    DtaUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
             }
             catch (Exception ex)
             {

@@ -37,6 +37,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
             this.CboRol = new System.Windows.Forms.ComboBox();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.LblRol = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,14 +60,13 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
@@ -136,6 +136,10 @@
             this.CboRol.TabIndex = 11;
             this.CboRol.DropDown += new System.EventHandler(this.CboRol_DropDown);
             this.CboRol.DropDownClosed += new System.EventHandler(this.CboRol_DropDownClosed);
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // LblRol
             // 
@@ -426,10 +430,6 @@
             this.DtaUsuario.Size = new System.Drawing.Size(1522, 298);
             this.DtaUsuario.TabIndex = 28;
             // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
             // usuariosBindingSource4
             // 
             this.usuariosBindingSource4.DataSource = typeof(VienaStore.C_Datos.Usuarios);
@@ -466,8 +466,8 @@
             this.Load += new System.EventHandler(this.CrearUsuarioNuevo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();

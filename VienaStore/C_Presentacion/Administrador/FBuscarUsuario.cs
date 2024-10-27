@@ -112,6 +112,14 @@ namespace VienaStore.C_Presentacion.Administrador
                 DtaUsuario.Columns[11].Visible = false;
                 DtaUsuario.Columns[0].Visible = false;
                 DtaUsuario.Columns[9].Visible = false;
+                DtaUsuario.Columns[4].Visible = false;
+                foreach (DataGridViewColumn column in DtaUsuario.Columns)
+                {
+                    column.HeaderText = column.HeaderText.ToUpper();
+                    DtaUsuario.Columns["fechaNacimiento"].HeaderText = "FEC NAC";
+                    DtaUsuario.Columns["descripcion"].HeaderText = "PERFIL";
+                    DtaUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
             }
             catch (Exception ex)
             {
