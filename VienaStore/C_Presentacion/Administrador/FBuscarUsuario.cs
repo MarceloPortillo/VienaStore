@@ -18,6 +18,7 @@ namespace VienaStore.C_Presentacion.Administrador
     public partial class FBuscarUsuario : Form
     {
         private BusinessUsuarios _businessUsuario;
+        private BusinessRol _businessRol;
         private static FBuscarUsuario instancia = null;
         public static FBuscarUsuario Ventana_unica()
         {
@@ -32,6 +33,7 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             InitializeComponent();
             _businessUsuario = new BusinessUsuarios();
+            _businessRol = new BusinessRol();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -42,11 +44,6 @@ namespace VienaStore.C_Presentacion.Administrador
         public static void limpiar()
         {
             instancia = null;
-        }
-
-        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.SoloNumeros(e);
         }
 
         private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,7 +87,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 {
                     SaveUsuario();
                     ListarUsuarios();
-                    Limpiar.LimpiarUsuariosEditados(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, FechaNacimiento, TxtEmail, TxtTelefono, TxtUsuario, CboRol);
+                    Limpiar.LimpiarUsuariosEditados(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, FechaNacimiento, TxtEmail, TxtTelefono, TxtUsuario, textBox1, CboRol);
                     MessageBox.Show("Modificación Exitosa", "¡Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -103,6 +100,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void FBuscarUsuario_Load(object sender, EventArgs e)
         {
             ListarUsuarios();
+            ListarRoles();
         }
 
         public void ListarUsuarios()
@@ -112,6 +110,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 List<Usuario_Rol> usuario = _businessUsuario.GetUsuarios();
                 DtaUsuario.DataSource = usuario;
                 DtaUsuario.Columns[11].Visible = false;
+                DtaUsuario.Columns[0].Visible = false;
+                DtaUsuario.Columns[9].Visible = false;
             }
             catch (Exception ex)
             {
@@ -133,7 +133,7 @@ namespace VienaStore.C_Presentacion.Administrador
             if (estado.Trim() == "Inactivo")
             {
                 MessageBox.Show("No puedes modificar un usuario inactivo", "Inactivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Limpiar.LimpiarUsuariosEditados(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, FechaNacimiento, TxtEmail, TxtTelefono, TxtUsuario, CboRol);
+                Limpiar.LimpiarUsuariosEditados(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, FechaNacimiento, TxtEmail, TxtTelefono, TxtUsuario, textBox1, CboRol);
                 return;
             }
 
@@ -145,6 +145,9 @@ namespace VienaStore.C_Presentacion.Administrador
             TxtTelefono.Text = Convert.ToString(fila.Cells["telefono"].Value);
             TxtUsuario.Text = Convert.ToString(fila.Cells["usuario"].Value);
             FechaNacimiento.Value = Convert.ToDateTime(fila.Cells["fechaNacimiento"].Value).Date;
+            textBox1.Text = fila.Cells["contrasenia"].Value != DBNull.Value
+                              ? Convert.ToString(fila.Cells["contrasenia"].Value)
+                               : string.Empty;
             CboRol.Text = Convert.ToString(fila.Cells["descripcion"].Value);
         }
 
@@ -154,13 +157,13 @@ namespace VienaStore.C_Presentacion.Administrador
             if (e.RowIndex >= 0 && DtaUsuario.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 int id = int.Parse(DtaUsuario.Rows[e.RowIndex].Cells["id_usuario"].Value.ToString());
-                string estado = DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTexBoxColumn"].Value.ToString();
+                string estado = DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value.ToString();
                 if (estado == "Activo")
                 {
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere eliminar este Usuario?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTexBoxColumn"].Value = "Inactivo";
+                        DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value = "Inactivo";
                         EliminarUsuario(id);
                         MessageBox.Show("Se ha eliminado correctamente", "Elminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
@@ -171,10 +174,10 @@ namespace VienaStore.C_Presentacion.Administrador
                 }
                 else if (estado == "Inactivo")
                 {
-                    DialogResult preg = MessageBox.Show("¿Esta seguro que quiere Activar esta Categoría?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult preg = MessageBox.Show("¿Esta seguro que quiere Activar este Usuario?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTexBoxColumn"].Value = "Activo";
+                        DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value = "Activo";
                         EliminarUsuario(id);
                         MessageBox.Show("Se ha Activado correctamente", "Reestablecido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
@@ -205,15 +208,59 @@ namespace VienaStore.C_Presentacion.Administrador
                 usuario.telefono = TxtTelefono.Text;
                 usuario.usuario = TxtUsuario.Text;
                 usuario.fechaNacimiento = FechaNacimiento.Value;
-                usuario.id_rol = CboRol.TabIndex;
+                usuario.contrasenia = textBox1.Text;
+                usuario.id_rol = Convert.ToInt32(CboRol.SelectedValue);
 
                 _businessUsuario.GuardarUsuario(usuario);
             }
+            ListarRoles();
         }
 
         public void SaveUsuario()
         {
             GuardarUsuario();
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string buscarTex = TxtBuscar.Text;
+            List<Usuario_Rol> UsuaruisEncontrados = _businessUsuario.GetUsuarios(buscarTex);
+            DtaUsuario.DataSource = UsuaruisEncontrados;
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarUsuario();
+        }
+
+        private void EliminarUsuario()
+        {
+            if (DtaUsuario.CurrentRow != null)
+            {
+                int id = int.Parse(DtaUsuario.CurrentRow.Cells[0].Value.ToString());
+                DialogResult ask = MessageBox.Show("¿Seguro que desea eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (ask == DialogResult.Yes)
+                {
+                    _businessUsuario.DeleteUsuario(id);
+                    MessageBox.Show("El cliente ha sido eliminado exitosamente.", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ListarUsuarios();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }        
+        }
+
+        public void ListarRoles(string buscarText = null)
+        {
+            List<Rol> listarRoles = _businessRol.GetRoles(buscarText);
+            CboRol.DataSource = listarRoles;
+            CboRol.DisplayMember = "descripcion";
+            CboRol.ValueMember = "id_rol";
+
+            CboRol.SelectedIndex = -1;
         }
 
 

@@ -134,6 +134,8 @@
             this.CboRol.Name = "CboRol";
             this.CboRol.Size = new System.Drawing.Size(444, 31);
             this.CboRol.TabIndex = 11;
+            this.CboRol.DropDown += new System.EventHandler(this.CboRol_DropDown);
+            this.CboRol.DropDownClosed += new System.EventHandler(this.CboRol_DropDownClosed);
             // 
             // LblRol
             // 

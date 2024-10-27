@@ -48,5 +48,7 @@ namespace VienaStore.C_Negocio
         {
             _dataAccessUsuarios.DeleteUsuario(id);
         }
+
+
     }
 }

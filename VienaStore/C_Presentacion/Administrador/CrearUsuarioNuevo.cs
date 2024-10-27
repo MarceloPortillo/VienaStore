@@ -138,55 +138,29 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                // MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            ListarRoles();
         }
 
         public void ListarRoles(string buscarText = null)
         {
+
             List<Rol> listaRoles = _businessRol.GetRoles(buscarText);
+            listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rol" });
+
             CboRol.DataSource = listaRoles;
-            CboRol.DisplayMember = "descripcion";  
-            CboRol.ValueMember = "id_rol"; 
+            CboRol.DisplayMember = "descripcion";
+            CboRol.ValueMember = "id_rol";
+
+            CboRol.SelectedIndex = 0;
         }
+
 
         private void CrearUsuarioNuevo_Load(object sender, EventArgs e)
         {
             ListarRoles();
             ListarUsuarios();
         }
-
-        private void RecuperarInformacion()
-        {
-            Usuarios usuario = new Usuarios();
-
-            usuario.nombre = TxtNombre.Text;
-            usuario.apellido = TxtApellido.Text;
-
-            int DNI = 0;
-            if (int.TryParse(TxtDNI.Text, out DNI))
-            {
-                usuario.dni = DNI;
-            }
-
-            usuario.direccion = TxtDireccion.Text;
-            usuario.email = TxtEmail.Text;
-            usuario.telefono = TxtTelefono.Text;
-            usuario.usuario = TxtUsuario.Text;
-            usuario.contrasenia = TxtContraseña.Text;
-            usuario.id_rol = Convert.ToInt32(CboRol.SelectedValue);
-            usuario.fechaNacimiento = dateTimePicker1.Value;
-
-            MessageBox.Show(usuario.nombre);
-            MessageBox.Show(usuario.apellido);
-            MessageBox.Show(usuario.dni.ToString());
-            MessageBox.Show(usuario.direccion);
-            MessageBox.Show(usuario.email);
-            MessageBox.Show(usuario.telefono);
-            MessageBox.Show(usuario.usuario);
-            MessageBox.Show(usuario.contrasenia);
-            MessageBox.Show(usuario.id_rol.ToString());
-            MessageBox.Show(usuario.fechaNacimiento.ToString("dd/MM/yyyy"));
-        }
-
+                
         public void ListarUsuarios()
         {
             try
@@ -198,6 +172,35 @@ namespace VienaStore.C_Presentacion.Administrador
             catch (Exception ex)
             {
                 MessageBox.Show("Error al listar usuarios: " + ex.Message);
+            }
+        }
+
+        private void CboRol_DropDown(object sender, EventArgs e)
+        {
+            if (CboRol.Items.Count > 0 && ((Rol)CboRol.Items[0]).Id_Rol == 0)
+            {
+                List<Rol> listaRoles = (List<Rol>)CboRol.DataSource;
+                listaRoles.RemoveAt(0);
+
+                CboRol.DataSource = null;
+                CboRol.DataSource = listaRoles;
+                CboRol.DisplayMember = "descripcion";
+                CboRol.ValueMember = "id_rol";
+            }
+        }
+
+        private void CboRol_DropDownClosed(object sender, EventArgs e)
+        {
+            if (CboRol.SelectedIndex == -1)
+            {
+                List<Rol> listaRoles = (List<Rol>)CboRol.DataSource;
+                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rol" });
+
+                CboRol.DataSource = null;
+                CboRol.DataSource = listaRoles;
+                CboRol.DisplayMember = "descripcion";
+                CboRol.ValueMember = "id_rol";
+                CboRol.SelectedIndex = 0;
             }
         }
     }

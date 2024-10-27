@@ -14,7 +14,6 @@ namespace VienaStore.C_Datos
 {
     internal class DataAccessUsuarios
     {
-
         public void InsertUsuario(Usuarios usuario)
         {
             try
@@ -42,7 +41,6 @@ namespace VienaStore.C_Datos
             {
                 MessageBox.Show(ex.Message);
             }
-
             finally
             {
                 DataAccess.DatabaseConnection.GetConnection().Close();
@@ -52,16 +50,13 @@ namespace VienaStore.C_Datos
         public List<Usuario_Rol> GetUsuarios(string search = null)
         {
             List<Usuario_Rol> usuarios_r = new List<Usuario_Rol>();
-
             try
             {
-                // Obtén la conexión de la clase DatabaseConnection
                 using (SqlConnection connection = DataAccess.DatabaseConnection.GetConnection())
                 {
-                    // Abre la conexión si no está abierta
                     if (connection.State == ConnectionState.Closed)
                     {
-                        connection.Open(); // Abre la conexión solo si está cerrada
+                        connection.Open();
                     }
 
                     string query = @"SELECT id_usuario, dni, nombre, apellido, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, estado, u.id_rol as id, descripcion 
@@ -74,13 +69,10 @@ namespace VienaStore.C_Datos
                OR telefono LIKE @Buscar OR usuario LIKE @Buscar";
                     }
 
-
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Si hay un término de búsqueda, añade el parámetro con el comodín para búsqueda dinámica
                         if (!string.IsNullOrEmpty(search))
                         {
-                            // Usa el comodín '%' para buscar coincidencias parciales
                             command.Parameters.Add(new SqlParameter("@Buscar", "%" + search + "%"));
                         }
 
@@ -111,10 +103,8 @@ namespace VienaStore.C_Datos
             }
             catch (Exception ex)
             {
-                // Manejo de errores personalizado
                 throw new Exception("Error al obtener clientes: " + ex.Message);
             }
-
             return usuarios_r;
         }
 
@@ -131,13 +121,12 @@ namespace VienaStore.C_Datos
                                                                       WHEN estado = 'Activo' THEN 'Inactivo'
                                                                       ELSE 'Activo'
                                                                         END
-                                                        WHERE id_usuario = @id_usuario";
+                                                            WHERE id_usuario = @id_usuario";
                 SqlParameter id_usuario = new SqlParameter("@id_usuario", id_Usuario);
 
                 SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection()); 
                 command.Parameters.Add(id_usuario);
                 command.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
@@ -154,19 +143,18 @@ namespace VienaStore.C_Datos
             try
             {
                 DataAccess.DatabaseConnection.GetConnection();
-
                 string query = @"UPDATE usuarios SET
-                            nombre = @nombre,
-                            apellido = @apellido,
-                            dni = @dni,
-                            direccion = @direccion,
-                            email = @email,
-                            telefono = @telefono,
-                            usuario = @usuarioParam,
-                            fechaNacimiento = @fechaNacimiento,
-                            contrasenia = @contrasenia,
-                            id_rol = @id_rol
-                         WHERE id_usuario = @id_usuario";
+                                                     nombre = @nombre,
+                                                     apellido = @apellido,
+                                                     dni = @dni,
+                                                     direccion = @direccion,
+                                                     email = @email,
+                                                     telefono = @telefono,
+                                                     usuario = @usuarioParam,
+                                                     fechaNacimiento = @fechaNacimiento,
+                                                     contrasenia = @contrasenia,
+                                                     id_rol = @id_rol
+                                                 WHERE id_usuario = @id_usuario";
 
                 SqlParameter nombre = new SqlParameter("@nombre", usuario.nombre);
                 SqlParameter apellido = new SqlParameter("@apellido", usuario.apellido);
@@ -178,6 +166,7 @@ namespace VienaStore.C_Datos
                 SqlParameter fechaNacimiento = new SqlParameter("@fechaNacimiento", usuario.fechaNacimiento);
                 SqlParameter contrasenia = new SqlParameter("@contrasenia", usuario.contrasenia);
                 SqlParameter id_rol = new SqlParameter("@id_rol", usuario.id_rol);
+                SqlParameter id_usuario = new SqlParameter("@id_usuario", usuario.id_usuario);
 
                 SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
@@ -187,23 +176,22 @@ namespace VienaStore.C_Datos
                 command.Parameters.Add(direccion);
                 command.Parameters.Add(email);
                 command.Parameters.Add(telefono);
-                command.Parameters.Add(usuarioParam);  // Nombre actualizado
+                command.Parameters.Add(usuarioParam);
                 command.Parameters.Add(contrasenia);
                 command.Parameters.Add(fechaNacimiento);
                 command.Parameters.Add(id_rol);
+                command.Parameters.Add(id_usuario);
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new Exception("Error al actualizar el usuario: " + ex.Message);
+                throw;
             }
             finally
             {
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
-
-
     }
 }
