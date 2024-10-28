@@ -34,5 +34,14 @@ namespace VienaStore.C_Negocio
             campo1.Clear();
             campo2.Clear();
         }
+
+        public static void LimpiarProveedor(TextBox nombre, TextBox cuit, TextBox direccion, TextBox telefono, TextBox email)
+        {
+            nombre.Clear();
+            cuit.Clear();
+            direccion.Clear();
+            telefono.Clear();
+            email.Clear();
+        }
     }
 }
