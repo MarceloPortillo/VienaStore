@@ -19,8 +19,8 @@ namespace VienaStore.C_Datos
 				DataAccess.DatabaseConnection.GetConnection();
 				string query = @"
 				INSERT INTO Categorias(nombre, descripcion) VALUES (@nombre, @descripcion)";
-
-				SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
+                Console.WriteLine("Hola");
+                SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 				
 				cmd.Parameters.AddWithValue("@nombre",categoria.nombre);
 				cmd.Parameters.AddWithValue("@descripcion", categoria.descripcion);

@@ -34,5 +34,43 @@ namespace VienaStore.C_Negocio
             campo1.Clear();
             campo2.Clear();
         }
+
+        public static void LimpiarUsuarios(TextBox campo1, TextBox campo2, TextBox campo3, TextBox campo4, DateTimePicker campo5, TextBox campo6, MaskedTextBox campo7, TextBox campo8, TextBox campo9, ComboBox campo10)
+        {
+            campo1.Clear();
+            campo2.Clear();
+            campo3.Clear();
+            campo4.Clear();
+            campo5.Value = DateTime.Now;
+            campo6.Clear();
+            campo7.Clear();
+            campo8.Clear();
+            campo9.Clear();
+            campo10.ResetText();
+        }
+
+        public static void LimpiarUsuariosEditados(TextBox campo1, TextBox campo2, TextBox campo3, TextBox campo4, DateTimePicker campo5, TextBox campo6, MaskedTextBox campo7, TextBox campo8, TextBox campo9, ComboBox campo10)
+        {
+            campo1.Clear();
+            campo2.Clear();
+            campo3.Clear();
+            campo4.Clear();
+            campo5.Value = DateTime.Now;
+            campo6.Clear();
+            campo7.Clear();
+            campo8.Clear();
+            campo9.Clear();
+            campo10.ResetText();
+        }
+
+
+        public static void LimpiarProveedor(TextBox nombre, TextBox cuit, TextBox direccion, TextBox telefono, TextBox email)
+        {
+            nombre.Clear();
+            cuit.Clear();
+            direccion.Clear();
+            telefono.Clear();
+            email.Clear();
+        }
     }
 }
