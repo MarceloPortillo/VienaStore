@@ -13,5 +13,6 @@ namespace VienaStore.C_Datos
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string estado { get; set; }
+
     }
 }

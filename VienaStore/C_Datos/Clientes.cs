@@ -11,7 +11,7 @@ namespace VienaStore.C_Datos
     {
         public int id { get; set; }
 
-        public decimal dni { get; set; }
+        public decimal dni { get; set; }//cambiar a tipo Varchar
 
         public string nombre { get; set; }
 

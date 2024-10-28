@@ -18,7 +18,7 @@ namespace VienaStore.C_Negocio
             // Simulación de la verificación del rol del usuario
             // Definimos usuarios y contraseñas estáticos
             string usuarioAdministrador = "admin";
-            string contraseñaAdministrador = "admin123";
+            string contraseñaAdministrador = "123";
 
             string usuarioEncargado = "encargado";
             string contraseñaEncargado = "encargado123";

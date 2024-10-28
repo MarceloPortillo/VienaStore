@@ -50,6 +50,17 @@
     <Compile Include="C_Datos\Categorias.cs" />
     <Compile Include="C_Datos\Clientes.cs" />
     <Compile Include="C_Datos\DataAccesClientes.cs" />
+    <Compile Include="C_Datos\DataAccessRol.cs" />
+    <Compile Include="C_Datos\DataAccess.cs" />
+    <Compile Include="C_Datos\DataAccessCategoria.cs" />
+    <Compile Include="C_Datos\DataAccessUsuarios.cs" />
+    <Compile Include="C_Datos\Rol.cs" />
+    <Compile Include="C_Datos\Usuarios.cs" />
+    <Compile Include="C_Datos\Usuario_Rol.cs" />
+    <Compile Include="C_Negocio\BusinessCliente.cs" />
+    <Compile Include="C_Negocio\BusinessCategoria.cs" />
+    <Compile Include="C_Negocio\BusinessRol.cs" />
+    <Compile Include="C_Negocio\BusinessUsuarios.cs" />
     <Compile Include="C_Datos\DataAccesProveedores.cs" />
     <Compile Include="C_Datos\DataAccess.cs" />
     <Compile Include="C_Datos\DataAccessCategoria.cs" />
@@ -263,8 +274,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Rol.datasource" />
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Usuarios.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Proveedores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

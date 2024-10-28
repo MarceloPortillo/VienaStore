@@ -100,7 +100,9 @@
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(48, 160);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -129,6 +131,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dniDataGridViewTextBoxColumn
             // 
@@ -136,6 +139,7 @@
             this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.dniDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
+            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -143,6 +147,7 @@
             this.nombreDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
             this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // apellidoDataGridViewTextBoxColumn
             // 
@@ -150,6 +155,7 @@
             this.apellidoDataGridViewTextBoxColumn.HeaderText = "APELLIDO";
             this.apellidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // direccionDataGridViewTextBoxColumn
             // 
@@ -157,6 +163,7 @@
             this.direccionDataGridViewTextBoxColumn.HeaderText = "DIRECCIÓN";
             this.direccionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -164,6 +171,7 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "E-MAIL";
             this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
@@ -171,6 +179,7 @@
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "TELEFONO";
             this.telefonoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // estado
             // 
@@ -178,6 +187,7 @@
             this.estado.HeaderText = "ESTADO";
             this.estado.MinimumWidth = 6;
             this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // clientesBindingSource1
             // 
