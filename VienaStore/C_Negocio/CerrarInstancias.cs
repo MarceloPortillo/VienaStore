@@ -27,7 +27,7 @@ namespace VienaStore.C_Negocio
             FListarProductos.limpiar();
             CrearUsuarioNuevo.limpiar();
             reportes.limpiar();
-            Proveedores.limpiar();
+            FGestionProveedores.limpiar();
             FEditarCLiente.limpiar();
             FListarClientes.limpiar();
             FBuscarClientes.limpiar();
