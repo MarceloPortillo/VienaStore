@@ -79,7 +79,7 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (CampoVacios.CamposUsuario(TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail, TxtUsuario))
+            if (CampoVacios.CamposUsuario(TxtNombre, TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail, TxtUsuario))
             {
                 DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                  
@@ -204,7 +204,7 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void GuardarUsuario()
         {
-            if (CampoVacios.CamposUsuario(TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail, TxtUsuario))
+            if (CampoVacios.CamposUsuario(TxtApellido, TxtApellido, TxtDNI, TxtNombre, TxtDireccion, TxtTelefono, TxtEmail, TxtUsuario))
             { 
             Usuarios usuario = new Usuarios();
                 usuario.id_usuario = Convert.ToInt32(DtaUsuario.CurrentRow.Cells["id_usuario"].Value);

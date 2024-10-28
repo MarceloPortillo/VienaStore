@@ -66,15 +66,7 @@ namespace VienaStore.C_Negocio
             return true;
             }
 
-        public static bool CamposUsuario(TextBox apellido, TextBox dni, TextBox nombre, TextBox direccion, MaskedTextBox telefono, TextBox email, TextBox usuario)
-        {
-            if (string.IsNullOrWhiteSpace(apellido.Text) ||
-                string.IsNullOrWhiteSpace(dni.Text) ||
-                string.IsNullOrWhiteSpace(nombre.Text) ||
-                string.IsNullOrWhiteSpace(direccion.Text) ||
-                string.IsNullOrWhiteSpace(telefono.Text) ||
-                string.IsNullOrWhiteSpace(email.Text) ||
-                string.IsNullOrWhiteSpace(usuario.Text))
+        
         public static bool camposProveedor(TextBox nombre, TextBox cuit, TextBox direccion, TextBox telefono, TextBox email)
         {
             if (string.IsNullOrWhiteSpace(nombre.Text) || string.IsNullOrWhiteSpace(cuit.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(email.Text))
