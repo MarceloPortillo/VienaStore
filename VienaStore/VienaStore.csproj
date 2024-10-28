@@ -61,6 +61,13 @@
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
     <Compile Include="C_Negocio\BusinessUsuarios.cs" />
+    <Compile Include="C_Datos\DataAccesProveedores.cs" />
+    <Compile Include="C_Datos\DataAccess.cs" />
+    <Compile Include="C_Datos\DataAccessCategoria.cs" />
+    <Compile Include="C_Datos\Proveedores.cs" />
+    <Compile Include="C_Negocio\BusinessCliente.cs" />
+    <Compile Include="C_Negocio\BusinessCategoria.cs" />
+    <Compile Include="C_Negocio\BusinessProveedores.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Dialogos.cs" />
@@ -106,11 +113,11 @@
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Administrador\menu_administrador.Designer.cs" />
-    <Compile Include="C_Presentacion\Administrador\Proveedores.cs">
+    <Compile Include="C_Presentacion\Administrador\FGestionProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="C_Presentacion\Administrador\Proveedores.Designer.cs">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <Compile Include="C_Presentacion\Administrador\FGestionProveedores.Designer.cs">
+      <DependentUpon>FGestionProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Encargado\FAnularVenta.cs">
       <SubType>Form</SubType>
@@ -217,8 +224,8 @@
     <EmbeddedResource Include="C_Presentacion\Administrador\menu_administrador.resx">
       <DependentUpon>menu_administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="C_Presentacion\Administrador\Proveedores.resx">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="C_Presentacion\Administrador\FGestionProveedores.resx">
+      <DependentUpon>FGestionProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Encargado\FAnularVenta.resx">
       <DependentUpon>FAnularVenta.cs</DependentUpon>
@@ -272,6 +279,7 @@
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Rol.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Usuarios.datasource" />
+    <None Include="Properties\DataSources\VienaStore.C_Datos.Proveedores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

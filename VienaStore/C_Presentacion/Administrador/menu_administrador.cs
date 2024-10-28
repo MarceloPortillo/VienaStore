@@ -23,7 +23,7 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             CerrarOtrosFormularios();
 
-            Proveedores nuevo = Proveedores.Ventana_unica();
+            FGestionProveedores nuevo = FGestionProveedores.Ventana_unica();
             nuevo.TopLevel = false;            
             CerrarInstancias.InstanciasNull();
             //this.panel3.Controls.Clear();

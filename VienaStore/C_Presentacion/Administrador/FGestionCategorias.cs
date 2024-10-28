@@ -70,6 +70,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void FGestionCategorias_Load(object sender, EventArgs e)
         {
             ListarCategorias();
+            DtaUsuario.ClearSelection();
         }
 
         public void ListarCategorias(string buscarText = null)
@@ -192,8 +193,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 return;
             }
             Categorias categoria = new Categorias();
-            categoria.nombre = TxtNombre.Text;
-            categoria.descripcion = TxtDescripcion.Text;
+            categoria.nombre = TxtNombre.Text.ToUpper();
+            categoria.descripcion = TxtDescripcion.Text.ToUpper();
             try
             {
                 DialogResult ask = MessageBox.Show("¿Seguro que desea agregar una nueva categoría?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -220,12 +221,17 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                 Categorias categoria = new Categorias();
                 categoria.id_Categoria = Convert.ToInt32(DtaUsuario.CurrentRow.Cells["id_Categoria"].Value);
-                categoria.nombre = TxtNombre.Text;
-                categoria.descripcion = TxtDescripcion.Text;
+                categoria.nombre = TxtNombre.Text.ToUpper();
+                categoria.descripcion = TxtDescripcion.Text.ToUpper();
                 categoria.estado = Convert.ToString(DtaUsuario.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
 
                 _businessCategoria.guardar(categoria);
             }
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Focus();
         }
     }
 

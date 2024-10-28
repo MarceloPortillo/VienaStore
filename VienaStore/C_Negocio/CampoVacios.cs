@@ -75,6 +75,9 @@ namespace VienaStore.C_Negocio
                 string.IsNullOrWhiteSpace(telefono.Text) ||
                 string.IsNullOrWhiteSpace(email.Text) ||
                 string.IsNullOrWhiteSpace(usuario.Text))
+        public static bool camposProveedor(TextBox nombre, TextBox cuit, TextBox direccion, TextBox telefono, TextBox email)
+        {
+            if (string.IsNullOrWhiteSpace(nombre.Text) || string.IsNullOrWhiteSpace(cuit.Text) || string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(email.Text))
             {
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
