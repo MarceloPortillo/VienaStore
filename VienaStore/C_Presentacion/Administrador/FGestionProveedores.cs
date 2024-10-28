@@ -18,7 +18,14 @@ namespace VienaStore.C_Presentacion.Administrador
     public partial class FGestionProveedores : Form
     {
         private static FGestionProveedores instancia = null;
+
         private BusinessProveedores _businessProveedores;
+
+        private bool esEdicion = false;
+
+        private int idProveedorSeleccionado = -1; 
+
+
         public static FGestionProveedores Ventana_unica()
         {
 
@@ -63,75 +70,17 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-
-            if (DtaProveedores.SelectedRows.Count > 0)
-            {
-                DataGridViewRow fila = DtaProveedores.SelectedRows[0];
-                string estado = Convert.ToString(fila.Cells["estado"].Value);
-                if (estado == "ELIMINADO")
-                {
-                    MessageBox.Show("El proveedor no existe", "Verificar!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-
-                }
-                else
-                {
-                    int id_proveedor = Convert.ToInt32(fila.Cells["idproveedor"].Value);
-                    TxtEmpresa.Text = Convert.ToString(fila.Cells["empresa"].Value);
-                    TxtCuit.Text = Convert.ToString(fila.Cells["cuit"].Value);
-                    TxtDireccion.Text = Convert.ToString(fila.Cells["direccion"].Value);
-                    TxtTelefono.Text = Convert.ToString(fila.Cells["telefono"].Value);
-                    TxtCorreo.Text = Convert.ToString(fila.Cells["email"].Value);
-                }
-            }
-            else 
-            {
-                MessageBox.Show("Por favor seleccione un proveedor para Modificar", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
+            Edit();
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            this.TxtEmpresa.Clear();
-            this.TxtCuit.Clear();
-            this.TxtCorreo.Clear();
-            this.TxtDireccion.Clear();
-            this.TxtTelefono.Clear();
+            Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (!CampoVacios.camposProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono))
-            {
-                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
-                return;
-            }
-
-            Proveedores proveedor = new Proveedores();
-            proveedor.nombre = TxtEmpresa.Text.ToUpper();
-            proveedor.cuit = TxtCuit.Text.ToUpper();
-            proveedor.direccion = TxtDireccion.Text.ToUpper();
-            proveedor.telefono = TxtTelefono.Text;
-            proveedor.email = TxtCorreo.Text.ToLower();
-
-            DialogResult ask = MessageBox.Show("¿Seguro que desea agregar un nuevo proveedor?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (ask == DialogResult.Yes)
-            {
-
-                _businessProveedores.GuardarProveedor(proveedor);
-
-                MessageBox.Show("El Proveedor: " + this.TxtEmpresa.Text + "\n" + "CUIT N°" + " " + this.TxtCuit.Text + "" + " \nSe agregó Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
-                ListarProveedores();
-                return;
-            }
-            else
-            {
-                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
-            }
+            AddProveedor();
         }
 
         private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -170,19 +119,11 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (CampoVacios.camposProveedor(TxtEmpresa, TxtCuit, TxtDireccion, TxtTelefono, TxtCorreo))
-            {
-                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar los datos del proveedor?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirmacion == DialogResult.Yes)
-                {
-                    GuardarProveedor();
-                    Limpiar.LimpiarProveedor(TxtEmpresa, TxtDireccion, TxtCuit, TxtCorreo, TxtTelefono);
-                    ListarProveedores();
-                    MessageBox.Show("Modificación Exitosa", "¡Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            BotonGuardarProveedor();
+            esEdicion = false;
+            DtaProveedores.ClearSelection();
         }
+
         private void GuardarProveedor()
         {
             Proveedores proveedor = new Proveedores();
@@ -201,7 +142,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void DatagridEliminar(DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && DtaProveedores.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
-            {
+            {                
                 int id = int.Parse(DtaProveedores.Rows[e.RowIndex].Cells["idproveedor"].Value.ToString());
                 string estado = DtaProveedores.Rows[e.RowIndex].Cells["estado"].Value.ToString();
                 if (estado == "ACTIVO")
@@ -237,6 +178,90 @@ namespace VienaStore.C_Presentacion.Administrador
 
         }
 
+        private void  BotonGuardarProveedor()
+        {
+            if (CampoVacios.camposProveedor(TxtEmpresa, TxtCuit, TxtDireccion, TxtTelefono, TxtCorreo))
+            {
+                if (esEdicion == true)
+                {
+                    DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar los datos del proveedor?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (confirmacion == DialogResult.Yes)
+                    {
+                        GuardarProveedor();
+                        Limpiar.LimpiarProveedor(TxtEmpresa, TxtDireccion, TxtCuit, TxtCorreo, TxtTelefono);
+                        ListarProveedores();
+                        MessageBox.Show("Modificación Exitosa", "¡Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else {
+                    MessageBox.Show("Debes Presionar el Boton Agregar para Ingresar un nuevo Proveedor", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+            }
+        }
+        private void AddProveedor()
+        {
+            if (!CampoVacios.camposProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono))
+            {
+                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
+                return;
+            }
+
+            Proveedores proveedor = new Proveedores();
+            proveedor.nombre = TxtEmpresa.Text.ToUpper();
+            proveedor.cuit = TxtCuit.Text.ToUpper();
+            proveedor.direccion = TxtDireccion.Text.ToUpper();
+            proveedor.telefono = TxtTelefono.Text;
+            proveedor.email = TxtCorreo.Text.ToLower();
+
+            DialogResult ask = MessageBox.Show("¿Seguro que desea agregar un nuevo proveedor?", "Confirmar insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ask == DialogResult.Yes)
+            {
+
+                _businessProveedores.GuardarProveedor(proveedor);
+
+                MessageBox.Show("El Proveedor: " + this.TxtEmpresa.Text + "\n" + "CUIT N°" + " " + this.TxtCuit.Text + "" + " \nSe agregó Correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
+                ListarProveedores();
+                return;
+            }
+            else
+            {
+                Limpiar.LimpiarProveedor(TxtEmpresa, TxtCuit, TxtCorreo, TxtDireccion, TxtTelefono);
+            }
+        }
+        private void Edit()
+        {
+
+            if (DtaProveedores.SelectedRows.Count > 0)
+            {
+                esEdicion = true;
+                DataGridViewRow fila = DtaProveedores.SelectedRows[0];
+                string estado = Convert.ToString(fila.Cells["estado"].Value);
+                if (estado == "ELIMINADO")
+                {
+                    MessageBox.Show("El proveedor no existe", "Verificar!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
+                else
+                {
+                    int id_proveedor = Convert.ToInt32(fila.Cells["idproveedor"].Value);
+                    TxtEmpresa.Text = Convert.ToString(fila.Cells["empresa"].Value);
+                    TxtCuit.Text = Convert.ToString(fila.Cells["cuit"].Value);
+                    TxtDireccion.Text = Convert.ToString(fila.Cells["direccion"].Value);
+                    TxtTelefono.Text = Convert.ToString(fila.Cells["telefono"].Value);
+                    TxtCorreo.Text = Convert.ToString(fila.Cells["email"].Value);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un proveedor para Modificar", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }          
+            
+        }
 
 
         private void EliminarProveedor(int id)

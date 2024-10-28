@@ -56,11 +56,10 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
+            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -283,7 +282,7 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(786, 559);
+            this.BtnEditar.Location = new System.Drawing.Point(943, 560);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(147, 69);
@@ -293,27 +292,11 @@
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.Coral;
-            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.Image = global::VienaStore.Properties.Resources.Eliminar_48x48px;
-            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(957, 559);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(141, 69);
-            this.BtnEliminar.TabIndex = 11;
-            this.BtnEliminar.Text = "ELIMINAR";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminar.UseVisualStyleBackColor = false;
-            // 
             // DtaProveedores
             // 
             this.DtaProveedores.AllowUserToAddRows = false;
             this.DtaProveedores.AllowUserToResizeColumns = false;
             this.DtaProveedores.AllowUserToResizeRows = false;
-            this.DtaProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DtaProveedores.AutoGenerateColumns = false;
             this.DtaProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtaProveedores.BackgroundColor = System.Drawing.Color.MistyRose;
@@ -365,6 +348,14 @@
             this.DtaProveedores.TabIndex = 20;
             this.DtaProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaProveedores_CellContentClick);
             // 
+            // idproveedor
+            // 
+            this.idproveedor.DataPropertyName = "id_proveedor";
+            this.idproveedor.HeaderText = "id_proveedor";
+            this.idproveedor.Name = "idproveedor";
+            this.idproveedor.ReadOnly = true;
+            this.idproveedor.Visible = false;
+            // 
             // LblProveedoresRegistrados
             // 
             this.LblProveedoresRegistrados.AutoSize = true;
@@ -390,14 +381,6 @@
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // idproveedor
-            // 
-            this.idproveedor.DataPropertyName = "id_proveedor";
-            this.idproveedor.HeaderText = "id_proveedor";
-            this.idproveedor.Name = "idproveedor";
-            this.idproveedor.ReadOnly = true;
-            this.idproveedor.Visible = false;
             // 
             // empresa
             // 
@@ -474,7 +457,6 @@
             this.Controls.Add(this.DtaProveedores);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnEditar);
-            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.label1);
@@ -515,7 +497,6 @@
         public System.Windows.Forms.Button BtnLimpiar;
         public System.Windows.Forms.Button BtnSalir;
         public System.Windows.Forms.Button BtnEditar;
-        public System.Windows.Forms.Button BtnEliminar;
         public System.Windows.Forms.Button BtnAgregar;
         public System.Windows.Forms.Button BtnGuardar;
         public System.Windows.Forms.DataGridView DtaProveedores;
