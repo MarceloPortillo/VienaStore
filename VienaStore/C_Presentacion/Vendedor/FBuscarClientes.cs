@@ -61,13 +61,6 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void TxtEmail_TextChanged(object sender, EventArgs e)
         {
 
-            if (!string.IsNullOrWhiteSpace(TxtEmail.Text) && !C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
-            {
-                MessageBox.Show("Dirección de correo electrónico no es válida. El correo debe tener el formato: nombre@dominio.com",
-                                "Validación de correo electrónico", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TxtEmail.SelectAll();
-                TxtEmail.Focus();
-            }
         }
 
         private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -109,6 +102,7 @@ namespace VienaStore.C_Presentacion.Vendedor
         private void FBuscarClientes_Load(object sender, EventArgs e)
         {
             ListarContactos();
+            dataGridView1.ClearSelection();
         }
 
         public void ListarContactos(string searchText = null)
@@ -247,9 +241,9 @@ namespace VienaStore.C_Presentacion.Vendedor
             }
 
             cliente.dni = dni;
-            cliente.nombre = TxtNombre.Text;
-            cliente.apellido = TxtApellido.Text;
-            cliente.direccion = TxtDireccion.Text;
+            cliente.nombre = TxtNombre.Text.ToUpper();
+            cliente.apellido = TxtApellido.Text.ToUpper();
+            cliente.direccion = TxtDireccion.Text.ToUpper();
             cliente.email = TxtEmail.Text;
             cliente.telefono = TxtTelefono.Text;
             cliente.id = _cliente != null ? _cliente.id : 0;
@@ -336,6 +330,17 @@ namespace VienaStore.C_Presentacion.Vendedor
             else
             {
                 MessageBox.Show("Seleccione un cliente para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void TxtEmail_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(TxtEmail.Text) && !C_Negocio.Validaciones.ValidarEmail(TxtEmail.Text))
+            {
+                MessageBox.Show("Dirección de correo electrónico no es válida. El correo debe tener el formato: nombre@dominio.com",
+                                "Validación de correo electrónico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtEmail.SelectAll();
+                TxtEmail.Focus();
             }
         }
     }
