@@ -63,6 +63,13 @@ namespace VienaStore.C_Presentacion
                 // Si el usuario fue autenticado correctamente
                 if (usuarioValidado != null)
                 {
+                    // Verificar si el usuario está inactivo
+                    if (usuarioValidado.estado.ToLower() == "inactivo")
+                    {
+                        MessageBox.Show("Usuario inactivo. Por favor, comuníquese con un administrador.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Salir del método sin continuar
+                    }
+
                     this.Hide(); // Oculta el formulario actual
 
                     // Redirige al formulario correspondiente según el rol del usuario
@@ -75,15 +82,15 @@ namespace VienaStore.C_Presentacion
                             break;
 
                         case 2: // Rol Encargado
-                            var menuVendedor = new Menu_Vendedor();
-                            menuVendedor.FormClosed += (s, args) => this.Close();
-                            menuVendedor.Show();
+                            var menuEncargado = new Menu_Vendedor();
+                            menuEncargado.FormClosed += (s, args) => this.Close();
+                            menuEncargado.Show();
                             break;
 
                         case 3: // Rol Vendedor
-                            var menuEncargado = new menu_encargado();
-                            menuEncargado.FormClosed += (s, args) => this.Close();
-                            menuEncargado.Show();
+                            var menuVendedor = new menu_encargado();
+                            menuVendedor.FormClosed += (s, args) => this.Close();
+                            menuVendedor.Show();
                             break;
 
                         default:
