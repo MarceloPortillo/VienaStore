@@ -501,7 +501,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox TxtUsuario;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox CboRol;
         public System.Windows.Forms.Label LblRol;
         public System.Windows.Forms.Label LblFechaNacimiento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -510,5 +509,6 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private System.Windows.Forms.BindingSource usuariosBindingSource3;
         private System.Windows.Forms.BindingSource usuariosBindingSource4;
+        public System.Windows.Forms.ComboBox CboRol;
     }
 }

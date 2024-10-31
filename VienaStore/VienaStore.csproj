@@ -61,16 +61,18 @@
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
     <Compile Include="C_Negocio\BusinessUsuarios.cs" />
-    <Compile Include="C_Datos\DataAccesProveedores.cs" />    
-    <Compile Include="C_Datos\Proveedores.cs" />    
+    <Compile Include="C_Datos\DataAccesProveedores.cs" />
+    <Compile Include="C_Datos\Proveedores.cs" />
     <Compile Include="C_Negocio\BusinessProveedores.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Dialogos.cs" />
+    <Compile Include="C_Negocio\Encrypt.cs" />
     <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
     <Compile Include="C_Negocio\Producto.cs" />
+    <Compile Include="C_Negocio\UsuarioService.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
     <Compile Include="C_Presentacion\Administrador\FGestionCategorias.cs">
       <SubType>Form</SubType>
