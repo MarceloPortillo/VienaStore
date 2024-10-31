@@ -55,12 +55,12 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void TxtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.SoloLetras(e);
+            Validaciones.SoloLetrasYPuntos(e);
         }
 
         private void TxtCuit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.SoloNumeros(e);
+            Validaciones.SoloNumerosYGuion(e);
         }
 
         private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)

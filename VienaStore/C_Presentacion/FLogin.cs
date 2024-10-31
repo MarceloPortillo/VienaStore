@@ -71,16 +71,17 @@ namespace VienaStore.C_Presentacion
                     switch (usuarioValidado.id_rol)
                     {
                         case 1:
+                            var menuEncargado = new Menu_Vendedor();
+                            menuEncargado.FormClosed += (s, args) => this.Close();
+                            menuEncargado.Show();
+                            break;
+
+                        case 2:
                             var menuAdmin = new menu_administrador();
                             menuAdmin.FormClosed += (s, args) => this.Close();
                             menuAdmin.Show();
                             break;
 
-                        case 2: 
-                            var menuEncargado = new Menu_Vendedor();
-                            menuEncargado.FormClosed += (s, args) => this.Close();
-                            menuEncargado.Show();
-                            break;
 
                         case 3: 
                             var menuVendedor = new menu_encargado();

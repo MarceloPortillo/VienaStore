@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGestionProveedores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGestionProveedores));
             this.label1 = new System.Windows.Forms.Label();
             this.LblBuscar = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
@@ -57,10 +57,6 @@
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
-            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.proveedoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +64,10 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource1)).BeginInit();
@@ -225,6 +225,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Controls.Add(this.TxtCuit);
@@ -252,7 +253,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(1513, 250);
+            this.BtnGuardar.Location = new System.Drawing.Point(1341, 250);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(193, 74);
@@ -268,7 +269,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Image = global::VienaStore.Properties.Resources.proveedor_32px;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(1113, 251);
+            this.BtnAgregar.Location = new System.Drawing.Point(941, 251);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(193, 74);
@@ -284,7 +285,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(1314, 250);
+            this.BtnLimpiar.Location = new System.Drawing.Point(1142, 250);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(193, 74);
@@ -300,7 +301,7 @@
             this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(1348, 586);
+            this.BtnEditar.Location = new System.Drawing.Point(1555, 589);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(196, 85);
@@ -366,41 +367,6 @@
             this.DtaProveedores.Size = new System.Drawing.Size(1738, 377);
             this.DtaProveedores.TabIndex = 20;
             this.DtaProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaProveedores_CellContentClick);
-            // 
-            // LblProveedoresRegistrados
-            // 
-            this.LblProveedoresRegistrados.AutoSize = true;
-            this.LblProveedoresRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(46, 106);
-            this.LblProveedoresRegistrados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblProveedoresRegistrados.Name = "LblProveedoresRegistrados";
-            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(311, 29);
-            this.LblProveedoresRegistrados.TabIndex = 18;
-            this.LblProveedoresRegistrados.Text = "Proveedores Registrados";
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Coral;
-            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(1563, 585);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(5);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(188, 85);
-            this.BtnSalir.TabIndex = 12;
-            this.BtnSalir.Text = "SALIR";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // proveedoresBindingSource1
-            // 
-            this.proveedoresBindingSource1.DataSource = typeof(VienaStore.C_Datos.Proveedores);
-            // 
-            // proveedoresBindingSource
-            // 
-            this.proveedoresBindingSource.DataSource = typeof(VienaStore.C_Datos.Proveedores);
             // 
             // empresa
             // 
@@ -475,6 +441,41 @@
             this.idproveedor.ReadOnly = true;
             this.idproveedor.Visible = false;
             // 
+            // proveedoresBindingSource1
+            // 
+            this.proveedoresBindingSource1.DataSource = typeof(VienaStore.C_Datos.Proveedores);
+            // 
+            // LblProveedoresRegistrados
+            // 
+            this.LblProveedoresRegistrados.AutoSize = true;
+            this.LblProveedoresRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProveedoresRegistrados.Location = new System.Drawing.Point(46, 106);
+            this.LblProveedoresRegistrados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblProveedoresRegistrados.Name = "LblProveedoresRegistrados";
+            this.LblProveedoresRegistrados.Size = new System.Drawing.Size(311, 29);
+            this.LblProveedoresRegistrados.TabIndex = 18;
+            this.LblProveedoresRegistrados.Text = "Proveedores Registrados";
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.Coral;
+            this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(1540, 250);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(193, 73);
+            this.BtnSalir.TabIndex = 12;
+            this.BtnSalir.Text = "SALIR";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataSource = typeof(VienaStore.C_Datos.Proveedores);
+            // 
             // FGestionProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,7 +483,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1848, 1107);
-            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.LblProveedoresRegistrados);
             this.Controls.Add(this.DtaProveedores);
             this.Controls.Add(this.panel1);

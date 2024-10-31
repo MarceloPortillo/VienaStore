@@ -37,6 +37,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
             this.CboRol = new System.Windows.Forms.ComboBox();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.LblRol = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,14 +60,13 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
@@ -136,6 +136,10 @@
             this.CboRol.TabIndex = 11;
             this.CboRol.DropDown += new System.EventHandler(this.CboRol_DropDown);
             this.CboRol.DropDownClosed += new System.EventHandler(this.CboRol_DropDownClosed);
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // LblRol
             // 
@@ -334,7 +338,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(1298, 477);
+            this.BtnGuardar.Location = new System.Drawing.Point(1540, 476);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(216, 101);
@@ -350,12 +354,12 @@
             this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(1539, 478);
+            this.BtnCancelar.Location = new System.Drawing.Point(1577, 972);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(217, 101);
+            this.BtnCancelar.Size = new System.Drawing.Size(179, 101);
             this.BtnCancelar.TabIndex = 14;
-            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.Text = "SALIR";
             this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -366,7 +370,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(1048, 477);
+            this.BtnLimpiar.Location = new System.Drawing.Point(1290, 476);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(216, 101);
@@ -423,12 +427,8 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.DtaUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaUsuario.Size = new System.Drawing.Size(1731, 424);
+            this.DtaUsuario.Size = new System.Drawing.Size(1731, 349);
             this.DtaUsuario.TabIndex = 28;
-            // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // usuariosBindingSource4
             // 
@@ -451,7 +451,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1774, 1072);
+            this.ClientSize = new System.Drawing.Size(1774, 1087);
             this.Controls.Add(this.DtaUsuario);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnCancelar);
@@ -466,8 +466,8 @@
             this.Load += new System.EventHandler(this.CrearUsuarioNuevo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
