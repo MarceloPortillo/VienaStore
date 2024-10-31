@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using VienaStore.C_Datos;
 
 namespace VienaStore.C_Negocio
@@ -19,7 +20,8 @@ namespace VienaStore.C_Negocio
 
             if (usuarioRol == null)
             {
-                throw new Exception("Usuario o contraseña incorrectos.");
+            //    MessageBox.Show("Usuario o contraseña incorrectos.");
+
             }
 
             return usuarioRol;

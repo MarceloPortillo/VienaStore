@@ -28,7 +28,7 @@ namespace VienaStore.C_Presentacion
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             IngresarAlSistema();
-            this.Hide();
+            //this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,45 +49,40 @@ namespace VienaStore.C_Presentacion
         private void IngresarAlSistema()
         {
             try
-            {
-                // Crear una instancia de UsuarioService
+            {                
                 UsuarioService usuarioService = new UsuarioService();
-
-                // Obtener el usuario y la contraseña desde los campos de texto
-                string usuario = TBUsuario.Text.Trim(); // Asegúrate de que no haya espacios en blanco
+              
+                string usuario = TBUsuario.Text.Trim();
                 string contrasenia = TBContrasenia.Text.Trim();
-
-                // Llamar al método Login para validar las credenciales
+               
                 Usuario_Rol usuarioValidado = usuarioService.Login(usuario, contrasenia);
-
-                // Si el usuario fue autenticado correctamente
+                
                 if (usuarioValidado != null)
                 {
-                    // Verificar si el usuario está inactivo
                     if (usuarioValidado.estado.ToLower() == "inactivo")
                     {
                         MessageBox.Show("Usuario inactivo. Por favor, comuníquese con un administrador.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; // Salir del método sin continuar
+                        return;
                     }
 
-                    this.Hide(); // Oculta el formulario actual
+                    this.Hide();
 
-                    // Redirige al formulario correspondiente según el rol del usuario
+                 
                     switch (usuarioValidado.id_rol)
                     {
-                        case 1: // Rol Administrador
+                        case 1:
                             var menuAdmin = new menu_administrador();
                             menuAdmin.FormClosed += (s, args) => this.Close();
                             menuAdmin.Show();
                             break;
 
-                        case 2: // Rol Encargado
+                        case 2: 
                             var menuEncargado = new Menu_Vendedor();
                             menuEncargado.FormClosed += (s, args) => this.Close();
                             menuEncargado.Show();
                             break;
 
-                        case 3: // Rol Vendedor
+                        case 3: 
                             var menuVendedor = new menu_encargado();
                             menuVendedor.FormClosed += (s, args) => this.Close();
                             menuVendedor.Show();
@@ -109,12 +104,6 @@ namespace VienaStore.C_Presentacion
                 MessageBox.Show("Error al iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
-
 
         private void TBUsuario_KeyDown(object sender, KeyEventArgs e)
         {
