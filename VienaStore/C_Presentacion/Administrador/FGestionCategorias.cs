@@ -113,7 +113,7 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                 DataGridViewRow fila = DtaCategoria.SelectedRows[0];
                 int id_Categoria = Convert.ToInt32(fila.Cells["id_categoria"].Value);
-                TxtNombre.Text = Convert.ToString(fila.Cells["nombre"].Value);
+                TxtNombre.Text = Convert.ToString(fila.Cells["nombreCategoria"].Value);
                 TxtDescripcion.Text = Convert.ToString(fila.Cells["descripcion"].Value);
                 string estado = Convert.ToString(fila.Cells["BtnActivarDesactivar"].Value);
                 if (estado == "Inactivo")
@@ -194,7 +194,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 return;
             }
             Categorias categoria = new Categorias();
-            categoria.nombre = TxtNombre.Text.ToUpper();
+            categoria.nombreCategoria = TxtNombre.Text.ToUpper();
             categoria.descripcion = TxtDescripcion.Text.ToUpper();
             try
             {
@@ -222,7 +222,7 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                 Categorias categoria = new Categorias();
                 categoria.id_Categoria = Convert.ToInt32(DtaCategoria.CurrentRow.Cells["id_Categoria"].Value);
-                categoria.nombre = TxtNombre.Text.ToUpper();
+                categoria.nombreCategoria = TxtNombre.Text.ToUpper();
                 categoria.descripcion = TxtDescripcion.Text.ToUpper();
                 categoria.estado = Convert.ToString(DtaCategoria.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
 
