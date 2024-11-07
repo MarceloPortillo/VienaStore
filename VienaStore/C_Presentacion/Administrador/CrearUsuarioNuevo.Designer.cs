@@ -37,7 +37,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
             this.CboRol = new System.Windows.Forms.ComboBox();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.LblRol = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,13 +59,14 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
@@ -137,10 +137,6 @@
             this.CboRol.DropDown += new System.EventHandler(this.CboRol_DropDown);
             this.CboRol.DropDownClosed += new System.EventHandler(this.CboRol_DropDownClosed);
             // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
             // LblRol
             // 
             this.LblRol.AutoSize = true;
@@ -158,6 +154,7 @@
             this.TxtContraseña.Location = new System.Drawing.Point(1026, 194);
             this.TxtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.ShortcutsEnabled = false;
             this.TxtContraseña.Size = new System.Drawing.Size(444, 29);
             this.TxtContraseña.TabIndex = 10;
             this.TxtContraseña.UseSystemPasswordChar = true;
@@ -179,6 +176,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(1026, 146);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(444, 29);
             this.TxtUsuario.TabIndex = 9;
             // 
@@ -221,6 +219,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(1026, 46);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.ShortcutsEnabled = false;
             this.TxtEmail.Size = new System.Drawing.Size(444, 29);
             this.TxtEmail.TabIndex = 6;
             this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
@@ -231,6 +230,7 @@
             this.TxtDireccion.Location = new System.Drawing.Point(283, 191);
             this.TxtDireccion.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.ShortcutsEnabled = false;
             this.TxtDireccion.Size = new System.Drawing.Size(444, 29);
             this.TxtDireccion.TabIndex = 4;
             // 
@@ -240,6 +240,7 @@
             this.TxtDNI.Location = new System.Drawing.Point(283, 143);
             this.TxtDNI.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDNI.Name = "TxtDNI";
+            this.TxtDNI.ShortcutsEnabled = false;
             this.TxtDNI.Size = new System.Drawing.Size(444, 29);
             this.TxtDNI.TabIndex = 3;
             this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
@@ -250,6 +251,7 @@
             this.TxtApellido.Location = new System.Drawing.Point(283, 96);
             this.TxtApellido.Margin = new System.Windows.Forms.Padding(5);
             this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.ShortcutsEnabled = false;
             this.TxtApellido.Size = new System.Drawing.Size(444, 29);
             this.TxtApellido.TabIndex = 2;
             this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
@@ -261,6 +263,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(283, 44);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.ShortcutsEnabled = false;
             this.TxtNombre.Size = new System.Drawing.Size(444, 29);
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
@@ -386,6 +389,7 @@
             this.DtaUsuario.AllowUserToResizeColumns = false;
             this.DtaUsuario.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -406,6 +410,7 @@
             this.DtaUsuario.EnableHeadersVisualStyles = false;
             this.DtaUsuario.Location = new System.Drawing.Point(25, 605);
             this.DtaUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.DtaUsuario.MultiSelect = false;
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.ReadOnly = true;
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -429,6 +434,10 @@
             this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaUsuario.Size = new System.Drawing.Size(1731, 349);
             this.DtaUsuario.TabIndex = 28;
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // usuariosBindingSource4
             // 
@@ -466,8 +475,8 @@
             this.Load += new System.EventHandler(this.CrearUsuarioNuevo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();

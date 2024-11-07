@@ -204,7 +204,7 @@ namespace VienaStore.C_Presentacion.Administrador
             if (CboRol.SelectedIndex == -1)
             {
                 List<Rol> listaRoles = (List<Rol>)CboRol.DataSource;
-                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rol" });
+                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rolllllll" });
 
                 CboRol.DataSource = null;
                 CboRol.DataSource = listaRoles;

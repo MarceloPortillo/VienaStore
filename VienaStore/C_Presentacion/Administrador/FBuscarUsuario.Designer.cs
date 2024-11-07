@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
-            this.BtnActivarDesactivar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
@@ -77,6 +75,7 @@
             this.DtaUsuario.AllowUserToOrderColumns = true;
             this.DtaUsuario.AllowUserToResizeColumns = false;
             this.DtaUsuario.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtaUsuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtaUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -92,48 +91,31 @@
             this.DtaUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DtaUsuario.ColumnHeadersHeight = 50;
             this.DtaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DtaUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BtnActivarDesactivar});
             this.DtaUsuario.EnableHeadersVisualStyles = false;
             this.DtaUsuario.Location = new System.Drawing.Point(12, 131);
             this.DtaUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DtaUsuario.MultiSelect = false;
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.ReadOnly = true;
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DtaUsuario.RowHeadersVisible = false;
             this.DtaUsuario.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.DtaUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.DtaUsuario.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaUsuario.Size = new System.Drawing.Size(1720, 319);
             this.DtaUsuario.TabIndex = 1;
             this.DtaUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaUsuario_CellContentClick);
             // 
-            // BtnActivarDesactivar
-            // 
-            this.BtnActivarDesactivar.DataPropertyName = "estado";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.BtnActivarDesactivar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BtnActivarDesactivar.HeaderText = "ESTADO";
-            this.BtnActivarDesactivar.MinimumWidth = 6;
-            this.BtnActivarDesactivar.Name = "BtnActivarDesactivar";
-            this.BtnActivarDesactivar.ReadOnly = true;
-            this.BtnActivarDesactivar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BtnActivarDesactivar.Text = "ELIMINAR";
-            // 
             // TxtTelefono
             // 
             this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefono.Location = new System.Drawing.Point(1006, 116);
+            this.TxtTelefono.Location = new System.Drawing.Point(1065, 116);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.TxtTelefono.Mask = "(999)-0000000";
             this.TxtTelefono.Name = "TxtTelefono";
@@ -145,7 +127,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(895, 47);
+            this.LblEmail.Location = new System.Drawing.Point(954, 47);
             this.LblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(81, 22);
@@ -155,7 +137,7 @@
             // TxtEmail
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(1006, 44);
+            this.TxtEmail.Location = new System.Drawing.Point(1065, 44);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(444, 27);
@@ -206,7 +188,7 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(877, 116);
+            this.LblTelefono.Location = new System.Drawing.Point(936, 116);
             this.LblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(99, 22);
@@ -262,7 +244,7 @@
             this.CboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboRol.FormattingEnabled = true;
-            this.CboRol.Location = new System.Drawing.Point(1143, 318);
+            this.CboRol.Location = new System.Drawing.Point(1202, 318);
             this.CboRol.Margin = new System.Windows.Forms.Padding(4);
             this.CboRol.Name = "CboRol";
             this.CboRol.Size = new System.Drawing.Size(283, 28);
@@ -272,7 +254,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1055, 324);
+            this.label2.Location = new System.Drawing.Point(1114, 324);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 22);
@@ -283,7 +265,7 @@
             // 
             this.LblUsuario.AutoSize = true;
             this.LblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Location = new System.Drawing.Point(886, 187);
+            this.LblUsuario.Location = new System.Drawing.Point(945, 187);
             this.LblUsuario.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(90, 22);
@@ -293,7 +275,7 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(1004, 187);
+            this.TxtUsuario.Location = new System.Drawing.Point(1063, 187);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(444, 27);
@@ -425,7 +407,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1006, 255);
+            this.textBox1.Location = new System.Drawing.Point(1065, 255);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(444, 27);
@@ -435,7 +417,7 @@
             // 
             this.LblContrasenia.AutoSize = true;
             this.LblContrasenia.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContrasenia.Location = new System.Drawing.Point(864, 260);
+            this.LblContrasenia.Location = new System.Drawing.Point(923, 260);
             this.LblContrasenia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblContrasenia.Name = "LblContrasenia";
             this.LblContrasenia.Size = new System.Drawing.Size(126, 22);
@@ -535,7 +517,6 @@
         private System.Windows.Forms.BindingSource rolBindingSource;
         public System.Windows.Forms.Label LblContrasenia;
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewButtonColumn BtnActivarDesactivar;
         public System.Windows.Forms.ComboBox CboRol;
     }
 }

@@ -109,17 +109,39 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                 List<Usuario_Rol> usuario = _businessUsuario.GetUsuarios();
                 DtaUsuario.DataSource = usuario;
-                DtaUsuario.Columns[11].Visible = false;
+                DtaUsuario.Columns["fechaNacimiento"].Visible = false;
                 DtaUsuario.Columns[0].Visible = false;
                 DtaUsuario.Columns[9].Visible = false;
                 DtaUsuario.Columns[4].Visible = false;
+                DtaUsuario.Columns["id_rol"].Visible = false;
+                DtaUsuario.AutoGenerateColumns = false;
+
+                if (!DtaUsuario.Columns.Contains("BtnEstado"))
+                {
+                    DataGridViewButtonColumn btnEstadoColumn = new DataGridViewButtonColumn();
+                    btnEstadoColumn.HeaderText = "ACCION";
+                    btnEstadoColumn.Name = "BtnEstado";
+                    btnEstadoColumn.UseColumnTextForButtonValue = false;
+                    btnEstadoColumn.Width = 80;
+                    DtaUsuario.Columns.Add(btnEstadoColumn);
+                }
+                foreach (DataGridViewRow row in DtaUsuario.Rows)
+                {
+                    if (row.DataBoundItem is Usuario_Rol usuarioItem)
+                    {
+                        string estado = usuarioItem.estado;
+                        row.Cells["BtnEstado"].Value = estado == "Inactivo" ? "Activar" : "Eliminar";
+                    }
+                }
+
                 foreach (DataGridViewColumn column in DtaUsuario.Columns)
                 {
+                    DtaUsuario.ClearSelection();
                     column.HeaderText = column.HeaderText.ToUpper();
-                    DtaUsuario.Columns["fechaNacimiento"].HeaderText = "FEC NAC";
                     DtaUsuario.Columns["descripcion"].HeaderText = "PERFIL";
                     DtaUsuario.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
+
             }
             catch (Exception ex)
             {
@@ -136,7 +158,7 @@ namespace VienaStore.C_Presentacion.Administrador
             }
 
             DataGridViewRow fila = DtaUsuario.SelectedRows[0];
-            string estado = Convert.ToString(fila.Cells["BtnActivarDesactivar"].Value);
+            string estado = Convert.ToString(fila.Cells["estado"].Value);
 
             if (estado.Trim() == "Inactivo")
             {
@@ -165,13 +187,13 @@ namespace VienaStore.C_Presentacion.Administrador
             if (e.RowIndex >= 0 && DtaUsuario.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 int id = int.Parse(DtaUsuario.Rows[e.RowIndex].Cells["id_usuario"].Value.ToString());
-                string estado = DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value.ToString();
+                string estado = DtaUsuario.Rows[e.RowIndex].Cells["estado"].Value.ToString();
                 if (estado == "Activo")
                 {
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere eliminar este Usuario?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value = "Inactivo";
+                        DtaUsuario.Rows[e.RowIndex].Cells["estado"].Value = "Inactivo";
                         EliminarUsuario(id);
                         MessageBox.Show("Se ha eliminado correctamente", "Elminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
@@ -185,13 +207,21 @@ namespace VienaStore.C_Presentacion.Administrador
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere Activar este Usuario?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["BtnActivarDesactivar"].Value = "Activo";
+                        DtaUsuario.Rows[e.RowIndex].Cells["estado"].Value = "Activo";
                         EliminarUsuario(id);
                         MessageBox.Show("Se ha Activado correctamente", "Reestablecido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
                         return;
+                    }
+                }
+                foreach (DataGridViewRow row in DtaUsuario.Rows)
+                {
+                    if (row.DataBoundItem is Usuario_Rol usuarioItem)
+                    {
+                        string estadoActual = usuarioItem.estado;
+                        row.Cells["btnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
                     }
                 }
             }
@@ -234,6 +264,14 @@ namespace VienaStore.C_Presentacion.Administrador
             string buscarTex = TxtBuscar.Text;
             List<Usuario_Rol> UsuaruisEncontrados = _businessUsuario.GetUsuarios(buscarTex);
             DtaUsuario.DataSource = UsuaruisEncontrados;
+            foreach (DataGridViewRow row in DtaUsuario.Rows)
+            {
+                if (row.DataBoundItem is Usuario_Rol usuarioItem)
+                {
+                    string estadoActual = usuarioItem.estado;
+                    row.Cells["btnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
+                }
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -270,6 +308,7 @@ namespace VienaStore.C_Presentacion.Administrador
 
             CboRol.SelectedIndex = -1;
         }
+
 
 
     }
