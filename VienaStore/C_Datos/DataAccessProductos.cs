@@ -151,10 +151,24 @@ namespace VienaStore.C_Datos
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
-
-                throw;
+                if (ex.Message.Contains("CK_Productos_precioCosto"))
+                {
+                    throw new Exception("El precio de costo no puede tener un valor de $0", ex);
+                }
+                else if (ex.Message.Contains("CK_Productos_precioVenta_Mayor_precioCosto"))
+                {
+                    throw new Exception("El precio de venta debe ser Mayor al precio de costo", ex);
+                }
+                else if (ex.Message.Contains("CK_Productos_StockMin_Menor_Stock"))
+                {
+                    throw new Exception("El stock Minimo debe ser menor al stock", ex);
+                }
+                else
+                {
+                    throw new Exception("Error vuelva a intentarlo", ex);
+                }
             }
             finally { DataAccess.DatabaseConnection.GetConnection().Close(); }
         }

@@ -18,6 +18,7 @@ namespace VienaStore.C_Presentacion.Administrador
     public partial class FBuscarProductos : Form
     {
         private BusinessProductos _businessProductos;
+        
         private BusinessProductos _bussinesProductos;
 
         private BusinessCategoria _categoriaProductos;
@@ -141,7 +142,7 @@ namespace VienaStore.C_Presentacion.Administrador
             {
                 DataGridViewRow fila = DtaProdcuto.SelectedRows[0];
                 string estado = Convert.ToString(fila.Cells["estado"].Value);
-                if (estado == "Inactivo")
+                if (estado == "ELIMINADO")
                 {
                     MessageBox.Show("El producto no existe", "Verificar!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -182,40 +183,45 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             if (CampoVacios.CamposVaciosProducto(TBNombre, TBDescripcion, TxtStockMIn, TBStock, TBPrecioCompra, TBPrecioVenta, ComboCategoria, ComboProveedor))
             {
-
-                DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar los datos del Producto?", "Confirmar Modifición", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirmacion == DialogResult.Yes)
+                try
                 {
-                    GuardarProducto();
-                    Limpiar.limpiarAgregarProducto(TBNombre, TBDescripcion, TxtStockMIn, TBStock, TBPrecioCompra, TBPrecioVenta, ComboCategoria, ComboProveedor);
-                    ListarProductos();
-                    MessageBox.Show("Modificación Exitosa", "¡Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
+                    DialogResult confirmacion = MessageBox.Show("¿Estás seguro de que deseas Modificar los datos del Producto?", "Confirmar Modifición", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            }
+                    if (confirmacion == DialogResult.Yes)
+                    {
+
+                        GuardarProducto();
+
+                        Limpiar.limpiarAgregarProducto(TBNombre, TBDescripcion, TxtStockMIn, TBStock, TBPrecioCompra, TBPrecioVenta, ComboCategoria, ComboProveedor);
+                        ListarProductos();
+                        MessageBox.Show("Modificación Exitosa", "¡Felicitaciones!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {                    
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }            
         }
 
         private void GuardarProducto()
         {
-            Productos producto = new Productos();
+            
+                Productos producto = new Productos();
 
-            producto.nombreProducto = TBNombre.Text.ToUpper();
-            producto.descripcionProducto = TBDescripcion.Text;
-            producto.id_Categoria = Convert.ToInt32(ComboCategoria.SelectedValue);
-            producto.stockMin = Convert.ToInt32(TBStock.Text);
-            producto.stock = Convert.ToInt32(TxtStockMIn.Text);
-            producto.precioCosto = Convert.ToSingle(TBPrecioVenta.Text);
-            producto.precioVenta = Convert.ToSingle(TBPrecioCompra.Text);
-            producto.id_proveedor = Convert.ToInt32(ComboProveedor.SelectedValue);
+                producto.nombreProducto = TBNombre.Text.ToUpper();
+                producto.descripcionProducto = TBDescripcion.Text;
+                producto.id_Categoria = Convert.ToInt32(ComboCategoria.SelectedValue);
+                producto.stockMin = Convert.ToInt32(TBStock.Text);
+                producto.stock = Convert.ToInt32(TxtStockMIn.Text);
+                producto.precioCosto = Convert.ToSingle(TBPrecioVenta.Text);
+                producto.precioVenta = Convert.ToSingle(TBPrecioCompra.Text);
+                producto.id_proveedor = Convert.ToInt32(ComboProveedor.SelectedValue);
 
-            producto.codProducto = Convert.ToInt32(DtaProdcuto.CurrentRow.Cells["codProducto"].Value);
-
-
-            _businessProductos.GuardarProducto(producto);
+                producto.codProducto = Convert.ToInt32(DtaProdcuto.CurrentRow.Cells["codProducto"].Value);
+                _businessProductos.GuardarProducto(producto);
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -88,9 +88,6 @@ namespace VienaStore.C_Presentacion.Administrador
                     C_Negocio.Limpiar.limpiarAgregarProducto(TBNombreProducto, TBDescripcion, TBStock, TBPrecioCompra, TBPrecioVenta, TxtStockMin, CboProveedor, CBCategoria);
                     CargarCombo();
                     ListarProductos();
-
-
-
                 }
             }
             catch (Exception ex)
