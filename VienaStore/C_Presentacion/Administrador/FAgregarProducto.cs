@@ -136,6 +136,10 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             CargarCombo();
             ListarProductos();
+            this.BeginInvoke((MethodInvoker)delegate
+            {
+                DataProducto.ClearSelection();
+            });
         }
 
         private void CargarCombo()
@@ -160,7 +164,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 DataProducto.Columns["id_Categoria"].Visible = false;
                 foreach (DataGridViewColumn column in DataProducto.Columns)
                 {
-                    DataProducto.ClearSelection();
+                    
                     column.HeaderText = column.HeaderText.ToUpper();
                     DataProducto.Columns["codProducto"].HeaderText = "COD.PRODUCTO";
                     DataProducto.Columns["nombreProducto"].HeaderText = "PRODUCTO";
@@ -171,9 +175,11 @@ namespace VienaStore.C_Presentacion.Administrador
                     DataProducto.Columns["precioCosto"].HeaderText = "P. COSTO";
                     DataProducto.Columns["precioVenta"].HeaderText = "P.VENTA";
                     DataProducto.Columns["nombreProveedor"].HeaderText = "P.VENTA";
-                    DataProducto.Columns["estado"].HeaderText = "ESTADO";
+                    DataProducto.Columns["estado"].HeaderText = "ESTADO";                   
+
 
                     DataProducto.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
                 }
             }
             catch (Exception)

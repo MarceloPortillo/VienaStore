@@ -46,6 +46,8 @@ namespace VienaStore.C_Presentacion.Administrador
             _categoriaProductos = new BusinessCategoria();
             _proveedoresProductos = new BusinessProveedores();
             _businessProductos = new BusinessProductos();
+            DtaProdcuto.CellFormatting += DtaProdcuto_CellFormatting;
+
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -66,6 +68,10 @@ namespace VienaStore.C_Presentacion.Administrador
         private void FBuscarProductos_Load(object sender, EventArgs e)
         {
             ListarProductos();
+            this.BeginInvoke((MethodInvoker)delegate
+            {
+                DtaProdcuto.ClearSelection();
+            });
         }
 
         private void ListarProductos()
@@ -84,6 +90,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 DtaProdcuto.Columns["nombreCategoria"].Width = 100;
                 DtaProdcuto.Columns["estado"].Width = 80;
                 DtaProdcuto.AutoGenerateColumns = false;
+
 
                 if (!DtaProdcuto.Columns.Contains("btnEstado"))
                 {
@@ -122,7 +129,11 @@ namespace VienaStore.C_Presentacion.Administrador
 
 
                     DtaProdcuto.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                    
                 }
+                
+
             }
             catch (Exception)
             {
@@ -163,7 +174,7 @@ namespace VienaStore.C_Presentacion.Administrador
             }
             else
             {
-                MessageBox.Show("Por favor seleccione un proveedor para Modificar", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor seleccione un producto para Modificar", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
         }
@@ -219,9 +230,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 producto.id_proveedor = Convert.ToInt32(ComboProveedor.SelectedValue);
 
                 producto.codProducto = Convert.ToInt32(DtaProdcuto.CurrentRow.Cells["codProducto"].Value);
-                _businessProductos.GuardarProducto(producto);
-            
-            
+                _businessProductos.GuardarProducto(producto);  
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -301,6 +310,15 @@ namespace VienaStore.C_Presentacion.Administrador
                     string estadoActual = productoItem.estado;
                     row.Cells["btnEstado"].Value = estadoActual == "ELIMINADO" ? "Activar" : "Eliminar";
                 }
+            }
+        }
+
+        private void DtaProdcuto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (DtaProdcuto.Columns[e.ColumnIndex].Name == "btnEstado" && e.RowIndex >= 0)
+            {
+                string estado = Convert.ToString(DtaProdcuto.Rows[e.RowIndex].Cells["estado"].Value);
+                e.Value = estado == "ELIMINADO" ? "Activar" : "Eliminar";
             }
         }
     }
