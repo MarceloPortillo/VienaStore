@@ -30,19 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGestionCategorias));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGestionCategorias));
             this.LblTituloCategorias = new System.Windows.Forms.Label();
             this.LblDNI = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.DtaCategoria = new System.Windows.Forms.DataGridView();
+            this.id_Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnActivarDesactivar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,12 +55,6 @@
             this.TxtBuscarCategoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.id_Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnActivarDesactivar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DtaCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -138,7 +137,7 @@
             this.DtaCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_Categoria,
-            this.nombre,
+            this.nombreCategoria,
             this.descripcion,
             this.estadoDataGridViewTextBoxColumn,
             this.BtnActivarDesactivar});
@@ -149,15 +148,76 @@
             this.DtaCategoria.Name = "DtaCategoria";
             this.DtaCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DtaCategoria.RowHeadersVisible = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.DtaCategoria.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.DtaCategoria.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DtaCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaCategoria.Size = new System.Drawing.Size(694, 187);
             this.DtaCategoria.TabIndex = 31;
             this.DtaCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaUsuario_CellContentClick);
+            // 
+            // id_Categoria
+            // 
+            this.id_Categoria.DataPropertyName = "id_Categoria";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.id_Categoria.DefaultCellStyle = dataGridViewCellStyle2;
+            this.id_Categoria.FillWeight = 35.55792F;
+            this.id_Categoria.HeaderText = "COD. CAT";
+            this.id_Categoria.Name = "id_Categoria";
+            this.id_Categoria.ReadOnly = true;
+            this.id_Categoria.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nombreCategoria
+            // 
+            this.nombreCategoria.DataPropertyName = "nombreCategoria";
+            this.nombreCategoria.HeaderText = "CATEGORIA";
+            this.nombreCategoria.Name = "nombreCategoria";
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descripcion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.descripcion.FillWeight = 228.4264F;
+            this.descripcion.HeaderText = "DESCRIPCIÓN";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.estadoDataGridViewTextBoxColumn.FillWeight = 78.67189F;
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "ESTADO";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.estadoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // BtnActivarDesactivar
+            // 
+            this.BtnActivarDesactivar.DataPropertyName = "estado";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.BtnActivarDesactivar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.BtnActivarDesactivar.FillWeight = 78.67189F;
+            this.BtnActivarDesactivar.HeaderText = "ESTADO";
+            this.BtnActivarDesactivar.Name = "BtnActivarDesactivar";
+            this.BtnActivarDesactivar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BtnActivarDesactivar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BtnActivarDesactivar.Text = "ELIMINAR";
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(VienaStore.C_Datos.Categorias);
             // 
             // BtnModificar
             // 
@@ -261,71 +321,6 @@
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // id_Categoria
-            // 
-            this.id_Categoria.DataPropertyName = "id_Categoria";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.id_Categoria.DefaultCellStyle = dataGridViewCellStyle2;
-            this.id_Categoria.FillWeight = 35.55792F;
-            this.id_Categoria.HeaderText = "COD. CAT";
-            this.id_Categoria.Name = "id_Categoria";
-            this.id_Categoria.ReadOnly = true;
-            this.id_Categoria.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // BtnActivarDesactivar
-            // 
-            this.BtnActivarDesactivar.DataPropertyName = "estado";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.BtnActivarDesactivar.DefaultCellStyle = dataGridViewCellStyle6;
-            this.BtnActivarDesactivar.FillWeight = 78.67189F;
-            this.BtnActivarDesactivar.HeaderText = "ESTADO";
-            this.BtnActivarDesactivar.Name = "BtnActivarDesactivar";
-            this.BtnActivarDesactivar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnActivarDesactivar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BtnActivarDesactivar.Text = "ELIMINAR";
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nombre.FillWeight = 78.67189F;
-            this.nombre.HeaderText = "CATEGORIA";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "descripcion";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcion.DefaultCellStyle = dataGridViewCellStyle4;
-            this.descripcion.FillWeight = 228.4264F;
-            this.descripcion.HeaderText = "DESCRIPCIÓN";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estadoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.estadoDataGridViewTextBoxColumn.FillWeight = 78.67189F;
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "ESTADO";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.estadoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataSource = typeof(VienaStore.C_Datos.Categorias);
-            // 
             // FGestionCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,8 +371,9 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         public System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn BtnActivarDesactivar;

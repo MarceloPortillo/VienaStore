@@ -30,13 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGestionProveedores));
+=======
+>>>>>>> origin/DEV_PRUEBA
             this.label1 = new System.Windows.Forms.Label();
             this.LblBuscar = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
@@ -57,7 +60,14 @@
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.DtaProveedores = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+            this.nombreProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LblProveedoresRegistrados = new System.Windows.Forms.Label();
+            this.BtnSalir = new System.Windows.Forms.Button();
+>>>>>>> origin/DEV_PRUEBA
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -331,7 +341,7 @@
             this.DtaProveedores.ColumnHeadersHeight = 50;
             this.DtaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.empresa,
+            this.nombreProveedor,
             this.cuit,
             this.direccion,
             this.telefono,
@@ -347,6 +357,7 @@
             this.DtaProveedores.Name = "DtaProveedores";
             this.DtaProveedores.ReadOnly = true;
             this.DtaProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+<<<<<<< HEAD
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Snow;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,19 +366,30 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+=======
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+>>>>>>> origin/DEV_PRUEBA
             this.DtaProveedores.RowHeadersVisible = false;
             this.DtaProveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.DtaProveedores.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.DtaProveedores.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DtaProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaProveedores.Size = new System.Drawing.Size(1738, 377);
             this.DtaProveedores.TabIndex = 20;
             this.DtaProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaProveedores_CellContentClick);
             // 
+<<<<<<< HEAD
             // empresa
             // 
             this.empresa.DataPropertyName = "nombre";
@@ -431,6 +453,14 @@
             this.estado.ReadOnly = true;
             this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+=======
+            // nombreProveedor
+            // 
+            this.nombreProveedor.DataPropertyName = "nombreProveedor";
+            this.nombreProveedor.HeaderText = "PROVEEDOR";
+            this.nombreProveedor.Name = "nombreProveedor";
+            this.nombreProveedor.ReadOnly = true;
+>>>>>>> origin/DEV_PRUEBA
             // 
             // idproveedor
             // 
@@ -472,6 +502,56 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+<<<<<<< HEAD
+=======
+            // cuit
+            // 
+            this.cuit.DataPropertyName = "cuit";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cuit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cuit.HeaderText = "CUIT";
+            this.cuit.Name = "cuit";
+            this.cuit.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "DIRECCION";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.telefono.DefaultCellStyle = dataGridViewCellStyle3;
+            this.telefono.HeaderText = "TELEFONO";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-MAIL";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.estado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.estado.HeaderText = "ESTADO";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // proveedoresBindingSource1
+            // 
+            this.proveedoresBindingSource1.DataSource = typeof(VienaStore.C_Datos.Proveedores);
+            // 
+>>>>>>> origin/DEV_PRUEBA
             // proveedoresBindingSource
             // 
             this.proveedoresBindingSource.DataSource = typeof(VienaStore.C_Datos.Proveedores);
@@ -534,6 +614,7 @@
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
         private System.Windows.Forms.BindingSource proveedoresBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn empresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;

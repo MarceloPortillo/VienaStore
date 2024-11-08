@@ -16,12 +16,12 @@ namespace VienaStore.C_Negocio
         public TextBox campo4;
         public TextBox campo5;           
             
-        public static void limpiarAgregarProducto(TextBox campo1, TextBox campo2, TextBox campo3, TextBox campo4, TextBox campo5, TextBox campo6, TextBox campo7, ComboBox campo8, ComboBox campo9)
+        public static void limpiarAgregarProducto(TextBox campo1, TextBox campo2, TextBox campo3, TextBox campo5, TextBox campo6, TextBox campo7, ComboBox campo8, ComboBox campo9)
         {
             campo1.Clear();
             campo2.Clear();
             campo3.Clear();
-            campo4.Clear();
+            
             campo5.Clear();
             campo6.Clear();
             campo7.Clear();

@@ -38,8 +38,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Enabled = false;
-            this.BtnEliminar.Visible = false;
+            
             // 
             // PBEditarProducto
             // 
