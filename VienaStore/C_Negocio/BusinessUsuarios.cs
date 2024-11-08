@@ -23,6 +23,7 @@ namespace VienaStore.C_Negocio
                 if (usuario.id_usuario == 0)
                 {
                     _dataAccessUsuarios.InsertUsuario(usuario);
+                    
                 }
                 else
                 {
@@ -30,11 +31,11 @@ namespace VienaStore.C_Negocio
                 }
                 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 // Lanzar la excepción con más contexto si es necesario
-                //throw new Exception("Error al guardar el usuario: " + ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
@@ -47,6 +48,14 @@ namespace VienaStore.C_Negocio
         public void DeleteUsuario(int id)
         {
             _dataAccessUsuarios.DeleteUsuario(id);
+        }
+
+        public Usuario_Rol ValidarLogin(string usuario, string contrasenia)
+        {
+            // Encriptar la contraseña antes de enviarla a la capa de datos
+            string contraseniaEncriptada = Encrypt.GetSHA256(contrasenia.Trim());
+            // Llamar a la capa de datos para obtener el usuario validado
+            return _dataAccessUsuarios.ObtenerUsuarioPorCredenciales(usuario, contraseniaEncriptada);
         }
 
 

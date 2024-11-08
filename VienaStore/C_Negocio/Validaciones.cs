@@ -14,6 +14,23 @@ namespace VienaStore.C_Negocio
     internal class Validaciones
     {
         private DataAccesClientes dataAcces;
+
+        public static void SoloNumerosYGuion(KeyPressEventArgs f)
+        {
+            if (char.IsNumber(f.KeyChar) || f.KeyChar == '-')
+            {
+                f.Handled = false;
+            }
+            else if (char.IsControl(f.KeyChar))
+            {
+                f.Handled = false;
+            }
+            else
+            {
+                f.Handled = true;
+                MessageBox.Show("Error: Ingrese solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public static void SoloNumeros(KeyPressEventArgs f)
         {
             if (char.IsNumber(f.KeyChar))
@@ -86,5 +103,25 @@ namespace VienaStore.C_Negocio
             return false;
         }
 
+        public static void SoloLetrasYPuntos(KeyPressEventArgs f)
+        {
+            if (char.IsLetter(f.KeyChar) || f.KeyChar == '.')
+            {
+                f.Handled = false;
+            }
+            else if (char.IsControl(f.KeyChar))
+            {
+                f.Handled = false;
+            }
+            else if (f.KeyChar == ' ')
+            {
+                f.Handled = false;
+            }
+            else
+            {
+                f.Handled |= true;
+                MessageBox.Show("Ingrese solo letras.", "Verifique", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
