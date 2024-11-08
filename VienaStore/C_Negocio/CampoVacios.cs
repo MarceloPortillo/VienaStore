@@ -76,5 +76,23 @@ namespace VienaStore.C_Negocio
             }
             return true;
         }
-    }
+
+        public static bool CamposVaciosProducto(TextBox descripcion, TextBox precioCompra, TextBox precioVenta, TextBox codProducto, TextBox stockMin, TextBox stock, ComboBox comCategoria, ComboBox comProveedor)
+        {
+            if (  string.IsNullOrWhiteSpace(descripcion.Text) ||
+                  string.IsNullOrWhiteSpace(stock.Text) ||
+                  string.IsNullOrWhiteSpace(precioCompra.Text) ||
+                  string.IsNullOrWhiteSpace(precioVenta.Text) ||
+                  string.IsNullOrWhiteSpace(codProducto.Text) ||
+                   comCategoria.SelectedIndex == -1 ||
+                   string.IsNullOrWhiteSpace(stockMin.Text) ||
+                   comProveedor.SelectedIndex == -1)
+                   
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+}
 }

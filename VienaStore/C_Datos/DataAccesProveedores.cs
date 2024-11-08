@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,12 @@ namespace VienaStore.C_Datos
                 //Abrir conexion 
                 DataAccess.DatabaseConnection.GetConnection();
                 string query = @"
-				INSERT INTO Proveedores(nombre, cuit, direccion, telefono, email) VALUES
-								        (@nombre, @cuit, @direccion, @telefono, @email)";
+				INSERT INTO Proveedores(nombreProveedor, cuit, direccion, telefono, email) VALUES
+								        (@nombreProveedor, @cuit, @direccion, @telefono, @email)";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
-                cmd.Parameters.AddWithValue("@nombre", proveedor.nombre);
+                cmd.Parameters.AddWithValue("@nombreProveedor", proveedor.nombreProveedor);
                 cmd.Parameters.AddWithValue("@cuit", proveedor.cuit);
                 cmd.Parameters.AddWithValue("@direccion", proveedor.direccion);
                 cmd.Parameters.AddWithValue("@telefono", proveedor.telefono);
@@ -60,7 +61,7 @@ namespace VienaStore.C_Datos
             {
                 DataAccess.DatabaseConnection.GetConnection();
 
-                string query = @"SELECT id_proveedor, nombre, cuit, direccion, telefono, email, estado
+                string query = @"SELECT id_proveedor, nombreProveedor, cuit, direccion, telefono, email, estado
                                 FROM proveedores";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
@@ -72,7 +73,7 @@ namespace VienaStore.C_Datos
                     proveedores.Add(new Proveedores
                     {
                         id_proveedor = int.Parse(reader["id_proveedor"].ToString()),
-                        nombre = reader["nombre"].ToString(),
+                        nombreProveedor = reader["nombreProveedor"].ToString(),
                         cuit = reader["cuit"].ToString(),
                         direccion = reader["direccion"].ToString(),
                         telefono = reader["telefono"].ToString(),
@@ -98,7 +99,7 @@ namespace VienaStore.C_Datos
                 DataAccess.DatabaseConnection.GetConnection();
                 string query = @"
                                 UPDATE Proveedores SET
-                                                        nombre = @nombre,
+                                                        nombreProveedor = @nombreProveedor,
                                                         cuit = @cuit,
                                                         direccion = @direccion,
                                                         telefono = @telefono,
@@ -106,7 +107,7 @@ namespace VienaStore.C_Datos
                                 WHERE id_proveedor = @id_proveedor";
 
                 SqlParameter id_proveedor = new SqlParameter("@id_proveedor", proveedor.id_proveedor);
-                SqlParameter nombre = new SqlParameter("@nombre", proveedor.nombre);
+                SqlParameter nombreProveedor = new SqlParameter("@nombreProveedor", proveedor.nombreProveedor);
                 SqlParameter cuit = new SqlParameter("@cuit", proveedor.cuit);
                 SqlParameter direccion = new SqlParameter("@direccion", proveedor.direccion);
                 SqlParameter telefono = new SqlParameter("@telefono", proveedor.telefono);
@@ -114,7 +115,7 @@ namespace VienaStore.C_Datos
 
                 SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
                 command.Parameters.Add(id_proveedor);
-                command.Parameters.Add(nombre);
+                command.Parameters.Add(nombreProveedor);
                 command.Parameters.Add(cuit);
                 command.Parameters.Add(direccion);
                 command.Parameters.Add(telefono);
@@ -171,13 +172,13 @@ namespace VienaStore.C_Datos
             try
             {
                 DataAccess.DatabaseConnection.GetConnection();
-                string query = @"SELECT id_proveedor, nombre, cuit, direccion, telefono, email, estado FROM Proveedores";
+                string query = @"SELECT id_proveedor, nombreProveedor, cuit, direccion, telefono, email, estado FROM Proveedores";
 
                 SqlCommand command = new SqlCommand();
 
                 if (!string.IsNullOrEmpty(buscar))
                 {
-                    query += @" WHERE id_proveedor LIKE @buscar OR nombre LIKE @buscar OR cuit LIKE @buscar OR direccion LIKE @buscar OR telefono LIKE @buscar OR email LIKE @buscar OR estado LIKE @buscar";
+                    query += @" WHERE id_proveedor LIKE @buscar OR nombreProveedor LIKE @buscar OR cuit LIKE @buscar OR direccion LIKE @buscar OR telefono LIKE @buscar OR email LIKE @buscar OR estado LIKE @buscar";
                     command.Parameters.Add(new SqlParameter("@buscar", $"%{buscar}%"));
                 }
                 command.CommandText = query;
@@ -190,7 +191,7 @@ namespace VienaStore.C_Datos
                     proveedor.Add(new Proveedores
                     {
                         id_proveedor = int.Parse(reader["id_proveedor"].ToString()),
-                        nombre = reader["nombre"].ToString(),
+                        nombreProveedor = reader["nombreProveedor"].ToString(),
                         cuit = reader["cuit"].ToString(),
                         direccion = reader["direccion"].ToString(),
                         telefono = reader["telefono"].ToString(),
@@ -209,6 +210,16 @@ namespace VienaStore.C_Datos
             return proveedor;
         }
 
+        public DataTable CargarComboProveedor()
+        {
+            DataAccess.DatabaseConnection.GetConnection();
+
+            SqlDataAdapter adapter = new SqlDataAdapter("Cargar_Combo_Proveedor", DataAccess.DatabaseConnection.GetConnection());
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable proveedor = new DataTable();
+            adapter.Fill(proveedor);
+            return proveedor;
+        }
 
     }
 }

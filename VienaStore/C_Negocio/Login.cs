@@ -8,12 +8,14 @@ using VienaStore.C_Presentacion.Administrador;
 using VienaStore.C_Presentacion.Encargado;
 using VienaStore.C_Presentacion.Vendedor;
 using VienaStore.C_Presentacion;
+using VienaStore.C_Datos;
+
 
 namespace VienaStore.C_Negocio
 {
     internal class Login
     {
-        public static void registro(string usuario, string contrasenia) 
+        public static void registro(string usuario, string contrasenia)
         {
             // Simulación de la verificación del rol del usuario
             // Definimos usuarios y contraseñas estáticos
@@ -37,7 +39,7 @@ namespace VienaStore.C_Negocio
                 menu_administrador formAdmin = new menu_administrador();
                 formAdmin.Show();
                 return;
-                
+
             }
             // Verificación para usuario Encargado
             else if (usuarioIngresado == usuarioEncargado && contraseñaIngresada == contraseñaEncargado)
@@ -46,7 +48,7 @@ namespace VienaStore.C_Negocio
                 menu_encargado formEncargado = new menu_encargado();
                 formEncargado.Show();
                 return;
-           
+
             }
             // Verificación para usuario Vendedor
             else if (usuarioIngresado == usuarioVendedor && contraseñaIngresada == contraseñaVendedor)
@@ -59,17 +61,16 @@ namespace VienaStore.C_Negocio
             else if (string.IsNullOrWhiteSpace(usuarioIngresado) ||
                      string.IsNullOrWhiteSpace(contraseñaIngresada))
             {
-                MessageBox.Show("Debe Completar todos los campos","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 // Si los datos no coinciden, mostramos un mensaje de error
-               FLogin otro = new FLogin();
+                FLogin otro = new FLogin();
                 otro.Show();
                 return;
             }
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FLogin nuevo = new FLogin();
-                nuevo.Show();
-                return;
+            MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            FLogin nuevo = new FLogin();
+            nuevo.Show();
+            return;
         }
-
     }
 }

@@ -39,7 +39,7 @@ namespace VienaStore.C_Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception (ex.Message);
             }
             finally
             {
@@ -198,5 +198,72 @@ namespace VienaStore.C_Datos
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
+        // Capa de Datos: UsuarioData.cs
+        public Usuario_Rol ObtenerUsuarioPorCredenciales(string usuario, string contraseniaEncriptada)
+        {
+            Usuario_Rol usuarioRol = null;
+
+            try
+            {
+                using (SqlConnection connection = DataAccess.DatabaseConnection.GetConnection())
+                {
+                    if (connection.State == ConnectionState.Closed)
+                    {
+                        connection.Open();
+                    }
+
+                    // Imprime los valores para ver si llegan correctamente
+                    Console.WriteLine($"Usuario: {usuario}, Contraseña encriptada: {contraseniaEncriptada}");
+
+                    string query = @"
+                SELECT 
+                    u.id_usuario, u.dni, u.nombre, u.apellido, u.direccion, u.email, u.telefono, u.usuario, 
+                    u.fechaNacimiento, u.contrasenia, u.estado, u.id_rol, r.descripcion
+                FROM Usuarios u
+                JOIN rol r ON u.id_rol = r.id_rol
+                WHERE u.usuario = @Usuario AND u.contrasenia = @Contrasenia";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Usuario", usuario);
+                        command.Parameters.AddWithValue("@Contrasenia", contraseniaEncriptada);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                usuarioRol = new Usuario_Rol
+                                {
+                                    id_usuario = Convert.ToInt32(reader["id_usuario"]),
+                                    dni = Convert.ToInt32(reader["dni"]),
+                                    nombre = reader["nombre"].ToString(),
+                                    apellido = reader["apellido"].ToString(),
+                                    direccion = reader["direccion"].ToString(),
+                                    email = reader["email"].ToString(),
+                                    telefono = reader["telefono"].ToString(),
+                                    usuario = reader["usuario"].ToString(),
+                                    fechaNacimiento = Convert.ToDateTime(reader["fechaNacimiento"]),
+                                    estado = reader["estado"].ToString(),
+                                    contrasenia = reader["contrasenia"].ToString(),
+                                    id_rol = Convert.ToInt32(reader["id_rol"]),
+                                    descripcion = reader["descripcion"].ToString()
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error en ObtenerUsuarioPorCredenciales: " + ex.ToString());
+                throw;
+            }
+
+            return usuarioRol;
+        }
+
+
+
+
     }
 }

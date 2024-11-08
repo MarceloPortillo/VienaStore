@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -46,6 +47,11 @@ namespace VienaStore.C_Negocio
         public void DeleteCategoria(int id) 
         {
             _dataAccessCategoria.DeleteCategoria(id);
+        }
+
+        public DataTable CargarComboCategorias()
+        {
+            return _dataAccessCategoria.CargarCombo();            
         }
     }
 }
