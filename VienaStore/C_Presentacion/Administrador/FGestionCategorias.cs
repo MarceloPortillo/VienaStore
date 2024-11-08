@@ -69,21 +69,21 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void FGestionCategorias_Load(object sender, EventArgs e)
         {
-            ListarCategorias();
-            DtaUsuario.ClearSelection();
+            ListarCategorias();            
+            DtaCategoria.ClearSelection();
         }
 
         public void ListarCategorias(string buscarText = null)
         {
             List<Categorias> lista = _businessCategoria.GetCategorias(buscarText);
-            DtaUsuario.DataSource = lista;
+            DtaCategoria.DataSource = lista;
         }
 
         private void TxtBuscarCategoria_TextChanged(object sender, EventArgs e)
         {
             string buscarTex = TxtBuscarCategoria.Text;
             List<Categorias> categoriasEncontradas = _businessCategoria.GetCategorias(buscarTex);
-            DtaUsuario.DataSource = categoriasEncontradas;
+            DtaCategoria.DataSource = categoriasEncontradas;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -94,6 +94,7 @@ namespace VienaStore.C_Presentacion.Administrador
         private void BtnSave_Click(object sender, EventArgs e)
         {
             BotonGuardar();
+            DtaCategoria.ClearSelection();
         }
 
         private void DtaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -108,11 +109,11 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void edit()
         {
-            if (DtaUsuario.SelectedRows.Count > 0)
+            if (DtaCategoria.SelectedRows.Count > 0)
             {
-                DataGridViewRow fila = DtaUsuario.SelectedRows[0];
+                DataGridViewRow fila = DtaCategoria.SelectedRows[0];
                 int id_Categoria = Convert.ToInt32(fila.Cells["id_categoria"].Value);
-                TxtNombre.Text = Convert.ToString(fila.Cells["nombre"].Value);
+                TxtNombre.Text = Convert.ToString(fila.Cells["nombreCategoria"].Value);
                 TxtDescripcion.Text = Convert.ToString(fila.Cells["descripcion"].Value);
                 string estado = Convert.ToString(fila.Cells["BtnActivarDesactivar"].Value);
                 if (estado == "Inactivo")
@@ -150,16 +151,16 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void DatagridEliminar(DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && DtaUsuario.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (e.RowIndex >= 0 && DtaCategoria.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
-                int id = int.Parse(DtaUsuario.Rows[e.RowIndex].Cells["id_Categoria"].Value.ToString());
-                string estado = DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value.ToString();
+                int id = int.Parse(DtaCategoria.Rows[e.RowIndex].Cells["id_Categoria"].Value.ToString());
+                string estado = DtaCategoria.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value.ToString();
                 if (estado == "Activo")
                 {
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere eliminar esta Categoria?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value = "Inactivo";
+                        DtaCategoria.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value = "Inactivo";
                         EliminarCategoria(id);
                         MessageBox.Show("Se ha eliminado correctamente", "Elminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
@@ -173,7 +174,7 @@ namespace VienaStore.C_Presentacion.Administrador
                     DialogResult preg = MessageBox.Show("¿Esta seguro que quiere Activar esta Categoría?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (preg == DialogResult.Yes)
                     {
-                        DtaUsuario.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value = "Activo";
+                        DtaCategoria.Rows[e.RowIndex].Cells["estadoDataGridViewTextBoxColumn"].Value = "Activo";
                         EliminarCategoria(id);
                         MessageBox.Show("Se ha Activado correctamente", "Reestablecido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
@@ -193,7 +194,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 return;
             }
             Categorias categoria = new Categorias();
-            categoria.nombre = TxtNombre.Text.ToUpper();
+            categoria.nombreCategoria = TxtNombre.Text.ToUpper();
             categoria.descripcion = TxtDescripcion.Text.ToUpper();
             try
             {
@@ -220,10 +221,10 @@ namespace VienaStore.C_Presentacion.Administrador
             if (CampoVacios.camposCategoria(TxtNombre, TxtDescripcion))
             {
                 Categorias categoria = new Categorias();
-                categoria.id_Categoria = Convert.ToInt32(DtaUsuario.CurrentRow.Cells["id_Categoria"].Value);
-                categoria.nombre = TxtNombre.Text.ToUpper();
+                categoria.id_Categoria = Convert.ToInt32(DtaCategoria.CurrentRow.Cells["id_Categoria"].Value);
+                categoria.nombreCategoria = TxtNombre.Text.ToUpper();
                 categoria.descripcion = TxtDescripcion.Text.ToUpper();
-                categoria.estado = Convert.ToString(DtaUsuario.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
+                categoria.estado = Convert.ToString(DtaCategoria.CurrentRow.Cells["estadoDataGridViewTextBoxColumn"].Value);
 
                 _businessCategoria.guardar(categoria);
             }
