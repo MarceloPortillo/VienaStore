@@ -74,7 +74,6 @@
     <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
-    <Compile Include="C_Negocio\Producto.cs" />
     <Compile Include="C_Negocio\UsuarioService.cs" />
     <Compile Include="C_Negocio\BusinessProductos.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
