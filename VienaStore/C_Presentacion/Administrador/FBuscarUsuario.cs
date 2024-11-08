@@ -34,6 +34,7 @@ namespace VienaStore.C_Presentacion.Administrador
             InitializeComponent();
             _businessUsuario = new BusinessUsuarios();
             _businessRol = new BusinessRol();
+            DtaUsuario.CellFormatting += DtaProdcuto_CellFormatting;
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -221,7 +222,7 @@ namespace VienaStore.C_Presentacion.Administrador
                     if (row.DataBoundItem is Usuario_Rol usuarioItem)
                     {
                         string estadoActual = usuarioItem.estado;
-                        row.Cells["btnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
+                        row.Cells["BtnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
                     }
                 }
             }
@@ -269,7 +270,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 if (row.DataBoundItem is Usuario_Rol usuarioItem)
                 {
                     string estadoActual = usuarioItem.estado;
-                    row.Cells["btnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
+                    row.Cells["BtnEstado"].Value = estadoActual == "Inactivo" ? "Activar" : "Eliminar";
                 }
             }
         }
@@ -309,7 +310,13 @@ namespace VienaStore.C_Presentacion.Administrador
             CboRol.SelectedIndex = -1;
         }
 
-
-
+        private void DtaProdcuto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (DtaUsuario.Columns[e.ColumnIndex].Name == "BtnEstado" && e.RowIndex >= 0)
+            {
+                string estado = Convert.ToString(DtaUsuario.Rows[e.RowIndex].Cells["estado"].Value);
+                e.Value = estado == "Inactivo" ? "Activar" : "Eliminar";
+            }
+        }
     }
 }
