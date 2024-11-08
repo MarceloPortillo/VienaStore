@@ -10,7 +10,7 @@ namespace VienaStore.C_Datos
     {
         public int id_proveedor { get; set; }
 
-        public string nombre { get; set; }
+        public string nombreProveedor { get; set; }
 
         public string cuit { get; set; }
 

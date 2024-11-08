@@ -37,7 +37,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LblFechaNacimiento = new System.Windows.Forms.Label();
             this.CboRol = new System.Windows.Forms.ComboBox();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.LblRol = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,13 +59,14 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.DtaUsuario = new System.Windows.Forms.DataGridView();
+            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
@@ -97,16 +97,16 @@
             this.panel1.Controls.Add(this.LblNombre);
             this.panel1.Controls.Add(this.LblDNI);
             this.panel1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(114, 101);
+            this.panel1.Location = new System.Drawing.Point(25, 101);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1517, 351);
+            this.panel1.Size = new System.Drawing.Size(1731, 351);
             this.panel1.TabIndex = 22;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(259, 242);
+            this.dateTimePicker1.Location = new System.Drawing.Point(283, 242);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(444, 29);
             this.dateTimePicker1.TabIndex = 38;
@@ -116,7 +116,7 @@
             // 
             this.LblFechaNacimiento.AutoSize = true;
             this.LblFechaNacimiento.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFechaNacimiento.Location = new System.Drawing.Point(68, 246);
+            this.LblFechaNacimiento.Location = new System.Drawing.Point(92, 246);
             this.LblFechaNacimiento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblFechaNacimiento.Name = "LblFechaNacimiento";
             this.LblFechaNacimiento.Size = new System.Drawing.Size(169, 23);
@@ -129,7 +129,7 @@
             this.CboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboRol.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboRol.FormattingEnabled = true;
-            this.CboRol.Location = new System.Drawing.Point(966, 244);
+            this.CboRol.Location = new System.Drawing.Point(1026, 244);
             this.CboRol.Margin = new System.Windows.Forms.Padding(4);
             this.CboRol.Name = "CboRol";
             this.CboRol.Size = new System.Drawing.Size(444, 31);
@@ -137,15 +137,11 @@
             this.CboRol.DropDown += new System.EventHandler(this.CboRol_DropDown);
             this.CboRol.DropDownClosed += new System.EventHandler(this.CboRol_DropDownClosed);
             // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
-            // 
             // LblRol
             // 
             this.LblRol.AutoSize = true;
             this.LblRol.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRol.Location = new System.Drawing.Point(808, 246);
+            this.LblRol.Location = new System.Drawing.Point(868, 246);
             this.LblRol.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblRol.Name = "LblRol";
             this.LblRol.Size = new System.Drawing.Size(39, 23);
@@ -155,9 +151,10 @@
             // TxtContraseña
             // 
             this.TxtContraseña.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContraseña.Location = new System.Drawing.Point(966, 194);
+            this.TxtContraseña.Location = new System.Drawing.Point(1026, 194);
             this.TxtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.ShortcutsEnabled = false;
             this.TxtContraseña.Size = new System.Drawing.Size(444, 29);
             this.TxtContraseña.TabIndex = 10;
             this.TxtContraseña.UseSystemPasswordChar = true;
@@ -166,7 +163,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(808, 198);
+            this.label3.Location = new System.Drawing.Point(868, 198);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 23);
@@ -176,9 +173,10 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(966, 146);
+            this.TxtUsuario.Location = new System.Drawing.Point(1026, 146);
             this.TxtUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.ShortcutsEnabled = false;
             this.TxtUsuario.Size = new System.Drawing.Size(444, 29);
             this.TxtUsuario.TabIndex = 9;
             // 
@@ -186,7 +184,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(808, 148);
+            this.label2.Location = new System.Drawing.Point(868, 148);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 23);
@@ -196,7 +194,7 @@
             // TxtTelefono
             // 
             this.TxtTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefono.Location = new System.Drawing.Point(966, 99);
+            this.TxtTelefono.Location = new System.Drawing.Point(1026, 99);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.TxtTelefono.Mask = "(999)-0000000";
             this.TxtTelefono.Name = "TxtTelefono";
@@ -208,7 +206,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(808, 46);
+            this.LblEmail.Location = new System.Drawing.Point(868, 46);
             this.LblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(68, 23);
@@ -218,9 +216,10 @@
             // TxtEmail
             // 
             this.TxtEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(966, 46);
+            this.TxtEmail.Location = new System.Drawing.Point(1026, 46);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.ShortcutsEnabled = false;
             this.TxtEmail.Size = new System.Drawing.Size(444, 29);
             this.TxtEmail.TabIndex = 6;
             this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
@@ -228,18 +227,20 @@
             // TxtDireccion
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDireccion.Location = new System.Drawing.Point(259, 191);
+            this.TxtDireccion.Location = new System.Drawing.Point(283, 191);
             this.TxtDireccion.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.ShortcutsEnabled = false;
             this.TxtDireccion.Size = new System.Drawing.Size(444, 29);
             this.TxtDireccion.TabIndex = 4;
             // 
             // TxtDNI
             // 
             this.TxtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDNI.Location = new System.Drawing.Point(259, 143);
+            this.TxtDNI.Location = new System.Drawing.Point(283, 143);
             this.TxtDNI.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDNI.Name = "TxtDNI";
+            this.TxtDNI.ShortcutsEnabled = false;
             this.TxtDNI.Size = new System.Drawing.Size(444, 29);
             this.TxtDNI.TabIndex = 3;
             this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
@@ -247,9 +248,10 @@
             // TxtApellido
             // 
             this.TxtApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellido.Location = new System.Drawing.Point(259, 96);
+            this.TxtApellido.Location = new System.Drawing.Point(283, 96);
             this.TxtApellido.Margin = new System.Windows.Forms.Padding(5);
             this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.ShortcutsEnabled = false;
             this.TxtApellido.Size = new System.Drawing.Size(444, 29);
             this.TxtApellido.TabIndex = 2;
             this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
@@ -258,9 +260,10 @@
             // 
             this.TxtNombre.CausesValidation = false;
             this.TxtNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(259, 44);
+            this.TxtNombre.Location = new System.Drawing.Point(283, 44);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.ShortcutsEnabled = false;
             this.TxtNombre.Size = new System.Drawing.Size(444, 29);
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
@@ -269,7 +272,7 @@
             // 
             this.LblTelefono.AutoSize = true;
             this.LblTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(808, 96);
+            this.LblTelefono.Location = new System.Drawing.Point(868, 96);
             this.LblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblTelefono.Name = "LblTelefono";
             this.LblTelefono.Size = new System.Drawing.Size(87, 23);
@@ -280,7 +283,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(68, 196);
+            this.LblDireccion.Location = new System.Drawing.Point(92, 196);
             this.LblDireccion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(93, 23);
@@ -291,7 +294,7 @@
             // 
             this.LblApellido.AutoSize = true;
             this.LblApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellido.Location = new System.Drawing.Point(68, 148);
+            this.LblApellido.Location = new System.Drawing.Point(92, 148);
             this.LblApellido.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblApellido.Name = "LblApellido";
             this.LblApellido.Size = new System.Drawing.Size(45, 23);
@@ -302,7 +305,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(68, 102);
+            this.LblNombre.Location = new System.Drawing.Point(92, 102);
             this.LblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(81, 23);
@@ -313,7 +316,7 @@
             // 
             this.LblDNI.AutoSize = true;
             this.LblDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDNI.Location = new System.Drawing.Point(68, 48);
+            this.LblDNI.Location = new System.Drawing.Point(92, 48);
             this.LblDNI.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LblDNI.Name = "LblDNI";
             this.LblDNI.Size = new System.Drawing.Size(82, 23);
@@ -325,7 +328,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(500, 23);
+            this.label1.Location = new System.Drawing.Point(656, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(502, 40);
@@ -338,7 +341,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.guardar_48x48_px;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(1173, 484);
+            this.BtnGuardar.Location = new System.Drawing.Point(1540, 476);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(216, 101);
@@ -354,12 +357,12 @@
             this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(1414, 485);
+            this.BtnCancelar.Location = new System.Drawing.Point(1577, 972);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(217, 101);
+            this.BtnCancelar.Size = new System.Drawing.Size(179, 101);
             this.BtnCancelar.TabIndex = 14;
-            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.Text = "SALIR";
             this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -370,7 +373,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.Image = global::VienaStore.Properties.Resources.borrar;
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(923, 484);
+            this.BtnLimpiar.Location = new System.Drawing.Point(1290, 476);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(216, 101);
@@ -386,6 +389,7 @@
             this.DtaUsuario.AllowUserToResizeColumns = false;
             this.DtaUsuario.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -404,8 +408,9 @@
             this.DtaUsuario.ColumnHeadersHeight = 50;
             this.DtaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtaUsuario.EnableHeadersVisualStyles = false;
-            this.DtaUsuario.Location = new System.Drawing.Point(114, 644);
+            this.DtaUsuario.Location = new System.Drawing.Point(25, 605);
             this.DtaUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.DtaUsuario.MultiSelect = false;
             this.DtaUsuario.Name = "DtaUsuario";
             this.DtaUsuario.ReadOnly = true;
             this.DtaUsuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -427,8 +432,12 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.DtaUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DtaUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaUsuario.Size = new System.Drawing.Size(1522, 298);
+            this.DtaUsuario.Size = new System.Drawing.Size(1731, 349);
             this.DtaUsuario.TabIndex = 28;
+            // 
+            // usuariosBindingSource2
+            // 
+            this.usuariosBindingSource2.DataSource = typeof(VienaStore.C_Datos.Usuarios);
             // 
             // usuariosBindingSource4
             // 
@@ -451,7 +460,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1647, 994);
+            this.ClientSize = new System.Drawing.Size(1774, 1087);
             this.Controls.Add(this.DtaUsuario);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnCancelar);
@@ -466,8 +475,8 @@
             this.Load += new System.EventHandler(this.CrearUsuarioNuevo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtaUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
@@ -501,7 +510,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox TxtUsuario;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox CboRol;
         public System.Windows.Forms.Label LblRol;
         public System.Windows.Forms.Label LblFechaNacimiento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -510,5 +518,6 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private System.Windows.Forms.BindingSource usuariosBindingSource3;
         private System.Windows.Forms.BindingSource usuariosBindingSource4;
+        public System.Windows.Forms.ComboBox CboRol;
     }
 }

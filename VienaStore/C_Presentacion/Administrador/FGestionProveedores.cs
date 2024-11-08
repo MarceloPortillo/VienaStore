@@ -55,12 +55,12 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void TxtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.SoloLetras(e);
+            Validaciones.SoloLetrasYPuntos(e);
         }
 
         private void TxtCuit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.SoloNumeros(e);
+            Validaciones.SoloNumerosYGuion(e);
         }
 
         private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -128,7 +128,7 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             Proveedores proveedor = new Proveedores();
 
-            proveedor.nombre = TxtEmpresa.Text.ToUpper();
+            proveedor.nombreProveedor = TxtEmpresa.Text.ToUpper();
             proveedor.cuit = TxtCuit.Text;
             proveedor.email = TxtCorreo.Text.ToLower();
             proveedor.direccion = TxtDireccion.Text.ToUpper();
@@ -208,7 +208,7 @@ namespace VienaStore.C_Presentacion.Administrador
             }
 
             Proveedores proveedor = new Proveedores();
-            proveedor.nombre = TxtEmpresa.Text.ToUpper();
+            proveedor.nombreProveedor = TxtEmpresa.Text.ToUpper();
             proveedor.cuit = TxtCuit.Text.ToUpper();
             proveedor.direccion = TxtDireccion.Text.ToUpper();
             proveedor.telefono = TxtTelefono.Text;
@@ -248,7 +248,7 @@ namespace VienaStore.C_Presentacion.Administrador
                 else
                 {
                     int id_proveedor = Convert.ToInt32(fila.Cells["idproveedor"].Value);
-                    TxtEmpresa.Text = Convert.ToString(fila.Cells["empresa"].Value);
+                    TxtEmpresa.Text = Convert.ToString(fila.Cells["nombreProveedor"].Value);
                     TxtCuit.Text = Convert.ToString(fila.Cells["cuit"].Value);
                     TxtDireccion.Text = Convert.ToString(fila.Cells["direccion"].Value);
                     TxtTelefono.Text = Convert.ToString(fila.Cells["telefono"].Value);

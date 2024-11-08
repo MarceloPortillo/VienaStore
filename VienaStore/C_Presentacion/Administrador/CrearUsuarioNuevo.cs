@@ -100,7 +100,8 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void GuardarNuevoUsuario()
         {
-            if (!CampoVacios.CamposUsuario(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña) || Validaciones.ValidarLength(TxtNombre.Text, 3))
+
+                if (!CampoVacios.CamposUsuario(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña) || Validaciones.ValidarLength(TxtNombre.Text, 3))
             {
 
                 return;
@@ -123,7 +124,6 @@ namespace VienaStore.C_Presentacion.Administrador
             usuario.contrasenia = TxtContraseña.Text;
             usuario.fechaNacimiento = dateTimePicker1.Value;
             usuario.id_rol = Convert.ToInt32(CboRol.SelectedValue);
-
             try
             {
                 DialogResult ask = MessageBox.Show("¿Seguro que desea insertar un nuevo Usuario?", "Confirmar inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -135,9 +135,9 @@ namespace VienaStore.C_Presentacion.Administrador
                      Limpiar.LimpiarUsuarios(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, dateTimePicker1, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña, CboRol);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-               // MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ListarRoles();
         }
@@ -204,7 +204,7 @@ namespace VienaStore.C_Presentacion.Administrador
             if (CboRol.SelectedIndex == -1)
             {
                 List<Rol> listaRoles = (List<Rol>)CboRol.DataSource;
-                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rol" });
+                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rolllllll" });
 
                 CboRol.DataSource = null;
                 CboRol.DataSource = listaRoles;

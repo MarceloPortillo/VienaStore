@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using VienaStore.C_Datos;
@@ -42,5 +44,11 @@ namespace VienaStore.C_Negocio
             return _dataAccesProveedores.BuscarProveedor(buscarText);
             
         }
+
+        public DataTable CargarComboProveedor()
+        {
+            return _dataAccesProveedores.CargarComboProveedor();
+        }
+        
     }
 }

@@ -28,11 +28,11 @@ namespace VienaStore.C_Datos
 
         public string contrasenia { get; set; }
 
-        public string estado { get; set; }
-
         public int id_rol { get; set; }
 
         public string descripcion { get; set; }
-        
+
+        public string estado { get; set; }
+
     }
 }
