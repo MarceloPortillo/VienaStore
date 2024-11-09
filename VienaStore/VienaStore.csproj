@@ -71,6 +71,7 @@
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Dialogos.cs" />
     <Compile Include="C_Negocio\Encrypt.cs" />
+    <Compile Include="C_Negocio\EstadoFormularios.cs" />
     <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
