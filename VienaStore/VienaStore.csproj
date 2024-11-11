@@ -49,31 +49,46 @@
   <ItemGroup>
     <Compile Include="C_Datos\Categorias.cs" />
     <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAccesBackUp.cs" />
     <Compile Include="C_Datos\DataAccesClientes.cs" />
     <Compile Include="C_Datos\DataAccess.cs" />
+    <Compile Include="C_Datos\DataAccessFactura.cs" />
+    <Compile Include="C_Datos\DataAccessFormaPago.cs" />
     <Compile Include="C_Datos\DataAccessProductos.cs" />
     <Compile Include="C_Datos\DataAccessRol.cs" />
     <Compile Include="C_Datos\DataAccessCategoria.cs" />
     <Compile Include="C_Datos\DataAccessUsuarios.cs" />
+    <Compile Include="C_Datos\DataAccessVentaDetalle.cs" />
+    <Compile Include="C_Datos\DataAccessVentas.cs" />
+    <Compile Include="C_Datos\Factura.cs" />
+    <Compile Include="C_Datos\FormaPago.cs" />
     <Compile Include="C_Datos\Productos.cs" />
     <Compile Include="C_Datos\Productos_Proveedores_Categorias.cs" />
     <Compile Include="C_Datos\Rol.cs" />
     <Compile Include="C_Datos\Usuarios.cs" />
     <Compile Include="C_Datos\Usuario_Rol.cs" />
+    <Compile Include="C_Datos\VentaDetalle.cs" />
+    <Compile Include="C_Datos\Ventas.cs" />
+    <Compile Include="C_Negocio\BusinessBackUp.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
+    <Compile Include="C_Negocio\BusinessFactura.cs" />
+    <Compile Include="C_Negocio\BusinessFormaPago.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
     <Compile Include="C_Negocio\BusinessUsuarios.cs" />
     <Compile Include="C_Datos\DataAccesProveedores.cs" />
     <Compile Include="C_Datos\Proveedores.cs" />
     <Compile Include="C_Negocio\BusinessProveedores.cs" />
+    <Compile Include="C_Negocio\BusinessVentas.cs" />
     <Compile Include="C_Negocio\CampoVacios.cs" />
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Dialogos.cs" />
     <Compile Include="C_Negocio\Encrypt.cs" />
+    <Compile Include="C_Negocio\EstadoFormularios.cs" />
     <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
+    <Compile Include="C_Negocio\UsuarioLogeado.cs" />
     <Compile Include="C_Negocio\UsuarioService.cs" />
     <Compile Include="C_Negocio\BusinessProductos.cs" />
     <Compile Include="C_Negocio\Validaciones.cs" />
@@ -397,6 +412,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup96_96.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -94,5 +94,18 @@ namespace VienaStore.C_Negocio
             }
             return true;
         }
+
+        public static bool CampoVacioAgregarStock(TextBox stock)
+        {
+           if (string.IsNullOrWhiteSpace(stock.Text))
+            {
+                MessageBox.Show("Debe agregar el stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 }
 }

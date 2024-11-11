@@ -19,7 +19,7 @@ namespace VienaStore.C_Datos
 			{
 				DataAccess.DatabaseConnection.GetConnection();
 				string query = @"
-				INSERT INTO Categorias(nombreCategoria, descripcion) VALUES (@nombre, @descripcion)";
+				INSERT INTO Categorias(nombreCategoria, descripcion) VALUES (@nombreCategoria, @descripcion)";
                 Console.WriteLine("Hola");
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 				
@@ -30,9 +30,10 @@ namespace VienaStore.C_Datos
             }
 			catch (Exception ex) 
 			{
+                
                 throw new Exception("El nombre de la categoría ya existe, \n Por Favor Ingrese otro Nombre", ex);
                 //MessageBox.Show("EL Nombre de la Categoria ya existe", "Error al Insertar", MessageBoxButtons.OK, MessageBoxIcon.Error);                 
-			}
+            }
 				finally
 			{
 				DataAccess.DatabaseConnection.GetConnection().Close();

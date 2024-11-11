@@ -50,5 +50,10 @@ namespace VienaStore.C_Negocio
             _dataAccessProducto.DeleteProducto(idProducto);
         }
 
+        public void AgregarSotck(Productos producto)
+        {
+            _dataAccessProducto.AgregarStockProducto(producto);
+        }
+
     }
 }

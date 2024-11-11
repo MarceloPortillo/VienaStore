@@ -343,5 +343,44 @@ namespace VienaStore.C_Presentacion.Vendedor
                 TxtEmail.Focus();
             }
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Verifica que se ha hecho clic en una fila válida
+            {
+                // Manejo de valores nulos al obtener los datos del cliente seleccionado
+                string idCliente = dataGridView1.Rows[e.RowIndex].Cells[0]?.Value?.ToString() ?? string.Empty;
+                string nombre = dataGridView1.Rows[e.RowIndex].Cells[2]?.Value?.ToString() ?? string.Empty;
+                string apellido = dataGridView1.Rows[e.RowIndex].Cells[3]?.Value?.ToString() ?? string.Empty;
+                string dni = dataGridView1.Rows[e.RowIndex].Cells[1]?.Value?.ToString() ?? string.Empty;
+                string direccion = dataGridView1.Rows[e.RowIndex].Cells[4]?.Value?.ToString() ?? string.Empty;
+
+                // Combina el nombre y apellido
+                string nombreCompleto = $"{nombre} {apellido}";
+
+                // Guarda los datos en las propiedades
+                this.NombreClienteSeleccionado = nombreCompleto;
+                this.DniClienteSeleccionado = dni;
+                this.DireccionClienteSeleccionado = direccion;
+                this.IdClienteSeleccionado = idCliente;
+
+                // Cierra el formulario de búsqueda
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+
+
+
+
+        // Propiedades para almacenar los datos del cliente seleccionado
+        public string NombreClienteSeleccionado { get; private set; }
+        public string DniClienteSeleccionado { get; private set; }
+        public string DireccionClienteSeleccionado { get; private set; }
+        public string IdClienteSeleccionado { get; private set; } // Renombrar la propiedad a IdClienteSeleccionado
+
+
     }
+
 }
