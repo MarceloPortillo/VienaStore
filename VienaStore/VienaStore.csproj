@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="C_Datos\Categorias.cs" />
     <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAccesBackUp.cs" />
     <Compile Include="C_Datos\DataAccesClientes.cs" />
     <Compile Include="C_Datos\DataAccess.cs" />
     <Compile Include="C_Datos\DataAccessFactura.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="C_Datos\Usuario_Rol.cs" />
     <Compile Include="C_Datos\VentaDetalle.cs" />
     <Compile Include="C_Datos\Ventas.cs" />
+    <Compile Include="C_Negocio\BusinessBackUp.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessFactura.cs" />
@@ -410,6 +412,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup96_96.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
