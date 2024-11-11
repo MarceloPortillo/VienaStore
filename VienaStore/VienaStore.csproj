@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="C_Datos\Categorias.cs" />
     <Compile Include="C_Datos\Clientes.cs" />
+    <Compile Include="C_Datos\DataAccesBackUp.cs" />
     <Compile Include="C_Datos\DataAccesClientes.cs" />
     <Compile Include="C_Datos\DataAccess.cs" />
     <Compile Include="C_Datos\DataAccessProductos.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="C_Datos\Rol.cs" />
     <Compile Include="C_Datos\Usuarios.cs" />
     <Compile Include="C_Datos\Usuario_Rol.cs" />
+    <Compile Include="C_Negocio\BusinessBackUp.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="C_Negocio\CerrarInstancias.cs" />
     <Compile Include="C_Negocio\Dialogos.cs" />
     <Compile Include="C_Negocio\Encrypt.cs" />
+    <Compile Include="C_Negocio\EstadoFormularios.cs" />
     <Compile Include="C_Negocio\Hora.cs" />
     <Compile Include="C_Negocio\Limpiar.cs" />
     <Compile Include="C_Negocio\Login.cs" />
@@ -397,6 +400,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup96_96.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

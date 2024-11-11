@@ -12,6 +12,7 @@ using VienaStore.C_Presentacion;
 using VienaStore.C_Negocio;
 using VienaStore.C_Datos;
 using System.Collections;
+using System.Reflection.Emit;
 
 namespace VienaStore.C_Presentacion.Administrador
 {
@@ -320,6 +321,80 @@ namespace VienaStore.C_Presentacion.Administrador
                 string estado = Convert.ToString(DtaProdcuto.Rows[e.RowIndex].Cells["estado"].Value);
                 e.Value = estado == "ELIMINADO" ? "Activar" : "Eliminar";
             }
+        }
+
+        private void BtnAgregarStock_Click(object sender, EventArgs e)
+        {
+
+            if (DtaProdcuto.SelectedRows.Count > 0)
+            {
+                DataGridViewRow fila = DtaProdcuto.SelectedRows[0];
+                string estado = Convert.ToString(fila.Cells["estado"].Value);
+                if (estado == "ELIMINADO")
+                {
+                    MessageBox.Show("El producto no existe", "Verificar!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }              
+                    
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un producto para agregar stock", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            EstadoFormularios.formularioEditarInactivo(TxtStockMIn, TBDescripcion, TBNombre, TBPrecioCompra, TBPrecioVenta, TBStock, ComboProveedor, ComboCategoria, LblCategoria, LblDescripcion, LblNombre, LblPrecioCompra, LblPrecioVenta, LblStokMin, LblProveedor, label2, BtnCancelar, button1, BtnEditar);
+            
+            EstadoFormularios.formularioAgregarStockActivo(TxtAgregarStock,LblAgregarStock, BtnGuardarStock,BtnCancelarAgregarStock,  LblEditar, LblEditarProducto);
+            
+        }
+
+        private void BtnCancelarAgregarStock_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }  
+        private void BtnGuardarStock_Click(object sender, EventArgs e)
+        {
+            if (CampoVacios.CampoVacioAgregarStock(TxtAgregarStock))
+            {
+                DialogResult preg = MessageBox.Show("¿Esta seguro que quiere agregar el stock del Producto?", "Confimar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (preg == DialogResult.Yes)
+                {
+                    int stock = Convert.ToInt32(TxtAgregarStock.Text);
+                    if (stock <= 0)
+                    {
+                        MessageBox.Show("Debe ingresar un número mayor a 0", "Error al agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.TxtAgregarStock.Clear();
+                        return;
+                    }
+                    EstadoFormularios.formularioAgregarStockActivo(TxtAgregarStock, LblAgregarStock, BtnGuardarStock, BtnCancelarAgregarStock, LblEditar, LblEditarProducto);
+                    ConfirmarAgregarStock();
+                    ListarProductos();
+                    MessageBox.Show("Stock Agregado correctamente", "Felicitaciones", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    EstadoFormularios.formularioAgregarStockInactivo(TxtAgregarStock, LblAgregarStock, BtnGuardarStock, BtnCancelarAgregarStock, LblEditar, LblEditarProducto);
+                    EstadoFormularios.formularioEditarActivo(TxtStockMIn, TBDescripcion, TBNombre, TBPrecioCompra, TBPrecioVenta, TBStock, ComboProveedor, ComboCategoria, LblCategoria, LblDescripcion, LblNombre, LblPrecioCompra, LblPrecioVenta, LblStokMin, LblProveedor, label2, BtnCancelar, button1, BtnEditar);
+                }
+                else
+                {
+                    return;
+                }
+            }
+               
+          
+        }
+
+        private void ConfirmarAgregarStock()
+        {
+            Productos stock = new Productos();
+            stock.codProducto = Convert.ToInt32(DtaProdcuto.CurrentRow.Cells["codProducto"].Value);
+            stock.stock = Convert.ToInt32(TxtAgregarStock.Text);
+            _businessProductos.AgregarSotck(stock);
+            this.TxtAgregarStock.Clear();
+        }
+
+        private void TxtAgregarStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }

@@ -206,7 +206,48 @@ namespace VienaStore.C_Datos
             }
         }
 
-        
+        public void AgregarStockProducto(Productos producto)
+        {
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
+                string query = @"
+                                UPDATE Productos SET
+                                                        stock = stock + @cantidad
+                                                        WHERE codProducto = @codProducto";
+
+                SqlParameter codProducto = new SqlParameter("@codProducto", producto.codProducto);
+                SqlParameter stock = new SqlParameter("@cantidad", producto.stock);              
+                                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
+                command.Parameters.Add(codProducto);                
+                command.Parameters.Add(stock);              
+
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Message.Contains("CK_Productos_precioCosto"))
+                {
+                    throw new Exception("El precio de costo no puede tener un valor de $0", ex);
+                }
+                else if (ex.Message.Contains("CK_Productos_precioVenta_Mayor_precioCosto"))
+                {
+                    throw new Exception("El precio de venta debe ser Mayor al precio de costo", ex);
+                }
+                else if (ex.Message.Contains("CK_Productos_StockMin_Menor_Stock"))
+                {
+                    throw new Exception("El stock Minimo debe ser menor al stock", ex);
+                }
+                else
+                {
+                    throw new Exception("Error vuelva a intentarlo", ex);
+                }
+            }
+            finally { DataAccess.DatabaseConnection.GetConnection().Close(); }
+        }
+
+
+
         }
     }
     

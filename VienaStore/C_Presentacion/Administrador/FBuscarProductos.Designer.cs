@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblProducto = new System.Windows.Forms.Label();
             this.DtaProdcuto = new System.Windows.Forms.DataGridView();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCancelarAgregarStock = new System.Windows.Forms.Button();
+            this.BtnGuardarStock = new System.Windows.Forms.Button();
+            this.TxtAgregarStock = new System.Windows.Forms.TextBox();
+            this.LblAgregarStock = new System.Windows.Forms.Label();
             this.ComboCategoria = new System.Windows.Forms.ComboBox();
             this.ComboProveedor = new System.Windows.Forms.ComboBox();
             this.LblProveedor = new System.Windows.Forms.Label();
@@ -58,6 +62,7 @@
             this.LblEditarProducto = new System.Windows.Forms.Label();
             this.LblEditar = new System.Windows.Forms.Label();
             this.PBEditarProducto = new System.Windows.Forms.PictureBox();
+            this.BtnAgregarStock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtaProdcuto)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBEditarProducto)).BeginInit();
@@ -80,19 +85,19 @@
             this.DtaProdcuto.AllowUserToAddRows = false;
             this.DtaProdcuto.AllowUserToResizeColumns = false;
             this.DtaProdcuto.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DtaProdcuto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DtaProdcuto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtaProdcuto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtaProdcuto.BackgroundColor = System.Drawing.Color.MistyRose;
             this.DtaProdcuto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtaProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaProdcuto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DtaProdcuto.ColumnHeadersHeight = 30;
             this.DtaProdcuto.EnableHeadersVisualStyles = false;
             this.DtaProdcuto.GridColor = System.Drawing.Color.MistyRose;
@@ -104,10 +109,10 @@
             this.DtaProdcuto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DtaProdcuto.RowHeadersVisible = false;
             this.DtaProdcuto.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSalmon;
-            this.DtaProdcuto.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            this.DtaProdcuto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DtaProdcuto.RowTemplate.Height = 24;
             this.DtaProdcuto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtaProdcuto.Size = new System.Drawing.Size(1086, 273);
@@ -132,6 +137,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnCancelarAgregarStock);
+            this.panel1.Controls.Add(this.BtnGuardarStock);
+            this.panel1.Controls.Add(this.TxtAgregarStock);
+            this.panel1.Controls.Add(this.LblAgregarStock);
             this.panel1.Controls.Add(this.ComboCategoria);
             this.panel1.Controls.Add(this.ComboProveedor);
             this.panel1.Controls.Add(this.LblProveedor);
@@ -155,6 +164,67 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 224);
             this.panel1.TabIndex = 6;
+            // 
+            // BtnCancelarAgregarStock
+            // 
+            this.BtnCancelarAgregarStock.BackColor = System.Drawing.Color.Coral;
+            this.BtnCancelarAgregarStock.Enabled = false;
+            this.BtnCancelarAgregarStock.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelarAgregarStock.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
+            this.BtnCancelarAgregarStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelarAgregarStock.Location = new System.Drawing.Point(538, 108);
+            this.BtnCancelarAgregarStock.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCancelarAgregarStock.Name = "BtnCancelarAgregarStock";
+            this.BtnCancelarAgregarStock.Size = new System.Drawing.Size(159, 55);
+            this.BtnCancelarAgregarStock.TabIndex = 24;
+            this.BtnCancelarAgregarStock.Text = "CANCELAR";
+            this.BtnCancelarAgregarStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelarAgregarStock.UseVisualStyleBackColor = false;
+            this.BtnCancelarAgregarStock.Visible = false;
+            this.BtnCancelarAgregarStock.Click += new System.EventHandler(this.BtnCancelarAgregarStock_Click);
+            // 
+            // BtnGuardarStock
+            // 
+            this.BtnGuardarStock.BackColor = System.Drawing.Color.Coral;
+            this.BtnGuardarStock.Enabled = false;
+            this.BtnGuardarStock.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardarStock.Image = global::VienaStore.Properties.Resources.Confirmar_48x48px;
+            this.BtnGuardarStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardarStock.Location = new System.Drawing.Point(366, 107);
+            this.BtnGuardarStock.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnGuardarStock.Name = "BtnGuardarStock";
+            this.BtnGuardarStock.Size = new System.Drawing.Size(159, 55);
+            this.BtnGuardarStock.TabIndex = 23;
+            this.BtnGuardarStock.Text = "GUARDAR";
+            this.BtnGuardarStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardarStock.UseVisualStyleBackColor = false;
+            this.BtnGuardarStock.Visible = false;
+            this.BtnGuardarStock.Click += new System.EventHandler(this.BtnGuardarStock_Click);
+            // 
+            // TxtAgregarStock
+            // 
+            this.TxtAgregarStock.Enabled = false;
+            this.TxtAgregarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAgregarStock.Location = new System.Drawing.Point(560, 75);
+            this.TxtAgregarStock.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtAgregarStock.Name = "TxtAgregarStock";
+            this.TxtAgregarStock.Size = new System.Drawing.Size(55, 29);
+            this.TxtAgregarStock.TabIndex = 22;
+            this.TxtAgregarStock.Visible = false;
+            this.TxtAgregarStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAgregarStock_KeyPress);
+            // 
+            // LblAgregarStock
+            // 
+            this.LblAgregarStock.AutoSize = true;
+            this.LblAgregarStock.Enabled = false;
+            this.LblAgregarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAgregarStock.Location = new System.Drawing.Point(425, 78);
+            this.LblAgregarStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblAgregarStock.Name = "LblAgregarStock";
+            this.LblAgregarStock.Size = new System.Drawing.Size(131, 24);
+            this.LblAgregarStock.TabIndex = 21;
+            this.LblAgregarStock.Text = "Agregar stock:";
+            this.LblAgregarStock.Visible = false;
             // 
             // ComboCategoria
             // 
@@ -402,12 +472,28 @@
             this.PBEditarProducto.TabIndex = 5;
             this.PBEditarProducto.TabStop = false;
             // 
+            // BtnAgregarStock
+            // 
+            this.BtnAgregarStock.BackColor = System.Drawing.Color.Coral;
+            this.BtnAgregarStock.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarStock.Image = global::VienaStore.Properties.Resources.Editar_Cliente_48x48px;
+            this.BtnAgregarStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarStock.Location = new System.Drawing.Point(847, 410);
+            this.BtnAgregarStock.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgregarStock.Name = "BtnAgregarStock";
+            this.BtnAgregarStock.Size = new System.Drawing.Size(146, 55);
+            this.BtnAgregarStock.TabIndex = 41;
+            this.BtnAgregarStock.Text = "     AGREGAR  \r\n     STOCK";
+            this.BtnAgregarStock.UseVisualStyleBackColor = false;
+            this.BtnAgregarStock.Click += new System.EventHandler(this.BtnAgregarStock_Click);
+            // 
             // FBuscarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1224, 788);
+            this.Controls.Add(this.BtnAgregarStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.LblEditarProducto);
@@ -462,5 +548,10 @@
         private System.Windows.Forms.Label LblProveedor;
         private System.Windows.Forms.ComboBox ComboProveedor;
         private System.Windows.Forms.ComboBox ComboCategoria;
+        private System.Windows.Forms.TextBox TxtAgregarStock;
+        private System.Windows.Forms.Label LblAgregarStock;
+        public System.Windows.Forms.Button BtnAgregarStock;
+        private System.Windows.Forms.Button BtnGuardarStock;
+        public System.Windows.Forms.Button BtnCancelarAgregarStock;
     }
 }
