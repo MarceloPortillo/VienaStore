@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static VienaStore.C_Datos.DataAccess;
 
 namespace VienaStore.C_Datos
 {
@@ -246,9 +247,67 @@ namespace VienaStore.C_Datos
             finally { DataAccess.DatabaseConnection.GetConnection().Close(); }
         }
 
+        public int ObtenerStock(int idProducto)
+        {
+            int stock = 0;
 
+            try
+            {
+                SqlConnection connection = DatabaseConnection.GetConnection();
+                string query = @"SELECT stock FROM Productos WHERE codProducto = @idProducto";
 
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@idProducto", idProducto);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    stock = Convert.ToInt32(reader["stock"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el stock del producto", ex);
+            }
+            finally
+            {
+                DatabaseConnection.GetConnection().Close();
+            }
+
+            return stock;
+        }
+
+        public void ActualizarStock(int idProducto, int cantidadVendida)
+        {
+            try
+            {
+                int stockActual = ObtenerStock(idProducto);
+                if (stockActual < cantidadVendida)
+                {
+                    throw new Exception("No hay suficiente stock para realizar esta venta.");
+                }
+
+                SqlConnection connection = DatabaseConnection.GetConnection();
+                string query = @"UPDATE Productos SET stock = stock - @cantidadVendida WHERE codProducto = @idProducto";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@cantidadVendida", cantidadVendida);
+                command.Parameters.AddWithValue("@idProducto", idProducto);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar el stock del producto", ex);
+            }
+            finally
+            {
+                DatabaseConnection.GetConnection().Close();
+            }
         }
     }
+}
+   
     
 

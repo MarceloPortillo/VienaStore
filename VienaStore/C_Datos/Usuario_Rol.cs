@@ -34,5 +34,10 @@ namespace VienaStore.C_Datos
 
         public string estado { get; set; }
 
+        public string NombreCompleto
+        {
+            get { return $"{nombre} {apellido}"; }
+        }
+
     }
 }
