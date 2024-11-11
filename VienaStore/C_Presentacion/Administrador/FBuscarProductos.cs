@@ -130,11 +130,8 @@ namespace VienaStore.C_Presentacion.Administrador
 
 
                     DtaProdcuto.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-                    
+                                     
                 }
-                
-
             }
             catch (Exception)
             {
@@ -325,7 +322,6 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void BtnAgregarStock_Click(object sender, EventArgs e)
         {
-
             if (DtaProdcuto.SelectedRows.Count > 0)
             {
                 DataGridViewRow fila = DtaProdcuto.SelectedRows[0];
@@ -350,8 +346,10 @@ namespace VienaStore.C_Presentacion.Administrador
         }
 
         private void BtnCancelarAgregarStock_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        {           
+            EstadoFormularios.formularioAgregarStockInactivo(TxtAgregarStock, LblAgregarStock, BtnGuardarStock, BtnCancelarAgregarStock, LblEditar, LblEditarProducto);
+            EstadoFormularios.formularioEditarActivo(TxtStockMIn, TBDescripcion, TBNombre, TBPrecioCompra, TBPrecioVenta, TBStock, ComboProveedor, ComboCategoria, LblCategoria, LblDescripcion, LblNombre, LblPrecioCompra, LblPrecioVenta, LblStokMin, LblProveedor, label2, BtnCancelar, button1, BtnEditar);
+            ListarProductos();
         }  
         private void BtnGuardarStock_Click(object sender, EventArgs e)
         {
@@ -378,11 +376,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 {
                     return;
                 }
-            }
-               
-          
+            }         
         }
-
         private void ConfirmarAgregarStock()
         {
             Productos stock = new Productos();

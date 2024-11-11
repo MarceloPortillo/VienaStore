@@ -19,11 +19,11 @@ namespace VienaStore.C_Datos
             try
             {
                 DataAccess.DatabaseConnection.GetConnection();
-               string query = "INSERT INTO Usuarios (nombre, apellido, dni, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, id_rol) VALUES " +
-                                                   "(@nombre,@apellido,@dni,@direccion,@email,@telefono,@usuario,@fechaNacimiento,@contrasenia,@id_rol)";
+                string query = "INSERT INTO Usuarios (nombre, apellido, dni, direccion, email, telefono, usuario, fechaNacimiento, contrasenia, id_rol) VALUES " +
+                                                    "(@nombre,@apellido,@dni,@direccion,@email,@telefono,@usuario,@fechaNacimiento,@contrasenia,@id_rol)";
 
                 SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
-           
+
                 cmd.Parameters.AddWithValue("@nombre", usuario.nombre);
                 cmd.Parameters.AddWithValue("@apellido", usuario.apellido);
                 cmd.Parameters.AddWithValue("@dni", usuario.dni);
@@ -39,7 +39,7 @@ namespace VienaStore.C_Datos
             }
             catch (Exception ex)
             {
-                throw new Exception (ex.Message);
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -98,7 +98,7 @@ namespace VienaStore.C_Datos
                                     fechaNacimiento = DateTime.Parse(reader["fechaNacimiento"].ToString()),
                                     estado = reader["estado"].ToString(),
                                     contrasenia = reader["contrasenia"].ToString(),
-                                    id_rol = int.Parse(reader["id"].ToString()),    
+                                    id_rol = int.Parse(reader["id"].ToString()),
                                     descripcion = reader["descripcion"].ToString()
                                 });
                             }
@@ -129,7 +129,7 @@ namespace VienaStore.C_Datos
                                                             WHERE id_usuario = @id_usuario";
                 SqlParameter id_usuario = new SqlParameter("@id_usuario", id_Usuario);
 
-                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection()); 
+                SqlCommand command = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
                 command.Parameters.Add(id_usuario);
                 command.ExecuteNonQuery();
             }
@@ -139,7 +139,7 @@ namespace VienaStore.C_Datos
             }
             finally
             {
-                DataAccess.DatabaseConnection.GetConnection().Close();  
+                DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
 
@@ -167,7 +167,7 @@ namespace VienaStore.C_Datos
                 SqlParameter direccion = new SqlParameter("@direccion", usuario.direccion);
                 SqlParameter email = new SqlParameter("@email", usuario.email);
                 SqlParameter telefono = new SqlParameter("@telefono", usuario.telefono);
-                SqlParameter usuarioParam = new SqlParameter("@usuarioParam", usuario.usuario);  
+                SqlParameter usuarioParam = new SqlParameter("@usuarioParam", usuario.usuario);
                 SqlParameter fechaNacimiento = new SqlParameter("@fechaNacimiento", usuario.fechaNacimiento);
                 SqlParameter contrasenia = new SqlParameter("@contrasenia", usuario.contrasenia);
                 SqlParameter id_rol = new SqlParameter("@id_rol", usuario.id_rol);
@@ -198,7 +198,7 @@ namespace VienaStore.C_Datos
                 DataAccess.DatabaseConnection.GetConnection().Close();
             }
         }
-        // Capa de Datos: UsuarioData.cs
+
         public Usuario_Rol ObtenerUsuarioPorCredenciales(string usuario, string contraseniaEncriptada)
         {
             Usuario_Rol usuarioRol = null;
@@ -212,7 +212,6 @@ namespace VienaStore.C_Datos
                         connection.Open();
                     }
 
-                    // Imprime los valores para ver si llegan correctamente
                     Console.WriteLine($"Usuario: {usuario}, Contraseña encriptada: {contraseniaEncriptada}");
 
                     string query = @"
@@ -262,8 +261,36 @@ namespace VienaStore.C_Datos
             return usuarioRol;
         }
 
+        public string GetNombreCompleto(string usuario)
+        {
+            string nombreCompleto = "";
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
 
+                string query = "SELECT nombreEmp, apellidoEmp FROM Usuarios WHERE usuario = @usuario";
+                SqlCommand cmd = new SqlCommand(query, DataAccess.DatabaseConnection.GetConnection());
 
+                cmd.Parameters.AddWithValue("@usuario", usuario);
 
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    string nombre = dr["nombreEmp"].ToString();
+                    string apellido = dr["apellidoEmp"].ToString();
+                    nombreCompleto = $"{nombre} {apellido}";
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                DataAccess.DatabaseConnection.GetConnection().Close();
+            }
+
+            return nombreCompleto;
+        }
     }
 }

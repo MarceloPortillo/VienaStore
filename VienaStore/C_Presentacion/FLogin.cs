@@ -49,14 +49,14 @@ namespace VienaStore.C_Presentacion
         private void IngresarAlSistema()
         {
             try
-            {                
+            {
                 UsuarioService usuarioService = new UsuarioService();
-              
+
                 string usuario = TBUsuario.Text.Trim();
                 string contrasenia = TBContrasenia.Text.Trim();
-               
+
                 Usuario_Rol usuarioValidado = usuarioService.Login(usuario, contrasenia);
-                
+
                 if (usuarioValidado != null)
                 {
                     if (usuarioValidado.estado.ToLower() == "inactivo")
@@ -65,9 +65,11 @@ namespace VienaStore.C_Presentacion
                         return;
                     }
 
+                    // Asignación del usuario logeado
+                    UsuarioLogeado.Usuario = usuarioValidado;
+
                     this.Hide();
 
-                 
                     switch (usuarioValidado.id_rol)
                     {
                         case 1:
@@ -82,8 +84,7 @@ namespace VienaStore.C_Presentacion
                             menuAdmin.Show();
                             break;
 
-
-                        case 3: 
+                        case 3:
                             var menuVendedor = new menu_encargado();
                             menuVendedor.FormClosed += (s, args) => this.Close();
                             menuVendedor.Show();
@@ -105,6 +106,7 @@ namespace VienaStore.C_Presentacion
                 MessageBox.Show("Error al iniciar sesión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void TBUsuario_KeyDown(object sender, KeyEventArgs e)
         {

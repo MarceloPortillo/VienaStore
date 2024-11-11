@@ -97,5 +97,29 @@ namespace VienaStore.C_Presentacion.Vendedor
                 throw;
             }
         }
+        public string NombreProductoSeleccionado { get; private set; }
+        public string DescripcionProductoSeleccionado { get; private set; }
+        public string CodigoProductoSeleccionado { get; private set; }
+        public decimal PrecioVentaProductoSeleccionado { get; private set; }
+        public int StockProductoSeleccionado { get; private set; }
+
+
+
+        private void DtaProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                NombreProductoSeleccionado = DtaProductos.Rows[e.RowIndex].Cells["nombreProducto"].Value.ToString();
+                DescripcionProductoSeleccionado = DtaProductos.Rows[e.RowIndex].Cells["descripcionProducto"].Value.ToString();
+                CodigoProductoSeleccionado = DtaProductos.Rows[e.RowIndex].Cells["codProducto"].Value.ToString();
+                PrecioVentaProductoSeleccionado = Convert.ToDecimal(DtaProductos.Rows[e.RowIndex].Cells["precioVenta"].Value);
+                StockProductoSeleccionado = Convert.ToInt32(DtaProductos.Rows[e.RowIndex].Cells["stock"].Value);
+
+
+                // Establece el resultado como OK y cierra el formulario
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
     }
 }

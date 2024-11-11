@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using VienaStore.C_Datos;
 
 namespace VienaStore.C_Negocio
@@ -14,7 +17,7 @@ namespace VienaStore.C_Negocio
 
         public BusinessUsuarios()
         {
-            _dataAccessUsuarios = new DataAccessUsuarios();  
+            _dataAccessUsuarios = new DataAccessUsuarios();
         }
         public void GuardarUsuario(Usuarios usuario)
         {
@@ -23,19 +26,16 @@ namespace VienaStore.C_Negocio
                 if (usuario.id_usuario == 0)
                 {
                     _dataAccessUsuarios.InsertUsuario(usuario);
-                    
+
                 }
                 else
                 {
                     _dataAccessUsuarios.UpdateUsuario(usuario);
                 }
-                
             }
             catch (Exception ex)
             {
-
-                // Lanzar la excepción con más contexto si es necesario
-                throw new Exception(ex.Message);
+               throw new Exception(ex.Message);
             }
         }
 
@@ -52,12 +52,14 @@ namespace VienaStore.C_Negocio
 
         public Usuario_Rol ValidarLogin(string usuario, string contrasenia)
         {
-            // Encriptar la contraseña antes de enviarla a la capa de datos
             string contraseniaEncriptada = Encrypt.GetSHA256(contrasenia.Trim());
-            // Llamar a la capa de datos para obtener el usuario validado
+
             return _dataAccessUsuarios.ObtenerUsuarioPorCredenciales(usuario, contraseniaEncriptada);
         }
 
-
+        public string ObtenerNombreCompleto(string usuario)
+        {
+            return _dataAccessUsuarios.GetNombreCompleto(usuario);
+        }
     }
 }

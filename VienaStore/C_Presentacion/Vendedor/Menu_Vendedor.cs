@@ -149,6 +149,10 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             LblHora.Text = DateTime.Now.ToLongTimeString();
         }
-        
+
+        private void Menu_Vendedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
