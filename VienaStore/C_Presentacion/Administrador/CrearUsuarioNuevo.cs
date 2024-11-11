@@ -100,7 +100,6 @@ namespace VienaStore.C_Presentacion.Administrador
 
         private void GuardarNuevoUsuario()
         {
-
                 if (!CampoVacios.CamposUsuario(TxtNombre, TxtApellido, TxtDNI, TxtDireccion, TxtEmail, TxtTelefono, TxtUsuario, TxtContraseña) || Validaciones.ValidarLength(TxtNombre.Text, 3))
             {
 
@@ -151,10 +150,8 @@ namespace VienaStore.C_Presentacion.Administrador
             CboRol.DataSource = listaRoles;
             CboRol.DisplayMember = "descripcion";
             CboRol.ValueMember = "id_rol";
-
             CboRol.SelectedIndex = 0;
         }
-
 
         private void CrearUsuarioNuevo_Load(object sender, EventArgs e)
         {
@@ -204,7 +201,7 @@ namespace VienaStore.C_Presentacion.Administrador
             if (CboRol.SelectedIndex == -1)
             {
                 List<Rol> listaRoles = (List<Rol>)CboRol.DataSource;
-                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rolllllll" });
+                listaRoles.Insert(0, new Rol { Id_Rol = 0, Descripcion = "Seleccione un Rol" });
 
                 CboRol.DataSource = null;
                 CboRol.DataSource = listaRoles;
