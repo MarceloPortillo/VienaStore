@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -59,6 +65,7 @@
     <Compile Include="C_Datos\DataAccessCategoria.cs" />
     <Compile Include="C_Datos\DataAccessUsuarios.cs" />
     <Compile Include="C_Datos\DataAccessVentaDetalle.cs" />
+    <Compile Include="C_Datos\DataAccessVentaDTO.cs" />
     <Compile Include="C_Datos\DataAccessVentas.cs" />
     <Compile Include="C_Datos\Factura.cs" />
     <Compile Include="C_Datos\FormaPago.cs" />
@@ -213,6 +220,12 @@
     <Compile Include="C_Presentacion\Vendedor\FRegistrarVenta.Designer.cs">
       <DependentUpon>FRegistrarVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FVentas.Designer.cs">
+      <DependentUpon>FVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\Menu_Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +295,9 @@
     <EmbeddedResource Include="C_Presentacion\Vendedor\FRegistrarVenta.resx">
       <DependentUpon>FRegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FVentas.resx">
+      <DependentUpon>FVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\Menu_Vendedor.resx">
       <DependentUpon>Menu_Vendedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +306,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
@@ -415,6 +432,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backup96_96.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantilla.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

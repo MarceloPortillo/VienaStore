@@ -10,6 +10,7 @@ namespace VienaStore.C_Negocio
         private DataAccessVentas _dataAccessVentas;
         private DataAccessVentaDetalle _dataAccessVentaDetalle;
 
+
         public BusinessVentas()
         {
             _dataAccessVentas = new DataAccessVentas();
@@ -43,5 +44,12 @@ namespace VienaStore.C_Negocio
                 throw new Exception("Error al confirmar la venta: " + ex.Message);
             }
         }
+
+        public List<DataAccessVentaDTO> GetVentas(string searchText = null)
+        {
+            return _dataAccessVentas.GetVentas(searchText); // Llamamos al método de la capa de datos
+        }
+
+
     }
 }
