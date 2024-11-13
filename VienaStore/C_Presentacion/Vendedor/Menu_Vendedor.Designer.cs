@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Vendedor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnMisVentas = new System.Windows.Forms.Button();
             this.BtnRegistrarVenta = new System.Windows.Forms.Button();
             this.BtnModificarCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.PBoxLogotipo = new System.Windows.Forms.PictureBox();
             this.LblHora = new System.Windows.Forms.Label();
             this.THora = new System.Windows.Forms.Timer(this.components);
-            this.BtnMisVentas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,6 +75,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 757);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnMisVentas
+            // 
+            this.BtnMisVentas.BackColor = System.Drawing.Color.Coral;
+            this.BtnMisVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnMisVentas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMisVentas.Image = global::VienaStore.Properties.Resources.venta_nuevo32px;
+            this.BtnMisVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMisVentas.Location = new System.Drawing.Point(33, 607);
+            this.BtnMisVentas.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMisVentas.Name = "BtnMisVentas";
+            this.BtnMisVentas.Size = new System.Drawing.Size(207, 73);
+            this.BtnMisVentas.TabIndex = 9;
+            this.BtnMisVentas.TabStop = false;
+            this.BtnMisVentas.Tag = "2";
+            this.BtnMisVentas.Text = "   MIS VENTAS";
+            this.BtnMisVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnMisVentas.UseCompatibleTextRendering = true;
+            this.BtnMisVentas.UseVisualStyleBackColor = false;
+            this.BtnMisVentas.Click += new System.EventHandler(this.BtnMisVentas_Click);
             // 
             // BtnRegistrarVenta
             // 
@@ -312,26 +332,6 @@
             // 
             this.THora.Enabled = true;
             this.THora.Tick += new System.EventHandler(this.THora_Tick);
-            // 
-            // BtnMisVentas
-            // 
-            this.BtnMisVentas.BackColor = System.Drawing.Color.Coral;
-            this.BtnMisVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnMisVentas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMisVentas.Image = global::VienaStore.Properties.Resources.compras_32px;
-            this.BtnMisVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMisVentas.Location = new System.Drawing.Point(33, 607);
-            this.BtnMisVentas.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnMisVentas.Name = "BtnMisVentas";
-            this.BtnMisVentas.Size = new System.Drawing.Size(207, 73);
-            this.BtnMisVentas.TabIndex = 9;
-            this.BtnMisVentas.TabStop = false;
-            this.BtnMisVentas.Tag = "2";
-            this.BtnMisVentas.Text = "   MIS VENTAS";
-            this.BtnMisVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnMisVentas.UseCompatibleTextRendering = true;
-            this.BtnMisVentas.UseVisualStyleBackColor = false;
-            this.BtnMisVentas.Click += new System.EventHandler(this.BtnMisVentas_Click);
             // 
             // Menu_Vendedor
             // 

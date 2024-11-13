@@ -36,15 +36,7 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.LblCLientes = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -63,10 +55,18 @@
             this.LblApellido = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblDNI = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,7 +74,7 @@
             this.groupBox1.Controls.Add(this.TxtBuscar);
             this.groupBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(1014, 397);
+            this.groupBox1.Location = new System.Drawing.Point(1139, 378);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -144,12 +144,251 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(1605, 403);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "ESTADO";
+            this.estado.MinimumWidth = 6;
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.estado.Text = "";
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminar.Location = new System.Drawing.Point(1236, 929);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(220, 68);
+            this.BtnEliminar.TabIndex = 3;
+            this.BtnEliminar.Text = "ELIMINAR";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
+            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditar.Location = new System.Drawing.Point(518, 929);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(220, 68);
+            this.BtnEditar.TabIndex = 4;
+            this.BtnEditar.Text = "EDITAR";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
+            this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLimpiar.Location = new System.Drawing.Point(998, 929);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(220, 68);
+            this.BtnLimpiar.TabIndex = 5;
+            this.BtnLimpiar.Text = "LIMPIAR";
+            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.Image")));
+            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelar.Location = new System.Drawing.Point(1472, 929);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(220, 68);
+            this.BtnCancelar.TabIndex = 6;
+            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackColor = System.Drawing.Color.LightSalmon;
+            this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
+            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGuardar.Location = new System.Drawing.Point(759, 929);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(220, 68);
+            this.BtnGuardar.TabIndex = 7;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Coral;
+            this.panel1.Controls.Add(this.TxtTelefono);
+            this.panel1.Controls.Add(this.LblEmail);
+            this.panel1.Controls.Add(this.TxtEmail);
+            this.panel1.Controls.Add(this.TxtDireccion);
+            this.panel1.Controls.Add(this.TxtDNI);
+            this.panel1.Controls.Add(this.TxtApellido);
+            this.panel1.Controls.Add(this.TxtNombre);
+            this.panel1.Controls.Add(this.LblTelefono);
+            this.panel1.Controls.Add(this.LblDireccion);
+            this.panel1.Controls.Add(this.LblApellido);
+            this.panel1.Controls.Add(this.LblNombre);
+            this.panel1.Controls.Add(this.LblDNI);
+            this.panel1.Location = new System.Drawing.Point(89, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1607, 265);
+            this.panel1.TabIndex = 22;
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTelefono.Location = new System.Drawing.Point(1011, 202);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtTelefono.Mask = "(999)-0000000";
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(292, 23);
+            this.TxtTelefono.TabIndex = 18;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
+            // 
+            // LblEmail
+            // 
+            this.LblEmail.AutoSize = true;
+            this.LblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmail.Location = new System.Drawing.Point(849, 122);
+            this.LblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(74, 23);
+            this.LblEmail.TabIndex = 17;
+            this.LblEmail.Text = "E-mail";
+            // 
+            // TxtEmail
+            // 
+            this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmail.Location = new System.Drawing.Point(1011, 118);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(292, 23);
+            this.TxtEmail.TabIndex = 16;
+            this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDireccion.Location = new System.Drawing.Point(1011, 36);
+            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(292, 23);
+            this.TxtDireccion.TabIndex = 11;
+            // 
+            // TxtDNI
+            // 
+            this.TxtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDNI.Location = new System.Drawing.Point(382, 196);
+            this.TxtDNI.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtDNI.Name = "TxtDNI";
+            this.TxtDNI.Size = new System.Drawing.Size(292, 23);
+            this.TxtDNI.TabIndex = 10;
+            this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
+            // 
+            // TxtApellido
+            // 
+            this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellido.Location = new System.Drawing.Point(382, 113);
+            this.TxtApellido.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(292, 23);
+            this.TxtApellido.TabIndex = 9;
+            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.CausesValidation = false;
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(382, 28);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(292, 23);
+            this.TxtNombre.TabIndex = 8;
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
+            // 
+            // LblTelefono
+            // 
+            this.LblTelefono.AutoSize = true;
+            this.LblTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTelefono.Location = new System.Drawing.Point(849, 200);
+            this.LblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblTelefono.Name = "LblTelefono";
+            this.LblTelefono.Size = new System.Drawing.Size(95, 23);
+            this.LblTelefono.TabIndex = 6;
+            this.LblTelefono.Text = "Teléfono";
+            // 
+            // LblDireccion
+            // 
+            this.LblDireccion.AutoSize = true;
+            this.LblDireccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDireccion.Location = new System.Drawing.Point(849, 31);
+            this.LblDireccion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblDireccion.Name = "LblDireccion";
+            this.LblDireccion.Size = new System.Drawing.Size(102, 23);
+            this.LblDireccion.TabIndex = 5;
+            this.LblDireccion.Text = "Dirección";
+            // 
+            // LblApellido
+            // 
+            this.LblApellido.AutoSize = true;
+            this.LblApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblApellido.Location = new System.Drawing.Point(251, 196);
+            this.LblApellido.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblApellido.Name = "LblApellido";
+            this.LblApellido.Size = new System.Drawing.Size(48, 23);
+            this.LblApellido.TabIndex = 4;
+            this.LblApellido.Text = "DNI";
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Location = new System.Drawing.Point(251, 111);
+            this.LblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(89, 23);
+            this.LblNombre.TabIndex = 3;
+            this.LblNombre.Text = "Apellido";
+            // 
+            // LblDNI
+            // 
+            this.LblDNI.AutoSize = true;
+            this.LblDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDNI.Location = new System.Drawing.Point(251, 29);
+            this.LblDNI.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblDNI.Name = "LblDNI";
+            this.LblDNI.Size = new System.Drawing.Size(88, 23);
+            this.LblDNI.TabIndex = 2;
+            this.LblDNI.Text = "Nombre";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -214,248 +453,9 @@
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "ESTADO";
-            this.estado.MinimumWidth = 6;
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.estado.Text = "";
-            // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataSource = typeof(VienaStore.C_Datos.Clientes);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
-            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(1112, 864);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(220, 68);
-            this.BtnEliminar.TabIndex = 3;
-            this.BtnEliminar.Text = "ELIMINAR";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminar.UseVisualStyleBackColor = false;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnEditar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
-            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(394, 864);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(220, 68);
-            this.BtnEditar.TabIndex = 4;
-            this.BtnEditar.Text = "EDITAR";
-            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnLimpiar
-            // 
-            this.BtnLimpiar.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnLimpiar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
-            this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(874, 864);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(220, 68);
-            this.BtnLimpiar.TabIndex = 5;
-            this.BtnLimpiar.Text = "LIMPIAR";
-            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLimpiar.UseVisualStyleBackColor = false;
-            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.Image")));
-            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(1348, 864);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(220, 68);
-            this.BtnCancelar.TabIndex = 6;
-            this.BtnCancelar.Text = "CANCELAR";
-            this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancelar.UseVisualStyleBackColor = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.LightSalmon;
-            this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
-            this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(635, 864);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(220, 68);
-            this.BtnGuardar.TabIndex = 7;
-            this.BtnGuardar.Text = "GUARDAR";
-            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnGuardar.UseVisualStyleBackColor = false;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Coral;
-            this.panel1.Controls.Add(this.TxtTelefono);
-            this.panel1.Controls.Add(this.LblEmail);
-            this.panel1.Controls.Add(this.TxtEmail);
-            this.panel1.Controls.Add(this.TxtDireccion);
-            this.panel1.Controls.Add(this.TxtDNI);
-            this.panel1.Controls.Add(this.TxtApellido);
-            this.panel1.Controls.Add(this.TxtNombre);
-            this.panel1.Controls.Add(this.LblTelefono);
-            this.panel1.Controls.Add(this.LblDireccion);
-            this.panel1.Controls.Add(this.LblApellido);
-            this.panel1.Controls.Add(this.LblNombre);
-            this.panel1.Controls.Add(this.LblDNI);
-            this.panel1.Location = new System.Drawing.Point(89, 103);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1480, 265);
-            this.panel1.TabIndex = 22;
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefono.Location = new System.Drawing.Point(961, 214);
-            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtTelefono.Mask = "(999)-0000000";
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(292, 23);
-            this.TxtTelefono.TabIndex = 18;
-            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
-            // 
-            // LblEmail
-            // 
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(799, 134);
-            this.LblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(74, 23);
-            this.LblEmail.TabIndex = 17;
-            this.LblEmail.Text = "E-mail";
-            // 
-            // TxtEmail
-            // 
-            this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(961, 130);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(292, 23);
-            this.TxtEmail.TabIndex = 16;
-            this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDireccion.Location = new System.Drawing.Point(961, 48);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(292, 23);
-            this.TxtDireccion.TabIndex = 11;
-            // 
-            // TxtDNI
-            // 
-            this.TxtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDNI.Location = new System.Drawing.Point(335, 208);
-            this.TxtDNI.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtDNI.Name = "TxtDNI";
-            this.TxtDNI.Size = new System.Drawing.Size(292, 23);
-            this.TxtDNI.TabIndex = 10;
-            this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
-            // 
-            // TxtApellido
-            // 
-            this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellido.Location = new System.Drawing.Point(335, 125);
-            this.TxtApellido.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(292, 23);
-            this.TxtApellido.TabIndex = 9;
-            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.CausesValidation = false;
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(335, 40);
-            this.TxtNombre.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(292, 23);
-            this.TxtNombre.TabIndex = 8;
-            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
-            // 
-            // LblTelefono
-            // 
-            this.LblTelefono.AutoSize = true;
-            this.LblTelefono.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTelefono.Location = new System.Drawing.Point(799, 212);
-            this.LblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblTelefono.Name = "LblTelefono";
-            this.LblTelefono.Size = new System.Drawing.Size(95, 23);
-            this.LblTelefono.TabIndex = 6;
-            this.LblTelefono.Text = "Teléfono";
-            // 
-            // LblDireccion
-            // 
-            this.LblDireccion.AutoSize = true;
-            this.LblDireccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(799, 43);
-            this.LblDireccion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblDireccion.Name = "LblDireccion";
-            this.LblDireccion.Size = new System.Drawing.Size(102, 23);
-            this.LblDireccion.TabIndex = 5;
-            this.LblDireccion.Text = "Dirección";
-            // 
-            // LblApellido
-            // 
-            this.LblApellido.AutoSize = true;
-            this.LblApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellido.Location = new System.Drawing.Point(204, 208);
-            this.LblApellido.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblApellido.Name = "LblApellido";
-            this.LblApellido.Size = new System.Drawing.Size(48, 23);
-            this.LblApellido.TabIndex = 4;
-            this.LblApellido.Text = "DNI";
-            // 
-            // LblNombre
-            // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(204, 123);
-            this.LblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(89, 23);
-            this.LblNombre.TabIndex = 3;
-            this.LblNombre.Text = "Apellido";
-            // 
-            // LblDNI
-            // 
-            this.LblDNI.AutoSize = true;
-            this.LblDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDNI.Location = new System.Drawing.Point(204, 41);
-            this.LblDNI.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblDNI.Name = "LblDNI";
-            this.LblDNI.Size = new System.Drawing.Size(88, 23);
-            this.LblDNI.TabIndex = 2;
-            this.LblDNI.Text = "Nombre";
             // 
             // FBuscarClientes
             // 
@@ -482,9 +482,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

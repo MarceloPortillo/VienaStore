@@ -449,5 +449,8 @@
   <ItemGroup>
     <None Include="Resources\plantilla.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta_nuevo32px.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

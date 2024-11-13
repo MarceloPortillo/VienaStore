@@ -37,16 +37,13 @@ namespace VienaStore.C_Presentacion.Vendedor
             instancia = null;
         }
 
-
         private void FMisVentas_Load(object sender, EventArgs e)
         {
-            // Verificar si el usuario está logeado
+
             if (UsuarioLogeado.Usuario != null)
             {
-                // Mostrar el nombre completo del usuario en el TextBox TxtEmpleado
                 TxtEmpleado.Text = UsuarioLogeado.Usuario.NombreCompleto;
 
-                // Llamar al método para listar las ventas del usuario logeado
                 ListarMisVentas();
             }
             else
@@ -59,27 +56,26 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
             try
             {
-                // Obtener el ID del usuario logeado
-                int idUsuarioLogeado = UsuarioLogeado.IdUsuario; // Asegúrate de que `UsuarioLogeado` tenga el ID del usuario logeado
+                int idUsuarioLogeado = UsuarioLogeado.IdUsuario;
 
-                // Llamamos a la capa de negocio y pasamos el ID del usuario
                 List<DataAccessVentaDTO> ventas = _businessVentas.GetMisVentas(idUsuarioLogeado, searchText);
 
                 dataGridViewMisVentas.DataSource = ventas;
 
-                // Configuración del DataGridView similar a la del administrador
                 dataGridViewMisVentas.BackgroundColor = Color.LightSalmon;
                 dataGridViewMisVentas.Columns["idVenta"].Visible = false;
-                dataGridViewMisVentas.Columns["total"].Width = 50;
-                dataGridViewMisVentas.Columns["fecha"].Width = 70;
+                dataGridViewMisVentas.Columns["total"].Width = 70;
+                dataGridViewMisVentas.Columns["fecha"].Width = 90;
                 dataGridViewMisVentas.Columns["estadoFactura"].Width = 50;
                 dataGridViewMisVentas.Columns["nombreCliente"].Width = 70;
                 dataGridViewMisVentas.Columns["descripcionFactura"].Width = 60;
-                dataGridViewMisVentas.Columns["tipoPago"].Width = 120;
+                dataGridViewMisVentas.Columns["tipoPago"].Width = 140;                
+
                 dataGridViewMisVentas.AutoGenerateColumns = false;
                 dataGridViewMisVentas.Columns["total"].DefaultCellStyle.Format = "'$' #,0.00";
+                //dataGridViewMisVentas.Columns["btnVerFactura"].Visible = false;
 
-                if (!dataGridViewMisVentas.Columns.Contains("btnVerFactura"))
+               /* if (!dataGridViewMisVentas.Columns.Contains("btnVerFactura"))
                 {
                     DataGridViewButtonColumn btnVerFactura = new DataGridViewButtonColumn();
                     btnVerFactura.Name = "btnVerFactura";
@@ -91,7 +87,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                     btnVerFactura.DisplayIndex = dataGridViewMisVentas.Columns.Count - 1;
                     btnVerFactura.Width = 100;
                     btnVerFactura.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                }
+                }*/
 
                 foreach (DataGridViewColumn column in dataGridViewMisVentas.Columns)
                 {

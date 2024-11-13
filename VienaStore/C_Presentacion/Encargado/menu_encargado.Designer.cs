@@ -40,36 +40,40 @@
             // 
             this.BtnRealizarBackUp.Enabled = false;
             this.BtnRealizarBackUp.Location = new System.Drawing.Point(267, 751);
-            this.BtnRealizarBackUp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnRealizarBackUp.Margin = new System.Windows.Forms.Padding(5);
             this.BtnRealizarBackUp.Visible = false;
             // 
             // BtnBuescarUsuario
             // 
             this.BtnBuescarUsuario.Enabled = false;
             this.BtnBuescarUsuario.Location = new System.Drawing.Point(481, 751);
-            this.BtnBuescarUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnBuescarUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.BtnBuescarUsuario.Visible = false;
             // 
             // BtnCrearUsuario
             // 
             this.BtnCrearUsuario.Enabled = false;
             this.BtnCrearUsuario.Location = new System.Drawing.Point(37, 688);
-            this.BtnCrearUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnCrearUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.BtnCrearUsuario.Visible = false;
             // 
             // BtnProveedores
             // 
             this.BtnProveedores.Enabled = false;
             this.BtnProveedores.Location = new System.Drawing.Point(37, 751);
-            this.BtnProveedores.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnProveedores.Margin = new System.Windows.Forms.Padding(5);
             this.BtnProveedores.Visible = false;
             // 
             // BtnAgregarCat
             // 
             this.BtnAgregarCat.Enabled = false;
             this.BtnAgregarCat.Location = new System.Drawing.Point(33, 553);
-            this.BtnAgregarCat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnAgregarCat.Margin = new System.Windows.Forms.Padding(5);
             this.BtnAgregarCat.Visible = false;
+            // 
+            // BtnVentaVendedor
+            // 
+            this.BtnVentaVendedor.Visible = false;
             // 
             // BtnModificarCliente
             // 
@@ -121,7 +125,7 @@
             // 
             // BtnMisVentas
             // 
-            this.BtnMisVentas.Location = new System.Drawing.Point(33, 480);
+            this.BtnMisVentas.Location = new System.Drawing.Point(33, 494);
             this.BtnMisVentas.Visible = false;
             // 
             // BtnInformes
@@ -131,8 +135,8 @@
             this.BtnInformes.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInformes.Image = global::VienaStore.Properties.Resources.informes_32px;
             this.BtnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInformes.Location = new System.Drawing.Point(33, 427);
-            this.BtnInformes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnInformes.Location = new System.Drawing.Point(33, 429);
+            this.BtnInformes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnInformes.Name = "BtnInformes";
             this.BtnInformes.Size = new System.Drawing.Size(207, 55);
             this.BtnInformes.TabIndex = 13;
@@ -142,6 +146,7 @@
             this.BtnInformes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnInformes.UseCompatibleTextRendering = true;
             this.BtnInformes.UseVisualStyleBackColor = false;
+            this.BtnInformes.Visible = false;
             this.BtnInformes.Click += new System.EventHandler(this.BtnInformes_Click);
             // 
             // button1
@@ -152,7 +157,7 @@
             this.button1.Image = global::VienaStore.Properties.Resources.anularVenta_32px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(33, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 55);
             this.button1.TabIndex = 14;

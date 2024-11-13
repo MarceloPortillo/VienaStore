@@ -121,7 +121,7 @@
             this.dataGridViewVentas.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewVentas.RowTemplate.Height = 24;
             this.dataGridViewVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewVentas.Size = new System.Drawing.Size(1481, 443);
+            this.dataGridViewVentas.Size = new System.Drawing.Size(1809, 443);
             this.dataGridViewVentas.TabIndex = 2;
             this.dataGridViewVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVentas_CellContentClick);
             // 
@@ -131,7 +131,7 @@
             this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(1303, 855);
+            this.BtnCancelar.Location = new System.Drawing.Point(1535, 850);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(212, 68);
@@ -146,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1840, 967);
+            this.ClientSize = new System.Drawing.Size(1942, 967);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.dataGridViewVentas);
             this.Controls.Add(this.LblVentas);

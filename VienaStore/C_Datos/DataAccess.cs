@@ -12,7 +12,7 @@ namespace VienaStore.C_Datos
     {
         public static class DatabaseConnection
         {
-            private static string ConnectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=MARCELO\\SQLEXPRESS\r\n";
+            private static string ConnectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=VienaStore;Data Source=VistaPremier\\SQLEXPRESS\r\n";
 
             public static SqlConnection GetConnection()
             {

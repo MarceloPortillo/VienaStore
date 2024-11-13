@@ -106,7 +106,7 @@
             this.DtaProductos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DtaProductos.RowTemplate.Height = 24;
             this.DtaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaProductos.Size = new System.Drawing.Size(1615, 497);
+            this.DtaProductos.Size = new System.Drawing.Size(1707, 676);
             this.DtaProductos.TabIndex = 2;
             this.DtaProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtaProductos_CellContentDoubleClick);
             // 
@@ -116,7 +116,7 @@
             this.BtnSalir.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(929, 689);
+            this.BtnSalir.Location = new System.Drawing.Point(1597, 867);
             this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(153, 64);
@@ -131,12 +131,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1653, 754);
+            this.ClientSize = new System.Drawing.Size(1762, 974);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DtaProductos);
             this.Controls.Add(this.LblListaProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FListarProductos";
             this.Text = "FListarProductos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

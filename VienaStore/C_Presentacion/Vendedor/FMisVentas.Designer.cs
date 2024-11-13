@@ -32,10 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtEmpleado = new System.Windows.Forms.TextBox();
             this.TxtBuscarFactura = new System.Windows.Forms.TextBox();
             this.LblVentas = new System.Windows.Forms.Label();
             this.dataGridViewMisVentas = new System.Windows.Forms.DataGridView();
-            this.TxtEmpleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMisVentas)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,13 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BUSCAR VENTA REALIZADA";
+            // 
+            // TxtEmpleado
+            // 
+            this.TxtEmpleado.Location = new System.Drawing.Point(16, 97);
+            this.TxtEmpleado.Name = "TxtEmpleado";
+            this.TxtEmpleado.Size = new System.Drawing.Size(415, 32);
+            this.TxtEmpleado.TabIndex = 2;
             // 
             // TxtBuscarFactura
             // 
@@ -90,7 +97,7 @@
             this.dataGridViewMisVentas.ColumnHeadersHeight = 30;
             this.dataGridViewMisVentas.EnableHeadersVisualStyles = false;
             this.dataGridViewMisVentas.GridColor = System.Drawing.Color.MistyRose;
-            this.dataGridViewMisVentas.Location = new System.Drawing.Point(12, 335);
+            this.dataGridViewMisVentas.Location = new System.Drawing.Point(32, 313);
             this.dataGridViewMisVentas.MultiSelect = false;
             this.dataGridViewMisVentas.Name = "dataGridViewMisVentas";
             this.dataGridViewMisVentas.ReadOnly = true;
@@ -103,22 +110,15 @@
             this.dataGridViewMisVentas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewMisVentas.RowTemplate.Height = 24;
             this.dataGridViewMisVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMisVentas.Size = new System.Drawing.Size(1481, 443);
+            this.dataGridViewMisVentas.Size = new System.Drawing.Size(1672, 686);
             this.dataGridViewMisVentas.TabIndex = 3;
-            // 
-            // TxtEmpleado
-            // 
-            this.TxtEmpleado.Location = new System.Drawing.Point(16, 97);
-            this.TxtEmpleado.Name = "TxtEmpleado";
-            this.TxtEmpleado.Size = new System.Drawing.Size(415, 32);
-            this.TxtEmpleado.TabIndex = 2;
             // 
             // FMisVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1559, 858);
+            this.ClientSize = new System.Drawing.Size(1707, 1032);
             this.Controls.Add(this.dataGridViewMisVentas);
             this.Controls.Add(this.LblVentas);
             this.Controls.Add(this.groupBox1);

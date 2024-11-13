@@ -55,9 +55,10 @@
             // 
             this.LblDesde.AutoSize = true;
             this.LblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDesde.Location = new System.Drawing.Point(361, 163);
+            this.LblDesde.Location = new System.Drawing.Point(481, 201);
+            this.LblDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDesde.Name = "LblDesde";
-            this.LblDesde.Size = new System.Drawing.Size(71, 20);
+            this.LblDesde.Size = new System.Drawing.Size(85, 25);
             this.LblDesde.TabIndex = 1;
             this.LblDesde.Text = "DESDE";
             // 
@@ -65,9 +66,10 @@
             // 
             this.LblHasta.AutoSize = true;
             this.LblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHasta.Location = new System.Drawing.Point(611, 163);
+            this.LblHasta.Location = new System.Drawing.Point(815, 201);
+            this.LblHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblHasta.Name = "LblHasta";
-            this.LblHasta.Size = new System.Drawing.Size(68, 20);
+            this.LblHasta.Size = new System.Drawing.Size(86, 25);
             this.LblHasta.TabIndex = 2;
             this.LblHasta.Text = "HASTA";
             // 
@@ -75,9 +77,10 @@
             // 
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.Font = new System.Drawing.Font("Myanmar Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.Location = new System.Drawing.Point(543, 15);
+            this.LblTitulo.Location = new System.Drawing.Point(724, 18);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(152, 48);
+            this.LblTitulo.Size = new System.Drawing.Size(191, 60);
             this.LblTitulo.TabIndex = 3;
             this.LblTitulo.Text = "REPORTES";
             this.LblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -86,18 +89,20 @@
             // 
             this.DateDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateDesde.Location = new System.Drawing.Point(459, 163);
+            this.DateDesde.Location = new System.Drawing.Point(612, 201);
+            this.DateDesde.Margin = new System.Windows.Forms.Padding(4);
             this.DateDesde.Name = "DateDesde";
-            this.DateDesde.Size = new System.Drawing.Size(110, 20);
+            this.DateDesde.Size = new System.Drawing.Size(145, 23);
             this.DateDesde.TabIndex = 4;
             // 
             // DateHasta
             // 
             this.DateHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateHasta.Location = new System.Drawing.Point(708, 162);
+            this.DateHasta.Location = new System.Drawing.Point(944, 199);
+            this.DateHasta.Margin = new System.Windows.Forms.Padding(4);
             this.DateHasta.Name = "DateHasta";
-            this.DateHasta.Size = new System.Drawing.Size(107, 20);
+            this.DateHasta.Size = new System.Drawing.Size(141, 23);
             this.DateHasta.TabIndex = 5;
             // 
             // DtaReportes
@@ -119,7 +124,8 @@
             this.DtaReportes.ColumnHeadersHeight = 30;
             this.DtaReportes.EnableHeadersVisualStyles = false;
             this.DtaReportes.GridColor = System.Drawing.Color.MistyRose;
-            this.DtaReportes.Location = new System.Drawing.Point(77, 334);
+            this.DtaReportes.Location = new System.Drawing.Point(103, 411);
+            this.DtaReportes.Margin = new System.Windows.Forms.Padding(4);
             this.DtaReportes.MultiSelect = false;
             this.DtaReportes.Name = "DtaReportes";
             this.DtaReportes.ReadOnly = true;
@@ -139,7 +145,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSalmon;
             this.DtaReportes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DtaReportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtaReportes.Size = new System.Drawing.Size(674, 223);
+            this.DtaReportes.Size = new System.Drawing.Size(899, 274);
             this.DtaReportes.TabIndex = 7;
             // 
             // BtnGuardar
@@ -148,14 +154,15 @@
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.Image = global::VienaStore.Properties.Resources.imprimir;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(329, 586);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Location = new System.Drawing.Point(439, 721);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(141, 69);
+            this.BtnGuardar.Size = new System.Drawing.Size(188, 85);
             this.BtnGuardar.TabIndex = 20;
             this.BtnGuardar.Text = "IMPRIMIR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Visible = false;
             // 
             // BtnCancelar
             // 
@@ -163,10 +170,10 @@
             this.BtnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.Image = global::VienaStore.Properties.Resources.cancelar_48x48_px;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(997, 586);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCancelar.Location = new System.Drawing.Point(1329, 721);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(141, 69);
+            this.BtnCancelar.Size = new System.Drawing.Size(188, 85);
             this.BtnCancelar.TabIndex = 21;
             this.BtnCancelar.Text = "SALIR";
             this.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,14 +186,15 @@
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::VienaStore.Properties.Resources.borrar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(519, 586);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(692, 721);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 69);
+            this.button1.Size = new System.Drawing.Size(188, 85);
             this.button1.TabIndex = 22;
             this.button1.Text = "LIMPIAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // BtnGererar
             // 
@@ -194,10 +202,10 @@
             this.BtnGererar.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGererar.Image = global::VienaStore.Properties.Resources.graficos_32px1;
             this.BtnGererar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGererar.Location = new System.Drawing.Point(443, 245);
-            this.BtnGererar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGererar.Location = new System.Drawing.Point(591, 302);
+            this.BtnGererar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGererar.Name = "BtnGererar";
-            this.BtnGererar.Size = new System.Drawing.Size(137, 69);
+            this.BtnGererar.Size = new System.Drawing.Size(183, 85);
             this.BtnGererar.TabIndex = 24;
             this.BtnGererar.Text = "GENERAR";
             this.BtnGererar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,11 +220,13 @@
             "VENTAS POR CATEGORIA",
             "VENTAS POR USUARIOS",
             "COMPRA PROVEEDORES"});
-            this.CboSeleccionar.Location = new System.Drawing.Point(205, 81);
+            this.CboSeleccionar.Location = new System.Drawing.Point(273, 100);
+            this.CboSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.CboSeleccionar.Name = "CboSeleccionar";
-            this.CboSeleccionar.Size = new System.Drawing.Size(265, 28);
+            this.CboSeleccionar.Size = new System.Drawing.Size(352, 33);
             this.CboSeleccionar.TabIndex = 6;
             this.CboSeleccionar.Text = "Seleccione el tipo de informe";
+            this.CboSeleccionar.Visible = false;
             // 
             // chartVentas
             // 
@@ -224,22 +234,23 @@
             this.chartVentas.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartVentas.Legends.Add(legend1);
-            this.chartVentas.Location = new System.Drawing.Point(791, 245);
+            this.chartVentas.Location = new System.Drawing.Point(1055, 302);
+            this.chartVentas.Margin = new System.Windows.Forms.Padding(4);
             this.chartVentas.Name = "chartVentas";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartVentas.Series.Add(series1);
-            this.chartVentas.Size = new System.Drawing.Size(360, 300);
+            this.chartVentas.Size = new System.Drawing.Size(480, 369);
             this.chartVentas.TabIndex = 25;
             this.chartVentas.Text = "chart1";
             // 
             // reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1189, 668);
+            this.ClientSize = new System.Drawing.Size(1585, 822);
             this.Controls.Add(this.chartVentas);
             this.Controls.Add(this.BtnGererar);
             this.Controls.Add(this.button1);
@@ -253,6 +264,7 @@
             this.Controls.Add(this.LblHasta);
             this.Controls.Add(this.LblDesde);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "reportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "reportes";

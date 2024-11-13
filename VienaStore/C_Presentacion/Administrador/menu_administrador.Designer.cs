@@ -192,7 +192,7 @@
             this.BtnProveedores.TabIndex = 9;
             this.BtnProveedores.TabStop = false;
             this.BtnProveedores.Tag = "2";
-            this.BtnProveedores.Text = " PROVEEDORES";
+            this.BtnProveedores.Text = "   PROVEEDORES";
             this.BtnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnProveedores.UseCompatibleTextRendering = true;
             this.BtnProveedores.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@
             this.BtnVentaVendedor.BackColor = System.Drawing.Color.Coral;
             this.BtnVentaVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnVentaVendedor.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVentaVendedor.Image = global::VienaStore.Properties.Resources.categories_32PX;
+            this.BtnVentaVendedor.Image = global::VienaStore.Properties.Resources.venta_nuevo32px;
             this.BtnVentaVendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVentaVendedor.Location = new System.Drawing.Point(33, 427);
             this.BtnVentaVendedor.Margin = new System.Windows.Forms.Padding(4);
@@ -292,7 +292,7 @@
             this.BtnVentaVendedor.TabIndex = 14;
             this.BtnVentaVendedor.TabStop = false;
             this.BtnVentaVendedor.Tag = "2";
-            this.BtnVentaVendedor.Text = "GESTIONAR VENTAS";
+            this.BtnVentaVendedor.Text = "     GESTIONAR    VENTAS";
             this.BtnVentaVendedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnVentaVendedor.UseCompatibleTextRendering = true;
             this.BtnVentaVendedor.UseVisualStyleBackColor = false;

@@ -369,6 +369,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
                     pdfDoc.Close();
                     stream.Close();
+                    DtaProductos.Rows.Clear();
                 }
             }
             BtnImprimir.Visible = false;

@@ -59,6 +59,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
                 dataGridViewVentas.Columns["total"].DisplayIndex = dataGridViewVentas.Columns.Count - 2;
 
+
                 if (!dataGridViewVentas.Columns.Contains("btnAnular"))
                 {
                     DataGridViewButtonColumn btnAnular = new DataGridViewButtonColumn();
