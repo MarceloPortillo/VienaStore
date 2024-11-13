@@ -193,5 +193,26 @@ namespace VienaStore.C_Datos
 
             return ventas;
         }
+
+        public bool AnularVenta(int idVenta)
+        {
+            try
+            {
+                using (var connection = DataAccess.DatabaseConnection.GetConnection())
+                {
+                    string query = "UPDATE Ventas SET id_estado = (SELECT id_estado FROM EstadoFactura WHERE descripcion = 'ANULADA') WHERE id_venta = @idVenta";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@idVenta", idVenta);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0; // Retorna true si se actualizó la venta
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al anular la venta: " + ex.Message);
+            }
+        }
+
     }
 }

@@ -123,6 +123,7 @@
             this.dataGridViewVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewVentas.Size = new System.Drawing.Size(1481, 443);
             this.dataGridViewVentas.TabIndex = 2;
+            this.dataGridViewVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVentas_CellContentClick);
             // 
             // BtnCancelar
             // 

@@ -58,19 +58,19 @@ namespace VienaStore.C_Presentacion.Vendedor
                 dataGridViewVentas.Columns["total"].DefaultCellStyle.Format = "'$' #,0.00";
 
                 dataGridViewVentas.Columns["total"].DisplayIndex = dataGridViewVentas.Columns.Count - 2;
-               
-                if (!dataGridViewVentas.Columns.Contains("btnVerFactura"))
-                {
-                    DataGridViewButtonColumn btnVerFactura = new DataGridViewButtonColumn();
-                    btnVerFactura.Name = "btnVerFactura";
-                    btnVerFactura.HeaderText = "Acciones";
-                    btnVerFactura.Text = "Ver Factura";
-                    btnVerFactura.UseColumnTextForButtonValue = true;
-                    dataGridViewVentas.Columns.Add(btnVerFactura);
 
-                    btnVerFactura.DisplayIndex = dataGridViewVentas.Columns.Count - 1;
-                    btnVerFactura.Width = 100;
-                    btnVerFactura.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                if (!dataGridViewVentas.Columns.Contains("btnAnular"))
+                {
+                    DataGridViewButtonColumn btnAnular = new DataGridViewButtonColumn();
+                    btnAnular.Name = "btnAnular";
+                    btnAnular.HeaderText = "Acciones";
+                    btnAnular.Text = "Anular";
+                    btnAnular.UseColumnTextForButtonValue = true;
+                    dataGridViewVentas.Columns.Add(btnAnular);
+
+                    btnAnular.DisplayIndex = dataGridViewVentas.Columns.Count - 1;
+                    btnAnular.Width = 100;
+                    btnAnular.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                 }
 
                 foreach (DataGridViewColumn column in dataGridViewVentas.Columns)
@@ -96,7 +96,6 @@ namespace VienaStore.C_Presentacion.Vendedor
             }
 
         }
-
         private void FVentas_Load(object sender, EventArgs e)
         {
             ListarVentas();
@@ -114,7 +113,31 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             ListarVentas(buscaText);
 
-        }      
+        }
+
+        private void dataGridViewVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewVentas.Columns["btnAnular"].Index && e.RowIndex >= 0)
+            {
+                int idVenta = Convert.ToInt32(dataGridViewVentas.Rows[e.RowIndex].Cells["idVenta"].Value);
+
+                var result = MessageBox.Show("¿Estás seguro de que quieres anular esta venta?", "Confirmar Anulación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    bool anulado = _businessVentas.AnularVenta(idVenta);
+
+                    if (anulado)
+                    {
+                        MessageBox.Show("La venta ha sido anulada exitosamente.");
+                        ListarVentas(); 
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo anular la venta.");
+                    }
+                }
+            }
+        }
     }
 }
 

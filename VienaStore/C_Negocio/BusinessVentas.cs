@@ -64,6 +64,11 @@ namespace VienaStore.C_Negocio
             }
         }
 
+        public bool AnularVenta(int idVenta)
+        {
+            return _dataAccessVentas.AnularVenta(idVenta);
+        }
+
 
     }
 }
