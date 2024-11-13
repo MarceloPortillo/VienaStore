@@ -168,6 +168,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 DtaUsuario.Columns[11].Visible = false;
                 DtaUsuario.Columns[0].Visible = false;
                 DtaUsuario.Columns["contrasenia"].Visible = false;
+                DtaUsuario.Columns["NombreCompleto"].Visible = false;
+                DtaUsuario.Columns["id_rol"].Visible = false;
                 foreach (DataGridViewColumn column in DtaUsuario.Columns)
                 {
                     column.HeaderText = column.HeaderText.ToUpper();

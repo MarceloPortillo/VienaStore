@@ -38,7 +38,7 @@ namespace VienaStore.C_Presentacion.Encargado
         {
             CerrarOtrosFormularios();
 
-            FAnularVenta nuevo = FAnularVenta.Ventana_unica();
+            FVentas nuevo = FVentas.Ventana_unica();
             nuevo.TopLevel = false;
             CerrarInstancias.InstanciasNull();
             // this.panel3.Controls.Clear();
