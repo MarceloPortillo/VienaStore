@@ -140,7 +140,7 @@ namespace VienaStore.C_Presentacion.Administrador
             chartVentas.ChartAreas[0].AxisY.Title = "Total Ventas";
             chartVentas.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
             chartVentas.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
-            chartVentas.ChartAreas[0].AxisY.LabelStyle.Format = "C"; // Formato moneda
+            chartVentas.ChartAreas[0].AxisY.LabelStyle.Format = "C"; 
         }
     }
 
