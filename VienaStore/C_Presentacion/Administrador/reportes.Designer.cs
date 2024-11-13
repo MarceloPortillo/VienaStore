@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LblDesde = new System.Windows.Forms.Label();
             this.LblHasta = new System.Windows.Forms.Label();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.DateDesde = new System.Windows.Forms.DateTimePicker();
             this.DateHasta = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DtaReportes = new System.Windows.Forms.DataGridView();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnGererar = new System.Windows.Forms.Button();
             this.CboSeleccionar = new System.Windows.Forms.ComboBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtaReportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,15 +100,47 @@
             this.DateHasta.Size = new System.Drawing.Size(107, 20);
             this.DateHasta.TabIndex = 5;
             // 
-            // dataGridView1
+            // DtaReportes
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 334);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(674, 223);
-            this.dataGridView1.TabIndex = 7;
+            this.DtaReportes.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DtaReportes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.DtaReportes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtaReportes.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.DtaReportes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaReportes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DtaReportes.ColumnHeadersHeight = 30;
+            this.DtaReportes.EnableHeadersVisualStyles = false;
+            this.DtaReportes.GridColor = System.Drawing.Color.MistyRose;
+            this.DtaReportes.Location = new System.Drawing.Point(77, 334);
+            this.DtaReportes.MultiSelect = false;
+            this.DtaReportes.Name = "DtaReportes";
+            this.DtaReportes.ReadOnly = true;
+            this.DtaReportes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtaReportes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.DtaReportes.RowHeadersVisible = false;
+            this.DtaReportes.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSalmon;
+            this.DtaReportes.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.DtaReportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DtaReportes.Size = new System.Drawing.Size(674, 223);
+            this.DtaReportes.TabIndex = 7;
             // 
             // BtnGuardar
             // 
@@ -166,6 +202,7 @@
             this.BtnGererar.Text = "GENERAR";
             this.BtnGererar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGererar.UseVisualStyleBackColor = false;
+            this.BtnGererar.Click += new System.EventHandler(this.BtnGererar_Click);
             // 
             // CboSeleccionar
             // 
@@ -175,7 +212,7 @@
             "VENTAS POR CATEGORIA",
             "VENTAS POR USUARIOS",
             "COMPRA PROVEEDORES"});
-            this.CboSeleccionar.Location = new System.Drawing.Point(459, 79);
+            this.CboSeleccionar.Location = new System.Drawing.Point(205, 81);
             this.CboSeleccionar.Name = "CboSeleccionar";
             this.CboSeleccionar.Size = new System.Drawing.Size(265, 28);
             this.CboSeleccionar.TabIndex = 6;
@@ -183,20 +220,18 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(782, 270);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(791, 245);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(395, 287);
-            this.chart1.TabIndex = 28;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(360, 300);
+            this.chart1.TabIndex = 25;
             this.chart1.Text = "chart1";
             // 
             // reportes
@@ -210,7 +245,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DtaReportes);
             this.Controls.Add(this.CboSeleccionar);
             this.Controls.Add(this.DateHasta);
             this.Controls.Add(this.DateDesde);
@@ -222,7 +257,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.reportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DtaReportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,7 +271,7 @@
         private System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.DateTimePicker DateDesde;
         private System.Windows.Forms.DateTimePicker DateHasta;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DtaReportes;
         public System.Windows.Forms.Button BtnGuardar;
         public System.Windows.Forms.Button BtnCancelar;
         public System.Windows.Forms.Button button1;
