@@ -154,5 +154,19 @@ namespace VienaStore.C_Presentacion.Vendedor
         {
 
         }
+
+        private void BtnMisVentas_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+
+            FMisVentas nuevo = FMisVentas.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            // this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+
+        }
     }
 }

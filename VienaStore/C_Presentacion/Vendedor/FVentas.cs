@@ -8,18 +8,34 @@ using System.IO;
 using System.Windows.Forms;
 using VienaStore.C_Datos; 
 using VienaStore.C_Negocio;
+using VienaStore.C_Presentacion.Administrador;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {
     public partial class FVentas : Form
     {
-        // Instancia de la capa de negocio
         private BusinessVentas _businessVentas;
+        private static FVentas instancia = null;
+        public static FVentas Ventana_unica()
+        {
+            if (instancia == null)
+            {
+                instancia = new FVentas();
+                return instancia;
+            }
+
+            return instancia;
+        }
 
         public FVentas()
         {
             InitializeComponent();
             _businessVentas = new BusinessVentas();
+        }
+
+        public static void limpiar()
+        {
+            instancia = null;
         }
         private void ListarVentas(string searchText = null)
         {
@@ -42,7 +58,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                 dataGridViewVentas.Columns["total"].DefaultCellStyle.Format = "'$' #,0.00";
 
                 dataGridViewVentas.Columns["total"].DisplayIndex = dataGridViewVentas.Columns.Count - 2;
-
+               
                 if (!dataGridViewVentas.Columns.Contains("btnVerFactura"))
                 {
                     DataGridViewButtonColumn btnVerFactura = new DataGridViewButtonColumn();
@@ -53,8 +69,8 @@ namespace VienaStore.C_Presentacion.Vendedor
                     dataGridViewVentas.Columns.Add(btnVerFactura);
 
                     btnVerFactura.DisplayIndex = dataGridViewVentas.Columns.Count - 1;
-
-                    btnVerFactura.Width = 100; 
+                    btnVerFactura.Width = 100;
+                    btnVerFactura.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                 }
 
                 foreach (DataGridViewColumn column in dataGridViewVentas.Columns)
@@ -88,6 +104,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            limpiar();
             this.Close();
         }
 

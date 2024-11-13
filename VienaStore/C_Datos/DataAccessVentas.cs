@@ -72,10 +72,8 @@ namespace VienaStore.C_Datos
 
             try
             {
-                // Conexión a la base de datos
                 DataAccess.DatabaseConnection.GetConnection();
 
-                // Consulta SQL con JOIN para obtener el estado de la factura por su descripción
                 string query = @"
             SELECT V.id_venta, V.total, V.fecha, E.descripcion AS estadoFactura, 
                    U.nombre + ' ' + U.apellido AS nombreUsuario, 
@@ -87,11 +85,10 @@ namespace VienaStore.C_Datos
             JOIN Clientes C ON V.id_cliente = C.id_cliente
             JOIN Factura F ON V.id_factura = F.id_factura
             JOIN FormaPago P ON V.id_pago = P.id_pago
-            LEFT JOIN EstadoFactura E ON V.id_estado = E.id_estado"; // JOIN con la tabla EstadoFactura
+            LEFT JOIN EstadoFactura E ON V.id_estado = E.id_estado"; 
 
                 SqlCommand cmd = new SqlCommand();
 
-                // Si se pasa un parámetro de búsqueda, se agrega a la consulta
                 if (!string.IsNullOrEmpty(buscar))
                 {
                     query += @" WHERE V.id_venta LIKE @buscar OR 
@@ -103,14 +100,12 @@ namespace VienaStore.C_Datos
                     cmd.Parameters.Add(new SqlParameter("@buscar", $"%{buscar}%"));
                 }
 
-                // Configurar la consulta y la conexión
                 cmd.CommandText = query;
                 cmd.Connection = DataAccess.DatabaseConnection.GetConnection();
 
-                // Ejecutar la consulta
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                // Leer los resultados
                 while (reader.Read())
                 {
                     ventas.Add(new DataAccessVentaDTO
@@ -135,14 +130,68 @@ namespace VienaStore.C_Datos
             return ventas;
         }
 
+        public List<DataAccessVentaDTO> GetVentasPorUsuario(int idUsuario, string buscar = null)
+        {
+            List<DataAccessVentaDTO> ventas = new List<DataAccessVentaDTO>();
 
+            try
+            {
+                DataAccess.DatabaseConnection.GetConnection();
 
+                string query = @"
+                    SELECT V.id_venta, V.total, V.fecha, E.descripcion AS estadoFactura, 
+                        U.nombre + ' ' + U.apellido AS nombreUsuario, 
+                        F.descripcion AS descripcionFactura, 
+                        C.nombre + ' ' + C.apellido AS nombreCliente, 
+                        P.descripcion AS tipoPago
+                    FROM Ventas V
+                    JOIN Usuarios U ON V.id_usuario = U.id_usuario
+                    JOIN Clientes C ON V.id_cliente = C.id_cliente
+                    JOIN Factura F ON V.id_factura = F.id_factura
+                    JOIN FormaPago P ON V.id_pago = P.id_pago
+                    LEFT JOIN EstadoFactura E ON V.id_estado = E.id_estado
+                    WHERE V.id_usuario = @idUsuario";  
 
+                if (!string.IsNullOrEmpty(buscar))
+                {
+                    query += @" AND (V.id_venta LIKE @buscar OR 
+                                    C.nombre LIKE @buscar OR 
+                                    C.apellido LIKE @buscar OR 
+                                    F.descripcion LIKE @buscar OR 
+                                    P.descripcion LIKE @buscar)";
+                }
 
+                SqlCommand cmd = new SqlCommand(query);
+                cmd.Parameters.Add(new SqlParameter("@idUsuario", idUsuario));
+                if (!string.IsNullOrEmpty(buscar))
+                {
+                    cmd.Parameters.Add(new SqlParameter("@buscar", $"%{buscar}%"));
+                }
 
+                cmd.Connection = DataAccess.DatabaseConnection.GetConnection();
+                SqlDataReader reader = cmd.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    ventas.Add(new DataAccessVentaDTO
+                    {
+                        idVenta = int.Parse(reader["id_venta"].ToString()),
+                        total = Convert.ToSingle(reader["total"]),
+                        fecha = Convert.ToDateTime(reader["fecha"]),
+                        estadoFactura = reader["estadoFactura"] != DBNull.Value ? reader["estadoFactura"].ToString() : "Desconocido",
+                        nombreUsuario = reader["nombreUsuario"] != DBNull.Value ? reader["nombreUsuario"].ToString() : "Desconocido",
+                        descripcionFactura = reader["descripcionFactura"] != DBNull.Value ? reader["descripcionFactura"].ToString() : "Sin descripción",
+                        nombreCliente = reader["nombreCliente"] != DBNull.Value ? reader["nombreCliente"].ToString() : "Desconocido",
+                        tipoPago = reader["tipoPago"] != DBNull.Value ? reader["tipoPago"].ToString() : "Sin tipo de pago",
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener las ventas del usuario: " + ex.Message);
+            }
 
-
-
+            return ventas;
+        }
     }
 }

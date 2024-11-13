@@ -120,5 +120,23 @@ namespace VienaStore.C_Presentacion.Administrador
             //nuevo.MdiParent = this;
             nuevo.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnVentaVendedor_Click(object sender, EventArgs e)
+        {
+            CerrarOtrosFormularios();
+            FVentas nuevo = FVentas.Ventana_unica();
+            nuevo.TopLevel = false;
+            CerrarInstancias.InstanciasNull();
+            //this.panel3.Controls.Clear();
+            this.panel3.Controls.Add(nuevo);
+            //nuevo.MdiParent = this;
+            nuevo.Show();
+
+        }
     }
 }

@@ -116,6 +116,8 @@ namespace VienaStore.C_Presentacion.Administrador
                 DtaUsuario.Columns[4].Visible = false;
                 DtaUsuario.Columns["id_rol"].Visible = false;
                 DtaUsuario.AutoGenerateColumns = false;
+                DtaUsuario.Columns["NombreCompleto"].Visible = false;
+
 
                 if (!DtaUsuario.Columns.Contains("BtnEstado"))
                 {
