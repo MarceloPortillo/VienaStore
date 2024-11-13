@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using VienaStore.C_Datos;
 using VienaStore.C_Negocio;
 
@@ -95,6 +96,8 @@ namespace VienaStore.C_Presentacion.Administrador
 
 
                 DtaReportes.ClearSelection();
+
+                CargarDatosEnGrafico(usuariosVentas);
             }
             catch (Exception ex)
             {
@@ -108,6 +111,36 @@ namespace VienaStore.C_Presentacion.Administrador
         {
             ListarUsuariosVentas();
 
+        }
+
+        private void CargarDatosEnGrafico(List<usuarios_ventas> usuariosVentas)
+        {
+            // Limpia las series anteriores
+            chartVentas.Series.Clear();
+
+            // Crea una nueva serie
+            var series = new Series("Ventas Totales")
+            {
+                ChartType = SeriesChartType.Column,
+                XValueType = ChartValueType.String,
+                YValueType = ChartValueType.Double
+            };
+
+            // Agrega datos a la serie
+            foreach (var usuario in usuariosVentas)
+            {
+                series.Points.AddXY(usuario.apellido, usuario.Total);
+            }
+
+            // Agrega la serie al gráfico
+            chartVentas.Series.Add(series);
+
+            // Configura el estilo del gráfico
+            chartVentas.ChartAreas[0].AxisX.Title = "Apellido";
+            chartVentas.ChartAreas[0].AxisY.Title = "Total Ventas";
+            chartVentas.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+            chartVentas.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
+            chartVentas.ChartAreas[0].AxisY.LabelStyle.Format = "C"; // Formato moneda
         }
     }
 
