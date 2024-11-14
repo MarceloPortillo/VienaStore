@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -55,10 +61,12 @@
     <Compile Include="C_Datos\DataAccessFactura.cs" />
     <Compile Include="C_Datos\DataAccessFormaPago.cs" />
     <Compile Include="C_Datos\DataAccessProductos.cs" />
+    <Compile Include="C_Datos\DataAccessReportes.cs" />
     <Compile Include="C_Datos\DataAccessRol.cs" />
     <Compile Include="C_Datos\DataAccessCategoria.cs" />
     <Compile Include="C_Datos\DataAccessUsuarios.cs" />
     <Compile Include="C_Datos\DataAccessVentaDetalle.cs" />
+    <Compile Include="C_Datos\DataAccessVentaDTO.cs" />
     <Compile Include="C_Datos\DataAccessVentas.cs" />
     <Compile Include="C_Datos\Factura.cs" />
     <Compile Include="C_Datos\FormaPago.cs" />
@@ -66,14 +74,17 @@
     <Compile Include="C_Datos\Productos_Proveedores_Categorias.cs" />
     <Compile Include="C_Datos\Rol.cs" />
     <Compile Include="C_Datos\Usuarios.cs" />
+    <Compile Include="C_Datos\usuarios_ventas.cs" />
     <Compile Include="C_Datos\Usuario_Rol.cs" />
     <Compile Include="C_Datos\VentaDetalle.cs" />
     <Compile Include="C_Datos\Ventas.cs" />
+    <Compile Include="C_Datos\Ventas_Categorias.cs" />
     <Compile Include="C_Negocio\BusinessBackUp.cs" />
     <Compile Include="C_Negocio\BusinessCliente.cs" />
     <Compile Include="C_Negocio\BusinessCategoria.cs" />
     <Compile Include="C_Negocio\BusinessFactura.cs" />
     <Compile Include="C_Negocio\BusinessFormaPago.cs" />
+    <Compile Include="C_Negocio\BusinessReportes.cs" />
     <Compile Include="C_Negocio\BusinessRol.cs" />
     <Compile Include="C_Negocio\BusinessUsuarios.cs" />
     <Compile Include="C_Datos\DataAccesProveedores.cs" />
@@ -201,6 +212,12 @@
     <Compile Include="C_Presentacion\Vendedor\FListarProductos.Designer.cs">
       <DependentUpon>FListarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FMisVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FMisVentas.Designer.cs">
+      <DependentUpon>FMisVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Presentacion\Vendedor\FNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +229,12 @@
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\FRegistrarVenta.Designer.cs">
       <DependentUpon>FRegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C_Presentacion\Vendedor\FVentas.Designer.cs">
+      <DependentUpon>FVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Presentacion\Vendedor\Menu_Vendedor.cs">
       <SubType>Form</SubType>
@@ -276,11 +299,17 @@
     <EmbeddedResource Include="C_Presentacion\Vendedor\FListarProductos.resx">
       <DependentUpon>FListarProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FMisVentas.resx">
+      <DependentUpon>FMisVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FNuevoCliente.resx">
       <DependentUpon>FNuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\FRegistrarVenta.resx">
       <DependentUpon>FRegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C_Presentacion\Vendedor\FVentas.resx">
+      <DependentUpon>FVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="C_Presentacion\Vendedor\Menu_Vendedor.resx">
       <DependentUpon>Menu_Vendedor.cs</DependentUpon>
@@ -290,6 +319,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Categorias.datasource" />
     <None Include="Properties\DataSources\VienaStore.C_Datos.Clientes.datasource" />
@@ -415,6 +445,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backup96_96.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta_nuevo32px.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

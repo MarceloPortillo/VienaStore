@@ -22,7 +22,7 @@ namespace VienaStore.C_Negocio
             string nombre = $"{DateTime.Today.Day}-{DateTime.Today.Month}-{DateTime.Today.Year}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}";
 
             
-            string rutaBackup = $@"C:\BackUpVienaStore\VienaStore-{nombre}.bak";
+            string rutaBackup = $@"C:\BackUVS\{nombre}.bak";
 
             
             string consulta = $"BACKUP DATABASE [VienaStore] TO DISK = N'{rutaBackup}' WITH NOFORMAT, NOINIT, NAME = N'VienaStore - Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10";

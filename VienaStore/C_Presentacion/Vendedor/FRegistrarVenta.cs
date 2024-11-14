@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using VienaStore.C_Datos;
 using VienaStore.C_Negocio;
 using VienaStore.C_Presentacion;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
 
 namespace VienaStore.C_Presentacion.Vendedor
 {    
@@ -50,6 +54,7 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void FRegistrarVenta_Load(object sender, EventArgs e)
         {
+            BtnImprimir.Visible = false;
             if (UsuarioLogeado.Usuario != null)
             {
                 TxtEmpleado.Text = UsuarioLogeado.Usuario.NombreCompleto;
@@ -115,42 +120,59 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
         private void AgregarProductoAlDataGridView()
         {
+
             if (string.IsNullOrWhiteSpace(TxtCantidad.Text) || !int.TryParse(TxtCantidad.Text, out int cantidad) || cantidad <= 0)
             {
                 MessageBox.Show("Debe ingresar una cantidad válida de producto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!int.TryParse(TxtStock.Text, out int stock) || cantidad > stock)
+            if (string.IsNullOrWhiteSpace(TxtStock.Text) || !int.TryParse(TxtStock.Text, out int stock) || cantidad > stock)
             {
                 MessageBox.Show("No hay suficiente stock disponible para la cantidad solicitada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int codProducto = Convert.ToInt32(TxtCodProd.Text); 
+            if (string.IsNullOrWhiteSpace(TxtCodProd.Text) || !int.TryParse(TxtCodProd.Text, out int codProducto))
+            {
+                MessageBox.Show("Debe ingresar un código de producto válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(TxtPrecioVenta.Text) || !decimal.TryParse(TxtPrecioVenta.Text, out decimal precioUnitario))
+            {
+                MessageBox.Show("Debe ingresar un precio de venta válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string nombreProducto = TxtNombreProducto.Text;
             string descripcionProducto = TxtDescripcionProducto.Text;
-            decimal precioUnitario = Convert.ToDecimal(TxtPrecioVenta.Text);
             decimal subtotal = cantidad * precioUnitario;
 
             bool productoExistente = false;
 
             foreach (DataGridViewRow row in DtaProductos.Rows)
             {
-                if (Convert.ToInt32(row.Cells["NroProducto"].Value) == codProducto)
+                if (row.Cells["NroProducto"].Value != null && int.TryParse(row.Cells["NroProducto"].Value.ToString(), out int nroProductoExistente) && nroProductoExistente == codProducto)
                 {
-                    int cantidadActual = Convert.ToInt32(row.Cells["cantidad"].Value);
-
-                    if (cantidadActual + cantidad > stock)
+                    if (row.Cells["cantidad"].Value != null && int.TryParse(row.Cells["cantidad"].Value.ToString(), out int cantidadActual))
                     {
-                        MessageBox.Show("No hay suficiente stock disponible para la cantidad acumulada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (cantidadActual + cantidad > stock)
+                        {
+                            MessageBox.Show("No hay suficiente stock disponible para la cantidad acumulada.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        row.Cells["cantidad"].Value = cantidadActual + cantidad;
+                        row.Cells["SubTotal"].Value = (cantidadActual + cantidad) * precioUnitario;
+                        productoExistente = true;
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al leer la cantidad existente del producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
-                    row.Cells["cantidad"].Value = cantidadActual + cantidad;
-                    row.Cells["SubTotal"].Value = (cantidadActual + cantidad) * precioUnitario;
-                    productoExistente = true;
-                    break;
                 }
             }
 
@@ -160,6 +182,7 @@ namespace VienaStore.C_Presentacion.Vendedor
             }
 
             ActualizarTotal();
+
             TxtNombreProducto.Clear();
             TxtDescripcionProducto.Clear();
             TxtCodProd.Clear();
@@ -194,7 +217,6 @@ namespace VienaStore.C_Presentacion.Vendedor
         }
         private void BtnConfirmarVenta_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(TxtNombre.Text) || string.IsNullOrWhiteSpace(TxtDNI.Text) ||
                 CBFactura.SelectedIndex == -1 || CBFormaDePago.SelectedIndex == -1 || DtaProductos.Rows.Count == 0)
             {
@@ -216,7 +238,6 @@ namespace VienaStore.C_Presentacion.Vendedor
 
             int idFactura = Convert.ToInt32(CBFactura.SelectedValue);
             int idPago = Convert.ToInt32(CBFormaDePago.SelectedValue);
-
 
             Ventas venta = new Ventas
             {
@@ -247,7 +268,7 @@ namespace VienaStore.C_Presentacion.Vendedor
                     Estado = 1
                 };
 
-                venta.DetallesVenta.Add(detalle); 
+                venta.DetallesVenta.Add(detalle);
             }
 
             MostrarDatosVenta(venta);
@@ -258,9 +279,11 @@ namespace VienaStore.C_Presentacion.Vendedor
                 try
                 {
                     BusinessVentas businessVentas = new BusinessVentas();
-                    businessVentas.ConfirmarVenta(venta); 
+                    businessVentas.ConfirmarVenta(venta);
 
-                    MessageBox.Show("La venta ha sido confirmada exitosamente.", "Venta Confirmada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult resultado = MessageBox.Show("¡Felicitaciones! La venta se realizó exitosamente.",
+                        "Venta Confirmada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BtnImprimir.Visible = true;
 
                 }
                 catch (Exception ex)
@@ -272,7 +295,6 @@ namespace VienaStore.C_Presentacion.Vendedor
 
         private void MostrarDatosVenta(Ventas venta)
         {
-            // Mostrar los datos de la venta
             string mensaje = $"Fecha de Venta: {venta.Fecha}\n" +
                              $"Usuario ID: {venta.IdUsuario}\n" +
                              $"Cliente ID: {venta.IdCliente}\n" +
@@ -282,7 +304,6 @@ namespace VienaStore.C_Presentacion.Vendedor
                              $"Estado: {venta.Estado}\n\n" +
                              "Detalles de la Venta:\n";
 
-            // Mostrar los detalles de cada producto
             foreach (var detalle in venta.DetallesVenta)
             {
                 mensaje += $"Producto ID: {detalle.IdProducto}, " +
@@ -290,8 +311,70 @@ namespace VienaStore.C_Presentacion.Vendedor
                            $"Subtotal: {detalle.Subtotal}\n";
             }
 
-            // Mostrar el mensaje
             MessageBox.Show(mensaje, "Datos de la Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+
+            string paginahtml_texto = Properties.Resources.plantilla.ToString();
+
+            // Obtener la descripción de la factura seleccionada desde el ComboBox
+            string descripcionFactura = CBFactura.Text; // Esto obtiene el texto visible en el ComboBox (por ejemplo, "Factura A" o "Factura B")
+
+            paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", TxtNombre.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", TxtDNI.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+            paginahtml_texto = paginahtml_texto.Replace("@DIRECCION", TxtDireccion.Text);
+            paginahtml_texto = paginahtml_texto.Replace("@NUMERO_FACTURA", descripcionFactura); // Reemplazo con la descripción de la factura
+
+            string filas = string.Empty;
+            decimal total = 0;
+            foreach (DataGridViewRow row in DtaProductos.Rows)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Cells["cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Descripcion"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["PrecioUnitario"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
+                filas += "</tr>";
+                total += decimal.Parse(row.Cells["Subtotal"].Value.ToString());
+            }
+
+            paginahtml_texto = paginahtml_texto.Replace("@FILA", filas);
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", total.ToString());
+
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    // Incluir logotipo
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logotipo, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(150, 100);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                    img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                    pdfDoc.Add(img);
+
+                    using (StringReader sr = new StringReader(paginahtml_texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                    stream.Close();
+                    DtaProductos.Rows.Clear();
+                }
+            }
+            BtnImprimir.Visible = false;
+        }
+
+
     }
 }

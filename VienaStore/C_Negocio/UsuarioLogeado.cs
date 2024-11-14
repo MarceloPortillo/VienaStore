@@ -11,5 +11,15 @@ namespace VienaStore.C_Negocio
     {
         public static Usuario_Rol Usuario { get; set; }
 
+        public static int IdUsuario
+        {
+            get
+            {
+                return Usuario != null ? Usuario.id_usuario : 0;
+            }
+        }
+
     }
+
+
 }

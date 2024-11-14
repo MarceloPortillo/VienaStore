@@ -521,6 +521,36 @@ namespace VienaStore.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Online HTML Editor&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///            table.border th, table.border td {
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;table style=&quot;width:100%&quot;&gt;
+        ///        &lt;tr&gt;
+        ///            &lt;td style=&quot;width:20%&quot;&gt;&lt;/td&gt;
+        ///            &lt;td style=&quot;width:60%&quot; align=&quot;center&quot;&gt;
+        ///                &lt;table&gt;
+        ///                     [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantilla {
+            get {
+                return ResourceManager.GetString("plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap proveedor_32px {
@@ -536,6 +566,16 @@ namespace VienaStore.Properties {
         internal static System.Drawing.Bitmap signoMas_48 {
             get {
                 object obj = ResourceManager.GetObject("signoMas_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venta_nuevo32px {
+            get {
+                object obj = ResourceManager.GetObject("venta_nuevo32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

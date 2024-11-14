@@ -24,7 +24,6 @@ namespace VienaStore.C_Negocio
 
         public int ObtenerIdFacturaPorDescripcion(string descripcionFactura)
         {
-            // Llamamos a la capa de datos para obtener el ID
             DataAccessFactura dataAccessFactura = new DataAccessFactura();
             return dataAccessFactura.ObtenerIdFacturaPorDescripcion(descripcionFactura);
         }
