@@ -509,7 +509,7 @@
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(215, 65);
             this.BtnImprimir.TabIndex = 27;
-            this.BtnImprimir.Text = "Generar PFD";
+            this.BtnImprimir.Text = "Generar PDF";
             this.BtnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnImprimir.UseVisualStyleBackColor = true;
             this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
